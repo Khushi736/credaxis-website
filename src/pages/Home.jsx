@@ -761,9 +761,9 @@ function Home() {
             <div className={`footer-col ${activeCol === 3 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(3)}>Company</h4>
               <ul>
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Contact</li>
+                <li><Link to="/about" style={{ color: "inherit", textDecoration: "none" }} >About Us</Link></li>
+                <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Careers</Link></li>
+                <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Contact</Link></li>
               </ul>
             </div>
 
@@ -773,7 +773,7 @@ function Home() {
               <ul>
                 <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>privacy policy</Link></li>
                 <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li>
-                <li>Security</li>
+                <li><Link to="/security" style={{ color: "inherit", textDecoration: "none" }}>Security</Link></li>
               </ul>
             </div>
 

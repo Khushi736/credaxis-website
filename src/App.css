@@ -348,7 +348,7 @@ body {
 .story-section, .deserve-section, .upgrade-section, .faq-section {
   padding: 60px 20px;
   text-align: center;
-  background: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
 }
 
 .story-heading { font-size: 1.5rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 50px; }
@@ -397,7 +397,7 @@ body {
   justify-content: center; 
   overflow: hidden; 
   padding: 60px 15px; 
-  background: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
 }
 
 .security-content { 
@@ -511,7 +511,7 @@ body {
 /* =========================================
    SPATIAL UI (Mobile First)
 ========================================= */
-.spatial-ui-section { width: 100%; min-height: 50vh; background: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 60px 20px; overflow: hidden; perspective: 1500px; text-align: center; }
+.spatial-ui-section { width: 100%; min-height: 50vh;  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 60px 20px; overflow: hidden; perspective: 1500px; text-align: center; }
 .spatial-text-content { color: #fff; z-index: 10;}
 .spatial-text-content h2 { font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
 .spatial-text-content p { color: #a1a1aa; font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.6; max-width: 100%; }
@@ -727,7 +727,7 @@ body {
       TRUSTED SECTION (Mobile First)
 ========================================== */
 .trusted-section {
-  background-color: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
   color: #f0f2e8;
   padding: 80px 20px;
   width: 100%;

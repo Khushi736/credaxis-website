@@ -7,6 +7,9 @@ import ScanAndPay from "./pages/ScanAndPay";
 import UpiOnCredit from "./pages/UpiOnCredit";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Security from "./pages/Security";
+import About from "./pages/About";
+import NotFound from './pages/NotFound';
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -39,6 +42,10 @@ function App() {
         {/* Local Vite: /admin → admin-panel (port 5173). Production uses nginx/backend. */}
         <Route path="/admin/*" element={<AdminRedirect />} />
         <Route path="/admin" element={<AdminRedirect />} />
+        <Route path="/security" element={<Security />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/not-found" element={<NotFound />} />
+
       </Routes>
     </Router>
   );

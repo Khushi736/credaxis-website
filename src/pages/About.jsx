@@ -7,12 +7,12 @@ const About = () => {
     <div className="saas-about-wrapper">
       {/* Hero Section */}
       <section className="saas-about-hero">
-        <div className="saas-badge">About Credaxis</div>
+        <div className="saas-badge">About MyCredAxis</div>
         <h1 className="saas-hero-title">
           Architecting the Future of <span className="saas-gradient-text">Intelligent Finance</span>
         </h1>
         <p className="saas-hero-subtitle">
-          Credaxis is a next-generation fintech platform engineered to deliver enterprise-grade visibility, high-speed transaction flows, and absolute data security for modern financial ecosystems.
+          MyCredAxis is a next-generation fintech platform engineered to deliver enterprise-grade visibility, high-speed transaction flows, and absolute data security for modern financial ecosystems.
         </p>
       </section>
 

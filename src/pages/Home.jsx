@@ -43,8 +43,8 @@ function Home() {
 
   const faqData = [
     {
-      title: "about CredAxis",
-      desc: "CredAxis is a members-only club that rewards trustworthy individuals with financial and lifestyle progress. members are rewarded with exclusive perks and privileges for making sound financial decisions."
+      title: "about MyredAxis",
+      desc: "MyredAxis is a members-only club that rewards trustworthy individuals with financial and lifestyle progress. members are rewarded with exclusive perks and privileges for making sound financial decisions."
     },
     {
       title: "getting a membership",
@@ -188,7 +188,7 @@ function Home() {
                   <div className="card-header">
                     <div className="brand-logo">
                       <i className="bi bi-shield-check"></i>
-                      <span>CredAxis</span>
+                      <span>MyCredAxis</span>
                     </div>
                     <div className="card-icon-btn">
                       <i className="bi bi-credit-card-2-front-fill"></i>
@@ -278,7 +278,7 @@ function Home() {
           >
             download
             <br />
-            CredAxis
+            MyCredAxis
           </div>
         </div>
       </section>
@@ -500,7 +500,7 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
-            <div className="card-tag">CredAxis Garage</div>
+            <div className="card-tag">MyCredAxis Garage</div>
 
             <h3 className="card-title serif-text lowercase">
               manage your 
@@ -731,8 +731,14 @@ function Home() {
           
           {/* Left: Logo */}
           <div className="logo">
-            <img src="/images/logo.png" alt="CredAxis Logo" style={{ width: "150px", height: "auto" }} />
-            
+            <img src="/images/logos.png" alt="MyCredAxis Logo" style={{ width: "150px", height: "auto" }} />
+            <span className="brand-name" >
+              MycredAxis
+            </span>
+            <p className="brand-desc" >
+              Next-generation institutional grade financial intelligence and high-throughput transaction platform.
+            </p>
+
           </div>
 
           <div className="footer-grid">

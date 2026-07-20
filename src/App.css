@@ -816,3 +816,56 @@ body {
   }
 }
 
+/* =========================================
+   ULTIMATE WIDGET CENTERING FIX 
+   (Paste at the very bottom of your CSS file)
+========================================= */
+
+/* 1. Closed State (Start Position - Top Right) */
+.nav-glass-widget {
+  top: 40px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform: translate(0, 0) !important;
+  /* Yeh line top-right se aane ka smooth rasta banati hai */
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; 
+}
+
+/* Desktop Closed State */
+@media (min-width: 768px) {
+  .nav-glass-widget {
+    top: 55px !important;
+    right: 50px !important;
+  }
+}
+
+/* 2. Expanded State (Moves smoothly to Center) */
+.nav-glass-widget.expanded {
+  top: 50% !important;
+  right: 50% !important; /* 'left' ki jagah 'right' use kiya taaki transition break na ho */
+  left: auto !important;
+  transform: translate(50%, -50%) !important; /* Right: 50% + Translate: 50% = Perfect Center */
+  
+  /* 0.8s ka delay diya hai taaki pehle ye center aaye, uske baad up-down float karna shuru kare */
+  animation: floatCardCenteredRight 4s ease-in-out infinite forwards !important;
+  animation-delay: 0.8s !important; 
+}
+
+/* 3. The Floating Animation */
+@keyframes floatCardCenteredRight {
+  0%, 100% { 
+    transform: translate(50%, -50%) translateY(0); 
+  }
+  50% { 
+    transform: translate(50%, -50%) translateY(-10px); 
+  }
+}
+
+/* 4. Ensure Widget Inner Flip works perfectly */
+.widget-inner {
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-glass-widget.expanded .widget-inner {
+  transform: rotateY(180deg); /* Top-right se aate waqt ye isko flip karwayega */
+}

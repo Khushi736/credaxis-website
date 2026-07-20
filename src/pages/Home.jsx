@@ -43,8 +43,8 @@ function Home() {
 
   const faqData = [
     {
-      title: "about CRED.Axis",
-      desc: "CRED.Axis is a members-only club that rewards trustworthy individuals with financial and lifestyle progress. members are rewarded with exclusive perks and privileges for making sound financial decisions."
+      title: "about CredAxis",
+      desc: "CredAxis is a members-only club that rewards trustworthy individuals with financial and lifestyle progress. members are rewarded with exclusive perks and privileges for making sound financial decisions."
     },
     {
       title: "getting a membership",

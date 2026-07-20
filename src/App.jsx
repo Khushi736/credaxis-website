@@ -1,31 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// Components import karein
 import Home from "./pages/Home";
-import ScanAndPay from "./pages/ScanAndPay"; 
-import UpiOnCredit from "./pages/UpiOnCredit"; 
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // <-- Privacy Policy yahan import ki hai
+import ScanAndPay from "./pages/ScanAndPay";
+import UpiOnCredit from "./pages/UpiOnCredit";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+
+// Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
+const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
+const adminUrl = (import.meta.env.VITE_ADMIN_URL || "http://localhost:5173/admin").replace(
+  /\/$/,
+  ""
+);
+
+function AdminRedirect() {
+  useEffect(() => {
+    window.location.replace(`${adminUrl}/`);
+  }, []);
+
+  return (
+    <div style={{ color: "#fff", padding: 24, fontFamily: "sans-serif" }}>
+      Opening admin panel…
+    </div>
+  );
+}
 
 function App() {
   return (
-    <Router>
+    <Router basename={basename === "/" ? undefined : basename}>
       <Routes>
-        {/* Main website "/" url par dikhegi */}
         <Route path="/" element={<Home />} />
-        
-        {/* Upgrade section ke naye pages */}
         <Route path="/scan-and-pay" element={<ScanAndPay />} />
         <Route path="/upi-on-credit" element={<UpiOnCredit />} />
-
-        {/* Footer link ke liye Privacy Policy route */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
-        
-        {/* Koi bhi galat URL type kare toh ye dikhega (Optional) */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        {/* Local Vite: /admin → admin-panel (port 5173). Production uses nginx/backend. */}
+        <Route path="/admin/*" element={<AdminRedirect />} />
+        <Route path="/admin" element={<AdminRedirect />} />
       </Routes>
     </Router>
   );

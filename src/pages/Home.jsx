@@ -397,7 +397,7 @@ function Home() {
           <video
           autoPlay
           muted
-          loop={false}
+          loop
           playsInline
           className="financial-video"
         >
@@ -771,7 +771,7 @@ function Home() {
             <div className={`footer-col ${activeCol === 4 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(4)}>Policy</h4>
               <ul>
-                <li>Privacy Policy</li>
+                <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>privacy policy</Link></li>
                 <li>Terms & Conditions</li>
                 <li>Security</li>
               </ul>

@@ -2,13 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// Apne components import karein
+// Components import karein
 import Home from "./pages/Home";
 import ScanAndPay from "./pages/ScanAndPay"; 
-// import NotFound from "./NotFound"; // (Hit the wall wala page agar aapne banaya hai)
-import UpiOnCredit from "./pages/UpiOnCredit"; // Upar import karein
-
-
+import UpiOnCredit from "./pages/UpiOnCredit"; 
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // <-- Privacy Policy yahan import ki hai
 
 function App() {
   return (
@@ -20,12 +18,11 @@ function App() {
         {/* Upgrade section ke naye pages */}
         <Route path="/scan-and-pay" element={<ScanAndPay />} />
         <Route path="/upi-on-credit" element={<UpiOnCredit />} />
+
+        {/* Footer link ke liye Privacy Policy route */}
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         
-        {/* Agar aap baaki pages baad mein banayenge, toh unhe filhal 404 par bhej sakte hain */}
-        {/* <Route path="/upi-on-credit" element={<NotFound />} /> */}
-        {/* <Route path="/tap-to-pay" element={<NotFound />} /> */}
-        
-        {/* Koi bhi galat URL type kare toh ye dikhega */}
+        {/* Koi bhi galat URL type kare toh ye dikhega (Optional) */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>

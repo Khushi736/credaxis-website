@@ -1,0 +1,128 @@
+/* ==================================================
+   PRIVACY POLICY - PREMIUM CRED FINTECH THEME
+================================================== */
+
+.privacy-page {
+  background-color: #000;
+  color: #ededed;
+  min-height: 100vh;
+  padding: 100px 8% 120px 8%;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.privacy-container {
+  width: 100%;
+  max-width: 850px; /* Text ko zyada failne se rokega, readability high karega */
+  margin: 0 auto;
+}
+
+/* --- Header Styling --- */
+.privacy-header {
+  text-align: left; /* Left align jyada modern lagta hai */
+  margin-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+}
+
+.privacy-header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: lowercase;
+  letter-spacing: -1.5px;
+  color: #fff;
+  margin: 15px 0 10px 0;
+}
+
+.privacy-header p {
+  color: #71717a;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* --- Sections & Typography --- */
+.privacy-content section {
+  margin-bottom: 45px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Decorative left line */
+  transition: border-color 0.3s ease;
+}
+
+.privacy-content section:hover {
+  border-left-color: #fff; /* Hover par line bright white ho jayegi */
+}
+
+.privacy-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+.privacy-content p {
+  font-size: 1.05rem;
+  line-height: 1.8; /* Paragraph spacing balanced ki gayi hai */
+  color: #a1a1aa;
+  margin-bottom: 15px;
+}
+
+/* --- Structured Lists Styling --- */
+.privacy-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.privacy-list li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a1a1aa;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Nested lists (jaise a. ke andar i., ii.) */
+.privacy-list ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.privacy-list ul li {
+  font-size: 0.98rem;
+  color: #888891;
+  margin-bottom: 8px;
+}
+
+/* Links inside policy */
+.privacy-content a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.privacy-content a:hover {
+  color: #d4d4d8;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .privacy-page {
+    padding: 60px 5% 80px 5%;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .privacy-content section {
+    padding-left: 15px;
+  }
+}

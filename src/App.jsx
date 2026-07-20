@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import ScanAndPay from "./pages/ScanAndPay"; 
 import UpiOnCredit from "./pages/UpiOnCredit"; 
 import PrivacyPolicy from "./pages/PrivacyPolicy"; // <-- Privacy Policy yahan import ki hai
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
         {/* Footer link ke liye Privacy Policy route */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
         
         {/* Koi bhi galat URL type kare toh ye dikhega (Optional) */}
         {/* <Route path="*" element={<NotFound />} /> */}

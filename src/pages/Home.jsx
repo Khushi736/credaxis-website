@@ -772,7 +772,7 @@ function Home() {
               <h4 onClick={() => toggleCol(4)}>Policy</h4>
               <ul>
                 <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>privacy policy</Link></li>
-                <li>Terms & Conditions</li>
+                <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li>
                 <li>Security</li>
               </ul>
             </div>

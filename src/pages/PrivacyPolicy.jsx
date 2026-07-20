@@ -14,7 +14,7 @@ function PrivacyPolicy() {
         {/* Header / Branding */}
         <div className="privacy-header">
           <Link to="/" style={{ textDecoration: "none", display: "inline-block" }}>
-            <img src="/images/logo.png" alt="CredAxis Logo" style={{ width: "60px", height: "auto", marginBottom: "15px", filter: "brightness(0) invert(1)" }} />
+            <img src="/images/logo.png" alt="CredAxis Logo" style={{ width: "80px", height: "auto", marginBottom: "15px", filter: "brightness(0) invert(1)" }} />
           </Link>
           <h1>privacy policy</h1>
           <p>last updated on: [5th June 2026]</p>
@@ -26,7 +26,7 @@ function PrivacyPolicy() {
           <section>
             <h2>1. objective</h2>
             <p>
-              the privacy and security of personal information about you is our priority. we receive and store both personal and non-personal information about you when you visit and/or use our platform, including our mobile application ‘CASH by CRED’ (“Platform”). we protect this information by maintaining physical, electronic, and procedural safeguards that meet applicable laws. we train our employees in the proper handling of personal information.
+              the privacy and security of personal information about you is our priority. we receive and store both personal and non-personal information about you when you visit and/or use our platform, including our mobile application ‘CASH by MYCREDAXIS’ (“Platform”). we protect this information by maintaining physical, electronic, and procedural safeguards that meet applicable laws. we train our employees in the proper handling of personal information.
             </p>
             <p>
               this privacy policy describes our policies and procedures for collection, use, storage, processing, disclosure and protection of any information, including, but not limited to, personal information (“Personal Data”) provided by you as a user while using the platform and your privacy rights.
@@ -134,13 +134,13 @@ function PrivacyPolicy() {
               when you create a login ID and password or sign-in to the Platform, you are providing your consent to this Privacy Policy. with respect to the information collected by us to provide Services, you have the following rights available to you:
             </p>
             <p>
-              <strong>Right to withdraw consent:</strong> personal information collected will not be used for any purposes other than as mentioned herein. you may withdraw your consent for the use of the personal information at any time by deactivating your account on the Platform or by reaching out to the customer support at <a href="mailto:cashbycredsupport@cred.club" style={{ color: "#fff" }}>cashbycredsupport@cred.club</a>. withdrawing your consent will not affect the lawfulness of any processing we conducted prior to your withdrawal, nor will it affect processing of your personal data conducted in reliance on lawful processing grounds other than consent. in the event you choose to withdraw your consent for collecting and processing your personal data, we might not be able to provide you with certain products and services.
+              <strong>Right to withdraw consent:</strong> personal information collected will not be used for any purposes other than as mentioned herein. you may withdraw your consent for the use of the personal information at any time by deactivating your account on the Platform or by reaching out to the customer support at <a href="mailto:contact@bisanibrother.com" style={{ color: "#09d2ff" }}>contact@bisanibrother.com</a>. withdrawing your consent will not affect the lawfulness of any processing we conducted prior to your withdrawal, nor will it affect processing of your personal data conducted in reliance on lawful processing grounds other than consent. in the event you choose to withdraw your consent for collecting and processing your personal data, we might not be able to provide you with certain products and services.
             </p>
             <p>
               <strong>Right to rectify:</strong> we disclaim all liability and responsibility for the authenticity of the information provided by you to us. however, you have the right to review and correct, update and/or amend your information provided to us previously for it to be accurate, complete and up to date.
             </p>
             <p>
-              <strong>Right to deletion:</strong> you may request for deletion of your data by visiting the Contact Us page or by writing to us at <a href="mailto:cashbycredsupport@cred.club" style={{ color: "#fff" }}>cashbycredsupport@cred.club</a>.
+              <strong>Right to deletion:</strong> you may request for deletion of your data by visiting the Contact Us page or by writing to us at <a href="mailto:contact@bisanibrother.com" style={{ color: "#09d2ff" }}>contact@bisanibrother.com</a>.
             </p>
           </section>
 

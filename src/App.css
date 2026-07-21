@@ -471,23 +471,29 @@ body {
 .faq-item-desc { font-size: 1rem; line-height: 1.6; color: #a0a0a0; width: 100%; max-width: 100%; animation: fadeIn 0.4s ease; }
 
 .footer-content-wrapper { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: 40px; margin-top: 40px; border-top: 1px solid #111; width: 100%; gap: 40px; }
-.footer-logo-side img { width: 250px; height: auto; filter: brightness(0) invert(1); }
+.footer-logo-side img { width: 90px; height: auto; filter: brightness(0) invert(1); }
 .footer-grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 0; text-align: left; }
 .footer-col h4 { font-size: 1rem; text-transform: uppercase; color: #fff; margin-bottom: 0; letter-spacing: 2px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border-bottom: 1px solid #222; padding: 20px 0; }
 .brand-name {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.5px;
+  display: block;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
 .brand-desc {
   font-size: 0.85rem;
   color: #94a3b8;
-  line-height: 1.5;
-  margin: 0;
-}
-/* Default Plus (+) Icon */
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%; /* Mobile par full width lega taaki text cramped na lage */
+  margin-top: 8px;
+  margin-bottom: 0;
+}/* Default Plus (+) Icon */
+
 .footer-col h4::after { 
   content: "+"; 
   font-size: 1.5rem; 
@@ -706,8 +712,22 @@ body {
   .faq-item-title { font-size: 1.5rem; margin-bottom: 40px; }
   .faq-item-desc { font-size: 1.3rem; }
 
-  .footer-content-wrapper { flex-direction: row; gap: 600px; padding-top: 60px; margin-top: 60px; }
-  .footer-logo-side img { width: 450px; }
+  .footer-content-wrapper { flex-direction: row; gap: 500px; padding-top: 60px; margin-top: 60px; }
+  .footer-logo-side img { width: 100px; }
+  .footer-brand-col {
+    max-width: 350px; 
+  }
+  .brand-desc {
+    margin-top: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%; /* Parent ki width properly inherit karega */
+  }
+
+  /* .footer-logo-side.img img { 
+    width: 200px; 
+    margin-bottom: -15px;
+  } */
   .footer-grid { grid-template-columns: repeat(2, auto); column-gap: 140px; row-gap: 50px; text-align: left; }
   .footer-col h4 { cursor: default; border-bottom: none; padding: 0; margin-bottom: 20px; display: block; }
   .footer-col h4::after {
@@ -881,3 +901,4 @@ body {
 .nav-glass-widget.expanded .widget-inner {
   transform: rotateY(180deg); /* Top-right se aate waqt ye isko flip karwayega */
 }
+

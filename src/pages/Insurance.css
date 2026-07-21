@@ -1,0 +1,322 @@
+/* =========================================
+   INSURANCE PAGE CSS (STRICTLY SCOPED)
+========================================= */
+
+.insurance-page-wrapper {
+  background-color: #fcfcfc;
+  color: #212529;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.insurance-page-wrapper .about-studio-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.insurance-page-wrapper .about-studio-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.insurance-page-wrapper .nav-logo-img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.insurance-page-wrapper .nav-logo-img:hover {
+  opacity: 0.85;
+}
+
+.insurance-page-wrapper .about-studio-links {
+  display: flex;
+  gap: 30px;
+}
+
+.insurance-page-wrapper .about-studio-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.insurance-page-wrapper .about-studio-links a:hover {
+  color: #fed136;
+}
+
+/* Hero Section */
+.insurance-page-wrapper .insurance-page-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111214 0%, #1c2b36 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 6vw 0 6vw;
+  overflow: hidden;
+}
+
+.insurance-page-wrapper .hero-content-wrapper {
+  flex: 1;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  padding-right: 40px;
+}
+
+.insurance-page-wrapper .studio-welcome-badge {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fed136;
+  background: rgba(254, 209, 54, 0.1);
+  border: 1px solid rgba(254, 209, 54, 0.2);
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(5px);
+}
+
+.insurance-page-wrapper .studio-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.insurance-page-wrapper .text-highlight {
+  color: #fed136;
+}
+
+.insurance-page-wrapper .hero-subtitle {
+  font-size: 1.1rem;
+  color: #a0aab2;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.insurance-page-wrapper .studio-cta-button {
+  background-color: #fed136;
+  color: #111;
+  padding: 16px 42px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(254, 209, 54, 0.2);
+}
+
+.insurance-page-wrapper .studio-cta-button:hover {
+  background-color: #fec503;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(254, 209, 54, 0.4);
+}
+
+.insurance-page-wrapper .hero-image-wrapper {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.insurance-page-wrapper .hero-side-image {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* Insurance Cards Grid Section */
+.insurance-page-wrapper .insurance-grid-section {
+  padding: 100px 20px;
+  background-color: #fbfbfb;
+}
+
+.insurance-page-wrapper .studio-section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.insurance-page-wrapper .studio-section-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.insurance-page-wrapper .studio-section-sub {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.insurance-page-wrapper .insurance-swipe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 20px 10px;
+}
+
+.insurance-page-wrapper .insurance-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.insurance-page-wrapper .insurance-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(254, 209, 54, 0.4);
+}
+
+.insurance-page-wrapper .insurance-card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f1f3f5;
+}
+
+.insurance-page-wrapper .insurance-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.insurance-page-wrapper .insurance-card:hover .insurance-card-img {
+  transform: scale(1.08);
+}
+
+.insurance-page-wrapper .insurance-info {
+  padding: 30px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.insurance-page-wrapper .insurance-info h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.insurance-page-wrapper .insurance-info p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.insurance-page-wrapper .insurance-apply-btn {
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.insurance-page-wrapper .insurance-apply-btn:hover {
+  background-color: #fed136;
+  color: #111827;
+  box-shadow: 0 6px 15px rgba(254, 209, 54, 0.3);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .insurance-page-wrapper .insurance-page-hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .insurance-page-wrapper .hero-content-wrapper {
+    max-width: 100%;
+    padding-right: 0;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .insurance-page-wrapper .hero-image-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .insurance-page-wrapper .insurance-swipe-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 30px;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .insurance-page-wrapper .insurance-swipe-container::-webkit-scrollbar { display: none; }
+  
+  .insurance-page-wrapper .insurance-card {
+    min-width: 85vw;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+  }
+}

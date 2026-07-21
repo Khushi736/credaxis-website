@@ -10,6 +10,9 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import Security from "./pages/Security";
 import About from "./pages/About";
 import NotFound from './pages/NotFound';
+import CreditCards from './pages/CreditCards';
+import Loans from './pages/Loans';
+import Insurance from './pages/Insurance';
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -45,6 +48,9 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/about" element={<About />} />
         <Route path="/not-found" element={<NotFound />} />
+        <Route path="/credit-cards" element={<CreditCards />} />
+        <Route path="/loans" element={<Loans />} />
+        <Route path="/insurance" element={<Insurance />} />
 
       </Routes>
     </Router>

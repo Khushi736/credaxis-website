@@ -1,210 +1,441 @@
-.saas-about-wrapper {
-  background-color: #0b0f19;
-  color: #f8fafc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  padding: 80px 20px;
-  min-height: 100vh;
-  line-height: 1.6;
+/* =========================================
+   STUDIO STYLE ABOUT PAGE CSS (Light Theme)
+========================================= */
+
+.about-studio-wrapper {
+  background-color: #ffffff;
+  color: #212529;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-.saas-about-hero {
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-  text-align: center;
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+.about-studio-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-.saas-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  font-size: 0.85rem;
+.about-studio-logo a {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fed136;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+}
+
+.about-studio-links {
+  display: flex;
+  gap: 30px;
+}
+
+.about-studio-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #38bdf8;
-  background-color: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 20px;
-  margin-bottom: 20px;
+  transition: color 0.2s ease;
 }
 
-.saas-hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-  color: #ffffff;
+.about-studio-links a:hover {
+  color: #fed136;
 }
 
-.saas-gradient-text {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.saas-hero-subtitle {
-  font-size: 1.15rem;
-  color: #94a3b8;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Stats Section */
-.saas-stats-section {
-  max-width: 1100px;
-  margin: 0 auto 80px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.saas-stat-card {
-  background: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 30px;
+/* =========================================
+   HERO SECTION & ANIMATIONS
+========================================= */
+.about-studio-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), 
+              url('/images/about.png') center/cover no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  backdrop-filter: blur(10px);
+  padding: 80px 20px 0 20px;
+  overflow: hidden;
 }
 
-.saas-stat-card h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #38bdf8;
-  margin-bottom: 8px;
-}
-
-.saas-stat-card p {
-  font-size: 0.95rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Content Grid */
-.saas-content-section {
-  max-width: 1100px;
-  margin: 0 auto 80px auto;
-}
-
-.saas-content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.saas-text-block {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 40px;
-  border-radius: 16px;
-}
-
-.saas-text-block h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+.studio-welcome-badge {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease-out forwards;
 }
 
-.saas-text-block p {
-  color: #94a3b8;
-  font-size: 1rem;
-}
-
-/* Values Section */
-.saas-values-section {
-  max-width: 1100px;
-  margin: 0 auto 80px auto;
-  text-align: center;
-}
-
-.saas-section-title {
-  font-size: 2rem;
-  font-weight: 700;
+.studio-hero-title {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
   margin-bottom: 40px;
-  color: #ffffff;
+  text-transform: uppercase;
+  animation: slideInFromRight 1s ease-out forwards;
 }
 
-.saas-values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+.studio-cta-button {
+  background-color: #fed136;
+  color: #ffffff;
+  padding: 16px 38px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.studio-cta-button:hover {
+  background-color: #fec503;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(254, 209, 54, 0.4);
+}
+
+/* =========================================
+   TIMELINE SECTION & HEADING
+========================================= */
+.studio-timeline-section {
+  padding: 120px 20px;
+  background-color: #ffffff;
+}
+
+.studio-section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.studio-section-heading h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.studio-section-sub {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.studio-timeline-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  position: relative;
+  padding-top: 10px;
+}
+
+/* Center vertical line offset below the heading */
+.studio-timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: #e9ecef;
+}
+
+.studio-timeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.studio-timeline-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.studio-timeline-text {
+  width: 42%;
+  text-align: right;
+}
+
+.studio-timeline-row.reverse .studio-timeline-text {
   text-align: left;
 }
 
-.saas-value-item {
-  background: rgba(30, 41, 59, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 12px;
-}
-
-.saas-value-item h4 {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.saas-value-item p {
-  color: #94a3b8;
-  font-size: 0.95rem;
-}
-
-/* CTA Section */
-.saas-cta-section {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.2) 0%, rgba(15, 23, 42, 0.8) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  padding: 60px 40px;
-  border-radius: 20px;
-}
-
-.saas-cta-section h2 {
-  font-size: 2rem;
+.studio-year {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 12px;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.saas-cta-section p {
-  color: #94a3b8;
-  margin-bottom: 30px;
+.studio-timeline-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 15px;
 }
 
-.saas-cta-buttons {
+.studio-timeline-text p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+.studio-timeline-image {
+  width: 42%;
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
-.saas-btn-primary {
-  background-color: #38bdf8;
-  color: #0b0f19;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 8px;
+/* Circular Badges / Photos */
+.studio-circle-badge {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  border: 7px solid #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.studio-badge-logo {
+  width: 80px;
+  height: auto;
+  filter: brightness(0);
+}
+
+.studio-circle-badge span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #495057;
+  text-align: center;
+}
+
+/* Final Yellow Circle */
+.studio-timeline-end {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.studio-final-badge {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #fed136;
+  border: 7px solid #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+.studio-services-section {
+  padding: 100px 20px 120px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.studio-services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.studio-services-subtitle {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 70px;
+}
+
+.studio-services-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.studio-service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.service-icon-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #fed136;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.studio-service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #212529;
+}
+
+.studio-service-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile Screens)
+========================================= */
+@media (max-width: 768px) {
+  .studio-timeline-container::before {
+    left: 30px;
+  }
+
+  .studio-timeline-row, 
+  .studio-timeline-row.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 70px;
+    gap: 20px;
+  }
+
+  .studio-timeline-text, 
+  .studio-timeline-row.reverse .studio-timeline-text {
+    text-align: left;
+    width: 100%;
+  }
+
+  .studio-timeline-image {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .about-studio-nav {
+    padding: 20px;
+  }
+}
+/* Circular badge container for images without breaking responsiveness */
+.custom-img-badge {
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Image styling to ensure it fits the circular container cleanly */
+.timeline-rounded-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+
+
+.about-studio-logo a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: background-color 0.2s;
 }
 
-.saas-btn-primary:hover {
-  background-color: #0ea5e9;
+.nav-logo-img {
+  height: 65px; /* Logo ki height yahan se adjust kar sakte hain */
+  width: auto;   /* Width auto rakhne se logo ka aspect ratio maintain rahega */
+  object-fit: contain;
+  transition: opacity 0.2s ease;
 }
 
-.saas-btn-secondary {
-  background-color: transparent;
-  color: #f8fafc;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: border-color 0.2s;
+.nav-logo-img:hover {
+  opacity: 0.85;
 }
 
-.saas-btn-secondary:hover {
-  border-color: #38bdf8;
+/* Mobile screen ke liye responsive adjustment */
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 35px;
+  }
 }

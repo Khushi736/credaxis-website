@@ -348,7 +348,7 @@ body {
 .story-section, .deserve-section, .upgrade-section, .faq-section {
   padding: 60px 20px;
   text-align: center;
-  background: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
 }
 
 .story-heading { font-size: 1.5rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 50px; }
@@ -397,7 +397,7 @@ body {
   justify-content: center; 
   overflow: hidden; 
   padding: 60px 15px; 
-  background: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
 }
 
 .security-content { 
@@ -474,7 +474,19 @@ body {
 .footer-logo-side img { width: 250px; height: auto; filter: brightness(0) invert(1); }
 .footer-grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 0; text-align: left; }
 .footer-col h4 { font-size: 1rem; text-transform: uppercase; color: #fff; margin-bottom: 0; letter-spacing: 2px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border-bottom: 1px solid #222; padding: 20px 0; }
+.brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
 
+.brand-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
 /* Default Plus (+) Icon */
 .footer-col h4::after { 
   content: "+"; 
@@ -511,7 +523,7 @@ body {
 /* =========================================
    SPATIAL UI (Mobile First)
 ========================================= */
-.spatial-ui-section { width: 100%; min-height: 50vh; background: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 60px 20px; overflow: hidden; perspective: 1500px; text-align: center; }
+.spatial-ui-section { width: 100%; min-height: 50vh;  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 60px 20px; overflow: hidden; perspective: 1500px; text-align: center; }
 .spatial-text-content { color: #fff; z-index: 10;}
 .spatial-text-content h2 { font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
 .spatial-text-content p { color: #a1a1aa; font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.6; max-width: 100%; }
@@ -727,7 +739,7 @@ body {
       TRUSTED SECTION (Mobile First)
 ========================================== */
 .trusted-section {
-  background-color: #000;
+  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
   color: #f0f2e8;
   padding: 80px 20px;
   width: 100%;
@@ -816,3 +828,56 @@ body {
   }
 }
 
+/* =========================================
+   ULTIMATE WIDGET CENTERING FIX 
+   (Paste at the very bottom of your CSS file)
+========================================= */
+
+/* 1. Closed State (Start Position - Top Right) */
+.nav-glass-widget {
+  top: 40px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform: translate(0, 0) !important;
+  /* Yeh line top-right se aane ka smooth rasta banati hai */
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important; 
+}
+
+/* Desktop Closed State */
+@media (min-width: 768px) {
+  .nav-glass-widget {
+    top: 55px !important;
+    right: 50px !important;
+  }
+}
+
+/* 2. Expanded State (Moves smoothly to Center) */
+.nav-glass-widget.expanded {
+  top: 50% !important;
+  right: 50% !important; /* 'left' ki jagah 'right' use kiya taaki transition break na ho */
+  left: auto !important;
+  transform: translate(50%, -50%) !important; /* Right: 50% + Translate: 50% = Perfect Center */
+  
+  /* 0.8s ka delay diya hai taaki pehle ye center aaye, uske baad up-down float karna shuru kare */
+  animation: floatCardCenteredRight 4s ease-in-out infinite forwards !important;
+  animation-delay: 0.8s !important; 
+}
+
+/* 3. The Floating Animation */
+@keyframes floatCardCenteredRight {
+  0%, 100% { 
+    transform: translate(50%, -50%) translateY(0); 
+  }
+  50% { 
+    transform: translate(50%, -50%) translateY(-10px); 
+  }
+}
+
+/* 4. Ensure Widget Inner Flip works perfectly */
+.widget-inner {
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-glass-widget.expanded .widget-inner {
+  transform: rotateY(180deg); /* Top-right se aate waqt ye isko flip karwayega */
+}

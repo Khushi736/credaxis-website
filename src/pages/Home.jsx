@@ -729,16 +729,17 @@ function Home() {
         {/* FAQ ke neeche footer start */}
         <div className="footer-content-wrapper reveal">
           
-          {/* Left: Logo */}
-          <div className="logo">
-            <img src="/images/logos.png" alt="MyCredAxis Logo" style={{ width: "150px", height: "auto" }} />
-            <span className="brand-name" >
-              MycredAxis
+          {/* Left: Logo & Brand Section */}
+          <div className="footer-brand-col">
+            <div className="footer-logo-side img">
+              <img src="/images/logos.png" alt="MyCredAxis Logo" />
+            </div>
+            <span className="brand-name">
+              MyCredAxis
             </span>
-            <p className="brand-desc" >
+            <p className="brand-desc">
               Next-generation institutional grade financial intelligence and high-throughput transaction platform.
             </p>
-
           </div>
 
           <div className="footer-grid">
@@ -747,9 +748,9 @@ function Home() {
             <div className={`footer-col ${activeCol === 1 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(1)}>Upgrades</h4>
               <ul>
-                <li>Credit Cards</li>
-                <li>Loans</li>
-                <li>Insurance</li>
+                <li><Link to="/credit-cards"  style={{ color: "inherit", textDecoration: "none" }}>Credit Cards</Link></li>
+                <li><Link to="/loans"  style={{ color: "inherit", textDecoration: "none" }}>Loans</Link></li>
+                <li><Link to="/insurance"  style={{ color: "inherit", textDecoration: "none" }}>Insurance</Link></li>
               </ul>
             </div>
 

@@ -1,0 +1,342 @@
+/* =========================================
+   CREDIT CARDS PAGE CSS (STRICTLY SCOPED)
+   Har class ke aage '.cards-page-wrapper' laga hai taaki Home page break na ho!
+========================================= */
+
+.cards-page-wrapper {
+  background-color: #ffffff;
+  color: #212529;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   1. NAVIGATION BAR (Scoped)
+========================================= */
+.cards-page-wrapper .about-studio-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.cards-page-wrapper .about-studio-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cards-page-wrapper .nav-logo-img {
+  height: 65px; 
+  width: auto; 
+  object-fit: contain; 
+  transition: opacity 0.2s ease;
+}
+
+.cards-page-wrapper .nav-logo-img:hover {
+  opacity: 0.85; 
+}
+
+.cards-page-wrapper .about-studio-links {
+  display: flex;
+  gap: 30px;
+}
+
+.cards-page-wrapper .about-studio-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.cards-page-wrapper .about-studio-links a:hover {
+  color: #fed136;
+}
+
+/* =========================================
+   2. HERO SECTION (VIDEO BACKGROUND) - Scoped
+========================================= */
+.cards-page-wrapper .cards-page-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 0 20px;
+  overflow: hidden;
+  background-color: #1a1a1a; 
+}
+
+.cards-page-wrapper .hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0;
+}
+
+.cards-page-wrapper .hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); 
+  z-index: 1;
+}
+
+.cards-page-wrapper .hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-page-wrapper .studio-welcome-badge {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #ffffff;
+  margin-bottom: 20px;
+  animation: ccSlideInFromLeft 1s ease-out forwards;
+}
+
+.cards-page-wrapper .studio-hero-title {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  animation: ccSlideInFromRight 1s ease-out forwards;
+}
+
+.cards-page-wrapper .studio-cta-button {
+  background-color: #fed136;
+  color: #ffffff;
+  padding: 16px 38px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: ccFadeInUp 1.2s ease-out forwards;
+}
+
+.cards-page-wrapper .studio-cta-button:hover {
+  background-color: #fec503;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(254, 209, 54, 0.4);
+}
+
+/* =========================================
+   3. GRID & HEADING SECTION - Scoped
+========================================= */
+.cards-page-wrapper .cards-grid-section {
+  padding: 120px 20px;
+  background-color: #ffffff;
+}
+
+.cards-page-wrapper .studio-section-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.cards-page-wrapper .studio-section-heading h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.cards-page-wrapper .studio-section-sub {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* =========================================
+   4. CARD CONTAINER & STYLING - Scoped
+========================================= */
+.cards-page-wrapper .cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.cards-page-wrapper .cc-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #f1f3f5;
+}
+
+.cards-page-wrapper .cc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.cards-page-wrapper .cc-card-visual {
+  width: 90%;
+  height: 190px;
+  margin: -30px auto 20px auto;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  position: relative;
+  top: 50px; 
+}
+
+.cards-page-wrapper .cc-info {
+  padding: 60px 25px 30px 25px;
+  text-align: center;
+}
+
+.cards-page-wrapper .blue-card { background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC); }
+.cards-page-wrapper .gold-card { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7); color: #333; }
+.cards-page-wrapper .dark-card { background: linear-gradient(135deg, #2b2b2b, #1a1a1a); }
+
+.cards-page-wrapper .cc-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards-page-wrapper .cc-top-row h4 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.cards-page-wrapper .cc-top-row i {
+  font-size: 1.3rem;
+  transform: rotate(90deg);
+}
+
+.cards-page-wrapper .cc-chip {
+  width: 40px;
+  height: 25px;
+  background: #ffcc00;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.cards-page-wrapper .cc-number {
+  font-family: monospace;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 15px 0 0 0;
+}
+
+.cards-page-wrapper .cc-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cards-page-wrapper .cc-name {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cards-page-wrapper .cc-logo-icon {
+  font-size: 1.8rem;
+}
+
+.cards-page-wrapper .cc-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+.cards-page-wrapper .cc-info p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.cards-page-wrapper .cc-apply-btn {
+  background-color: transparent;
+  color: #212529;
+  border: 2px solid #fed136;
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cards-page-wrapper .cc-apply-btn:hover {
+  background-color: #fed136;
+  color: #ffffff;
+}
+
+/* =========================================
+   5. KEYFRAMES (Renamed for uniqueness)
+========================================= */
+@keyframes ccSlideInFromLeft {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ccSlideInFromRight {
+  0% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ccFadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   6. RESPONSIVE ADJUSTMENTS - Scoped
+========================================= */
+@media (max-width: 768px) {
+  .cards-page-wrapper .about-studio-nav {
+    padding: 20px;
+  }
+  .cards-page-wrapper .nav-logo-img {
+    height: 35px; 
+  }
+}

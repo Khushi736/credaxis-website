@@ -1,0 +1,548 @@
+/* =========================================
+   LOANS PAGE CSS (STRICTLY SCOPED)
+   Har class ke aage '.loans-page-wrapper' laga hai taaki baaki pages ka design break na ho!
+========================================= */
+
+.loans-page-wrapper {
+  background-color: #fcfcfc;
+  color: #212529;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   1. NAVIGATION BAR (Scoped)
+========================================= */
+.loans-page-wrapper .about-studio-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.loans-page-wrapper .about-studio-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.loans-page-wrapper .nav-logo-img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.loans-page-wrapper .nav-logo-img:hover {
+  opacity: 0.85;
+}
+
+.loans-page-wrapper .about-studio-links {
+  display: flex;
+  gap: 30px;
+}
+
+.loans-page-wrapper .about-studio-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.loans-page-wrapper .about-studio-links a:hover {
+  color: #fed136;
+}
+
+/* =========================================
+   2. HERO SECTION (Premium Split Design - Scoped)
+========================================= */
+.loans-page-wrapper .loans-page-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111214 0%, #8aa1cf 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 6vw 0 6vw; 
+  overflow: hidden;
+}
+
+.loans-page-wrapper .hero-content-wrapper {
+  flex: 1;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  padding-right: 40px; 
+}
+
+.loans-page-wrapper .studio-welcome-badge {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fed136;
+  background: rgba(254, 209, 54, 0.1);
+  border: 1px solid rgba(254, 209, 54, 0.2);
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(5px);
+  animation: loansSlideInLeft 1s ease-out forwards;
+}
+
+.loans-page-wrapper .studio-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: loansSlideInRight 1s ease-out forwards;
+}
+
+.loans-page-wrapper .text-highlight {
+  color: #fed136;
+}
+
+.loans-page-wrapper .hero-subtitle {
+  font-size: 1.1rem;
+  color: #a0aab2;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+  animation: loansFadeInUp 1s ease-out forwards;
+}
+
+.loans-page-wrapper .studio-cta-button {
+  background-color: #fed136;
+  color: #111; 
+  padding: 16px 42px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px; 
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(254, 209, 54, 0.2);
+  animation: loansFadeInUp 1.2s ease-out forwards;
+}
+
+.loans-page-wrapper .studio-cta-button:hover {
+  background-color: #fec503;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(254, 209, 54, 0.4);
+}
+
+.loans-page-wrapper .hero-image-wrapper {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  animation: loansFadeInUp 1.2s ease-out forwards;
+}
+
+.loans-page-wrapper .hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(254,209,54,0.15) 0%, rgba(0,0,0,0) 65%);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.loans-page-wrapper .hero-side-image {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: cover; 
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* =========================================
+   3. LOANS GRID SECTION (Updated Premium Cards - Scoped)
+========================================= */
+.loans-page-wrapper .loans-grid-section {
+  padding: 100px 20px;
+  background-color: #fbfbfb;
+}
+
+.loans-page-wrapper .studio-section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.loans-page-wrapper .studio-section-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.loans-page-wrapper .studio-section-sub {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* =========================================
+   NEW HALF-IMAGE LOAN CARDS DESIGN (Scoped)
+========================================= */
+
+.loans-page-wrapper .loans-swipe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+  padding: 20px 10px;
+}
+
+.loans-page-wrapper .loan-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Taaki image corners card ke sath round ho jayein */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.loans-page-wrapper .loan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(254, 209, 54, 0.4);
+}
+
+/* Half Image Wrapper */
+.loans-page-wrapper .loan-card-image-wrapper {
+  width: 100%;
+  height: 200px; /* Card ka upper half portion */
+  overflow: hidden;
+  background-color: #f1f3f5;
+}
+
+.loans-page-wrapper .loan-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.loans-page-wrapper .loan-card:hover .loan-card-img {
+  transform: scale(1.08); /* Hover par subtle zoom effect */
+}
+
+/* Lower Info Area (Title & Description only) */
+.loans-page-wrapper .loan-info {
+  padding: 30px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.loans-page-wrapper .loan-info h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.loans-page-wrapper .loan-info p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Apply Button */
+/* .loans-page-wrapper .loan-apply-btn {
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto; 
+}
+
+.loans-page-wrapper .loan-apply-btn:hover {
+  background-color: #fed136;
+  color: #111827;
+  box-shadow: 0 6px 15px rgba(254, 209, 54, 0.3);
+} */
+
+/* Mobile Swipe Support for new cards */
+@media (max-width: 900px) {
+  .loans-page-wrapper .loan-card {
+    min-width: 85vw;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+  }
+}
+
+/* =========================================
+   4. WHY BORROW WITH US SECTION (Scoped)
+========================================= */
+.loans-page-wrapper .why-borrow-section {
+  padding: 100px 20px 120px 20px;
+  background-color: #ffffff;
+}
+
+.loans-page-wrapper .why-borrow-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.loans-page-wrapper .why-borrow-content {
+  flex: 1;
+}
+
+.loans-page-wrapper .why-borrow-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.loans-page-wrapper .why-borrow-subtitle {
+  font-size: 1.05rem;
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.loans-page-wrapper .why-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 40px;
+}
+
+.loans-page-wrapper .why-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.loans-page-wrapper .why-feature-icon {
+  color: #28a745; 
+  font-size: 1.5rem;
+  margin-top: -2px;
+}
+
+.loans-page-wrapper .why-feature-text h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 6px;
+}
+
+.loans-page-wrapper .why-feature-text p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.loans-page-wrapper .why-borrow-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.loans-page-wrapper .why-image-backdrop {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #eafbf7;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.loans-page-wrapper .why-main-image {
+  position: relative;
+  z-index: 2;
+  width: 95%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  object-fit: cover;
+}
+
+.loans-page-wrapper .why-floating-badge {
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
+  z-index: 3;
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: loansFadeInUp 1s ease-out forwards;
+}
+
+.loans-page-wrapper .badge-icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: #20c997;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.loans-page-wrapper .badge-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.loans-page-wrapper .badge-text-content strong {
+  font-size: 1.1rem;
+  color: #212529;
+  font-weight: 700;
+}
+
+.loans-page-wrapper .badge-text-content span {
+  font-size: 0.8rem;
+  color: #20c997;
+  font-weight: 600;
+}
+
+/* =========================================
+   5. UNIQUE KEYFRAME ANIMATIONS FOR LOANS
+========================================= */
+@keyframes loansSlideInLeft { 0% { opacity: 0; transform: translateX(-100px); } 100% { opacity: 1; transform: translateX(0); } }
+@keyframes loansSlideInRight { 0% { opacity: 0; transform: translateX(100px); } 100% { opacity: 1; transform: translateX(0); } }
+@keyframes loansFadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   6. RESPONSIVE MEDIA QUERIES
+========================================= */
+@media (max-width: 992px) {
+  .loans-page-wrapper .loans-page-hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .loans-page-wrapper .hero-content-wrapper {
+    max-width: 100%;
+    padding-right: 0;
+    align-items: center; 
+    margin-bottom: 50px;
+  }
+  
+  .loans-page-wrapper .hero-image-wrapper {
+    max-width: 90%;
+  }
+
+  .loans-page-wrapper .why-borrow-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .loans-page-wrapper .why-borrow-image-wrapper {
+    width: 100%;
+    justify-content: center;
+    padding-right: 20px; 
+  }
+  
+  .loans-page-wrapper .why-image-backdrop {
+    right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .loans-page-wrapper .loans-swipe-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 30px; 
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .loans-page-wrapper .loans-swipe-container::-webkit-scrollbar { display: none; }
+  .loans-page-wrapper .loans-swipe-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .loans-page-wrapper .loan-card {
+    min-width: 85vw; 
+    scroll-snap-align: center;
+    flex: 0 0 auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .loans-page-wrapper .about-studio-nav {
+    padding: 20px;
+  }
+  
+  .loans-page-wrapper .nav-logo-img {
+    height: 35px;
+  }
+  
+  .loans-page-wrapper .why-features-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .loans-page-wrapper .why-floating-badge {
+    bottom: -20px;
+    right: 10px;
+    padding: 12px 20px;
+  }
+}

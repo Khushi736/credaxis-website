@@ -11,24 +11,25 @@ const About = () => {
   return (
     <div className="about-studio-wrapper">
       {/* Top Header / Navigation Bar */}
-      <nav className="about-studio-nav">
-        <div className="about-studio-logo">
-          <Link to="/">
-            <img src="/images/logo.png" alt="MyCredAxis Logo" className="nav-logo-img" />
-          </Link>
-        </div>
-        <div className="about-studio-links">
-          <Link to="/">Home</Link>
-          <Link to="/security">Security</Link>
-        </div>
-      </nav>
-
-      {/* Hero / Studio Intro Section */}
       <header className="about-studio-hero">
-        <span className="studio-welcome-badge slide-in-left">Welcome To myCredAxis!</span>
-        <h1 className="studio-hero-title slide-in-right">IT'S NICE TO MEET YOU</h1>
-        {/* Fix 2: <Link> ki jagah <a> tag lagaya hash link ke liye */}
-        <a href="#services" className="studio-cta-button fade-in-up">Our Services</a>
+        <div className="about-studio-nav">
+          <div className="about-studio-logo">
+            <Link to="/">
+              <img src="/images/logo.png" alt="MyCredAxis Logo" />
+              <span>MyCredAxis</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Reference image ke jaisa layout */}
+        <div className="studio-hero-content">
+          <h1 className="hero-main-title">
+            Who We Are 
+          </h1>
+          <p className="hero-subtitle-text">
+            A high-performance digital financial platform specializing in simplifying everyday payments, credit services, and secure transactions. We build experiences that don't just exist—they resonate.
+          </p>
+        </div>
       </header>
 
       {/* Story / Timeline Sections (Matching the uploaded video style) */}

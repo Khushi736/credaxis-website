@@ -11,7 +11,7 @@ const Insurance = () => {
   return (
     <div className="insurance-page-wrapper">
       {/* Top Navigation Bar */}
-      <nav className="about-studio-nav">
+      {/* <nav className="about-studio-nav">
         <div className="about-studio-logo">
           <Link to="/">
             <img src="/images/logo.png" alt="MyCredAxis Logo" className="nav-logo-img" />
@@ -24,7 +24,7 @@ const Insurance = () => {
           <Link to="/loans">Loans</Link>
           <Link to="/insurance">Insurance</Link>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <header className="insurance-page-hero">
@@ -40,7 +40,7 @@ const Insurance = () => {
           <a href="#insurance-options" className="studio-cta-button">Explore Policies</a>
         </div>
         <div className="hero-image-wrapper">
-          <img src="/images/insurance-hero.jpg" alt="Insurance Protection" className="hero-side-image" />
+          <img src="/images/insurance.png" alt="Insurance Protection" className="hero-side-image" />
         </div>
       </header>
 
@@ -56,7 +56,7 @@ const Insurance = () => {
           {/* 1. Health Insurance */}
           <div className="insurance-card">
             <div className="insurance-card-image-wrapper">
-              <img src="/images/health-insurance.jpg" alt="Health Insurance" className="insurance-card-img" />
+              <img src="/images/health.jpeg" alt="Health Insurance" className="insurance-card-img" />
             </div>
             <div className="insurance-info">
               <h3>Health Insurance</h3>
@@ -68,7 +68,7 @@ const Insurance = () => {
           {/* 2. Life Insurance */}
           <div className="insurance-card">
             <div className="insurance-card-image-wrapper">
-              <img src="/images/life-insurance.jpg" alt="Life Insurance" className="insurance-card-img" />
+              <img src="/images/lifeins.jpg" alt="Life Insurance" className="insurance-card-img" />
             </div>
             <div className="insurance-info">
               <h3>Life Insurance</h3>
@@ -80,7 +80,7 @@ const Insurance = () => {
           {/* 3. Car Insurance */}
           <div className="insurance-card">
             <div className="insurance-card-image-wrapper">
-              <img src="/images/car-insurance.jpg" alt="Car Insurance" className="insurance-card-img" />
+              <img src="/images/cins.jpg" alt="Car Insurance" className="insurance-card-img" />
             </div>
             <div className="insurance-info">
               <h3>Car Insurance</h3>
@@ -89,20 +89,83 @@ const Insurance = () => {
             </div>
           </div>
 
-          {/* 4. Home Insurance */}
-          <div className="insurance-card">
-            <div className="insurance-card-image-wrapper">
-              <img src="/images/home-insurance.jpg" alt="Home Insurance" className="insurance-card-img" />
-            </div>
-            <div className="insurance-info">
-              <h3>Home Insurance</h3>
-              <p>Safeguard your structure and valuable belongings against natural calamities, theft, and accidental damages.</p>
-              <button className="insurance-apply-btn">Get Policy</button>
-            </div>
-          </div>
-
         </div>
       </section>
+
+      {/* Inspiring Quotes & Trust Section */}
+      <section className="insurance-quotes-section">
+        <div className="quotes-container">
+          <div className="studio-section-heading">
+            <h2>Words of Wisdom</h2>
+            <p className="studio-section-sub">Why securing your family's future today matters the most.</p>
+          </div>
+
+          <div className="quotes-grid">
+            <div className="quote-card">
+              <div className="quote-icon">“</div>
+              <p className="quote-text">
+                "Insurance is like a parachute. If you don't have it when you need it, you'll never need it again."
+              </p>
+              <span className="quote-author">— Thane Keenan</span>
+            </div>
+
+            <div className="quote-card">
+              <div className="quote-icon">“</div>
+              <p className="quote-text">
+                "The best time to plant a tree was 20 years ago. The second best time is now. Same goes for financial protection."
+              </p>
+              <span className="quote-author">— Proverb / Financial Wisdom</span>
+            </div>
+
+            <div className="quote-card">
+              <div className="quote-icon">“</div>
+              <p className="quote-text">
+                "It is better to have insurance and not need it, than to need insurance and not have it."
+              </p>
+              <span className="quote-author">— Sir Winston Churchill</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Inline Wavy Footer Section */}
+      <footer className="insurance-inline-footer">
+        <div className="footer-wave-shape">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,50 L1200,120 L0,120 Z" fill="#111214"></path>
+          </svg>
+        </div>
+
+        <div className="insurance-footer-container">
+          <div className="insurance-footer-row">
+            
+            {/* Left Column: Logo & Paragraph */}
+            <div className="footer-brand-info">
+              <Link to="/">
+                <img src="/images/logo.png" alt="MyCredAxis Logo" className="footer-logo" />
+              </Link>
+              <p>Smart loans, credit cards & comprehensive insurance solutions.</p>
+            </div>
+
+            {/* Middle Column: Listed Links */}
+            <div className="footer-nav-links">
+              {/* <h4>Quick Links</h4> */}
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/credit-cards">Credit Cards</Link></li>
+                <li><Link to="/loans">Loans</Link></li>
+                <li><Link to="/insurance">Insurance</Link></li>
+              </ul>
+            </div>
+
+            {/* Right Column: Copyright */}
+            <div className="footer-copyright">
+              <p>&copy; {new Date().getFullYear()} MyCredAxis.<br />All rights reserved.</p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

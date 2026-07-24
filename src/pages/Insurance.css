@@ -3,7 +3,7 @@
 ========================================= */
 
 .insurance-page-wrapper {
-  background-color: #fcfcfc;
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
   color: #212529;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
@@ -59,27 +59,45 @@
   color: #fed136;
 }
 
-/* Hero Section */
+/* Hero Section with Background Image */
 .insurance-page-wrapper .insurance-page-hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #111214 0%, #1c2b36 100%);
+  
+  /* Background image set kar di hai */
+  background-image: url('/images/insurance.png');
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 100px 6vw 0 6vw;
   overflow: hidden;
 }
 
+/* SMART OVERLAY: Left side dark (text ke liye), Right side transparent (image ke liye) */
+.insurance-page-wrapper .insurance-page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(17, 18, 20, 0.75) 0%, rgba(17, 18, 20, 0.55) 50%, rgba(17, 18, 20, 0.2) 100%);
+  z-index: 1;
+}
+
 .insurance-page-wrapper .hero-content-wrapper {
   flex: 1;
-  max-width: 48%;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   z-index: 2;
-  padding-right: 40px;
+  position: relative;
 }
 
 .insurance-page-wrapper .studio-welcome-badge {
@@ -117,7 +135,6 @@
   color: #a0aab2;
   line-height: 1.6;
   margin-bottom: 40px;
-  max-width: 90%;
 }
 
 .insurance-page-wrapper .studio-cta-button {
@@ -140,23 +157,9 @@
   box-shadow: 0 12px 35px rgba(254, 209, 54, 0.4);
 }
 
+/* Purana hero-image-wrapper yahan remove kar diya hai kyunki image ab background mein hai */
 .insurance-page-wrapper .hero-image-wrapper {
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  position: relative;
-}
-
-.insurance-page-wrapper .hero-side-image {
-  width: 100%;
-  height: auto;
-  max-height: 75vh;
-  object-fit: cover;
-  border-radius: 24px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+  display: none;
 }
 
 /* Insurance Cards Grid Section */
@@ -280,21 +283,20 @@
 /* Responsive Media Queries */
 @media (max-width: 992px) {
   .insurance-page-wrapper .insurance-page-hero {
-    flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-position: center center;
     padding-top: 120px;
   }
   
   .insurance-page-wrapper .hero-content-wrapper {
     max-width: 100%;
-    padding-right: 0;
     align-items: center;
     margin-bottom: 50px;
   }
-  
-  .insurance-page-wrapper .hero-image-wrapper {
-    max-width: 90%;
+
+  .insurance-page-wrapper .insurance-page-hero::before {
+    background: rgba(17, 18, 20, 0.85);
   }
 }
 
@@ -318,5 +320,232 @@
     min-width: 85vw;
     scroll-snap-align: center;
     flex: 0 0 auto;
+  }
+}
+
+/* =========================================
+   INSURING QUOTES SECTION (Scoped)
+========================================= */
+.insurance-page-wrapper .insurance-quotes-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+  border-top: 1px solid #e2e8f0;
+}
+
+.insurance-page-wrapper .quotes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.insurance-page-wrapper .quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.insurance-page-wrapper .quote-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.insurance-page-wrapper .quote-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(254, 209, 54, 0.4);
+}
+
+.insurance-page-wrapper .quote-icon {
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: #fed136;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.insurance-page-wrapper .quote-text {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.insurance-page-wrapper .quote-author {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   STRUCTURED FOOTER (REDUCED SIDE SPACE)
+========================================= */
+
+.insurance-page-wrapper .insurance-inline-footer {
+  position: relative;
+  background-color: #111214;
+  color: #94a3b8;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 80px 40px 45px 40px;
+  box-sizing: border-box;
+  overflow: visible;
+  margin-top: 60px;
+}
+
+/* Wavy SVG Top Border */
+.insurance-page-wrapper .footer-wave-shape {
+  position: absolute;
+  top: -65px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 5;
+}
+
+.insurance-page-wrapper .footer-wave-shape svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+  fill: #111214;
+}
+
+.insurance-page-wrapper .insurance-footer-container {
+  position: relative;
+  z-index: 6;
+  max-width: 1380px; /* Container width badha di hai taaki side space kam ho */
+  margin: 0 auto;
+}
+
+/* Grid Layout with spread columns */
+.insurance-page-wrapper .insurance-footer-row {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1.2fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left Column: Logo & Paragraph */
+.insurance-page-wrapper .footer-brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: 350px;
+  justify-self: start;
+}
+
+.insurance-page-wrapper .footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0px;
+}
+
+.insurance-page-wrapper .footer-brand-info p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+/* Middle Column: Listed Links in 2 Columns */
+.insurance-page-wrapper .footer-nav-links {
+  text-align: left;
+  justify-self: center;
+}
+
+.insurance-page-wrapper .footer-nav-links h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.insurance-page-wrapper .footer-nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 50px;
+}
+
+.insurance-page-wrapper .footer-nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.insurance-page-wrapper .footer-nav-links a:hover {
+  color: #fed136;
+}
+
+/* Right Column: Copyright (Bottom Right aligned) */
+.insurance-page-wrapper .footer-copyright {
+  text-align: right;
+  justify-self: end;
+}
+
+.insurance-page-wrapper .footer-copyright p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Footer for Mobile */
+@media (max-width: 900px) {
+  .insurance-page-wrapper .insurance-inline-footer {
+    padding: 80px 20px 45px 20px;
+  }
+
+  .insurance-page-wrapper .insurance-footer-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .insurance-page-wrapper .footer-brand-info {
+    align-items: center;
+    max-width: 100%;
+    justify-self: center;
+  }
+
+  .insurance-page-wrapper .footer-brand-info p {
+    text-align: center;
+  }
+
+  .insurance-page-wrapper .footer-nav-links {
+    text-align: center;
+    justify-self: center;
+  }
+
+  .insurance-page-wrapper .footer-nav-links ul {
+    justify-items: center;
+  }
+
+  .insurance-page-wrapper .footer-copyright {
+    text-align: center;
+    justify-self: center;
   }
 }

@@ -13,6 +13,8 @@ import NotFound from './pages/NotFound';
 import CreditCards from './pages/CreditCards';
 import Loans from './pages/Loans';
 import Insurance from './pages/Insurance';
+import TapToPay from './pages/TapToPay';
+import AboutUs from './pages/AboutUs';
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -51,6 +53,9 @@ function App() {
         <Route path="/credit-cards" element={<CreditCards />} />
         <Route path="/loans" element={<Loans />} />
         <Route path="/insurance" element={<Insurance />} />
+        <Route path="/tap-to-pay" element={<TapToPay />} />
+        <Route path="/about-us" element={<AboutUs />} />
+
 
       </Routes>
     </Router>

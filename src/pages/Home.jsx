@@ -3,7 +3,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom"; // NAYA IMPORT
-
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube, FaMapMarkerAlt, FaComments,FaTimes, FaWhatsapp, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 
 function Home() {
@@ -12,6 +12,7 @@ function Home() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFaqExpanded, setIsFaqExpanded] = useState(false);
   const [activeCol, setActiveCol] = useState(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   
   // App.jsx mein ye state add karein
   const [openFaqIndex, setOpenFaqIndex] = useState(null); 
@@ -519,6 +520,33 @@ function Home() {
         </div>
       </section>
 
+      <section className="hm-video-hero-section">
+        {/* Background Video */}
+        <video 
+          src="/video/ball.mp4" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="hm-bg-video"
+        />
+        
+        {/* Dark Overlay for Text Readability */}
+        <div className="hm-video-overlay"></div>
+
+        {/* Center Content */}
+        <div className="hm-hero-content">
+          <h1 className="hm-hero-title">
+            feel the odds fall<br />
+            <span className="hm-hero-italic">in your favor</span>
+          </h1>
+          <p className="hm-hero-subtitle">
+            unlock cashback, exclusive rewards from select brands, and special access to curated products and experiences.
+          </p>
+        </div>
+      </section>
+
+
       {/* =========================================
             SECURITY SECTION
       ========================================== */}
@@ -609,167 +637,39 @@ function Home() {
       </section>
 
       {/* =========================================
-            TRUSTED SECTION
-      ========================================== */}
-      <section className="trusted-section reveal">
-        <div className="trusted-container">
-          
-          {/* Left Side: Text Content */}
-          <div className="trusted-left">
-            <span className="trusted-label">JOIN THE EXCLUSIVE CLUB</span>
-            <h2 className="trusted-heading serif-text lowercase">
-              excellence is<br />our baseline
-            </h2>
-          </div>
-
-          {/* Right Side: Ratings */}
-          <div className="trusted-right">
-            
-            {/* App Store Rating */}
-            <div className="rating-block">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-half"></i>
-              </div>
-              <div className="score">
-                4.8<span className="out-of">/5</span>
-              </div>
-              <div className="store-label">APP STORE</div>
-            </div>
-
-            {/* Play Store Rating */}
-            <div className="rating-block">
-              <div className="stars">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-half"></i>
-              </div>
-              <div className="score">
-                4.8<span className="out-of">/5</span>
-              </div>
-              <div className="store-label">PLAY STORE</div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-      
-
-      {/* =========================================
             FOOTER
       ========================================== */}
 
-      <section className="faq-section">
-        {/* <div className="faq-header reveal">
-          F A Q s <i className="bi bi-chevron-down"></i>
-        </div> */}
-        {/* 1. Clickable FAQ Header */}
-        <div 
-          className="faq-header reveal" 
-          onClick={() => setIsFaqExpanded(!isFaqExpanded)}
-          style={{ cursor: "pointer", userSelect: "none" }}
-        >
-          F A Q s <i className={`bi bi-chevron-${isFaqExpanded ? 'up' : 'down'}`}></i>
-        </div>
-
-        {/* 2. Expandable FAQ Content (Hidden by default) */}
-        {/* <div className={`faq-content-container ${isFaqExpanded ? 'expanded' : ''}`}>
-          <div className="faq-content-inner">
-            
-            
-            <div className="faq-text-content">
-              {faqData.map((faq, index) => (
-                <div className="faq-item" key={index}>
-                  <h3 className="faq-item-title">{faq.title}</h3>
-                  <p className="faq-item-desc">{faq.desc}</p>
-                </div>
-              ))}
-            </div>
-            
-          </div>
-        </div> */}
-
-
-         <div className={`faq-content-container ${isFaqExpanded ? 'expanded' : ''}`}>
-          <div className="faq-content-inner">
-            
-            <div className="faq-text-content">
-              {faqData.map((faq, index) => (
-                <div className="faq-item" key={index}>
-                  {/* Question Header */}
-                  <div 
-                    className="faq-item-header" 
-                    onClick={() => toggleFaq(index)}
-                    style={{ cursor: "pointer", display: "flex", justifyContent: "space-between" }}
-                  >
-                    <h3 className="faq-item-title">{faq.title}</h3>
-                    {/* + ya - icon */}
-                    <i className={`bi bi-${openFaqIndex === index ? 'dash' : 'plus'}`}></i>
-                  </div>
-
-                  {/* Answer (Sirf tab dikhega jab openFaqIndex match karega) */}
-                  {openFaqIndex === index && (
-                    <p className="faq-item-desc reveal active">
-                      {faq.desc}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-            
-          </div>
-        </div>
-
-        
+      <section className="footer-section">
+               
         {/* FAQ ke neeche footer start */}
         <div className="footer-content-wrapper reveal">
           
           {/* Left: Logo & Brand Section */}
           <div className="footer-brand-col">
-            <div className="footer-logo-side img">
-              <img src="/images/logos.png" alt="MyCredAxis Logo" />
-            </div>
             <span className="brand-name">
-              MyCredAxis
+              Bisani Brothers Private Limited
             </span>
             <p className="brand-desc">
-              Next-generation institutional grade financial intelligence and high-throughput transaction platform.
+              MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place.
+
             </p>
+            <div className="social-icons">
+              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+            </div>
           </div>
 
           <div className="footer-grid">
-            
-            {/* Column 1 */}
-            <div className={`footer-col ${activeCol === 1 ? 'active' : ''}`}>
-              <h4 onClick={() => toggleCol(1)}>Upgrades</h4>
-              <ul>
-                <li><Link to="/credit-cards"  style={{ color: "inherit", textDecoration: "none" }}>Credit Cards</Link></li>
-                <li><Link to="/loans"  style={{ color: "inherit", textDecoration: "none" }}>Loans</Link></li>
-                <li><Link to="/insurance"  style={{ color: "inherit", textDecoration: "none" }}>Insurance</Link></li>
-              </ul>
-            </div>
-
-            {/* Column 2 */}
-            <div className={`footer-col ${activeCol === 2 ? 'active' : ''}`}>
-              <h4 onClick={() => toggleCol(2)}>Payments</h4>
-              <ul>
-                <li>Utility Bills</li>
-                <li>Rent Payment</li>
-                <li>Education Fees</li>
-              </ul>
-            </div>
-
+       
             {/* Column 3 */}
             <div className={`footer-col ${activeCol === 3 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(3)}>Company</h4>
               <ul>
                 <li><Link to="/about" style={{ color: "inherit", textDecoration: "none" }} >About Us</Link></li>
-                <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Careers</Link></li>
+                {/* <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Careers</Link></li> */}
                 <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Contact</Link></li>
               </ul>
             </div>
@@ -780,52 +680,55 @@ function Home() {
               <ul>
                 <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>privacy policy</Link></li>
                 <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li>
-                <li><Link to="/security" style={{ color: "inherit", textDecoration: "none" }}>Security</Link></li>
+                <li><Link to="/security" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
               </ul>
             </div>
 
           </div>
         </div>
-        {/* <div className="footer-grid reveal">
-          <div className="footer-col">
-            <h4>Upgrades</h4>
+        {/* Naya Footer Bottom Bar (Copyright & Legal Links) */}
+        <div className="footer-bottom-bar">
+          <p className="copyright-text">© 2026 Bisani Brothers. All Rights Reserved.</p>
+          {/* <div className="footer-legal-links">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <span className="separator">|</span>
+            <Link to="/terms">Terms of Service</Link>
+          </div> */}
+          <div className="footer-address">
+          <p>
+            <FaMapMarkerAlt /> 
+            D-1012/13, Sector 16, Indira Nagar, Lucknow, Uttar Pradesh 226016
+          </p>
+        </div>
+        </div>
 
-            <ul>
-              <li>CRED money</li>
-              <li>CRED mint</li>
-              <li>CRED garage</li>
-            </ul>
+        {/* Floating Chat Button */}
+          {/* Floating Chat Widget (Popup Menu) */}
+        <div className="chat-widget-wrapper">
+          
+          {/* Sub-menus (WhatsApp, Email, Phone) */}
+          <div className={`chat-sub-menus ${isChatOpen ? 'active' : ''}`}>
+            <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
+              <FaWhatsapp />
+            </a>
+            <a href="mailto:support@bisanibrothers.com" className="sub-btn email">
+              <FaEnvelope />
+            </a>
+            <a href="tel:+911234567890" className="sub-btn phone">
+              <FaPhoneAlt />
+            </a>
           </div>
 
-          <div className="footer-col">
-            <h4>Payments</h4>
-
-            <ul>
-              <li>Tap to Pay</li>
-              <li>Pay anyone</li>
-              <li>RuPay on UPI</li>
-            </ul>
+          {/* Main Floating Button (Toggles between Comment & X) */}
+          <div 
+            className={`chat-floating-btn ${isChatOpen ? 'open' : ''}`} 
+            onClick={() => setIsChatOpen(!isChatOpen)}
+          >
+            {isChatOpen ? <FaTimes /> : <FaComments />}
           </div>
 
-          <div className="footer-col">
-            <h4>Company</h4>
-
-            <ul>
-              <li>about CRED</li>
-              <li>careers</li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>Policy</h4>
-
-            <ul>
-              <li>security</li>
-              <li>privacy policy</li>
-              <li>terms</li>
-            </ul>
-          </div>
-        </div> */}
+        </div>
+       
       </section>
 
       {/* =========================================

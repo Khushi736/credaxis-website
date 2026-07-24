@@ -168,7 +168,7 @@ body {
 }
 
 .nav-glass-widget {
-  position: fixed; 
+  position: absolute; 
   top: 40px; 
   right: 20px; 
   width: 42px;
@@ -180,12 +180,14 @@ body {
 }
 
 .nav-glass-widget.expanded {
+  position: fixed !important;
   top: 50%;
   right: 50%;
   width: 90vw;
   height: 220px; 
   transform: translate(50%, -50%);
   animation: floatCard 4s ease-in-out infinite;
+  z-index: 99999; /* Expanded state humesha har cheez ke upar rahegi */
 }
 
 @keyframes floatCard {
@@ -327,7 +329,7 @@ body {
    DOWNLOAD QR (Mobile First)
 ========================================= */
 .download-qr {
-  position: fixed;
+  position: absolute;
   bottom: 30px;
   right: 20px;
   background: rgba(0, 0, 0, 0.8);
@@ -345,7 +347,7 @@ body {
 /* =========================================
    SECTIONS: STORY, DESERVE, UPGRADE, SECURITY (Mobile First)
 ========================================= */
-.story-section, .deserve-section, .upgrade-section, .faq-section {
+.story-section, .deserve-section, .upgrade-section{
   padding: 60px 20px;
   text-align: center;
   background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
@@ -456,75 +458,6 @@ body {
   -ms-hyphens: none !important;
   hyphens: none !important;
 }
-/* =========================================
-   FAQ / FOOTER (Mobile First)
-========================================= */
-.faq-section { border-top: 1px solid #111; }
-.faq-header { font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 40px; }
-
-.faq-content-container { width: 100%; max-height: 0; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1); text-align: left; }
-.faq-content-container.expanded { max-height: 2000px; }
-.faq-content-inner { width: 100%; padding: 30px 0; display: flex; flex-direction: column; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 40px; }
-.faq-text-content { display: flex; flex-direction: column; gap: 20px; width: 100%; }
-.faq-item { width: 100%; }
-.faq-item-title { font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 15px; letter-spacing: -0.5px; }
-.faq-item-desc { font-size: 1rem; line-height: 1.6; color: #a0a0a0; width: 100%; max-width: 100%; animation: fadeIn 0.4s ease; }
-
-.footer-content-wrapper { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: 40px; margin-top: 40px; border-top: 1px solid #111; width: 100%; gap: 40px; }
-.footer-logo-side img { width: 90px; height: auto; filter: brightness(0) invert(1); }
-.footer-grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 0; text-align: left; }
-.footer-col h4 { font-size: 1rem; text-transform: uppercase; color: #fff; margin-bottom: 0; letter-spacing: 2px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border-bottom: 1px solid #222; padding: 20px 0; }
-.brand-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  display: block;
-  margin-top: 0;
-  line-height: 1.2;
-}
-
-.brand-desc {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  line-height: 1.6;
-  width: 100%;
-  max-width: 100%; /* Mobile par full width lega taaki text cramped na lage */
-  margin-top: 8px;
-  margin-bottom: 0;
-}/* Default Plus (+) Icon */
-
-.footer-col h4::after { 
-  content: "+"; 
-  font-size: 1.5rem; 
-  font-weight: 300; 
-  color: #a1a1aa; 
-  transition: transform 0.3s ease; 
-}
-
-/* Change to Minus (−) Icon when Active */
-.footer-col.active h4::after { 
-  content: "−"; 
-  color: #fff; 
-}
-
-/* --- Footer Accordion Lists --- */
-.footer-col ul { list-style: none; padding: 10px 0; margin: 0; display: none; }
-
-/* Show the list smoothly when Active */
-.footer-col.active ul { 
-  display: block; 
-  animation: fadeIn 0.3s ease forwards; 
-}
-
-.footer-col ul li { margin-bottom: 15px; font-size: 0.9rem; color: #666; cursor: pointer; transition: color 0.3s ease; }
-.footer-col ul li:hover { color: #fff; }
-
-/* --- Keyframes for Smooth Reveal --- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 /* =========================================
    SPATIAL UI (Mobile First)
@@ -544,15 +477,6 @@ body {
 .spatial-ui-section.active .screen-right { width: 180px; height: 360px; transform: translate(calc(-50% + 110px), -50%) translateZ(-100px) rotateY(-20deg) rotateX(-4deg) scale(1); opacity: 0.7; z-index: 5; transition-delay: 0.4s; }
 .spatial-ui-section.active .glass-glare { animation: sweep-glare 8s infinite 1.5s; }
 
-/* =========================================
-   FINANCIAL CORE SECTION (Mobile First)
-========================================= */
-/* .financial-core-section { position: relative; width: 100%; height: 85vh; overflow: hidden; background: #000; }
-.financial-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.financial-overlay { position: absolute; inset: 0; display: flex; justify-content: center; align-items: center; z-index: 2; background: linear-gradient(rgba(0,0,0,.40), rgba(0,0,0,.45)); text-align: center; padding: 0 20px; }
-.financial-content { max-width: 700px; }
-.financial-content h2 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; color: #fff; margin-bottom: 20px; }
-.financial-content p { font-size: clamp(1rem, 1.3vw, 1.2rem); color: #d8d8d8; line-height: 1.8; } */
 
 /* =========================================
    FINANCIAL CORE SECTION (Updated Layout)
@@ -705,36 +629,6 @@ body {
     margin: 0 auto;
   }
 
-  /* FAQ & Footer */
-  .faq-section { padding: 100px 10%; text-align: left; }
-  .faq-header { font-size: 2rem; margin-bottom: 50px; }
-  .faq-content-inner { padding: 40px 0; align-items: flex-start; }
-  .faq-item-title { font-size: 1.5rem; margin-bottom: 40px; }
-  .faq-item-desc { font-size: 1.3rem; }
-
-  .footer-content-wrapper { flex-direction: row; gap: 500px; padding-top: 60px; margin-top: 60px; }
-  .footer-logo-side img { width: 100px; }
-  .footer-brand-col {
-    max-width: 350px; 
-  }
-  .brand-desc {
-    margin-top: 25px;
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 100%; /* Parent ki width properly inherit karega */
-  }
-
-  /* .footer-logo-side.img img { 
-    width: 200px; 
-    margin-bottom: -15px;
-  } */
-  .footer-grid { grid-template-columns: repeat(2, auto); column-gap: 140px; row-gap: 50px; text-align: left; }
-  .footer-col h4 { cursor: default; border-bottom: none; padding: 0; margin-bottom: 20px; display: block; }
-  .footer-col h4::after {
-    display: none !important;
-  }
-  .footer-col ul { display: block !important; padding: 0; }
-
   /* Spatial UI */
   .spatial-ui-section { flex-direction: row; justify-content: space-around; padding: 50px 10%; text-align: left; }
   .spatial-text-content h2 { font-size: 5rem; max-width: 600px; }
@@ -753,99 +647,6 @@ body {
   .modal-text-content { align-items: flex-start; text-align: left; }
   .modal-title { font-size: 3rem; margin-bottom: 40px; }
   .learn-more-btn { font-size: 14px; padding: 15px 30px; }
-}
-
-/* =========================================
-      TRUSTED SECTION (Mobile First)
-========================================== */
-.trusted-section {
-  background: linear-gradient(145deg, #0d152a 0%, #000000 50%, #1f1608 100%);
-  color: #f0f2e8;
-  padding: 80px 20px;
-  width: 100%;
-}
-
-.trusted-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; /* Mobile: Stack top to bottom */
-  gap: 60px;
-}
-
-.trusted-left {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.trusted-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #bdb7b7;
-  text-transform: uppercase;
-  padding-left: 30px;
-}
-
-.trusted-heading {
-  font-size: clamp(3.5rem, 10vw, 5.5rem);
-  line-height: 1;
-  margin: 0;
-}
-
-.trusted-right {
-  display: flex;
-  flex-direction: row; /* Mobile: side-by-side scores */
-  gap: 40px;
-}
-
-.rating-block {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.stars {
-  color: #d3a312;
-  font-size: 1.2rem;
-  display: flex;
-  gap: 4px;
-}
-
-.score {
-  font-size: clamp(3.5rem, 8vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.out-of {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  color: #888;
-  font-weight: 500;
-}
-
-.store-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #888;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
-
-/* --- DESKTOP VIEW --- */
-@media (min-width: 768px) {
-  .trusted-container {
-    flex-direction: row; /* Align left text and right ratings side-by-side */
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .trusted-right {
-    gap: 70px;
-  }
 }
 
 /* =========================================
@@ -902,3 +703,485 @@ body {
   transform: rotateY(180deg); /* Top-right se aate waqt ye isko flip karwayega */
 }
 
+/* =========================================
+   MOBILE-FIRST VIDEO HERO SECTION
+========================================= */
+.hm-video-hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Puri screen ki height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Background Video Styling */
+.hm-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Gradient/Overlay taaki text clearly read ho sake */
+.hm-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+/* Hero Content Container */
+.hm-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Serif Headline Styling */
+.hm-hero-title {
+  font-family: 'Playfair Display', Georgia, serif; /* Agar aapke paas serif font hai */
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.hm-hero-italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Subtitle Styling */
+.hm-hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #cccccc;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  text-transform: lowercase;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS (MEDIA QUERIES)
+========================================= */
+
+/* Tablet & Medium Screens (768px and above) */
+@media (min-width: 768px) {
+  .hm-video-hero-section {
+    padding: 0 40px;
+  }
+
+  .hm-hero-title {
+    font-size: 4rem;
+    margin-bottom: 25px;
+  }
+
+  .hm-hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 650px;
+  }
+}
+
+/* Large Desktop Screens (1024px and above) */
+@media (min-width: 1024px) {
+  .hm-hero-title {
+    font-size: 5.2rem;
+    margin-bottom: 30px;
+  }
+
+  .hm-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+}
+
+/* =========================================
+   FOOTER SECTION (Mobile First)
+========================================= */
+.footer-section {
+  background: linear-gradient(145deg, #0a0f1a 0%, #000000 50%, #120e06 100%);
+  color: #ffffff;
+  padding: 40px 20px 30px; /* 🔥 Top padding kam kar di gayi hai (pehle 60px thi) */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Brand Section --- */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.brand-desc {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Social Icons Styling --- */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px; /* Paragraph ke niche ka space */
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Image ke according round border */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1); /* Hover par thoda sa light background */
+  transform: translateY(-3px); /* Hover par thoda sa upar uthega */
+}
+
+/* --- Footer Grid & Accordion (Mobile) --- */
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-col {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-col h4::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #a1a1aa;
+  transition: transform 0.3s ease;
+}
+
+.footer-col.active h4::after {
+  content: "−";
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+  display: none; 
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col.active ul {
+  display: flex;
+  animation: fadeInFooter 0.3s ease forwards;
+}
+
+@keyframes fadeInFooter {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-col ul li {
+  margin: 0;
+}
+
+.footer-col ul li a {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* =========================================
+   FOOTER DESKTOP (min-width: 768px)
+========================================= */
+@media (min-width: 768px) {
+  .footer-section {
+    padding: 50px 50px 50px; /* 🔥 Desktop par bhi top padding reduce kar di hai (pehle 80px thi) */
+  }
+
+  .footer-content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+  }
+
+  .footer-brand-col {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .footer-grid {
+    flex: 1.5;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 100px; 
+  }
+
+  .footer-col {
+    border-bottom: none;
+    min-width: 150px;
+  }
+
+  .footer-col h4 {
+    padding: 0;
+    margin-bottom: 25px;
+    cursor: default; 
+  }
+
+  .footer-col h4::after {
+    display: none !important;
+  }
+
+  .footer-col ul {
+    display: flex !important;
+    padding: 0;
+  }
+}
+
+/* =========================================
+   FOOTER BOTTOM BAR & CHAT BTN (Mobile First)
+========================================= */
+.footer-bottom-bar {
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.copyright-text {
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --- Footer Address Styling (Replaced Legal Links) --- */
+.footer-address {
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 100%;
+  padding-bottom: 65px; /* 🔥 Scroll karne par text ke neeche jagah bachegi, jisse chat button text par nahi aayega */
+}
+
+.footer-address p {
+  margin: 0;
+  display: flex;
+  align-items: flex-start; /* 🔥 Agar address 2 line mein jaye, toh icon upar hi aligned rahega */
+  justify-content: center; /* Mobile par center align karne ke liye */
+  gap: 8px; /* Icon aur text ke beech ka space */
+}
+
+.footer-address p i, 
+.footer-address p svg {
+  color: #9cb7c3; /* Icon ka color blue rakha hai */
+  font-size: 1.1rem;
+  flex-shrink: 0; /* 🔥 Space kam hone par icon chota nahi hoga */
+  margin-top: 2px; /* Icon ko text ki height ke barabar lane ke liye */
+}
+
+
+/* =========================================
+   FOOTER BOTTOM DESKTOP (min-width: 768px)
+========================================= */
+@media (min-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Dono elements ko vertically center match karne ke liye */
+    margin-top: 50px;
+    padding-top: 25px;
+  }
+  
+  .footer-address {
+    padding-bottom: 0; /* Desktop par chat button side mein hota hai, toh padding hata di */
+  }
+  .footer-address p {
+    justify-content: flex-end; /* Desktop par icon aur address ko right side push karne ke liye */
+  }
+  
+
+}
+/* =========================================
+   FLOATING CHAT WIDGET & POPUP MENU
+========================================= */
+.chat-widget-wrapper {
+  position: fixed;
+  bottom: 15px; /* 🔥 Mobile par corner ke ekdum paas set kiya */
+  right: 15px;  /* 🔥 Right corner padding reduce ki */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Sub Menus Container */
+.chat-sub-menus {
+  position: absolute;
+  bottom: 55px; /* Main button ab chota hai, isliye isko uske hisab se adjust kiya */
+  display: flex;
+  flex-direction: column-reverse; /* Niche se upar khulne jaisa effect */
+  gap: 12px; /* Gap thoda kam kiya */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy effect */
+  pointer-events: none;
+}
+
+/* Jab chat open ho */
+.chat-sub-menus.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Individual Sub Buttons - Professional Theme (Mobile Size) */
+.sub-btn {
+  width: 40px; /* 🔥 Sub-buttons ko main button ke according chota kiya */
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #1a365d; /* Dark Blue */
+  color: #b5dcec; /* Light Blue Icon */
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  font-size: 16px; /* Icon chota kiya */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: Turns solid light blue */
+.sub-btn:hover {
+  background-color: #5e889a; 
+  color: #000000;
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 6px 14px rgba(56, 189, 248, 0.4);
+  border-color: #38bdf8;
+}
+
+/* Main Chat Button (Mobile Size) */
+.chat-floating-btn {
+  width: 45px; /* 🔥 Mobile par button size chota kiya (Pehle 55px tha) */
+  height: 45px;
+  background-color: #5a7784;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 20px; /* Icon bhi properly scale down kiya */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Jab chat menu khula ho toh main button ka design (X Icon style) */
+.chat-floating-btn.open {
+  background-color: #1a365d; /* Dark Blue */
+  color: #ffffff;
+  transform: rotate(90deg); /* Halki si rotation animation */
+}
+
+/* =========================================
+   DESKTOP VIEW (Original Bada Size)
+========================================= */
+@media (min-width: 768px) {
+  .chat-widget-wrapper {
+    bottom: 40px;
+    right: 40px;
+  }
+  .chat-sub-menus {
+    bottom: 80px;
+    gap: 15px; /* Gap wapas bada diya */
+  }
+  .sub-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .chat-floating-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}

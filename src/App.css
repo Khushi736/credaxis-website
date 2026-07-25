@@ -824,7 +824,7 @@ body {
   background: linear-gradient(145deg, #0a0f1a 0%, #000000 50%, #120e06 100%);
   color: #ffffff;
   padding: 40px 20px 30px; /* 🔥 Top padding kam kar di gayi hai (pehle 60px thi) */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(130, 128, 128, 0.46);
   font-family: "Inter", sans-serif;
   width: 100%;
 }
@@ -1014,7 +1014,7 @@ body {
 .footer-bottom-bar {
   margin: 40px auto 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(120, 112, 112, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;

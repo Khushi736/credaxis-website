@@ -1,0 +1,569 @@
+/* ==========================================================
+   SUPPORT & CONTACT PAGE STYLING (Updated Layout & Slanted Left Box)
+   ========================================== */
+
+.support-page-wrapper {
+  background-color: #F8F9FA;
+  color: #1E293B;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.support-page-wrapper *, .support-page-wrapper *:before, .support-page-wrapper *:after {
+  box-sizing: inherit;
+}
+
+/* Hero Banner with Logo on Top Center */
+.support-hero-banner {
+  position: relative;
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), 
+              url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+  padding: 30px 40px 100px 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.support-nav-brand {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center; /* Logo placed at Top Center */
+  align-items: center;
+}
+
+.support-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.support-logo-img {
+  width: 38px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.support-brand-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.support-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.support-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.support-hero-content p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Contact Main Card Section (Pushed further down as requested) */
+/* ==========================================================
+   UPDATED CONTACT MAIN SECTION SPACING
+   ========================================== */
+
+.contact-main-card-section {
+  background-color: #F8F9FA;
+  padding: 0 40px 80px 40px;
+  margin-top: 40px; /* Pehle -50px tha, ab ise positive space de diya hai taaki upar se chipka na rahe */
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================
+   UPDATED CONTACT CARD CONTAINER & LEFT EDGE-TO-EDGE FIX
+   ========================================== */
+
+.contact-grid-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+/* Left Card Box - Edge to Edge Connected on Left */
+.contact-left-card {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  padding: 50px 40px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #ffffff;
+  position: relative;
+  margin-left: 0; /* Left gap ko completely remove kar diya hai */
+  border-top-left-radius: 16px; /* Parent container ke sath perfectly match karne ke liye */
+  border-bottom-left-radius: 16px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%); /* "/" Slash Shape */
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.info-step-circle {
+  width: 32px;
+  height: 32px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.info-title-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 3px 0 0 0;
+}
+
+.left-card-desc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
+}
+
+.left-social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.left-social-icons a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #38bdf8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.left-social-icons a:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* Right Suggestion Form Box */
+.contact-right-form-box {
+  padding: 50px 45px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right-form-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.form-sub-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.suggestion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+  border-color: #0284c7;
+}
+
+.submit-btn-pro {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: max-content;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+}
+
+.submit-btn-pro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+}
+
+/* Quick Features Bar */
+.quick-features-bar {
+  background-color: #F8F9FA;
+  padding: 0 40px 80px 40px;
+}
+
+.quick-cards-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.q-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.q-icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.q-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.q-card p {
+  color: #64748b;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+/* FAQ Section */
+.support-faq-section {
+  background-color: #ffffff;
+  padding: 80px 40px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.faq-wrapper-max {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.faq-section-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.05rem;
+  margin-bottom: 45px;
+}
+
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-card-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-card-item:hover, .faq-card-item.active {
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
+}
+
+.faq-question-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question-row h3 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.faq-toggle-icon {
+  color: #0284c7;
+  font-size: 0.9rem;
+}
+
+.faq-answer-row {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-answer-row p {
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Exact Custom Footer Styling */
+.exact-custom-footer {
+  background-color: #03070d;
+  color: #94a3b8;
+  padding: 70px 60px 40px 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.footer-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-col-brand h3 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-col-brand p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.footer-social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-row a {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-social-row a:hover {
+  background: #0284c7;
+  border-color: #0284c7;
+}
+
+.footer-col-links h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.footer-col-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-col-links ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-col-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom-bar {
+  max-width: 1200px;
+  margin: 35px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.footer-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.floating-chat-bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: #0284c7;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .contact-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left-card {
+    margin-left: 0;
+    clip-path: none;
+    border-radius: 0;
+  }
+
+  .quick-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .form-row-dual {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   DYNAMIC CONTACT LINKS STYLING (Remove Default Blue Underlines)
+   ========================================== */
+
+.dynamic-contact-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  cursor: pointer;
+}
+
+.dynamic-contact-link:hover .info-value-text {
+  color: #38bdf8 !important; /* Hover karne par halka sky blue effect dega */
+  text-decoration: underline;
+}
+
+.dynamic-q-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}

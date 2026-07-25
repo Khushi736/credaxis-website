@@ -7,7 +7,7 @@ import ScanAndPay from "./pages/ScanAndPay";
 import UpiOnCredit from "./pages/UpiOnCredit";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import Security from "./pages/Security";
+import Support from "./pages/Support";
 import About from "./pages/About";
 import NotFound from './pages/NotFound';
 import CreditCards from './pages/CreditCards';
@@ -15,6 +15,7 @@ import Loans from './pages/Loans';
 import Insurance from './pages/Insurance';
 import TapToPay from './pages/TapToPay';
 import AboutUs from './pages/AboutUs';
+import Faq from './pages/Faq';
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -47,7 +48,7 @@ function App() {
         {/* Local Vite: /admin → admin-panel (port 5173). Production uses nginx/backend. */}
         <Route path="/admin/*" element={<AdminRedirect />} />
         <Route path="/admin" element={<AdminRedirect />} />
-        <Route path="/security" element={<Security />} />
+        <Route path="/support" element={<Support />} />
         <Route path="/about" element={<About />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/credit-cards" element={<CreditCards />} />
@@ -55,6 +56,7 @@ function App() {
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/tap-to-pay" element={<TapToPay />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/faq" element={<Faq/>} />
 
 
       </Routes>

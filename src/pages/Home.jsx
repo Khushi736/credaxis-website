@@ -668,9 +668,9 @@ function Home() {
             <div className={`footer-col ${activeCol === 3 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(3)}>Company</h4>
               <ul>
-                <li><Link to="/about" style={{ color: "inherit", textDecoration: "none" }} >About Us</Link></li>
+                <li><Link to="/about-us" style={{ color: "inherit", textDecoration: "none" }} >About Us</Link></li>
                 {/* <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Careers</Link></li> */}
-                <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Contact</Link></li>
+                <li><Link to="/faq" style={{ color: "inherit", textDecoration: "none"}}>FAQs</Link></li>
               </ul>
             </div>
 
@@ -678,9 +678,9 @@ function Home() {
             <div className={`footer-col ${activeCol === 4 ? 'active' : ''}`}>
               <h4 onClick={() => toggleCol(4)}>Policy</h4>
               <ul>
-                <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>privacy policy</Link></li>
-                <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li>
-                <li><Link to="/security" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
+                <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</Link></li>
+                {/* <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li> */}
+                <li><Link to="/support" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
               </ul>
             </div>
 

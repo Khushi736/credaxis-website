@@ -205,8 +205,8 @@ export default function Support() {
           <div className="footer-col-links">
             <h4>COMPANY</h4>
             <ul>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/support">Contact</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/faq">FAQs</Link></li>
             </ul>
           </div>
 
@@ -214,7 +214,7 @@ export default function Support() {
             <h4>POLICY</h4>
             <ul>
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
+              {/* <li><Link to="/terms">Terms & Conditions</Link></li> */}
               <li><Link to="/support">Support</Link></li>
             </ul>
           </div>

@@ -157,16 +157,16 @@ export default function Faq() {
           <div className="footer-col-links">
             <h4>COMPANY</h4>
             <ul>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/support">Contact</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              {/* <li><Link to="/faq">Faqs</Link></li> */}
             </ul>
           </div>
 
           <div className="footer-col-links">
             <h4>POLICY</h4>
             <ul>
-              <li><Link to="/privacy">privacy policy</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              {/* <li><Link to="/terms">Terms & Conditions</Link></li> */}
               <li><Link to="/support">Support</Link></li>
             </ul>
           </div>

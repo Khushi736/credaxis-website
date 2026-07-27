@@ -283,29 +283,42 @@ function Home() {
           </div>
         </div>
       </section>
-            {/* =========================================
-            STORY SECTION
-      ========================================== */}
-
-      {/* <section className="story-section">
-        <h2 className="story-heading reveal">
-          not everyone makes it in.
-        </h2>
-
-        <p className="story-para serif-text reveal">
-          the story of CRED begins with trust. we believe individuals who've
-          proven their trustworthiness{" "}
-          <span style={{ color: "#fff" }}>
-            deserve better: better experiences, better rewards, better rules.
-          </span>{" "}
-          this is the status quo we're building. make it to the club, and
-          experience the ascension yourself.
-        </p>
-      </section> */}
+    
       {/* =========================================
             SPATIAL UI FLOATING SCREENS
       ========================================== */}
-      
+      <section className="video-feature-section">
+        <div className="vf-container">
+          
+          {/* Upper Part: Video */}
+          <div className="vf-video-box">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="vf-video"
+            >
+              {/* Apne video ka sahi path yahan dalein */}
+              <source src="/video/bill.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* Lower Part: Text & Action Button */}
+          <div className="vf-text-box reveal">
+            <h2>One Platform. Every Bill.<br/> Zero Hassle.</h2>
+            <p>
+              Pay electricity, mobile, broadband, FASTag, credit card bills, loan EMIs, insurance premiums and more—all from one secure platform. Choose your preferred payment method, including UPI, debit cards, credit cards or net banking, and enjoy fast, reliable payments with instant confirmations. Earn rewards on eligible transactions and unlock additional benefits through referrals, making every payment more rewarding.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+
+{/* 
       <section className="spatial-ui-section reveal">
         
         <div className="spatial-text-content">
@@ -323,26 +336,23 @@ function Home() {
 
         <div className="spatial-container reveal">
           
-          {/* Back Left Screen (Small & Tilted) */}
           <div className="spatial-screen screen-left">
             <div className="glass-glare"></div>
             <img src="/images/sp1.jpeg" alt="UI Screen" />
           </div>
 
-          {/* Main Center Screen (Large & Focused) */}
           <div className="spatial-screen screen-main">
             <div className="glass-glare"></div>
             <img src="/images/sp2.jpeg" alt="UI Screen" />
           </div>
 
-          {/* Back Right Screen (Small & Tilted) */}
           <div className="spatial-screen screen-right">
             <div className="glass-glare"></div>
             <img src="/images/sp3.jpeg" alt="UI Screen" />
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* =========================================
             DESERVE SECTION
@@ -392,8 +402,8 @@ function Home() {
 
       </section> */}
 
-      <section className="financial-core-section">
-        {/* Left Side: Video (Scroll-based) */}
+      {/* <section className="financial-core-section">
+       
         <div className="video-container-financial">
           <video
           autoPlay
@@ -406,14 +416,14 @@ function Home() {
         </video>
         </div>
 
-        {/* Right Side: Content */}
+        
         <div className="financial-content serif-text lowercase reveal">
           <h2>smarter spending. <br/> better progress.</h2>
           <p>turn your credit card into a powerful financial tool. 
             receive timely updates, master your cash flow, and unlock
              the insights needed to reach your financial potential.</p>
         </div>
-      </section>
+      </section> */}
       {/* =========================================
             UPGRADE SECTION
       ========================================== */}
@@ -639,97 +649,7 @@ function Home() {
       {/* =========================================
             FOOTER
       ========================================== */}
-
-      <section className="footer-section">
-               
-        {/* FAQ ke neeche footer start */}
-        <div className="footer-content-wrapper reveal">
-          
-          {/* Left: Logo & Brand Section */}
-          <div className="footer-brand-col">
-            <span className="brand-name">
-              Bisani Brothers Private Limited
-            </span>
-            <p className="brand-desc">
-              MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place.
-
-            </p>
-            <div className="social-icons">
-              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
-              <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            </div>
-          </div>
-
-          <div className="footer-grid">
-       
-            {/* Column 3 */}
-            <div className={`footer-col ${activeCol === 3 ? 'active' : ''}`}>
-              <h4 onClick={() => toggleCol(3)}>Company</h4>
-              <ul>
-                <li><Link to="/about-us" style={{ color: "inherit", textDecoration: "none" }} >About Us</Link></li>
-                {/* <li><Link to="/not-found" style={{ color: "inherit", textDecoration: "none"}}>Careers</Link></li> */}
-                <li><Link to="/faq" style={{ color: "inherit", textDecoration: "none"}}>FAQs</Link></li>
-              </ul>
-            </div>
-
-            {/* Column 4 */}
-            <div className={`footer-col ${activeCol === 4 ? 'active' : ''}`}>
-              <h4 onClick={() => toggleCol(4)}>Policy</h4>
-              <ul>
-                <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</Link></li>
-                {/* <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</Link></li> */}
-                <li><Link to="/support" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        {/* Naya Footer Bottom Bar (Copyright & Legal Links) */}
-        <div className="footer-bottom-bar">
-          <p className="copyright-text">© 2026 Bisani Brothers. All Rights Reserved.</p>
-          {/* <div className="footer-legal-links">
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <span className="separator">|</span>
-            <Link to="/terms">Terms of Service</Link>
-          </div> */}
-          <div className="footer-address">
-          <p>
-            <FaMapMarkerAlt /> 
-            D-1012/13, Sector 16, Indira Nagar, Lucknow, Uttar Pradesh 226016
-          </p>
-        </div>
-        </div>
-
-        {/* Floating Chat Button */}
-          {/* Floating Chat Widget (Popup Menu) */}
-        <div className="chat-widget-wrapper">
-          
-          {/* Sub-menus (WhatsApp, Email, Phone) */}
-          <div className={`chat-sub-menus ${isChatOpen ? 'active' : ''}`}>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
-              <FaWhatsapp />
-            </a>
-            <a href="mailto:support@bisanibrothers.com" className="sub-btn email">
-              <FaEnvelope />
-            </a>
-            <a href="tel:+911234567890" className="sub-btn phone">
-              <FaPhoneAlt />
-            </a>
-          </div>
-
-          {/* Main Floating Button (Toggles between Comment & X) */}
-          <div 
-            className={`chat-floating-btn ${isChatOpen ? 'open' : ''}`} 
-            onClick={() => setIsChatOpen(!isChatOpen)}
-          >
-            {isChatOpen ? <FaTimes /> : <FaComments />}
-          </div>
-
-        </div>
-       
-      </section>
+    
 
       {/* =========================================
             MODAL

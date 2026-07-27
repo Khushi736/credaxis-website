@@ -8,7 +8,6 @@ import UpiOnCredit from "./pages/UpiOnCredit";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Support from "./pages/Support";
-import About from "./pages/About";
 import NotFound from './pages/NotFound';
 import CreditCards from './pages/CreditCards';
 import Loans from './pages/Loans';
@@ -16,6 +15,7 @@ import Insurance from './pages/Insurance';
 import TapToPay from './pages/TapToPay';
 import AboutUs from './pages/AboutUs';
 import Faq from './pages/Faq';
+import Footer from './pages/Footer';
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -49,7 +49,6 @@ function App() {
         <Route path="/admin/*" element={<AdminRedirect />} />
         <Route path="/admin" element={<AdminRedirect />} />
         <Route path="/support" element={<Support />} />
-        <Route path="/about" element={<About />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/credit-cards" element={<CreditCards />} />
         <Route path="/loans" element={<Loans />} />
@@ -60,6 +59,7 @@ function App() {
 
 
       </Routes>
+      <Footer />
     </Router>
   );
 }

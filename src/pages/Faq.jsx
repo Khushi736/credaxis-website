@@ -137,71 +137,9 @@ export default function Faq() {
           <Link to="/support" className="btn-contact-support">Contact Support</Link>
         </div>
       </section>
+   
 
-      {/* Exact Custom Footer */}
-      <footer className="exact-custom-footer">
-        <div className="footer-main-container">
-          <div className="footer-col-brand">
-            <h3>Bisani Brothers Private Limited</h3>
-            <p>
-              MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place.
-            </p>
-            <div className="footer-social-row">
-              <a href="#linkedin"><FaLinkedinIn /></a>
-              <a href="#facebook"><FaFacebookF /></a>
-              <a href="#instagram"><FaInstagram /></a>
-              <a href="#youtube"><FaYoutube /></a>
-            </div>
-          </div>
-
-          <div className="footer-col-links">
-            <h4>COMPANY</h4>
-            <ul>
-              <li><Link to="/about-us">About Us</Link></li>
-              {/* <li><Link to="/faq">Faqs</Link></li> */}
-            </ul>
-          </div>
-
-          <div className="footer-col-links">
-            <h4>POLICY</h4>
-            <ul>
-              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              {/* <li><Link to="/terms">Terms & Conditions</Link></li> */}
-              <li><Link to="/support">Support</Link></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-bottom-bar">
-          <p>&copy; 2026 Bisani Brothers. All Rights Reserved.</p>
-          <div className="footer-address">
-            <FaMapMarkerAlt /> D-1012/13, Sector 16, Indira Nagar, Lucknow, Uttar Pradesh 226016
-          </div>
-        </div>
-
-        {/* Floating Chat Widget */}
-        <div className="chat-widget-wrapper">
-          <div className={`chat-sub-menus ${isChatOpen ? 'active' : ''}`}>
-            <a href="https://wa.me/880123456789" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
-              <FaWhatsapp />
-            </a>
-            <a href="mailto:exampleinfo@gmail.com" className="sub-btn email">
-              <FaEnvelope />
-            </a>
-            <a href="tel:+880123456789" className="sub-btn phone">
-              <FaPhoneAlt />
-            </a>
-          </div>
-
-          <div 
-            className={`chat-floating-btn ${isChatOpen ? 'open' : ''}`} 
-            onClick={() => setIsChatOpen(!isChatOpen)}
-          >
-            {isChatOpen ? <FaTimes /> : <FaComments />}
-          </div>
-        </div>
-      </footer>
-
+      
     </div>
   );
 }

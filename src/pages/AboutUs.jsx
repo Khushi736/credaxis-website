@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaShieldAlt, FaBullseye, FaBuilding, FaInfoCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaBullseye, FaBuilding, FaInfoCircle,  FaLock } from 'react-icons/fa';
 import './AboutUs.css';
 
 export default function AboutUs() {
@@ -27,7 +27,7 @@ export default function AboutUs() {
       <section className="objective-section">
         <div className="objective-content">
           <h2>Our Objective</h2>
-          <div className="yellow-line"></div>
+          
           <p>
             Our objective is to simplify access to essential financial services while maintaining transparency, security, and compliance with applicable laws and partner requirements. Certain services available on MyCredAxis are offered through authorized service providers, regulated partners, payment networks, and technology integrations, where applicable.
           </p>
@@ -37,7 +37,7 @@ export default function AboutUs() {
       {/* Sub-header Title */}
       <div className="section-header">
         <h2>Our Services</h2>
-        <div className="yellow-line"></div>
+       
       </div>
 
       {/* 2. Feature Rows */}
@@ -53,12 +53,11 @@ export default function AboutUs() {
             <button className="btn-yellow">Explore Bills &rarr;</button>
           </div>
           <div className="feature-image-container">
-            <div className="art-wrapper">
-              <div className="yellow-blob"></div>
-              <div className="hexagon-frame">
-                <img src="https://images.unsplash.com/photo-1556742049-0a67d553c2a5?auto=format&fit=crop&q=80&w=500" alt="Bill Payments" />
-              </div>
-            </div>
+            <img 
+              src="/images/payments.png" /* 🔥 Yahan apni image ka sahi path daalein */
+              alt="Feature Display" 
+              className="custom-feature-image"
+            />
           </div>
         </div>
 
@@ -72,13 +71,13 @@ export default function AboutUs() {
             <button className="btn-yellow">Check Credit &rarr;</button>
           </div>
           <div className="feature-image-container">
-            <div className="art-wrapper">
-              <div className="yellow-blob"></div>
-              <div className="hexagon-frame">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=500" alt="Credit Services" />
-              </div>
-            </div>
+            <img 
+              src="/images/score.png" /* 🔥 Yahan apni image ka sahi path daalein */
+              alt="Feature Display" 
+              className="custom-feature-image"
+            />
           </div>
+          
         </div>
 
         {/* Row 3: Rewards & KYC */}
@@ -91,12 +90,11 @@ export default function AboutUs() {
             <button className="btn-yellow">View Rewards &rarr;</button>
           </div>
           <div className="feature-image-container">
-            <div className="art-wrapper">
-              <div className="yellow-blob"></div>
-              <div className="hexagon-frame">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=500" alt="Rewards and Verification" />
-              </div>
-            </div>
+            <img 
+              src="/images/rewards.png" /* 🔥 Yahan apni image ka sahi path daalein */
+              alt="Feature Display" 
+              className="custom-feature-image"
+            />
           </div>
         </div>
 
@@ -109,7 +107,7 @@ export default function AboutUs() {
             
             <div className="split-block">
               <div className="inline-heading">
-                <span className="icon-symbol">&#128274;</span>
+                <span className="icon-symbol"><FaLock /></span> {/* 🔥 Updated to React Icon */}
                 <h3>Security</h3>
               </div>
               <p>
@@ -119,7 +117,7 @@ export default function AboutUs() {
             
             <div className="split-block">
               <div className="inline-heading">
-                <span className="icon-symbol">&#127919;</span>
+                <span className="icon-symbol"><FaBullseye /></span> {/* 🔥 Updated to React Icon */}
                 <h3>Our Mission</h3>
               </div>
               <p>
@@ -145,40 +143,40 @@ export default function AboutUs() {
 
       {/* 4. Company Information & Important Info Section */}
       <section className="company-info-section">
-        <div className="company-card-box">
-          <span className="icon-symbol mb-2">&#127970;</span>
-          <h4>Company Information</h4>
-          <p className="company-details">
-            <strong>Product Name:</strong> MyCredAxis<br />
-            <strong>Owned & Operated By:</strong> BisaniBrothers Private Limited
-          </p>
+        
+        {/* Top Header - No Outer Box */}
+        <div className="company-header-clean">
+          <div className="header-icon-box">
+            <FaBuilding />
+          </div>
+          <h2>Company Information</h2>
+          <p className="company-subtext"><strong>Product Name:</strong> MyCredAxis</p>
+          <p className="company-subtext"><strong>Owned & Operated By:</strong> BisaniBrothers Private Limited</p>
+        </div>
 
-          <div className="info-notes-grid">
-            <div className="note-box">
-              <h5>Important Information</h5>
-              <ul>
-                <li>Availability of services may vary depending on location, eligibility, partner integrations, and applicable regulations.</li>
-                <li>Some services may require user verification before access is granted.</li>
-                <li>Rewards, promotional offers, and supported services may change from time to time.</li>
-                <li>Information published on this website reflects services currently supported by the platform.</li>
-              </ul>
-            </div>
+        <div className="company-content-stacked">
+          
+          {/* Important Information - Upper Side (Box Removed) */}
+          <div className="important-info-clean">
+            <h3 className="blue-heading">Important Information</h3>
+            <ul className="custom-bullet-list">
+              <li>Availability of services may vary depending on location, eligibility, partner integrations, and applicable regulations.</li>
+              <li>Some services may require user verification before access is granted.</li>
+              <li>Rewards, promotional offers, and supported services may change from time to time.</li>
+              <li>Information published on this website reflects services currently supported by the platform.</li>
+            </ul>
+          </div>
 
-            <div className="note-box">
-              <h5>Disclaimer</h5>
-              <p>
-                MyCredAxis is a technology platform developed and operated by BisaniBrothers Private Limited. Bill payment, credit-related services, KYC verification, payment processing, and other applicable financial services may be provided through authorized partners, licensed service providers, regulated financial institutions, and applicable payment networks. MyCredAxis does not modify or alter information received from authorized third-party service providers.
-              </p>
-            </div>
+          {/* Disclaimer - Lower Side (Sleek Highlighted Container) */}
+          <div className="disclaimer-sleek-box">
+            <h3 className="blue-heading">Disclaimer</h3>
+            <p>
+              MyCredAxis is a technology platform developed and operated by BisaniBrothers Private Limited. Bill payment, credit-related services, KYC verification, payment processing, and other applicable financial services may be provided through authorized partners, licensed service providers, regulated financial institutions, and applicable payment networks. MyCredAxis does not modify or alter information received from authorized third-party service providers.
+            </p>
           </div>
 
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="about-footer">
-        <p>&copy; {new Date().getFullYear()} MyCredAxis (BisaniBrothers Private Limited). All Rights Reserved.</p>
-      </footer>
 
     </div>
   );

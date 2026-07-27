@@ -118,34 +118,7 @@
   font-weight: 700;
 }
 
-.yellow-line {
-  width: 10px;
-  height: 8px;
-  background: radial-gradient(circle, #ffffff 0%, #ffdf00 25%, #ff4500 60%, #ff1a00 100%);
-  background-size: 200% 100%;
-  margin: 18px auto 0 auto;
-  border-radius: 50px;
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.9), 0 0 40px rgba(255, 26, 0, 0.7), 0 0 60px rgba(255, 140, 0, 0.5), inset 0 0 6px #ffffff;
-  animation: exactFirePulse 1.4s ease-in-out infinite;
-}
 
-@keyframes exactFirePulse {
-  0% {
-    background-position: 100% 0%;
-    box-shadow: 0 0 12px rgba(255, 69, 0, 0.7), 0 0 25px rgba(255, 26, 0, 0.5), inset 0 0 4px #ffffff;
-    transform: scaleX(0.9) scaleY(0.85);
-  }
-  50% {
-    background-position: 0% 0%;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.9), 0 0 60px rgba(255, 69, 0, 1), 0 0 90px rgba(255, 26, 0, 0.8), 0 0 120px rgba(255, 140, 0, 0.6), inset 0 0 10px #ffffff;
-    transform: scaleX(1.25) scaleY(1.5);
-  }
-  100% {
-    background-position: -100% 0%;
-    box-shadow: 0 0 12px rgba(255, 69, 0, 0.7), 0 0 25px rgba(255, 26, 0, 0.5), inset 0 0 4px #ffffff;
-    transform: scaleX(0.9) scaleY(0.85);
-  }
-}
 
 /* Features Wrapper & Zigzag Rows */
 .features-wrapper {
@@ -205,37 +178,7 @@
   justify-content: center;
 }
 
-.yellow-blob {
-  position: absolute;
-  width: 280px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, transparent 70%);
-  border: 1px solid rgba(2, 132, 199, 0.15);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  z-index: 1;
-}
 
-.hexagon-frame {
-  position: relative;
-  width: 210px;
-  height: 230px;
-  z-index: 2;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: #FFFFFF;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-  border: 2px solid rgba(2, 132, 199, 0.2);
-}
-
-.hexagon-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.hexagon-frame:hover img {
-  transform: scale(1.05);
-}
 
 /* Elite Interactive Buttons */
 .btn-yellow {
@@ -318,122 +261,138 @@
   text-align: left;
 }
 
-/* Commitment Box */
-.commitment-box {
-  background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
-}
 
-.commitment-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  color: #0F172A;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
 
-.commitment-list {
-  list-style-type: none;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-size: 1.02rem;
-  color: #334155;
-  margin: 0;
-}
+/* =========================================
+   Sleek Company Info & Disclaimers Section
+========================================= */
 
-.commitment-list li {
-  position: relative;
-  padding-left: 26px;
-  text-align: left;
-}
-
-.commitment-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: #0284C7;
-  font-weight: bold;
-}
-
-/* Company Information & Disclaimers */
+/* Main Wrapper - Width increased to remove the squeezed look */
 .company-info-section {
-  max-width: 1200px;
-  margin: 70px auto 0 auto;
+  max-width: 1200px; /* 🔥 Wapas 1200px kiya taaki full aur proper wide lage */
+  margin: 70px auto 80px auto;
   padding: 0 40px;
 }
 
-.company-card-box {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 22px;
-  padding: 45px;
+/* --- Top Header (Without Box) --- */
+.company-header-clean {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  margin-bottom: 60px;
 }
 
-.company-card-box h4 {
+.header-icon-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.company-header-clean h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   color: #0F172A;
-  margin: 10px 0 16px 0;
+  margin: 0 0 15px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.company-subtext {
+  font-family: 'Inter', sans-serif;
+  color: #475569;
+  font-size: 1.05rem;
+  margin: 6px 0;
+  font-weight: 400;
+}
+
+.company-subtext strong {
+  color: #0F172A;
+  font-weight: 600;
+}
+
+/* --- Content Wrapper (Vertical Stack) --- */
+.company-content-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; 
+}
+
+/* Common Blue Heading */
+.blue-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #0284C7;
+  margin: 0 0 25px 0;
   font-weight: 700;
 }
 
-.company-details {
+/* --- Important Information (Clean Look) --- */
+.important-info-clean {
+  padding: 0;
+}
+
+.custom-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.custom-bullet-list li {
+  position: relative;
+  padding-left: 28px;
+  font-family: 'Inter', sans-serif;
   font-size: 1.05rem;
   color: #334155;
-  line-height: 1.9;
-  margin-bottom: 40px;
-}
-
-.info-notes-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  text-align: left;
-  width: 100%;
-}
-
-.note-box {
-  background: #F8F9FA;
-  border: 1px solid #E2E8F0;
-  padding: 30px;
-  border-radius: 18px;
-}
-
-.note-box h5 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  color: #0284C7;
-  margin: 0 0 16px 0;
-  font-weight: 700;
-}
-
-.note-box ul {
-  padding-left: 18px;
-  font-size: 0.92rem;
-  color: #475569;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
   line-height: 1.7;
 }
 
-.note-box p {
-  font-size: 0.92rem;
+/* Diamond Bullet Style */
+.custom-bullet-list li::before {
+  content: '✦'; 
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #38BDF8;
+  font-size: 1.15rem;
+}
+
+/* --- Disclaimer (Top Border Image Match) --- */
+.disclaimer-sleek-box {
+  background: linear-gradient(180deg, #F0F9FF 0%, #F8FAFC 100%);
+  border-left: 4px solid #0284C7; /* 🔥 Left border hata kar Top border add kiya */
+  border-radius: 16px; /* 🔥 Charo taraf se smooth rounded corners */
+  padding: 40px 45px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.disclaimer-sleek-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   color: #475569;
   line-height: 1.9;
   margin: 0;
-  text-align: left;
+  text-align: justify;
+}
+
+/* =========================================
+   Mobile Adjustments
+========================================= */
+@media (max-width: 768px) {
+  .company-info-section {
+    padding: 0 25px;
+  }
+  .disclaimer-sleek-box {
+    padding: 30px 25px;
+  }
 }
 
 /* Footer */
@@ -462,4 +421,248 @@
   .about-hero h1 {
     font-size: 2.4rem;
   }
+}
+/* =========================================
+   CLEAN FEATURE IMAGE 
+========================================= */
+.custom-feature-image {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* Aap apni need ke hisab se width badha/ghata sakte hain */
+   /* Halke se rounded corners ke liye (optional) */
+  object-fit: cover;
+ 
+}
+
+
+/* =========================================
+   Premium Commitment Box Design
+========================================= */
+.commitment-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  border-top: 4px solid #0284C7; /* 🔥 Top par ek blue accent line */
+  padding: 45px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading Styling with Gradient Underline */
+.commitment-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #0F172A;
+  margin: 0 0 35px 0;
+  font-weight: 800;
+  text-align: left;
+  position: relative;
+}
+
+.commitment-box h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0284C7, #38BDF8);
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+/* =========================================
+   Modern Card-Style List
+========================================= */
+.commitment-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 🔥 2-column grid layout on large screens */
+  gap: 20px;
+}
+
+/* Individual List Item Box */
+.commitment-list li {
+  position: relative;
+  padding: 16px 20px 16px 55px; /* 🔥 Icon ke liye space */
+  background: #F8FAFC; /* Halka grey background */
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  font-size: 1.02rem;
+  color: #334155;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover Effect on List Items */
+.commitment-list li:hover {
+  background: #FFFFFF;
+  border-color: #38BDF8;
+  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.08);
+  transform: translateY(-2px);
+  color: #0F172A;
+}
+
+/* 🔥 Custom Gradient Circular Checkmark Bullet */
+.commitment-list li::before {
+  content: '\2713'; /* Checkmark symbol (✓). Agar arrow chahiye toh '\2192' likhein */
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #0284C7, #38BDF8);
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
+  transition: all 0.3s ease;
+}
+
+.commitment-list li:hover::before {
+  transform: translateY(-50%) scale(1.15); /* Hover par icon thoda bada hoga */
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5);
+}
+
+/* =========================================
+   Mobile Adjustments
+========================================= */
+@media (max-width: 768px) {
+  .commitment-box {
+    padding: 30px 20px;
+  }
+  .commitment-list {
+    grid-template-columns: 1fr; /* Mobile par single column */
+  }
+}
+
+/* =========================================
+   Ultra-Premium Split Blocks (Security & Mission)
+========================================= */
+.split-block {
+  /* Subtle gradient background for depth instead of flat white */
+  background: linear-gradient(145deg, #ffffff 0%, #F8FAFC 100%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 50px 45px;
+  border-radius: 28px; /* Slightly softer, modern corners */
+  
+  /* 🔥 Magical 3D Shadow: Inner highlight + Outer soft drop shadow */
+  box-shadow: 
+    inset 2px 2px 5px rgba(255, 255, 255, 1), 
+    0 15px 35px rgba(15, 23, 42, 0.04);
+  
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 🔥 Top Highlight Bar (Appears on Hover) */
+.split-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0284C7, #38BDF8, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.split-block:hover::after {
+  opacity: 1;
+}
+
+.split-block:hover {
+  transform: translateY(-6px);
+  /* Hover par shadow aur deep aur premium blue hogi */
+  box-shadow: 
+    inset 2px 2px 5px rgba(255, 255, 255, 1), 
+    0 25px 50px rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
+.inline-heading {
+  display: flex;
+  align-items: center;
+  gap: 22px; /* Thoda aur breathing room */
+  margin-bottom: 28px; 
+}
+
+/* 🚀 Premium Floating Icon styling */
+.icon-symbol {
+  font-size: 1.5rem;
+  color: #0284C7; /* Default blue icon */
+  background: #FFFFFF;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px; /* Squircle */
+  
+  /* Glowing ring shadow */
+  box-shadow: 
+    0 10px 25px rgba(2, 132, 199, 0.12),
+    inset 0 0 0 1px rgba(2, 132, 199, 0.1); 
+  
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🔥 Decorative Notification Dot on Icon */
+.icon-symbol::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  background: #38BDF8;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Interactive Hover state for Icon */
+.split-block:hover .icon-symbol {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); /* Fills deep blue */
+  color: #FFFFFF; /* Icon becomes white */
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(2, 132, 199, 0.25);
+}
+
+.split-block:hover .icon-symbol::before {
+  background: #0F172A; /* Dot turns dark */
+}
+
+/* 🔥 Tighter Typography for High-End Look */
+.inline-heading h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  color: #0F172A;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px; /* Tighter letter spacing looks very professional */
+}
+
+.split-block p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  color: #475569;
+  line-height: 1.75;
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }

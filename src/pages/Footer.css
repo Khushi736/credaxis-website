@@ -264,8 +264,8 @@
 ========================================= */
 .chat-widget-wrapper {
   position: fixed;
-  bottom: 15px; /* 🔥 Mobile par corner ke ekdum paas set kiya */
-  right: 15px;  /* 🔥 Right corner padding reduce ki */
+  bottom: 15px; 
+  right: 15px;  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,18 +275,17 @@
 /* Sub Menus Container */
 .chat-sub-menus {
   position: absolute;
-  bottom: 55px; /* Main button ab chota hai, isliye isko uske hisab se adjust kiya */
+  bottom: 65px; /* 🔥 Main button bada hua hai, isliye isko thoda upar shift kiya */
   display: flex;
-  flex-direction: column-reverse; /* Niche se upar khulne jaisa effect */
-  gap: 12px; /* Gap thoda kam kiya */
+  flex-direction: column-reverse; 
+  gap: 12px; 
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.8);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy effect */
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
   pointer-events: none;
 }
 
-/* Jab chat open ho */
 .chat-sub-menus.active {
   opacity: 1;
   visibility: visible;
@@ -294,24 +293,23 @@
   pointer-events: auto;
 }
 
-/* Individual Sub Buttons - Professional Theme (Mobile Size) */
+/* Individual Sub Buttons */
 .sub-btn {
-  width: 40px; /* 🔥 Sub-buttons ko main button ke according chota kiya */
-  height: 40px;
+  width: 45px; /* 🔥 Sub-buttons ko 40px se 45px kar diya */
+  height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  background-color: #1a365d; /* Dark Blue */
-  color: #b5dcec; /* Light Blue Icon */
+  background-color: #1a365d; 
+  color: #b5dcec; 
   border: 1px solid rgba(56, 189, 248, 0.2);
-  font-size: 16px; /* Icon chota kiya */
+  font-size: 18px; /* 🔥 Icon bhi thoda bada kiya */
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
-/* Hover Effect: Turns solid light blue */
 .sub-btn:hover {
   background-color: #5e889a; 
   color: #000000;
@@ -320,27 +318,36 @@
   border-color: #38bdf8;
 }
 
-/* Main Chat Button (Mobile Size) */
+/* 🔥 NEW: Floating Keyframe Animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Main Chat Button (Mobile Size + Floating Animation) */
 .chat-floating-btn {
-  width: 45px; /* 🔥 Mobile par button size chota kiya (Pehle 55px tha) */
-  height: 45px;
+  width: 50px; /* 🔥 Chota hatakar ab thoda bada (50px) kar diya hai */
+  height: 50px;
   background-color: #5a7784;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-  font-size: 20px; /* Icon bhi properly scale down kiya */
+  font-size: 22px; /* 🔥 Icon size properly adjust kiya hai */
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
+  animation: floatUpDown 3s ease-in-out infinite; /* Smooth floating animation */
 }
 
-/* Jab chat menu khula ho toh main button ka design (X Icon style) */
+/* Jab chat menu khula ho toh main button ka design */
 .chat-floating-btn.open {
-  background-color: #1a365d; /* Dark Blue */
+  background-color: #1a365d; 
   color: #ffffff;
-  transform: rotate(90deg); /* Halki si rotation animation */
+  transform: rotate(90deg); 
+  animation: none; /* Open hone par float animation ruk jayegi */
 }
 
 /* =========================================
@@ -353,7 +360,7 @@
   }
   .chat-sub-menus {
     bottom: 80px;
-    gap: 15px; /* Gap wapas bada diya */
+    gap: 15px; 
   }
   .sub-btn {
     width: 50px;
@@ -361,7 +368,7 @@
     font-size: 20px;
   }
   .chat-floating-btn {
-    width: 60px;
+    width: 60px; /* Desktop pe original bada size */
     height: 60px;
     font-size: 28px;
   }

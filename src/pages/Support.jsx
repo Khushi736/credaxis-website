@@ -62,7 +62,8 @@ export default function Support() {
         </div>
         <div className="support-hero-content">
           <h1>Contact Us</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          {/* 🔥 Lorem Ipsum hataya aur professional text add kiya */}
+          <p>Need help with your transactions or account? Our support team is available to provide secure, fast, and reliable assistance.</p>
         </div>
       </section>
 
@@ -73,45 +74,49 @@ export default function Support() {
           {/* Left Slanted Card Box (Dynamic Contact Links) */}
           <div className="contact-left-card">
             
-            <a href="tel:+880123456789" className="contact-info-row dynamic-contact-link">
+            {/* 🔥 Real Phone Number Format */}
+            <a href="tel:+9118001234567" className="contact-info-row dynamic-contact-link">
               <span className="info-step-circle">1</span>
               <div>
-                <span className="info-title-label">Call Us</span>
-                <p className="info-value-text">+880 123 456 789</p>
+                <span className="info-title-label">Call Us (Toll-Free)</span>
+                <p className="info-value-text">+91 1800-123-4567</p>
               </div>
             </a>
 
-            <a href="mailto:exampleinfo@gmail.com" className="contact-info-row dynamic-contact-link">
+            {/* 🔥 Professional Domain Email */}
+            <a href="mailto:support@mycredaxis.com" className="contact-info-row dynamic-contact-link">
               <span className="info-step-circle">2</span>
               <div>
                 <span className="info-title-label">Email Us</span>
-                <p className="info-value-text">exampleinfo@gmail.com</p>
+                <p className="info-value-text">support@mycredaxis.com</p>
               </div>
             </a>
 
-            <a href="https://wa.me/880123456789" target="_blank" rel="noopener noreferrer" className="contact-info-row dynamic-contact-link">
+            {/* 🔥 WhatsApp Link Updated */}
+            <a href="https://wa.me/9118001234567" target="_blank" rel="noopener noreferrer" className="contact-info-row dynamic-contact-link">
               <span className="info-step-circle">3</span>
               <div>
                 <span className="info-title-label">WhatsApp Support</span>
-                <p className="info-value-text">Chat with us</p>
+                <p className="info-value-text">Chat with our digital assistant</p>
               </div>
             </a>
 
             <p className="left-card-desc">
-              Connect with us instantly through call, email, or WhatsApp. We are here to help you.
+              Connect with us instantly through call, email, or WhatsApp. We are dedicated to resolving your queries swiftly.
             </p>
 
             <div className="left-social-icons">
-              <a href="https://wa.me/880123456789" target="_blank" rel="noopener noreferrer" title="WhatsApp"><FaWhatsapp /></a>
-              <a href="tel:+880123456789" title="Call"><FaPhoneAlt /></a>
-              <a href="mailto:exampleinfo@gmail.com" title="Email"><FaEnvelope /></a>
+              <a href="https://wa.me/9118001234567" target="_blank" rel="noopener noreferrer" title="WhatsApp"><FaWhatsapp /></a>
+              <a href="tel:+9118001234567" title="Call"><FaPhoneAlt /></a>
+              <a href="mailto:support@mycredaxis.com" title="Email"><FaEnvelope /></a>
             </div>
           </div>
 
           {/* Right Suggestion Form */}
           <div className="contact-right-form-box">
             <h2>Send Us a Suggestion!</h2>
-            <p className="form-sub-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            {/* 🔥 Dummy text replaced with relevant form description */}
+            <p className="form-sub-desc">Your feedback drives our innovation. Share your thoughts, report issues, or suggest new features to help us build a better financial ecosystem for you.</p>
             
             <form onSubmit={(e) => e.preventDefault()} className="suggestion-form">
               <div className="form-row-dual">
@@ -137,20 +142,21 @@ export default function Support() {
       {/* Quick Features Bar */}
       <section className="quick-features-bar">
         <div className="quick-cards-grid">
-          <a href="tel:+880123456789" className="q-card dynamic-q-card">
+          <a href="tel:+9118001234567" className="q-card dynamic-q-card">
             <div className="q-icon-box"><FaPhoneAlt /></div>
             <h3>Contact Us</h3>
-            <p>+880 123 456 789</p>
+            <p>+91 1800-123-4567</p>
           </a>
-          <a href="mailto:exampleinfo@gmail.com" className="q-card dynamic-q-card">
+          <a href="mailto:support@mycredaxis.com" className="q-card dynamic-q-card">
             <div className="q-icon-box"><FaEnvelope /></div>
-            <h3>Gmail</h3>
-            <p>exampleinfo@gmail.com</p>
+            <h3>Email Support</h3>
+            <p>support@mycredaxis.com</p>
           </a>
           <div className="q-card">
             <div className="q-icon-box"><FaMapMarkerAlt /></div>
-            <h3>Location</h3>
-            <p>Lotifpur Bogura.</p>
+            <h3>Corporate Office</h3>
+            {/* 🔥 Location updated to a professional corporate address */}
+            <p>Bisani Brothers Pvt Ltd, Lucknow, India</p>
           </div>
         </div>
       </section>

@@ -916,3 +916,144 @@ body {
     padding: 70px 40px 90px 40px;
   }
 }
+
+/* =========================================
+   AUTOPAY/MANDATE CENTER SHOWCASE (DARK PREMIUM)
+========================================= */
+.autopay-showcase-section {
+  padding: 150px 20px; /* 🔥 Top aur Bottom padding badha di taaki height jyada lage */
+  background: #000; /* 🔥 Deep dark slate/navy background */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.autopay-showcase-container {
+  display: grid;
+  /* 🔥 Center column ko zyada space diya (1.8fr) taaki image badi dikhe */
+  grid-template-columns: 1fr 1.8fr 1fr; 
+  gap: 30px; /* Gap thoda kam kiya taaki content connected lage */
+  max-width: 1440px; /* 🔥 Squeezed look hatane ke liye width 1200px se 1440px kar di */
+  width: 100%;
+  padding: 0 20px; /* Sirf mobile/tablet ke safe area ke liye padding */
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* --- Text Columns --- */
+.autopay-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 70px; /* 🔥 Features ke beech ka space badha diya */
+}
+
+.autopay-align-left {
+  text-align: left; 
+}
+
+.autopay-align-right {
+  text-align: right; 
+}
+
+/* Individual Text Item Styling */
+.autopay-info-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem; /* Font size halka sa badhaya */
+  color: #FFFFFF; /* 🔥 Dark background pe heading White hogi */
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.autopay-info-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #94A3B8; /* 🔥 Light Grey text for high readability */
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* --- Center Image Column --- */
+.autopay-center-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.autopay-mockup-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 700px; /* 🔥 Image ki max-width 400px se badha kar 600px kar di */
+  transition: transform 0.5s ease;
+  margin: 0 auto; /* Image ko perfectly center rakhne ke liye */
+}
+
+/* Hover par halka sa lift effect */
+.autopay-mockup-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.autopay-mockup-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4)); /* Dark mode black shadow */
+}
+
+/* 🔥 Magical Glow Effect behind the image */
+.autopay-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Glow ko bhi nayi image size ke hisab se adjust kiya */
+  height: 100%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 65%);
+  z-index: -1;
+  border-radius: 50%;
+}
+/* =========================================
+   Responsive Design (Tablet & Mobile)
+========================================= */
+
+/* TABLET VIEW */
+@media (max-width: 1024px) {
+  .autopay-showcase-container {
+    grid-template-columns: 1fr; 
+    gap: 60px;
+  }
+  
+  .autopay-center-visual {
+    grid-row: 1; 
+    margin-bottom: 30px;
+  }
+
+  .autopay-text-col {
+    gap: 40px;
+  }
+
+  .autopay-align-left, .autopay-align-right {
+    text-align: center; 
+  }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .autopay-showcase-section {
+    padding: 80px 20px; /* Mobile pe bhi height badhayi hai */
+  }
+  
+  .autopay-info-box h3 {
+    font-size: 1.65rem;
+  }
+  
+  .autopay-info-box p {
+    font-size: 1rem;
+  }
+
+  .autopay-mockup-wrapper {
+    max-width: 320px; 
+  }
+}

@@ -430,8 +430,8 @@ function Home() {
 
       <section className="upgrade-section">
         <div className="upgrade-header reveal">
-          <h2 className="upgrade-title serif-text lowercase">
-            upgrade your life.
+          <h2 className="upgrade-title serif-text ">
+            Upgrade your life.
             <br />
             bit by bit.
           </h2>
@@ -439,16 +439,16 @@ function Home() {
 
         <div className="cards-container reveal">
           <div className="feature-card card-green">
-            <div className="card-tag">Scan & Pay</div>
+            <div className="card-tag">Pay bills</div>
 
-            <h3 className="card-title serif-text lowercase">
-              scan & pay
+            <h3 className="card-title serif-text ">
+              Every bill. 
               <br />
-              any upi qr
+              One place.
             </h3>
 
             <div className="card-visual">
-              <img src="/images/upgrade1.png" alt="Scan and Pay" className="card-image portrait" />
+              <img src="/images/bp1.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
             <Link to="/scan-and-pay" className="know-more">
@@ -457,16 +457,16 @@ function Home() {
           </div>
 
           <div className="feature-card card-purple">
-            <div className="card-tag">UPI on Credit</div>
+            <div className="card-tag">Mandate</div>
 
-            <h3 className="card-title serif-text lowercase">
-              upi payments.
+            <h3 className="card-title serif-text ">
+              Set it once.
               <br />
-              on credit.
+              Forgot the rest.
             </h3>
              
             <div className="card-visual">
-              <img src="/images/upg2.png" alt="Scan and Pay" className="card-image landscape" />
+              <img src="/images/autopay.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
             <Link to="/upi-on-credit" className="know-more">
@@ -475,16 +475,16 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
-            <div className="card-tag">Tap to Pay</div>
+            <div className="card-tag">CREDIT INSIGHTS</div>
 
-            <h3 className="card-title serif-text lowercase">
-              tap your phone.
+            <h3 className="card-title serif-text ">
+              Know where 
               <br />
-              pay on credit.
+              You stand
             </h3>
 
             <div className="card-visual">
-              <img src="/images/upg5.png" alt="Scan and Pay" className="card-image landscape " />
+              <img src="/images/report.png" alt="Scan and Pay" className="card-image landscape " />
             </div>
 
             <div className="know-more">
@@ -493,16 +493,16 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
-            <div className="card-tag">Pay Anyone</div>
+            <div className="card-tag">EMI PAYMENTS</div>
 
-            <h3 className="card-title serif-text lowercase">
-              send money to
+            <h3 className="card-title serif-text ">
+              Stay ahead 
               <br />
-              pay UPI app
+              of every EMi.
             </h3>
 
             <div className="card-visual">
-              <img src="/images/upg4.png" alt="Scan and Pay" className="card-image landscape" />
+              <img src="/images/emi.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
             <div className="know-more">
@@ -511,16 +511,16 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
-            <div className="card-tag">MyCredAxis Garage</div>
+            <div className="card-tag">Refer & Earn</div>
 
-            <h3 className="card-title serif-text lowercase">
-              manage your 
+            <h3 className="card-title serif-text">
+              Share more.
               <br />
-              cars'vitals.
+              Earn more.
             </h3>
 
             <div className="card-visual">
-              <img src="/images/upg3.png" alt="Scan and Pay" className="card-image portrait" />
+              <img src="/images/referral.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
             <div className="know-more">
@@ -530,8 +530,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="hm-video-hero-section">
-        {/* Background Video */}
+      {/* <section className="hm-video-hero-section">
+     
         <video 
           src="/video/ball.mp4" 
           autoPlay 
@@ -541,10 +541,8 @@ function Home() {
           className="hm-bg-video"
         />
         
-        {/* Dark Overlay for Text Readability */}
+  
         <div className="hm-video-overlay"></div>
-
-        {/* Center Content */}
         <div className="hm-hero-content">
           <h1 className="hm-hero-title">
             feel the odds fall<br />
@@ -554,30 +552,56 @@ function Home() {
             unlock cashback, exclusive rewards from select brands, and special access to curated products and experiences.
           </p>
         </div>
+      </section> */}
+
+      {/* =========================================
+          CENTER IMAGE FEATURE SECTION (AUTOPAY/MANDATE)
+      ========================================== */}
+      <section className="autopay-showcase-section">
+        <div className="autopay-showcase-container">
+          
+          {/* ⬅️ Left Text Column */}
+          <div className="autopay-text-col autopay-align-left">
+            <div className="autopay-info-box">
+              <h3 className="serif-text ">Effortless mandates.</h3>
+              <p>Set up recurring payments for your bills and emis in seconds. automate the hassle out of your monthly cycle.</p>
+            </div>
+            <div className="autopay-info-box">
+              <h3 className="serif-text ">Absolute control.</h3>
+              <p>Pause, modify, or revoke your active autopay setups instantly. you are always in the driver's seat.</p>
+            </div>
+          </div>
+
+          {/* 📱 Center Image Column */}
+          <div className="autopay-center-visual">
+            <div className="autopay-mockup-wrapper">
+              {/* Apni center image ka path yahan dalein */}
+              <img src="/images/mandate.png" alt="Autopay Features" />
+              
+              {/* Premium glowing effect background */}
+              <div className="autopay-ambient-glow"></div>
+            </div>
+          </div>
+
+          {/* ➡️ Right Text Column */}
+          <div className="autopay-text-col autopay-align-right">
+            <div className="autopay-info-box">
+              <h3 className="serif-text ">Zero late fees.</h3>
+              <p>Never miss a due date again. automated deductions ensure on-time payments and protect your credit score.</p>
+            </div>
+            <div className="autopay-info-box">
+              <h3 className="serif-text ">Pre-debit alerts.</h3>
+              <p>No surprise deductions. get timely notifications before any mandate is executed from your account.</p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
 
       {/* =========================================
             SECURITY SECTION
       ========================================== */}
-
-      {/* <section className="security-section">
-        <div className="security-icon reveal">
-          <i className="bi bi-lock-fill"></i>
-        </div>
-
-        <h3 className="security-tag reveal">
-          your data isn't our business. keeping it safe is.
-        </h3>
-
-        <p className="security-para serif-text reveal">
-          all your personal data and transactions are{" "}
-          <span style={{ color: "#fff" }}>
-            encrypted and secured.
-          </span>{" "}
-          there's no room for mistakes because we didn't leave any.
-        </p>
-      </section> */}
 
       <section className="security-section">
         {/* Background Video */}

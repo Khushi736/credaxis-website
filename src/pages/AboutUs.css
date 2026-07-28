@@ -7,7 +7,6 @@
   color: #1E293B;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   margin: 0;
-  
   padding: 0 0 80px 0;
   min-height: 100vh;
   box-sizing: border-box;
@@ -32,7 +31,7 @@
   height: 54px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) saturate(100%); /* Yeh image ko solid dark/black convert kar dega */
+  filter: brightness(0) saturate(100%);
 }
 
 .logo-subtext {
@@ -52,7 +51,7 @@
 }
 
 .hero-content {
-  max-width: 1000px; /* Expansive and balanced width, not squeezed */
+  max-width: 1000px; 
   margin: 0 auto;
 }
 
@@ -72,12 +71,11 @@
   font-weight: 400;
   text-align: center;
   margin: 0;
-  
 }
 
 /* Objective Section */
 .objective-section {
-  max-width: 1000px; /* Matched perfectly with hero width */
+  max-width: 1000px;
   margin: 10px auto 55px auto;
   padding: 0 40px;
   text-align: center;
@@ -117,8 +115,6 @@
   margin: 0;
   font-weight: 700;
 }
-
-
 
 /* Features Wrapper & Zigzag Rows */
 .features-wrapper {
@@ -167,18 +163,25 @@
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .art-wrapper {
   position: relative;
-  width: 320px;
+  width: 100%; 
+  max-width: 320px; /* Fixed width removed to prevent mobile overflow */
   height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+.custom-feature-image {
+  width: 100%;
+  height: auto;
+  max-width: 450px; 
+  object-fit: cover;
+}
 
 /* Elite Interactive Buttons */
 .btn-yellow {
@@ -193,7 +196,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25);
   display: inline-flex !important;
-  width: max-content !important; /* Yeh button ko stretch hone se rokega aur chota rakhega */
+  width: max-content !important; 
   max-width: max-content !important;
 }
 
@@ -202,6 +205,7 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
 }
+
 /* Security, Mission & Commitment Section */
 .mission-security-section {
   background: linear-gradient(180deg, #F1F5F9 0%, #E2E8F0 100%);
@@ -222,59 +226,209 @@
   margin-bottom: 40px;
 }
 
+/* Ultra-Premium Split Blocks (Security & Mission) */
 .split-block {
-  background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  padding: 36px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  background: linear-gradient(145deg, #ffffff 0%, #F8FAFC 100%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 50px 45px;
+  border-radius: 28px;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 1), 0 15px 35px rgba(15, 23, 42, 0.04);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.split-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0284C7, #38BDF8, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.split-block:hover::after {
+  opacity: 1;
+}
+
+.split-block:hover {
+  transform: translateY(-6px);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 1), 0 25px 50px rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.15);
 }
 
 .inline-heading {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 22px; 
+  margin-bottom: 28px; 
 }
 
+/* Premium Floating Icon styling */
 .icon-symbol {
-  font-size: 1.4rem;
-  background: rgba(2, 132, 199, 0.1);
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  font-size: 1.5rem;
+  color: #0284C7; 
+  background: #FFFFFF;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px; 
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12), inset 0 0 0 1px rgba(2, 132, 199, 0.1); 
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0; /* Prevents icon from shrinking on small screens */
+}
+
+.icon-symbol::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  background: #38BDF8;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.split-block:hover .icon-symbol {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); 
+  color: #FFFFFF; 
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(2, 132, 199, 0.25);
+}
+
+.split-block:hover .icon-symbol::before {
+  background: #0F172A; 
 }
 
 .inline-heading h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   color: #0F172A;
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px; 
 }
 
 .split-block p {
-  font-size: 1.02rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
   color: #475569;
-  line-height: 1.9;
+  line-height: 1.75;
   margin: 0;
   text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
+/* =========================================
+   Premium Commitment Box Design
+========================================= */
+.commitment-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  border-top: 4px solid #0284C7; 
+  padding: 45px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
 
+.commitment-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #0F172A;
+  margin: 0 0 35px 0;
+  font-weight: 800;
+  text-align: left;
+  position: relative;
+}
+
+.commitment-box h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0284C7, #38BDF8);
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.commitment-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 20px;
+}
+
+.commitment-list li {
+  position: relative;
+  padding: 16px 20px 16px 55px; 
+  background: #F8FAFC; 
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  font-size: 1.02rem;
+  color: #334155;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.commitment-list li:hover {
+  background: #FFFFFF;
+  border-color: #38BDF8;
+  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.08);
+  transform: translateY(-2px);
+  color: #0F172A;
+}
+
+.commitment-list li::before {
+  content: '\2713'; 
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #0284C7, #38BDF8);
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
+  transition: all 0.3s ease;
+}
+
+.commitment-list li:hover::before {
+  transform: translateY(-50%) scale(1.15); 
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5);
+}
 
 /* =========================================
    Sleek Company Info & Disclaimers Section
 ========================================= */
-
-/* Main Wrapper - Width increased to remove the squeezed look */
 .company-info-section {
-  max-width: 1200px; /* 🔥 Wapas 1200px kiya taaki full aur proper wide lage */
+  max-width: 1200px; 
   margin: 70px auto 80px auto;
   padding: 0 40px;
 }
 
-/* --- Top Header (Without Box) --- */
 .company-header-clean {
   text-align: center;
   margin-bottom: 60px;
@@ -316,14 +470,12 @@
   font-weight: 600;
 }
 
-/* --- Content Wrapper (Vertical Stack) --- */
 .company-content-stacked {
   display: flex;
   flex-direction: column;
   gap: 50px; 
 }
 
-/* Common Blue Heading */
 .blue-heading {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
@@ -332,7 +484,6 @@
   font-weight: 700;
 }
 
-/* --- Important Information (Clean Look) --- */
 .important-info-clean {
   padding: 0;
 }
@@ -355,7 +506,6 @@
   line-height: 1.7;
 }
 
-/* Diamond Bullet Style */
 .custom-bullet-list li::before {
   content: '✦'; 
   position: absolute;
@@ -365,11 +515,10 @@
   font-size: 1.15rem;
 }
 
-/* --- Disclaimer (Top Border Image Match) --- */
 .disclaimer-sleek-box {
   background: linear-gradient(180deg, #F0F9FF 0%, #F8FAFC 100%);
-  border-left: 4px solid #0284C7; /* 🔥 Left border hata kar Top border add kiya */
-  border-radius: 16px; /* 🔥 Charo taraf se smooth rounded corners */
+  border-left: 4px solid #0284C7; 
+  border-radius: 16px; 
   padding: 40px 45px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
 }
@@ -383,19 +532,6 @@
   text-align: justify;
 }
 
-/* =========================================
-   Mobile Adjustments
-========================================= */
-@media (max-width: 768px) {
-  .company-info-section {
-    padding: 0 25px;
-  }
-  .disclaimer-sleek-box {
-    padding: 30px 25px;
-  }
-}
-
-/* Footer */
 .about-footer {
   background-color: #0F172A;
   color: #94A3B8;
@@ -406,263 +542,119 @@
   margin-top: 80px;
 }
 
-/* Responsive Design */
+
+/* =========================================
+   MEDIA QUERIES FOR FULL RESPONSIVENESS
+========================================= */
+
+/* TABLET (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .features-wrapper {
+    padding: 20px 30px 40px 30px;
+  }
+  .feature-row, .feature-row.reverse {
+    gap: 40px;
+  }
+  .mission-security-section {
+    padding: 60px 30px;
+  }
+  .company-info-section {
+    padding: 0 30px;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
 @media (max-width: 768px) {
+  .about-hero {
+    padding: 20px 20px 30px 20px;
+  }
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  .objective-section {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+  .objective-content h2, 
+  .section-header h2, 
+  .company-header-clean h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Flex direction change for Zigzag features */
   .feature-row, .feature-row.reverse {
     flex-direction: column;
     text-align: center;
   }
-  
-  .content-split-box,
-  .info-notes-grid {
+  .feature-text p {
+    text-align: center; /* Override left align on mobile */
+  }
+  .features-wrapper {
+    gap: 60px;
+  }
+
+  /* Grid layouts */
+  .content-split-box {
     grid-template-columns: 1fr;
   }
-
-  .about-hero h1 {
-    font-size: 2.4rem;
-  }
-}
-/* =========================================
-   CLEAN FEATURE IMAGE 
-========================================= */
-.custom-feature-image {
-  width: 100%;
-  height: auto;
-  max-width: 450px; /* Aap apni need ke hisab se width badha/ghata sakte hain */
-   /* Halke se rounded corners ke liye (optional) */
-  object-fit: cover;
- 
-}
-
-
-/* =========================================
-   Premium Commitment Box Design
-========================================= */
-.commitment-box {
-  background: #FFFFFF;
-  border: 1px solid rgba(203, 213, 225, 0.6);
-  border-top: 4px solid #0284C7; /* 🔥 Top par ek blue accent line */
-  padding: 45px 50px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Heading Styling with Gradient Underline */
-.commitment-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #0F172A;
-  margin: 0 0 35px 0;
-  font-weight: 800;
-  text-align: left;
-  position: relative;
-}
-
-.commitment-box h3::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #0284C7, #38BDF8);
-  margin-top: 12px;
-  border-radius: 2px;
-}
-
-/* =========================================
-   Modern Card-Style List
-========================================= */
-.commitment-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 🔥 2-column grid layout on large screens */
-  gap: 20px;
-}
-
-/* Individual List Item Box */
-.commitment-list li {
-  position: relative;
-  padding: 16px 20px 16px 55px; /* 🔥 Icon ke liye space */
-  background: #F8FAFC; /* Halka grey background */
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  font-size: 1.02rem;
-  color: #334155;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-/* Hover Effect on List Items */
-.commitment-list li:hover {
-  background: #FFFFFF;
-  border-color: #38BDF8;
-  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.08);
-  transform: translateY(-2px);
-  color: #0F172A;
-}
-
-/* 🔥 Custom Gradient Circular Checkmark Bullet */
-.commitment-list li::before {
-  content: '\2713'; /* Checkmark symbol (✓). Agar arrow chahiye toh '\2192' likhein */
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #0284C7, #38BDF8);
-  color: #FFFFFF;
-  border-radius: 50%;
-  font-size: 0.8rem;
-  font-weight: bold;
-  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
-  transition: all 0.3s ease;
-}
-
-.commitment-list li:hover::before {
-  transform: translateY(-50%) scale(1.15); /* Hover par icon thoda bada hoga */
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5);
-}
-
-/* =========================================
-   Mobile Adjustments
-========================================= */
-@media (max-width: 768px) {
-  .commitment-box {
-    padding: 30px 20px;
-  }
   .commitment-list {
-    grid-template-columns: 1fr; /* Mobile par single column */
+    grid-template-columns: 1fr; 
+  }
+  
+  /* Paddings scaled down */
+  .mission-security-section {
+    padding: 40px 20px;
+  }
+  .split-block {
+    padding: 35px 25px;
+  }
+  .inline-heading h3 {
+    font-size: 1.5rem;
+  }
+  .commitment-box {
+    padding: 35px 25px;
+  }
+  .company-info-section {
+    padding: 0 20px;
+  }
+  .disclaimer-sleek-box {
+    padding: 30px 25px;
+    border-radius: 12px;
+  }
+  .company-content-stacked {
+    gap: 35px;
   }
 }
 
-/* =========================================
-   Ultra-Premium Split Blocks (Security & Mission)
-========================================= */
-.split-block {
-  /* Subtle gradient background for depth instead of flat white */
-  background: linear-gradient(145deg, #ffffff 0%, #F8FAFC 100%);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  padding: 50px 45px;
-  border-radius: 28px; /* Slightly softer, modern corners */
-  
-  /* 🔥 Magical 3D Shadow: Inner highlight + Outer soft drop shadow */
-  box-shadow: 
-    inset 2px 2px 5px rgba(255, 255, 255, 1), 
-    0 15px 35px rgba(15, 23, 42, 0.04);
-  
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-/* 🔥 Top Highlight Bar (Appears on Hover) */
-.split-block::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #0284C7, #38BDF8, transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.split-block:hover::after {
-  opacity: 1;
-}
-
-.split-block:hover {
-  transform: translateY(-6px);
-  /* Hover par shadow aur deep aur premium blue hogi */
-  box-shadow: 
-    inset 2px 2px 5px rgba(255, 255, 255, 1), 
-    0 25px 50px rgba(2, 132, 199, 0.08);
-  border-color: rgba(2, 132, 199, 0.15);
-}
-
-.inline-heading {
-  display: flex;
-  align-items: center;
-  gap: 22px; /* Thoda aur breathing room */
-  margin-bottom: 28px; 
-}
-
-/* 🚀 Premium Floating Icon styling */
-.icon-symbol {
-  font-size: 1.5rem;
-  color: #0284C7; /* Default blue icon */
-  background: #FFFFFF;
-  width: 65px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px; /* Squircle */
-  
-  /* Glowing ring shadow */
-  box-shadow: 
-    0 10px 25px rgba(2, 132, 199, 0.12),
-    inset 0 0 0 1px rgba(2, 132, 199, 0.1); 
-  
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 🔥 Decorative Notification Dot on Icon */
-.icon-symbol::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 14px;
-  height: 14px;
-  background: #38BDF8;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-/* Interactive Hover state for Icon */
-.split-block:hover .icon-symbol {
-  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); /* Fills deep blue */
-  color: #FFFFFF; /* Icon becomes white */
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(2, 132, 199, 0.25);
-}
-
-.split-block:hover .icon-symbol::before {
-  background: #0F172A; /* Dot turns dark */
-}
-
-/* 🔥 Tighter Typography for High-End Look */
-.inline-heading h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.85rem;
-  color: #0F172A;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -0.5px; /* Tighter letter spacing looks very professional */
-}
-
-.split-block p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.08rem;
-  color: #475569;
-  line-height: 1.75;
-  margin: 0;
-  text-align: left;
-  font-weight: 400;
-  letter-spacing: 0.2px;
+/* SMALL MOBILE (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+  .objective-content h2, 
+  .section-header h2, 
+  .company-header-clean h2 {
+    font-size: 1.5rem;
+  }
+  .split-block {
+    padding: 25px 20px;
+  }
+  .icon-symbol {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .commitment-box {
+    padding: 25px 20px;
+  }
+  .commitment-list li {
+    padding-left: 45px;
+    font-size: 0.95rem;
+  }
+  .custom-bullet-list li {
+    font-size: 0.95rem;
+  }
+  .disclaimer-sleek-box {
+    padding: 25px 20px;
+  }
 }

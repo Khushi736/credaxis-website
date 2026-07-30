@@ -576,7 +576,7 @@ function Home() {
           <div className="autopay-center-visual">
             <div className="autopay-mockup-wrapper">
               {/* Apni center image ka path yahan dalein */}
-              <img src="/images/mandate.png" alt="Autopay Features" />
+              <img src="/images/mdt.png" alt="Autopay Features" />
               
               {/* Premium glowing effect background */}
               <div className="autopay-ambient-glow"></div>

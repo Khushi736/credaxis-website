@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaBullseye, FaBuilding, FaInfoCircle,  FaLock } from 'react-icons/fa';
 import './AboutUs.css';
 
 export default function AboutUs() {
+  
+  // 🔥 Ye hook page load hote hi automatically top par scroll kar dega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about-container">
       

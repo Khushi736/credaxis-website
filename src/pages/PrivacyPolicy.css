@@ -1,116 +1,156 @@
 /* ==================================================
-   PRIVACY POLICY - PREMIUM CRED FINTECH THEME
+   PRIVACY POLICY - ENTERPRISE LIGHT THEME (CLEAN & WIDE)
 ================================================== */
 
 .privacy-page {
-  background-color: #000;
-  color: #ededed;
+  background-color: #ffffff;
+  color: #374151; /* Darkened for sharper text */
   min-height: 100vh;
   padding: 100px 8% 120px 8%;
-  font-family: inherit;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* 🔥 Font Smoothing for Apple/Mac-like Crisp Text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
   display: flex;
   justify-content: center;
 }
 
 .privacy-container {
   width: 100%;
-  max-width: 850px; /* Text ko zyada failne se rokega, readability high karega */
+  max-width: 1000px; /* Text ko failane ke liye wide width */
   margin: 0 auto;
+}
+
+/* --- Logo Styling (Fully Responsive, No Inline CSS) --- */
+/* --- Logo Styling --- */
+.privacy-logo {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* 🔥 THE FIX: White logo ko dark black/grey mein convert karne ke liye */
+  filter: brightness(0) contrast(100%); 
 }
 
 /* --- Header Styling --- */
 .privacy-header {
-  text-align: center; /* Center-aligned for a high-end document feel */
+  text-align: center; 
   margin-bottom: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #e2e8f0; 
   padding-bottom: 50px;
   position: relative;
 }
 
-
 .privacy-header h1 {
   font-size: 2.8rem;
   font-weight: 800;
-  letter-spacing: -1.5px;
-  color: #fff;
+  letter-spacing: -1.2px;
+  color: #111827; /* Pure dark/near-black */
   margin: 15px 0 10px 0;
 }
 
 .privacy-header p {
-  color: #71717a;
+  color: #64748b;
   font-size: 0.85rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-/* --- Sections & Typography --- */
+/* --- Sections --- */
 .privacy-content section {
-  margin-bottom: 45px;
-  position: relative;
-  padding-left: 20px;
-  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Decorative left line */
-  transition: border-color 0.3s ease;
-}
-
-.privacy-content section:hover {
-  border-left-color: #fff; /* Hover par line bright white ho jayegi */
+  margin-bottom: 50px;
 }
 
 .privacy-content h2 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #fff;
+  color: #111827; /* Pure dark/near-black */
   margin-bottom: 18px;
- 
   letter-spacing: -0.5px;
 }
 
+/* --- Typography --- */
 .privacy-content p {
   font-size: 1.05rem;
-  line-height: 1.8; /* Paragraph spacing balanced ki gayi hai */
-  color: #a1a1aa;
-  margin-bottom: 15px;
+  line-height: 1.85; 
+  color: #374151; /* Deeper grey for readability */
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+
+.privacy-content strong {
+  color: #111827;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 /* --- Structured Lists Styling --- */
 .privacy-list {
   list-style: none;
   padding: 0;
-  margin: 15px 0;
+  margin: 15px 0 30px 0;
 }
 
 .privacy-list li {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: #a1a1aa;
+  line-height: 1.75;
+  color: #374151;
   margin-bottom: 12px;
   position: relative;
-  padding-left: 15px;
+  padding-left: 24px; /* Bullet point ke baad ka space */
 }
 
-/* Nested lists (jaise a. ke andar i., ii.) */
+/* Clean Bullet Points (Dots instead of dashes) */
+.privacy-list li::before {
+  content: '•'; 
+  position: absolute;
+  left: 0;
+  top: -2px; /* Text ke sath perfect align karne ke liye */
+  color: #64748b; /* Bullet ka color thoda soft grey rakha hai */
+  font-size: 1.5rem; 
+}
+
+/* Nested lists */
 .privacy-list ul {
   list-style: none;
   padding-left: 20px;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .privacy-list ul li {
   font-size: 0.98rem;
-  color: #888891;
-  margin-bottom: 8px;
+  color: #475569;
+  margin-bottom: 12px;
+  padding-left: 20px;
 }
 
-/* Links inside policy */
+.privacy-list ul li::before {
+  content: '◦'; /* Sub-list ke liye khali dot (circle) */
+  color: #94a3b8;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+/* --- Links inside policy --- */
 .privacy-content a {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  color: #2563eb; 
+  text-decoration: none;
+  border-bottom: 1px solid #bfdbfe;
+  transition: all 0.2s ease;
 }
 
 .privacy-content a:hover {
-  color: #d4d4d8;
+  color: #1d4ed8; 
+  border-bottom-color: #1d4ed8;
 }
 
 /* --- Mobile Responsive --- */
@@ -122,8 +162,8 @@
   .privacy-header h1 {
     font-size: 2.2rem;
   }
-
-  .privacy-content section {
-    padding-left: 15px;
+  
+  .privacy-logo {
+    width: 65px; /* Mobile par logo automatically size adjust kar lega */
   }
 }

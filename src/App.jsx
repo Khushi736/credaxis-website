@@ -4,7 +4,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import ScanAndPay from "./pages/ScanAndPay";
-import UpiOnCredit from "./pages/UpiOnCredit";
+import Mandate from "./pages/Mandate";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Support from "./pages/Support";
@@ -12,10 +12,10 @@ import NotFound from './pages/NotFound';
 import CreditCards from './pages/CreditCards';
 import Loans from './pages/Loans';
 import Insurance from './pages/Insurance';
-import TapToPay from './pages/TapToPay';
 import AboutUs from './pages/AboutUs';
 import Faq from './pages/Faq';
 import Footer from './pages/Footer';
+import BillPayments from "./pages/BillPayments";
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -42,7 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/scan-and-pay" element={<ScanAndPay />} />
-        <Route path="/upi-on-credit" element={<UpiOnCredit />} />
+        <Route path="/mandate" element={<Mandate />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         {/* Local Vite: /admin → admin-panel (port 5173). Production uses nginx/backend. */}
@@ -53,9 +53,9 @@ function App() {
         <Route path="/credit-cards" element={<CreditCards />} />
         <Route path="/loans" element={<Loans />} />
         <Route path="/insurance" element={<Insurance />} />
-        <Route path="/tap-to-pay" element={<TapToPay />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/faq" element={<Faq/>} />
+        <Route path="/bill-payments" element={<BillPayments />} />
 
 
       </Routes>

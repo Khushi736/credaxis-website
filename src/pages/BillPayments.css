@@ -1,0 +1,761 @@
+/* =========================================
+   1. BASE SETUP (Unique 'bp-' prefix)
+========================================= */
+.bp-container {
+  background-color: #F8F9FA;
+  color: #1E293B;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0 0 80px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.bp-container *, .bp-container *:before, .bp-container *:after {
+  box-sizing: inherit;
+}
+
+/* =========================================
+   2. REVEAL ANIMATION ENGINE
+========================================= */
+.bp-reveal-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: top;
+  width: 100%; 
+}
+
+.bp-hidden-text {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+.bp-hidden-text.bp-fade-up {
+  transform: translateY(40px);
+}
+
+.bp-reveal-wrapper.bp-show-text .bp-hidden-text,
+.bp-reveal-wrapper.bp-show-text .bp-title-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bp-reveal-wrapper.bp-delay-1 .bp-hidden-text, .bp-reveal-wrapper.bp-delay-1 .bp-title-text { transition-delay: 0.1s; }
+.bp-reveal-wrapper.bp-delay-2 .bp-hidden-text { transition-delay: 0.2s; }
+.bp-reveal-wrapper.bp-delay-3 .bp-hidden-text { transition-delay: 0.3s; }
+.bp-reveal-wrapper.bp-delay-4 .bp-hidden-text { transition-delay: 0.4s; }
+
+
+/* =========================================
+   3. TOP WRAPPER (Logo + Hero Combined)
+========================================= */
+.bp-hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 95vh; /* Covers most of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8fafc;
+  margin-bottom: 100px;
+}
+
+/* The Magic Background Layer (SVG Waves) - Starts from exact top */
+.bp-wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.bp-wave-bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.8; 
+}
+
+/* --- LOGO SECTION (Sits above the wave) --- */
+.bp-logo-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding: 35px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bp-brand-logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%);
+  margin: 0 auto; 
+}
+
+.bp-logo-subtext {
+  font-size: 0.75rem;
+  color: #64748b;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* --- HERO CONTENT SECTION (Sits above the wave) --- */
+.bp-hero-content {
+  position: relative;
+  z-index: 2; 
+  max-width: 900px;
+  text-align: center;
+  padding: 40px 20px;
+  flex: 1; /* Pushes content to center perfectly */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Typography for Hero --- */
+.bp-clean-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a8c3ec;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.bp-title-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 6.5vw, 5.5rem); 
+  font-weight: 800;
+  line-height: 1.05; 
+  color: #0f172a;
+  margin: 0;
+  
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+.bp-header-subtitle {
+  font-size: 1.2rem; 
+  color: #475569;
+  max-width: 600px; 
+  margin: 28px auto 0 auto; 
+  text-align: center;
+  line-height: 1.7; 
+}
+
+.bp-text-gradient {
+  font-size: 0.65em; 
+  font-weight: 700;  
+  background: linear-gradient(135deg, #779acd 0%, #3067c0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-top: 8px; 
+}
+
+
+/* =========================================
+   CALL TO ACTION BUTTONS (Hero)
+========================================= */
+.bp-cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.bp-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 100px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.bp-btn-primary {
+  background-color: #4338ca; 
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(67, 56, 202, 0.25); 
+}
+
+.bp-btn-primary:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 15px 30px rgba(67, 56, 202, 0.35);
+  background-color: #3730a3;
+}
+
+.bp-btn-secondary {
+  background-color: transparent;
+  color: #0f172a; 
+  border: 1px solid #cbd5e1; 
+}
+
+.bp-btn-secondary:hover {
+  background-color: #f8fafc; 
+  border-color: #94a3b8;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .bp-cta-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .bp-btn {
+    width: 100%; 
+  }
+}
+
+/* =========================================
+   5. MINIMAL CATEGORIES GRID
+========================================= */
+.bp-biller-section {
+  max-width: 1100px;
+  margin: 0 auto 100px auto;
+  padding: 0 20px;
+}
+
+.bp-section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.bp-minimal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.bp-minimal-card {
+  border-radius: 20px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  height: 100%;
+}
+
+.bp-minimal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-color: #e2e8f0;
+}
+
+.bp-minimal-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.bp-minimal-card p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.bp-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+
+.bp-blue-light { background: #eff6ff; color: #08090a; }
+.bp-cyan-light { background: #ecfeff; color: #080808; }
+.bp-orange-light { background: #fff7ed; color: #090a0b; }
+.bp-green-light { background: #f0fdf4; color: #0a0a0a; }
+
+/* =========================================
+   7. THE NEXUS ECOSYSTEM (Top-to-Bottom & Wheel Layout)
+========================================= */
+/* =========================================
+   NEXUS SECTION TITLE & DESCRIPTION FIX
+========================================= */
+.bp-nexus-section {
+  max-width: 1100px;
+  margin: 150px auto;
+  padding: 0 20px;
+  overflow: visible; 
+}
+
+.bp-nexus-container.bp-nexus-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; 
+  width: 100%;
+}
+
+.bp-nexus-text-col {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Base Title Setup */
+.bp-nexus-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 24px 0;
+  letter-spacing: -1.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* Pehli aur dusri line ke beech ka saaf gap */
+}
+
+/* 🔥 Pehli line badi aur prominent */
+.bp-title-line-1 {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 1.1;
+}
+
+/* 🔥 Dusri line usse thodi choti taaki balanced lage */
+.bp-title-line-2 {
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  color: #1e293b; /* Thoda sa soft tone */
+}
+
+.bp-nexus-desc {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 650px; /* Paragraph ko neat aur readable width di hai */
+  margin: 0 auto; 
+}
+
+/* =========================================
+   MOBILE-FIRST NEXUS WHEEL (Base = Mobile)
+========================================= */
+.bp-nexus-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 10px 0;
+}
+
+.bp-orbital-system {
+  position: relative;
+  width: 280px; 
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.bp-nexus-core {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background: #0f172a; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.bp-core-label {
+  color: #f8fafc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.bp-orbit-track {
+  position: absolute;
+  width: 220px; 
+  height: 220px; 
+  border: 1px solid rgba(15, 23, 42, 0.08); 
+  border-radius: 50%;
+  animation: spinTrack 30s linear infinite; 
+}
+
+@keyframes spinTrack {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.bp-orbit-node {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.03);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06); 
+  animation: spinNode 30s linear infinite reverse; 
+}
+
+@keyframes spinNode {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Mobile Node Positions (220px Track) */
+.bp-node-1 { top: -21px; left: calc(50% - 21px); }            
+.bp-node-2 { top: 18px; left: 172px; }                    
+.bp-node-3 { right: -21px; top: calc(50% - 21px); }           
+.bp-node-4 { top: 172px; left: 172px; }                   
+.bp-node-5 { bottom: -21px; left: calc(50% - 21px); }         
+.bp-node-6 { top: 172px; left: 18px; }                    
+.bp-node-7 { left: -21px; top: calc(50% - 21px); }            
+.bp-node-8 { top: 18px; left: 18px; }                     
+
+.bp-node-icon {
+  font-size: 0.85rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #475569;
+}
+
+.bp-orbital-system:hover .bp-orbit-track,
+.bp-orbital-system:hover .bp-orbit-node {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   DESKTOP & TABLET EXPANSION (Min-Width 768px)
+========================================= */
+@media (min-width: 768px) {
+  .bp-orbital-system {
+    width: 480px;
+    height: 480px;
+  }
+
+  .bp-nexus-core {
+    width: 130px;
+    height: 130px;
+  }
+
+  .bp-core-label {
+    font-size: 0.9rem;
+  }
+
+  .bp-orbit-track {
+    width: 360px;
+    height: 360px;
+  }
+
+  .bp-orbit-node {
+    width: 64px;
+    height: 64px;
+  }
+
+  .bp-node-icon {
+    font-size: 1.3rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Desktop Node Positions (360px Track) */
+  .bp-node-1 { top: -32px; left: calc(50% - 32px); }            
+  .bp-node-2 { top: 20.7px; left: 275.3px; }                    
+  .bp-node-3 { right: -32px; top: calc(50% - 32px); }           
+  .bp-node-4 { top: 275.3px; left: 275.3px; }                   
+  .bp-node-5 { bottom: -32px; left: calc(50% - 32px); }         
+  .bp-node-6 { top: 275.3px; left: 20.7px; }                    
+  .bp-node-7 { left: -32px; top: calc(50% - 32px); }            
+  .bp-node-8 { top: 20.7px; left: 20.7px; } 
+}
+/* =========================================
+   MOBILE RESPONSIVE FIX FOR THE WHEEL
+========================================= */
+@media (max-width: 768px) {
+  .bp-nexus-visual-col {
+    width: 100%;
+    overflow: hidden; /* Bahar jaane wali cheezon ko chupayega */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bp-orbital-system {
+    transform: scale(0.7); /* Mobile screen ke mutabiq wheel ko chota kar dega */
+    transform-origin: center center;
+    margin: 0 auto;
+    left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bp-orbital-system {
+    transform: scale(0.58); /* Chote se chote phone par bhi bilkul fit aur center rahega */
+  }
+}
+/* =========================================
+   8. IMMERSIVE SECURITY SECTION (Dark Fade Layout)
+========================================= */
+/* =========================================
+   8. IMMERSIVE SECURITY SECTION (Dark Fade Layout)
+========================================= */
+.bp-security-immersive-section {
+  width: 100%;
+  background-color: #050505; 
+  margin: 100px 0; /* 🔥 Outer margin bhi thoda kam kiya (120px -> 100px) taaki page flow tight lage */
+  position: relative;
+  overflow: hidden;
+}
+
+.bp-security-container {
+  display: flex;
+  align-items: stretch; 
+  min-height: 380px; /* 🔥 FIX: Height ko 500px se ghata kar 380px kar diya */
+  max-width: 1800px; 
+  margin: 0 auto;
+}
+
+.bp-security-text-col {
+  flex: 1;
+  padding: 50px 5% 50px 5%; /* 🔥 FIX: Top aur Bottom padding 80px se kam karke 50px kar di */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2; 
+}
+.bp-security-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #64748b; 
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.bp-security-title {
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff; 
+  margin: 0 0 24px 0;
+  letter-spacing: -1px;
+}
+
+.bp-security-highlight { color: #818cf8; }
+
+.bp-security-desc {
+  font-size: 1.15rem;
+  color: #94a3b8; 
+  line-height: 1.7;
+  max-width: 450px;
+  margin: 0 0 40px 0;
+}
+
+.bp-security-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.bp-accent-line {
+  width: 40px;
+  height: 2px;
+  background-color: #6366f1; 
+}
+
+.bp-security-image-col {
+  flex: 1.2; 
+  position: relative;
+}
+
+.bp-image-fade-mask {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to right, #050505 0%, rgba(5,5,5,0.8) 20%, transparent 60%);
+  z-index: 1;
+}
+
+.bp-security-image {
+  width: 100%; height: 100%;
+  object-fit: cover; 
+  object-position: center right;
+  display: block;
+}
+
+@media (max-width: 968px) {
+  .bp-security-container { flex-direction: column; }
+  .bp-security-text-col {
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    align-items: center; 
+  }
+  .bp-security-desc { text-align: center; }
+  .bp-security-image-col { height: 400px; }
+  .bp-image-fade-mask { background: linear-gradient(to bottom, #050505 0%, rgba(5,5,5,0.5) 40%, transparent 100%); }
+}
+
+/* =========================================
+   3. FEATURE BLOCKS (Zig-Zag Layout)
+========================================= */
+.bp-feature-blocks-section {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px; /* Large breathing space between rows */
+}
+
+.bp-feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Reverse class flips the image and text alignment */
+.bp-feature-row.bp-reverse {
+  flex-direction: row-reverse;
+}
+
+.bp-feature-text-col {
+  flex: 1;
+  max-width: 500px;
+}
+
+.bp-feature-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4f46e5; /* Indigo accent */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.bp-feature-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin: 0 0 24px 0;
+  letter-spacing: -1px;
+}
+
+.bp-feature-desc {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.bp-feature-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* =========================================
+   FEATURE IMAGES - SHAPE & 3D FLIP EFFECT
+========================================= */
+.bp-feature-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px; /* 3D depth ke liye zaroori hai */
+}
+
+/* Container jo flip animation ko handle karega */
+.bp-feature-img {
+  width: 100%;
+  max-width: 480px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; /* Ekdum fluid organic shape */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+/* Jab user image par hover karega, toh wo 180 degree flip ho jayegi */
+.bp-feature-image-col:hover .bp-feature-img {
+  transform: rotateY(180deg);
+}
+/* Responsive adjustments for Feature Blocks */
+@media (max-width: 968px) {
+  .bp-feature-blocks-section {
+    gap: 100px;
+  }
+  
+  .bp-feature-row, .bp-feature-row.bp-reverse {
+    flex-direction: column-reverse; /* Stacks text below image on mobile */
+    text-align: center;
+    gap: 40px;
+  }
+
+  .bp-feature-text-col {
+    margin: 0 auto;
+  }
+
+  .bp-feature-footer {
+    justify-content: center;
+  }
+  
+  .bp-feature-img {
+    max-width: 100%;
+  }
+}

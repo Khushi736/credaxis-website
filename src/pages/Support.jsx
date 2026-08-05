@@ -56,14 +56,14 @@ export default function Support() {
       <section className="support-hero-banner">
         <div className="support-nav-brand">
           <Link to="/" className="support-brand-link">
-            <img src="/images/logo.png" alt="MyCredAxis Logo" className="support-logo-img" />
-            <span className="support-brand-text">myCredAxis</span>
+            <img src="/images/logos.png" alt="MyCredAxis Logo" className="support-logo-img" />
+            <span className="support-brand-text">MyCredAxis</span>
           </Link>
         </div>
         <div className="support-hero-content">
-          <h1>Contact Us</h1>
+          <h1>We're here for you.</h1>
           {/* 🔥 Lorem Ipsum hataya aur professional text add kiya */}
-          <p>Need help with your transactions or account? Our support team is available to provide secure, fast, and reliable assistance.</p>
+          <p>Whether you need help with a recent transaction or have a general query, our support team is always ready to assist you securely.</p>
         </div>
       </section>
 

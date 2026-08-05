@@ -234,24 +234,22 @@ function Home() {
         {/* ================= HERO CONTENT ================= */}
 
         <div className="hero-content reveal">
-          <h1 className="hero-title serif-text lowercase">
-            engineered for 
+          <h1 className="hero-title serif-text ">
+            Engineered for 
             <br />
-            the elite
+            the Elite
           </h1>
 
           <p className="hero-subtitle serif-text">
-            Step into a curated financial ecosystem built for high achievers
-            <br />
-            We reward your financial discipline with unmatched privileges,
-            <br />
-            premium credit lines, and bespoke wealth tools
+            <p>
+            Step into a curated financial ecosystem built for high achievers.<br/> We reward your financial discipline with unmatched privileges, <br/>seamless everyday payments, and bespoke credit tools—all <br/>within a single, highly secure platform.
+          </p>
           </p>
         </div>
 
         {/* ================= DOWNLOAD QR ================= */}
 
-        <div className="download-qr reveal">
+        {/* <div className="download-qr reveal">
           <div
             style={{
               width: "50px",
@@ -281,7 +279,7 @@ function Home() {
             <br />
             MyCredAxis
           </div>
-        </div>
+        </div> */}
       </section>
     
       {/* =========================================
@@ -451,7 +449,7 @@ function Home() {
               <img src="/images/bp1.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
-            <Link to="/scan-and-pay" className="know-more">
+            <Link to="/bill-payments" className="know-more">
               know more <i className="bi bi-arrow-right"></i>
             </Link>
           </div>
@@ -469,7 +467,7 @@ function Home() {
               <img src="/images/autopay.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
-            <Link to="/upi-on-credit" className="know-more">
+            <Link to="/mandate" className="know-more">
               know more <i className="bi bi-arrow-right"></i>
             </Link>
           </div>

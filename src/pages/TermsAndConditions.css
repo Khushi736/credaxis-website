@@ -1,129 +1,97 @@
-/* ==================================================
-    TERMS & CONDITIONS - PREMIUM CRED FINTECH THEME
-================================================== */
+/* TermsAndConditions.css - Enterprise Light Theme (Clean & Borderless) */
 
-.terms-page {
-  background-color: #000;
-  color: #ededed;
+.tc-container {
+  width: 100%;
   min-height: 100vh;
-  padding: 100px 8% 120px 8%;
-  font-family: inherit;
+  background-color: #ffffff; /* 🔥 Pure white background */
+  color: #374151; /* 🔥 Slate grey for base text */
+  padding: 120px 20px 100px 20px; 
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* 🔥 Font Smoothing for Crisp Text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
   display: flex;
   justify-content: center;
 }
 
-.terms-container {
+/* Open and wide layout maintained */
+.tc-container-wrapper {
+  max-width: 1000px;
   width: 100%;
-  max-width: 850px; /* Text ko zyada failne se rokega, readability high karega */
-  margin: 0 auto;
 }
 
-/* --- Header Styling --- */
-.terms-header {
-  text-align: center; /* Center-aligned for a high-end document feel */
-  margin-bottom: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 50px;
-  position: relative;
+.tc-header {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e2e8f0; /* 🔥 Light grey subtle line */
+  padding-bottom: 30px;
 }
 
-.terms-header h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-transform: lowercase;
-  letter-spacing: -1.5px;
-  color: #fff;
-  margin: 15px 0 10px 0;
-}
-
-.terms-header p {
-  color: #71717a;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* --- Sections & Typography --- */
-.terms-content section {
-  margin-bottom: 45px;
-  position: relative;
-  padding-left: 20px;
-  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Decorative left line */
-  transition: border-color 0.3s ease;
-}
-
-.terms-content section:hover {
-  border-left-color: #fff; /* Hover par line bright white ho jayegi */
-}
-
-.terms-content h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 18px;
-  text-transform: lowercase;
-  letter-spacing: -0.5px;
-}
-
-.terms-content p {
-  font-size: 1.05rem;
-  line-height: 1.8; /* Paragraph spacing balanced ki gayi hai */
-  color: #a1a1aa;
+.tc-title {
+  font-size: 3rem;
+  font-weight: 800; /* Bolder for light theme */
   margin-bottom: 15px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #111827; /* 🔥 Deep dark slate for headings */
 }
 
-/* --- Structured Lists Styling --- */
-.terms-list {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
+.tc-updated-date {
+  font-size: 0.9rem;
+  color: #64748b; /* 🔥 Muted grey */
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.terms-list li {
+.tc-body {
+  line-height: 1.85;
+  color: #475569; /* 🔥 Standard readable grey */
+}
+
+/* First paragraph (Intro) slightly highlighted */
+.tc-body > p:first-of-type {
+  font-size: 1.1rem;
+  color: #1f2937; /* 🔥 Darker text for intro focus */
+  margin-bottom: 45px;
+  font-weight: 500;
+}
+
+.tc-section {
+  margin-bottom: 45px;
+}
+
+.tc-section-title {
+  font-size: 1.4rem;
+  color: #111827; /* 🔥 Deep dark slate for section titles */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.tc-section-desc {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: #a1a1aa;
-  margin-bottom: 12px;
-  position: relative;
-  padding-left: 15px;
+  color: #475569; /* 🔥 Standard readable grey */
 }
 
-/* Nested lists (jaise a. ke andar i., ii.) */
-.terms-list ul {
-  list-style: none;
-  padding-left: 20px;
-  margin-top: 10px;
+/* Loading State Styling */
+.tc-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  color: #64748b;
+  font-size: 1.2rem;
 }
 
-.terms-list ul li {
-  font-size: 0.98rem;
-  color: #888891;
-  margin-bottom: 8px;
-}
-
-/* Links inside terms */
-.terms-content a {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.terms-content a:hover {
-  color: #d4d4d8;
-}
-
-/* --- Mobile Responsive --- */
-@media (max-width: 768px) {
-  .terms-page {
-    padding: 60px 5% 80px 5%;
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .tc-container {
+    padding: 100px 20px 50px 20px;
   }
-  
-  .terms-header h1 {
+  .tc-title {
     font-size: 2.2rem;
-  }
-
-  .terms-content section {
-    padding-left: 15px;
   }
 }

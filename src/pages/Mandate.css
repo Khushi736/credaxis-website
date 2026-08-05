@@ -1,0 +1,646 @@
+/* =========================================
+   1. BASE SETUP & MOBILE-FIRST DEFAULTS
+========================================= */
+/* =========================================
+   1. BASE SETUP & MOBILE-FIRST DEFAULTS
+========================================= */
+.md-container {
+  background-color: #050505;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  /* 🔥 THE FIX: Yeh page ko poori available height lene ko bolega, jisse Footer khinchega nahi */
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-container *, .md-container *:before, .md-container *:after {
+  box-sizing: inherit;
+}
+/* =========================================
+   2. HERO SECTION & SLOW ZOOM-OUT BACKGROUND
+========================================= */
+.md-hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Compacted for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.md-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/band-flow.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: slowZoomOut 8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  z-index: 1;
+}
+
+@keyframes slowZoomOut {
+  0% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.md-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    #050505 0%, 
+    rgba(5, 5, 5, 0.2) 25%, 
+    rgba(5, 5, 5, 0.2) 75%, 
+    #050505 100%
+  );
+  z-index: 2;
+}
+
+/* =========================================
+   3. TEXT REVEAL & HERO CONTENT
+========================================= */
+.md-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 16px 40px 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.md-reveal-wrapper {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.md-hidden-text {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s ease;
+}
+
+.md-reveal-wrapper.md-show-text .md-hidden-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.md-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================================
+   4. EXTENDED SECTION (Store Buttons & Trust Badges)
+========================================= */
+.md-extended-section {
+  position: relative;
+  background-color: #050505;
+  padding: 40px 16px; /* Reduced vertical spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.md-extended-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: mdFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+@keyframes mdFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-hero-subtext {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.md-dot {
+  color: #607491;
+  margin: 0 8px;
+}
+
+/* Store Buttons */
+.md-store-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.md-store-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  outline: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  justify-content: center;
+}
+
+.md-store-btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.md-apple-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.md-playstore-icon {
+  font-size: 1.7rem;
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.md-store-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.md-store-text span {
+  font-size: 0.6rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.md-store-text strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: 0.3px;
+}
+
+/* Trust Footer Badges - Single Line Horizontal on Mobile */
+.md-trust-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.md-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.md-trust-icon {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* =========================================
+   5. FEATURE CARDS SECTION (Horizontal Scroll on Mobile)
+========================================= */
+.md-cards-section {
+  position: relative;
+  background-color: #050505;
+  padding: 20px 0 50px 0; /* Left-right padding hata di hai taaki scroll edge-to-edge chale */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.md-features-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px 15px 16px; /* Bottom padding scrollbar ke liye */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Scrollbar ko clean aur modern banane ke liye */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.4) rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar for Chrome/Safari/Edge */
+.md-features-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.md-features-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin: 0 20px;
+}
+
+.md-features-grid::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 10px;
+}
+
+.md-feature-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 14px;
+  padding: 16px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.1);
+  text-align: left;
+  
+  /* Mobile pe card ki fixed width taaki horizontal scroll proper aaye */
+  min-width: 280px;
+  width: 280px;
+  min-height: 320px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.md-feature-card:hover {
+  border-color: rgba(139, 92, 246, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(139, 92, 246, 0.25);
+}
+
+.md-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    rgba(5, 5, 5, 0.4) 0%, 
+    rgba(5, 5, 5, 0.15) 70%, 
+    rgba(5, 5, 5, 0.22) 100%
+  );
+  z-index: 1;
+}
+
+.md-card-content-top {
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.md-card-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.md-card-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(195, 179, 233, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2295dd;
+  font-size: 0.9rem;
+}
+
+.md-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Tablets aur Desktops par grid layout wapas laane ke liye */
+@media (min-width: 1024px) {
+  .md-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1300px;
+    overflow-x: visible;
+    padding: 0 30px;
+  }
+
+  .md-feature-card {
+    min-width: auto;
+    width: 100%;
+    min-height: 400px;
+    padding: 30px 24px 24px 24px;
+  }
+}
+
+/* =========================================
+   6. EVERY PAYMENT HANDLED SECTION
+========================================= */
+.md-handled-section {
+  position: relative;
+  background-color: #050505;
+  padding: 40px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.md-handled-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  width: 100%;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.md-handled-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.md-handled-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 95%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 95%);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+}
+
+.md-handled-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.md-handled-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 8vw, 4.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.md-handled-highlight {
+  color: #b1bfc5;
+}
+
+.md-handled-store-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.md-handled-cta-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.md-primary-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #3b7089;
+  color: #050505;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+  width: 100%;
+  max-width: 280px;
+}
+
+.md-primary-cta-btn:hover {
+  background-color: #538195;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+}
+
+.md-cta-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.md-primary-cta-btn:hover .md-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   7. TABLET & DESKTOP UPWARD MEDIA QUERIES
+========================================= */
+
+/* Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .md-hero-section {
+    height: 100vh;
+  }
+
+  .md-hero-content {
+    padding: 0 30px 80px 30px;
+  }
+  
+  .md-extended-section {
+    padding: 80px 24px;
+  }
+
+  .md-hero-subtext {
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+  }
+
+  .md-store-buttons {
+    flex-direction: row;
+    max-width: none;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .md-store-btn {
+    width: auto;
+    padding: 14px 28px;
+  }
+
+  .md-trust-footer {
+    gap: 35px;
+  }
+
+  .md-trust-item {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+
+  .md-trust-icon {
+    font-size: 1.1rem;
+  }
+
+  .md-cards-section {
+    padding: 60px 24px 100px 24px;
+  }
+
+  .md-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    gap: 30px;
+  }
+
+  .md-feature-card {
+    min-height: 400px;
+    padding: 30px 24px 24px 24px;
+  }
+
+  .md-handled-section {
+    padding: 80px 24px;
+  }
+
+  .md-handled-container {
+    gap: 40px;
+  }
+
+  .md-handled-store-row {
+    flex-direction: row;
+    max-width: none;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .md-primary-cta-btn {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Desktops & Large Screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .md-hero-title {
+    letter-spacing: 6px;
+  }
+
+  .md-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1300px;
+    padding: 0 30px;
+  }
+
+  .md-handled-container {
+    flex-direction: row;
+    text-align: left;
+    gap: 60px;
+    padding: 0 30px;
+  }
+
+  .md-handled-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .md-handled-store-row {
+    justify-content: flex-start;
+  }
+
+  .md-handled-cta-wrapper {
+    justify-content: flex-start;
+  }
+}

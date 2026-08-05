@@ -43,10 +43,10 @@ export default function Footer() {
             MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place.
           </p>
           <div className="social-icons">
-            <a href="#!" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="#!" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#!" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#!" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.linkedin.com/company/bisani-brothers" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/people/Bisani-Brothers/61582749106777/" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/bisanibrothers/" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@bisanibrothers" aria-label="YouTube"><FaYoutube /></a>
           </div>
         </div>
 
@@ -66,6 +66,7 @@ export default function Footer() {
             <ul>
               <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</Link></li>
               <li><Link to="/support" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
+              <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms and Conditions</Link></li>
             </ul>
           </div>
         </div>

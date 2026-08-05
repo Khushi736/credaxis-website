@@ -78,8 +78,8 @@ export default function Faq() {
       <section className="faq-hero-banner">
         <div className="faq-nav-brand">
           <Link to="/" className="faq-brand-link">
-            <img src="/images/logo.png" alt="MyCredAxis Logo" className="faq-logo-img" />
-            <span className="faq-brand-text">myCredAxis</span>
+            <img src="/images/logos.png" alt="MyCredAxis Logo" className="faq-logo-img" />
+            <span className="faq-brand-text">MyCredAxis</span>
           </Link>
         </div>
         <div className="faq-hero-content">

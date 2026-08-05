@@ -3,11 +3,13 @@
 ========================================= */
 .footer-section {
   background: linear-gradient(145deg, #0a0f1a 0%, #000000 50%, #120e06 100%);
-  color: #ffffff;
-  padding: 40px 20px 30px; /* 🔥 Top padding kam kar di gayi hai (pehle 60px thi) */
+  color: #ffffff !important; /* 🔥 Fix: Force text color */
+  padding: 40px 20px 30px; 
   border-top: 1px solid rgba(130, 128, 128, 0.46);
   font-family: "Inter", sans-serif;
   width: 100%;
+  opacity: 1 !important; /* 🔥 Fix: Force visibility */
+  visibility: visible !important; /* 🔥 Fix: Force visibility */
 }
 
 .footer-content-wrapper {
@@ -17,6 +19,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  opacity: 1 !important; /* 🔥 Fix: Force visibility */
+  visibility: visible !important; /* 🔥 Fix: Force visibility */
 }
 
 /* --- Brand Section --- */
@@ -30,12 +34,12 @@
 .brand-name {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important; /* 🔥 Fix: Prevents other pages from making it black */
   letter-spacing: 0.5px;
 }
 
 .brand-desc {
-  color: #a1a1aa;
+  color: #a1a1aa !important; /* 🔥 Fix */
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -45,7 +49,7 @@
 .social-icons {
   display: flex;
   gap: 15px;
-  margin-top: 20px; /* Paragraph ke niche ka space */
+  margin-top: 20px; 
 }
 
 .social-icons a {
@@ -55,8 +59,8 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Image ke according round border */
-  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: #ffffff !important; /* 🔥 Fix */
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -64,8 +68,8 @@
 
 .social-icons a:hover {
   border-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1); /* Hover par thoda sa light background */
-  transform: translateY(-3px); /* Hover par thoda sa upar uthega */
+  background-color: rgba(255, 255, 255, 0.1); 
+  transform: translateY(-3px); 
 }
 
 /* --- Footer Grid & Accordion (Mobile) --- */
@@ -84,7 +88,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #ffffff !important; /* 🔥 Fix */
   padding: 20px 0;
   margin: 0;
   display: flex;
@@ -113,6 +117,7 @@
   display: none; 
   flex-direction: column;
   gap: 12px;
+  opacity: 1 !important; /* 🔥 Fix */
 }
 
 .footer-col.active ul {
@@ -130,14 +135,14 @@
 }
 
 .footer-col ul li a {
-  color: #a1a1aa;
+  color: #a1a1aa !important; /* 🔥 Fix */
   font-size: 0.9rem;
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color: #ffffff !important; /* 🔥 Fix */
   transform: translateX(5px);
 }
 
@@ -146,7 +151,7 @@
 ========================================= */
 @media (min-width: 768px) {
   .footer-section {
-    padding: 50px 50px 50px; /* 🔥 Desktop par bhi top padding reduce kar di hai (pehle 80px thi) */
+    padding: 50px 50px 50px; 
   }
 
   .footer-content-wrapper {
@@ -186,6 +191,7 @@
   .footer-col ul {
     display: flex !important;
     padding: 0;
+    visibility: visible !important; /* 🔥 Fix for desktop visibility */
   }
 }
 
@@ -206,14 +212,14 @@
 }
 
 .copyright-text {
-  color: #a1a1aa;
+  color: #a1a1aa !important;
   font-size: 0.85rem;
   margin: 0;
 }
 
-/* --- Footer Address Styling (Replaced Legal Links) --- */
+/* --- Footer Address Styling --- */
 .footer-address {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 0.85rem;
   line-height: 1.5;
   max-width: 100%;
@@ -224,14 +230,14 @@
   display: flex;
   align-items: flex-start; 
   justify-content: center;
-  text-align: left; /* 🔥 Text ko icon ke paas left-align rakhega */
-  gap: 10px; /* 🔥 Icon aur text ka direct gap */
-  max-width: 290px; /* 🔥 Pura block ek sath center mein maintain karne ke liye */
+  text-align: left; 
+  gap: 10px; 
+  max-width: 290px; 
 }
 
 .footer-address p i, 
 .footer-address p svg {
-  color: #9cb7c3; 
+  color: #9cb7c3 !important; 
   font-size: 1.2rem;
   flex-shrink: 0; 
   margin-top: 2px; 
@@ -254,11 +260,10 @@
   }
   .footer-address p {
     justify-content: flex-end; 
-    max-width: 100%; /* 🔥 Desktop pe limitation hata di */
+    max-width: 100%; 
   }
-  
-
 }
+
 /* =========================================
    FLOATING CHAT WIDGET & POPUP MENU
 ========================================= */
@@ -275,7 +280,7 @@
 /* Sub Menus Container */
 .chat-sub-menus {
   position: absolute;
-  bottom: 65px; /* 🔥 Main button bada hua hai, isliye isko thoda upar shift kiya */
+  bottom: 65px; 
   display: flex;
   flex-direction: column-reverse; 
   gap: 12px; 
@@ -295,7 +300,7 @@
 
 /* Individual Sub Buttons */
 .sub-btn {
-  width: 45px; /* 🔥 Sub-buttons ko 40px se 45px kar diya */
+  width: 45px; 
   height: 45px;
   border-radius: 50%;
   display: flex;
@@ -305,7 +310,7 @@
   background-color: #1a365d; 
   color: #b5dcec; 
   border: 1px solid rgba(56, 189, 248, 0.2);
-  font-size: 18px; /* 🔥 Icon bhi thoda bada kiya */
+  font-size: 18px; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
@@ -325,9 +330,9 @@
   100% { transform: translateY(0px); }
 }
 
-/* Main Chat Button (Mobile Size + Floating Animation) */
+/* Main Chat Button */
 .chat-floating-btn {
-  width: 50px; /* 🔥 Chota hatakar ab thoda bada (50px) kar diya hai */
+  width: 50px; 
   height: 50px;
   background-color: #5a7784;
   border-radius: 50%;
@@ -335,19 +340,19 @@
   justify-content: center;
   align-items: center;
   color: #000;
-  font-size: 22px; /* 🔥 Icon size properly adjust kiya hai */
+  font-size: 22px; 
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
-  animation: floatUpDown 3s ease-in-out infinite; /* Smooth floating animation */
+  animation: floatUpDown 3s ease-in-out infinite; 
 }
 
-/* Jab chat menu khula ho toh main button ka design */
+/* Jab chat menu khula ho */
 .chat-floating-btn.open {
   background-color: #1a365d; 
   color: #ffffff;
   transform: rotate(90deg); 
-  animation: none; /* Open hone par float animation ruk jayegi */
+  animation: none; 
 }
 
 /* =========================================
@@ -368,7 +373,7 @@
     font-size: 20px;
   }
   .chat-floating-btn {
-    width: 60px; /* Desktop pe original bada size */
+    width: 60px; 
     height: 60px;
     font-size: 28px;
   }

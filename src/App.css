@@ -1098,16 +1098,16 @@ body {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background-color: #38bdf8; /* Bright Cyan */
+  background-color: #F59E0B;; /* Bright Cyan */
   border-radius: 50%;
-  box-shadow: 0 0 8px #38bdf8; /* Permanent inner glow */
+  box-shadow: 0 0 8px #F59E0B, 0 0 12px rgba(245, 158, 11, 0.4); /* Permanent inner glow */
   display: inline-block;
   animation: neon-pulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes neon-pulse {
   0% { 
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7), 0 0 8px #38bdf8; 
+    box-shadow: 0 0 12px #F59E0B, 0 0 20px rgba(245, 158, 11, 0.6); 
   }
   70% { 
     box-shadow: 0 0 0 10px rgba(56, 189, 248, 0), 0 0 8px #38bdf8; 
@@ -1117,9 +1117,53 @@ body {
   }
 }
 
+/* =========================================
+   TRUE FROSTED GLASS BADGE (Perfect Balance)
+========================================= */
+
 .coming-soon-badge.card-badge-size {
-  top: 16px;       /* Card ke top se thoda kam gap */
-  right: 16px;     /* Card ke right se thoda kam gap */
-  padding: 5px 14px; /* Badge ko thoda patla kiya hai taaki card bhara-bhara na lage */
-  font-size: 0.65rem; /* Text size thoda chota */
+  top: 24px;
+  right: 24px;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  /* 🔥 THE FIX: True Translucent Glass (No solid black) */
+  background: rgba(255, 255, 255, 0.06); /* Ekdum light white tint */
+  backdrop-filter: blur(24px); /* Heavy blur jo card ke gradient ko absorb karega */
+  -webkit-backdrop-filter: blur(24px);
+  
+  /* Premium 3D edge reflection */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Upar se light reflection */
+  border-radius: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+  /* Refined Text */
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.9); /* Pure white ki jagah soft white */
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* 🔥 Premium Amber/Gold Glowing Dot */
+.coming-soon-badge.card-badge-size .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #F59E0B; /* Rich Amber Gold */
+  box-shadow: 0 0 8px #F59E0B, 0 0 12px rgba(245, 158, 11, 0.4);
+  animation: premium-pulse 2s infinite ease-in-out;
+}
+
+@keyframes premium-pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { 
+    opacity: 0.7; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 12px #F59E0B, 0 0 20px rgba(245, 158, 11, 0.6); 
+  }
+  100% { opacity: 1; transform: scale(1); }
 }

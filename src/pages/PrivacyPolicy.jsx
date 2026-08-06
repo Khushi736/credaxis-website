@@ -44,7 +44,7 @@ function PrivacyPolicy() {
   const pageTitle = pageData?.name || "Privacy Policy";
   const lastUpdated = pageData?.updatedAt
     ? new Date(pageData.updatedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })
-    : "5th June 2026";
+    : "6th August 2026";
     
   const privacySection = pageData?.sections?.find((sec) => sec.key === "privacy_content");
   const renderItems = privacySection?.items?.length > 0 ? privacySection.items : fallbackItems;

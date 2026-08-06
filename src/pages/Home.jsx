@@ -442,6 +442,9 @@ function Home() {
 
         <div className="cards-container reveal">
           <div className="feature-card card-green">
+            <div className="coming-soon-badge card-badge-size">
+              <span className="pulse-dot"></span> Coming Soon
+            </div>
             <div className="card-tag">Pay bills</div>
 
             <h3 className="card-title serif-text ">
@@ -496,6 +499,9 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
+            <div className="coming-soon-badge card-badge-size">
+              <span className="pulse-dot"></span> Coming Soon
+            </div>
             <div className="card-tag">EMI PAYMENTS</div>
 
             <h3 className="card-title serif-text ">
@@ -514,6 +520,9 @@ function Home() {
           </div>
 
           <div className="feature-card card-pink">
+            <div className="coming-soon-badge card-badge-size">
+              <span className="pulse-dot"></span> Coming Soon
+            </div>
             <div className="card-tag">Refer & Earn</div>
 
             <h3 className="card-title serif-text">

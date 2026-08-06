@@ -1057,3 +1057,69 @@ body {
     max-width: 320px; 
   }
 }
+
+/* =========================================
+   PREMIUM "COMING SOON" GLASS BADGE
+========================================= */
+
+.coming-soon-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  
+  /* 🔥 THE MAGIC: Dark Glassmorphism */
+  background: rgba(10, 15, 26, 0.45); /* Deep dark transparent */
+  backdrop-filter: blur(12px); /* Background video ko elegantly blur karega */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* Premium 3D Light-Catch Effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.25); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Soft floating shadow */
+  
+  padding: 8px 22px;
+  border-radius: 50px; 
+  
+  /* Typography */
+  color: #f8fafc; /* Crisp white */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Text ko open aur premium dikhane ke liye */
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* 🔥 Neon Glowing Dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #38bdf8; /* Bright Cyan */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38bdf8; /* Permanent inner glow */
+  display: inline-block;
+  animation: neon-pulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes neon-pulse {
+  0% { 
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7), 0 0 8px #38bdf8; 
+  }
+  70% { 
+    box-shadow: 0 0 0 10px rgba(56, 189, 248, 0), 0 0 8px #38bdf8; 
+  }
+  100% { 
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0), 0 0 8px #38bdf8; 
+  }
+}
+
+.coming-soon-badge.card-badge-size {
+  top: 16px;       /* Card ke top se thoda kam gap */
+  right: 16px;     /* Card ke right se thoda kam gap */
+  padding: 5px 14px; /* Badge ko thoda patla kiya hai taaki card bhara-bhara na lage */
+  font-size: 0.65rem; /* Text size thoda chota */
+}

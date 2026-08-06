@@ -290,6 +290,10 @@ function Home() {
           
           {/* Upper Part: Video */}
           <div className="vf-video-box">
+            <div className="coming-soon-badge">
+              <span className="pulse-dot"></span> Coming Soon
+            </div>
+
             <video 
               autoPlay 
               loop 
@@ -305,6 +309,7 @@ function Home() {
 
           {/* Lower Part: Text & Action Button */}
           <div className="vf-text-box reveal">
+            
             <h2>One Platform. Every Bill.<br/> Zero Hassle.</h2>
             <p>
               Pay electricity, mobile, broadband, FASTag, credit card bills, loan EMIs, insurance premiums and more—all from one secure platform. Choose your preferred payment method, including UPI, debit cards, credit cards or net banking, and enjoy fast, reliable payments with instant confirmations. Earn rewards on eligible transactions and unlock additional benefits through referrals, making every payment more rewarding.

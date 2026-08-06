@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"; // 🔥 useLocation import kiya
 import "./App.css";
 
 import Home from "./pages/Home";
@@ -36,9 +36,18 @@ function AdminRedirect() {
   );
 }
 
-function App() {
+// 🔥 NAYA COMPONENT: Routing aur Footer logic ke liye
+function AppContent() {
+  const location = useLocation();
+  
+  // Jin pages par Footer hide karna hai, unka path is array mein daalein
+  const hideFooterRoutes = ["/privacy-policy"];
+  
+  // Agar current path is array mein nahi hai, tabhi Footer dikhega
+  const showFooter = !hideFooterRoutes.includes(location.pathname);
+
   return (
-    <Router basename={basename === "/" ? undefined : basename}>
+    <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/scan-and-pay" element={<ScanAndPay />} />
@@ -54,12 +63,21 @@ function App() {
         <Route path="/loans" element={<Loans />} />
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/faq" element={<Faq/>} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/bill-payments" element={<BillPayments />} />
-
-
       </Routes>
-      <Footer />
+
+      {/* Conditionally Rendering the Footer */}
+      {showFooter && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router basename={basename === "/" ? undefined : basename}>
+      {/* AppContent ko Router ke andar render kiya taaki useLocation kaam kare */}
+      <AppContent />
     </Router>
   );
 }

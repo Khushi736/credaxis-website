@@ -43,7 +43,7 @@ function AppContent() {
   const location = useLocation();
   
   // Jin pages par Footer hide karna hai, unka path is array mein daalein
-  const hideFooterRoutes = ["/privacy-policy", "/delete-account"];
+  const hideFooterRoutes = ["/privacy-policy", "/delete-account", "/upcoming"];
   
   // Agar current path is array mein nahi hai, tabhi Footer dikhega
   const showFooter = !hideFooterRoutes.includes(location.pathname);

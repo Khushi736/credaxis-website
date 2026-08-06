@@ -16,6 +16,7 @@ import AboutUs from './pages/AboutUs';
 import Faq from './pages/Faq';
 import Footer from './pages/Footer';
 import BillPayments from "./pages/BillPayments";
+import FeatureComingSoon from "./pages/FeatureComingSoon";
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -41,7 +42,8 @@ function AppContent() {
   const location = useLocation();
   
   // Jin pages par Footer hide karna hai, unka path is array mein daalein
-  const hideFooterRoutes = ["/privacy-policy"];
+  const hideFooterRoutes = ["/privacy-policy", "/upcoming"];
+  
   
   // Agar current path is array mein nahi hai, tabhi Footer dikhega
   const showFooter = !hideFooterRoutes.includes(location.pathname);
@@ -65,6 +67,7 @@ function AppContent() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/bill-payments" element={<BillPayments />} />
+        <Route path="/upcoming" element={<FeatureComingSoon />} />
       </Routes>
 
       {/* Conditionally Rendering the Footer */}
@@ -83,3 +86,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+

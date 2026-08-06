@@ -493,9 +493,9 @@ function Home() {
               <img src="/images/report.png" alt="Scan and Pay" className="card-image landscape " />
             </div>
 
-            <div className="know-more">
+            <Link to="/upcoming" className="know-more">
               know more <i className="bi bi-arrow-right"></i>
-            </div>
+            </Link>
           </div>
 
           <div className="feature-card card-pink">
@@ -514,9 +514,9 @@ function Home() {
               <img src="/images/emi.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
-            <div className="know-more">
+            <Link to="/upcoming" className="know-more">
               know more <i className="bi bi-arrow-right"></i>
-            </div>
+            </Link>
           </div>
 
           <div className="feature-card card-pink">
@@ -535,9 +535,9 @@ function Home() {
               <img src="/images/referral.png" alt="Scan and Pay" className="card-image landscape" />
             </div>
 
-            <div className="know-more">
+            <Link to="/upcoming" className="know-more">
               know more <i className="bi bi-arrow-right"></i>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -624,7 +624,7 @@ function Home() {
         {/* Intersection Observer container */}
         {(() => {
           const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: false });
-          const fullText = "all your personal data and transactions are encrypted and secured. there's no room for mistakes because we didn't leave any.";
+          const fullText = "All your personal data and transactions are encrypted and secured. there's no room for mistakes because we didn't leave any.";
 
           return (
             <div ref={ref} className="security-content">

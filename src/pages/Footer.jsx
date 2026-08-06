@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import apiClient from "../services/apiClient";
+import { useSEO } from "../hooks/useSEO";
 import { 
   FaLinkedinIn, 
   FaFacebookF, 
@@ -17,6 +19,9 @@ import {
 export default function Footer() {
   // State for responsive footer columns (Accordion on mobile)
   const [activeCol, setActiveCol] = useState(null);
+  const [footerData, setFooterData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   
   // State for floating chat widget
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -30,6 +35,24 @@ export default function Footer() {
     }
   };
 
+  useEffect(() => {
+    const fetchFooterData = async () => {
+      try {
+        const response = await apiClient.get('/website/pages/footer');
+        if (response?.success && response?.data) {
+          setFooterData(response.data);
+        }
+      } catch (error) {
+        console.error("API Error: Using Fallback data for footer", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchFooterData();
+  }, []);
+
+  const footerSection = footerData?.sections?.find?.(sec => sec.key === "footer");
+
   return (
     <section className="footer-section">
       <div className="footer-content-wrapper reveal">
@@ -37,10 +60,10 @@ export default function Footer() {
         {/* Left: Logo & Brand Section */}
         <div className="footer-brand-col">
           <span className="brand-name">
-            Bisani Brothers Private Limited
+           {footerSection?.title || "Bisani Brothers Private Limited"}
           </span>
           <p className="brand-desc">
-            MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place.
+            {footerSection?.description || "MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place."}
           </p>
           <div className="social-icons">
             <a href="https://www.linkedin.com/company/bisani-brothers" aria-label="LinkedIn"><FaLinkedinIn /></a>

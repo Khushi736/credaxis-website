@@ -65,6 +65,7 @@ export default function Footer() {
             <h4 onClick={() => toggleCol(4)}>Policy</h4>
             <ul>
               <li><Link to="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</Link></li>
+              <li><Link to="/delete-account" style={{ color: "inherit", textDecoration: "none" }}>Delete Account</Link></li>
               <li><Link to="/support" style={{ color: "inherit", textDecoration: "none" }}>Support</Link></li>
               <li><Link to="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms and Conditions</Link></li>
             </ul>

@@ -93,6 +93,20 @@
   margin-bottom: 8px;
 }
 
+/* Numbered steps (e.g. delete account page) */
+.privacy-content ol.privacy-steps {
+  margin: 15px 0 30px 0;
+  padding-left: 1.35rem;
+}
+
+.privacy-content ol.privacy-steps li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
 /* --- Structured Lists Styling --- */
 .privacy-list {
   list-style: none;

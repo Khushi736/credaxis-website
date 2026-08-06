@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import ScanAndPay from "./pages/ScanAndPay";
 import Mandate from "./pages/Mandate";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import DeleteAccount from "./pages/DeleteAccount";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Support from "./pages/Support";
 import NotFound from './pages/NotFound';
@@ -42,8 +43,7 @@ function AppContent() {
   const location = useLocation();
   
   // Jin pages par Footer hide karna hai, unka path is array mein daalein
-  const hideFooterRoutes = ["/privacy-policy", "/upcoming"];
-  
+  const hideFooterRoutes = ["/privacy-policy", "/delete-account"];
   
   // Agar current path is array mein nahi hai, tabhi Footer dikhega
   const showFooter = !hideFooterRoutes.includes(location.pathname);
@@ -55,6 +55,7 @@ function AppContent() {
         <Route path="/scan-and-pay" element={<ScanAndPay />} />
         <Route path="/mandate" element={<Mandate />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         {/* Local Vite: /admin → admin-panel (port 5173). Production uses nginx/backend. */}
         <Route path="/admin/*" element={<AdminRedirect />} />

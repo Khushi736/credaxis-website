@@ -1,145 +1,226 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
-  FaChevronDown, 
-  FaChevronUp, 
-  FaLinkedinIn, 
-  FaFacebookF, 
-  FaInstagram, 
-  FaYoutube, 
-  FaMapMarkerAlt, 
-  FaWhatsapp, 
-  FaEnvelope, 
-  FaPhoneAlt, 
-  FaTimes, 
-  FaComments 
-} from "react-icons/fa";
+  BiSearch, BiGridAlt, BiCreditCard, BiTachometer, 
+  BiGift, BiShieldAlt2, BiUserCheck, BiBuildingHouse, BiUser,
+  BiMessageRoundedDots, BiEnvelope, BiPhoneCall, BiRightArrowAlt,
+  BiPlus, BiMinus
+} from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa";
 import "./Faq.css";
 
 export default function Faq() {
+  const [activeCategory, setActiveCategory] = useState("General");
+  const [expandedFaq, setExpandedFaq] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const toggleFaq = (index) => {
+    setExpandedFaq(expandedFaq === index ? null : index);
   };
 
-  // Expanded FAQ Data for a dedicated page
-  const faqData = [
+  // 🔥 Updated: Completely removed all counts and numbers
+  const categories = [
+    { name: "General", icon: <BiGridAlt /> },
+    { name: "Payments & Billing", icon: <BiCreditCard /> },
+    { name: "Credit Score", icon: <BiTachometer /> },
+    { name: "Rewards & Offers", icon: <BiGift /> },
+    { name: "Security & Privacy", icon: <BiShieldAlt2 /> },
+    { name: "KYC & Verification", icon: <BiUserCheck /> },
+    { name: "Loans & EMI", icon: <BiBuildingHouse /> },
+    { name: "Account & Profile", icon: <BiUser /> },
+  ];
+
+  const faqs = [
     {
-      category: "General",
-      questions: [
-        {
-          q: "What is MyCredAxis and what services does it provide?",
-          a: "MyCredAxis is a digital financial services platform and a product of BisaniBrothers Private Limited. It brings together everyday payment services, credit-related services, rewards, and identity verification features within a single application."
-        },
-        {
-          q: "How do I create an account?",
-          a: "You can download the MyCredAxis app, enter your mobile number, verify it via OTP, and complete a quick KYC process to start using all our financial services."
-        }
-      ]
+      q: "What is MyCredAxis and what services does it provide?",
+      a: "MyCredAxis is a secure digital finance platform that helps you manage bill payments, check credit score, and track your financial health.",
+      icon: <BiUser />,
+      colorClass: "icon-blue"
     },
     {
-      category: "Payments & Billing",
-      questions: [
-        {
-          q: "How do bill payments work on the platform?",
-          a: "Users can make supported utility and financial payments seamlessly, including Electricity, Mobile & DTH Recharge, Broadband, Water, Gas Cylinder, FASTag, Credit Card Bill, Loan EMI, and Insurance Premiums."
-        },
-        {
-          q: "Are there any hidden charges for UPI transactions?",
-          a: "No, all standard UPI transactions made through the MyCredAxis platform are completely free of charge. We believe in transparent banking."
-        }
-      ]
+      q: "How do I make a bill payment on MyCredAxis?",
+      a: "You can make payments for mobile recharge, electricity, gas, water, DTH, broadband and more in just a few simple steps.",
+      icon: <BiCreditCard />,
+      colorClass: "icon-cyan"
     },
     {
-      category: "Security & Privacy",
-      questions: [
-        {
-          q: "Is my personal and financial data secure?",
-          a: "Yes. We implement robust administrative, technical, and organizational security measures, including 256-bit data encryption and authorized KYC verification, to safeguard your information against unauthorized access."
-        },
-        {
-          q: "How can I access my credit score and reports?",
-          a: "Eligible users can access professional credit-related services including Credit Score Checks, Credit Reports, Account Summaries (Active & Closed), and Enquiry Information through our authorized partners."
-        }
-      ]
+      q: "How can I check my credit score?",
+      a: "You can check your credit score instantly from the app dashboard and get detailed insights and improvement tips.",
+      icon: <BiTachometer />,
+      colorClass: "icon-green"
+    },
+    {
+      q: "How do rewards and cashback work?",
+      a: "Earn CX Reward Points on transactions and redeem them for exciting rewards, scratch cards and exclusive offers.",
+      icon: <BiGift />,
+      colorClass: "icon-orange"
+    },
+    {
+      q: "Is my personal and financial data secure?",
+      a: "Yes, we use bank-grade encryption and follow strict security protocols to keep your data safe and private.",
+      icon: <BiShieldAlt2 />,
+      colorClass: "icon-purple"
+    },
+    {
+      q: "Why is KYC verification required?",
+      a: "KYC helps us verify your identity and ensures a safe and compliant platform experience for all users.",
+      icon: <BiUserCheck />,
+      colorClass: "icon-teal"
     }
   ];
 
   return (
-    <div className="faq-page-wrapper">
+    <div className="hc-wrapper">
       
-      {/* Top Header / Hero Section */}
-      <section className="faq-hero-banner">
-        <div className="faq-nav-brand">
-          <Link to="/" className="faq-brand-link">
-            <img src="/images/logos.png" alt="MyCredAxis Logo" className="faq-logo-img" />
-            <span className="faq-brand-text">MyCredAxis</span>
-          </Link>
+      {/* Top Navbar */}
+      <nav className="hc-nav">
+        <div className="hc-logo">
+          <img src="/images/logos.png" alt="MyCredAxis Logo" />
+          <span className="logo-text">
+            <span className="logo-my">My</span>CredAxis
+          </span>
         </div>
-        <div className="faq-hero-content">
-          <h1>Help Center & FAQs</h1>
-          <p>Find answers to common questions about our platform, payments, and security. We're here to help you navigate your financial journey.</p>
-        </div>
-      </section>
+        
+      </nav>
 
-      {/* Main FAQ Accordion Section */}
-      <section className="faq-main-content">
-        <div className="faq-container-max">
+      {/* Hero Section */}
+      <header className="hc-hero">
+        <div className="hc-hero-left">
           
-          {faqData.map((section, secIndex) => (
-            <div key={secIndex} className="faq-category-block">
-              <h2 className="faq-category-title">{section.category}</h2>
-              
-              <div className="faq-accordion-list">
-                {section.questions.map((faq, qIndex) => {
-                  // Generate a unique index for each question across categories
-                  const uniqueIndex = `${secIndex}-${qIndex}`;
-                  const isActive = activeIndex === uniqueIndex;
+          <h1 className="hc-hero-title">How can we<br/>help you today?</h1>
+          <p className="hc-hero-subtitle">
+            Find answers to your questions about our platform, payments, security and more.
+          </p>
+          
+          
 
-                  return (
-                    <div 
-                      key={uniqueIndex} 
-                      className={`faq-card-item ${isActive ? "active" : ""}`}
-                      onClick={() => toggleFAQ(uniqueIndex)}
-                    >
-                      <div className="faq-question-row">
-                        <h3>{faq.q}</h3>
-                        <span className="faq-toggle-icon">
-                          {isActive ? <FaChevronUp /> : <FaChevronDown />}
-                        </span>
-                      </div>
-                      {isActive && (
-                        <div className="faq-answer-row">
-                          <p>{faq.a}</p>
-                        </div>
-                      )}
+          
+        </div>
+
+        <div className="hc-hero-right">
+          <div className="hc-hero-image-container">
+            <img src="/images/faqbanner.png" alt="Support Executive" />
+          </div>
+        </div>
+      </header>
+
+      {/* Horizontal Categories */}
+      {/* <section className="hc-categories-row">
+        {categories.map((cat, idx) => (
+          <div key={idx} className={`hc-cat-box ${activeCategory === cat.name ? 'active' : ''}`} onClick={() => setActiveCategory(cat.name)}>
+            <div className="cat-icon">{cat.icon}</div>
+            <h4>{cat.name}</h4>
+           
+          </div>
+        ))}
+      </section> */}
+
+      {/* Main Content Layout */}
+      <section className="hc-main-layout">
+        
+        {/* Left Sidebar */}
+        <aside className="hc-sidebar">
+          <h3 className="sidebar-title">All Categories</h3>
+          <ul className="sidebar-nav">
+            {categories.map((cat, idx) => (
+              <li 
+                key={idx} 
+                className={activeCategory === cat.name ? 'active' : ''}
+                onClick={() => setActiveCategory(cat.name)}
+              >
+                {cat.icon} {cat.name}
+              </li>
+            ))}
+          </ul>
+
+          <div className="hc-support-card">
+            <h4>Can't find your answer?</h4>
+            <p>Our support team is here to help you.</p>
+            <Link to="/support" className="hc-btn-support">
+              Contact Support <BiRightArrowAlt />
+            </Link>
+          </div>
+        </aside>
+
+        {/* Right Content */}
+        <div className="hc-content-area">
+          <div className="content-header">
+            <h2>Frequently Asked Questions</h2>
+            {/* 🔥 Updated: Removed the article-count span entirely */}
+          </div>
+
+          <div className="hc-faq-list">
+            {faqs.map((faq, idx) => {
+              const isOpen = expandedFaq === idx;
+              return (
+                <div 
+                  key={idx} 
+                  className={`hc-faq-item ${isOpen ? 'open' : ''}`}
+                  onClick={() => toggleFaq(idx)}
+                >
+                  <div className="faq-item-icon">
+                    <div className={`icon-circle ${faq.colorClass}`}>
+                      {faq.icon}
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                  <div className="faq-item-content">
+                    <h3>{faq.q}</h3>
+                    <div className="faq-answer">
+                      <p>{faq.a}</p>
+                    </div>
+                  </div>
+                  <div className="faq-item-toggle">
+                    {isOpen ? <BiMinus /> : <BiPlus />}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Support Grid */}
+      <section className="hc-bottom-support">
+        <div className="support-header">
+          <h2>Still need help?</h2>
+          <p>Our support team is available to assist you.</p>
+        </div>
+
+        <div className="support-cards-grid">
+          <div className="support-card chat-card">
+            <div className="s-icon"><FaWhatsapp /></div>
+            <div className="s-info">
+              <h4>WhatsApp Support</h4>
+              <p>Chat with our team instantly on WhatsApp</p>
+              <a href="https://wa.me/918000000000" target="_blank" rel="noopener noreferrer" className="s-link">
+                Chat on WhatsApp <BiRightArrowAlt />
+              </a>
             </div>
-          ))}
+          </div>
 
+          <div className="support-card email-card">
+            <div className="s-icon"><BiEnvelope /></div>
+            <div className="s-info">
+              <h4>Email Support</h4>
+              <p>We usually reply within 24 hours</p>
+              <a href="mailto:support@mycredaxis.com" className="s-link">Send Email <BiRightArrowAlt /></a>
+            </div>
+          </div>
+
+          <div className="support-card call-card">
+            <div className="s-icon"><BiPhoneCall /></div>
+            <div className="s-info">
+              <h4>Call Support</h4>
+              <p>Mon to Sat, 9AM - 7PM (IST)</p>
+              <a href="tel:+918000000000" className="s-link">+91 80-xxxx-xxxx <BiRightArrowAlt /></a>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Direct Contact Banner */}
-      <section className="faq-contact-banner">
-        <div className="faq-contact-inner">
-          <h2>Still have questions?</h2>
-          <p>Can't find the answer you're looking for? Please chat to our friendly team.</p>
-          <Link to="/support" className="btn-contact-support">Contact Support</Link>
-        </div>
-      </section>
-   
-
-      
     </div>
   );
 }

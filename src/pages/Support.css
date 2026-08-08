@@ -1,506 +1,798 @@
 /* ==========================================================
-   SUPPORT & CONTACT PAGE STYLING (Fully Responsive & Premium)
-   ========================================== */
+   ULTRA-PREMIUM SUPPORT PAGE (Dark Theme - Exact Match)
+   ========================================================== */
 
-.support-page-wrapper {
-  background-color: #F8F9FA;
-  color: #1E293B;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+.sup-wrapper {
+  background-color: #030712; /* Deep tech black */
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* Prevents any accidental horizontal scroll */
-  width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-.support-page-wrapper *, .support-page-wrapper *:before, .support-page-wrapper *:after {
+.sup-wrapper *, .sup-wrapper *:before, .sup-wrapper *:after {
   box-sizing: inherit;
 }
 
-/* ==========================================================
-   HERO BANNER
-   ========================================== */
-.support-hero-banner {
-  position: relative;
-  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), 
-              url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
-  padding: 30px 40px 100px 40px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.support-nav-brand {
-  max-width: 1200px;
-  margin: 0 auto 30px auto;
+/* --- Top Navbar --- */
+.sup-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px 2%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.support-brand-link {
+.sup-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
-}
-
-.support-logo-img {
-  width: 48px;
-  height: auto;
-  filter: brightness(0) invert(1);
-}
-
-.support-brand-text {
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.5px;
 }
 
-.support-hero-content {
-  max-width: 700px;
-  margin: 0 auto;
+.sup-logo img {
+  height: 32px;
 }
 
-.support-hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 900;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+.logo-my {
+  font-family:serif;
+  font-size: 0.65em; /* CredAxis ke muqable chota ho jayega */
+  font-weight: 500;
+  color: #94a3b8;    /* Agar color change karna ho, warna #ffffff rakh sakte hain */
+  margin-right: 1px;
 }
 
-.support-hero-content p {
-  color: #94a3b8;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0;
+/* "CredAxis" part - bilkul waisa hi rahega */
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
-/* ==========================================================
-   CONTACT MAIN SECTION (Form & Links)
-   ========================================== */
-.contact-main-card-section {
-  background-color: #F8F9FA;
-  padding: 0 40px 80px 40px;
-  margin-top: 40px; 
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-.contact-grid-container {
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
+/* --- Hero Header --- */
+/* --- Hero Section with Split Grid --- */
+.sup-hero {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-  border: 1px solid #E2E8F0;
-  overflow: hidden;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 5% 80px;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
-/* Left Card Box */
-.contact-left-card {
-  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-  padding: 50px 40px 50px 50px;
+.sup-hero-left {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  color: #ffffff;
-  position: relative;
-  margin-left: 0; 
-  border-top-left-radius: 16px; 
-  border-bottom-left-radius: 16px;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%); /* Slanted edge */
+  align-items: flex-start;
+  text-align: left;
 }
 
-/* 🔥 TEXT WRAP FIXES APPLIED HERE */
-.contact-info-row {
+.sup-badge {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.sup-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 30px 0;
+  letter-spacing: -1px;
+}
+
+.sup-title span {
+  background: linear-gradient(135deg, #ffffff 0%, #a2a8dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sup-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  font-weight: 300;
+  max-width: 550px;
+}
+
+.sup-features-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.sup-feat {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  width: 100%;
+  gap: 12px;
+  text-align: left;
 }
 
-.contact-info-row > div {
-  flex: 1;
-  min-width: 0; /* Allows text to shrink and wrap properly */
-}
-
-.info-step-circle {
-  width: 32px;
-  height: 32px;
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 50%;
+.feat-dot {
+  font-size: 1.2rem;
+  color: #589ead;
+  background: rgba(56, 189, 248, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
   flex-shrink: 0;
 }
 
-.info-title-label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.sup-feat strong {
   display: block;
-}
-
-.info-value-text {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 3px 0 0 0;
-  word-break: break-word; /* Breaks long emails */
-  overflow-wrap: break-word; /* Prevents overflow */
-}
-
-.left-card-desc {
   font-size: 0.95rem;
-  color: #94a3b8;
-  line-height: 1.6;
-  margin: 10px 0 0 0;
+  color: #f8fafc;
+  font-weight: 600;
 }
 
-.left-social-icons {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.left-social-icons a {
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #38bdf8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.left-social-icons a:hover {
-  background: #38bdf8;
-  color: #0f172a;
-}
-
-/* Right Suggestion Form Box */
-.contact-right-form-box {
-  padding: 50px 45px;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-right-form-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
-
-.form-sub-desc {
-  font-size: 0.95rem;
+.sup-feat p {
+  font-size: 0.8rem;
   color: #64748b;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.suggestion-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-row-dual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.suggestion-form input,
-.suggestion-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  color: #0f172a;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.suggestion-form input:focus,
-.suggestion-form textarea:focus {
-  border-color: #0284c7;
-}
-
-.submit-btn-pro {
-  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
-  color: #ffffff;
-  border: none;
-  padding: 14px 30px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  cursor: pointer;
-  width: max-content;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
-}
-
-.submit-btn-pro:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
-}
-
-/* ==========================================================
-   QUICK FEATURES BAR
-   ========================================== */
-.quick-features-bar {
-  background-color: #F8F9FA;
-  padding: 0 40px 80px 40px;
-  width: 100%;
-}
-
-.quick-cards-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.q-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 14px;
-  text-align: center;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-}
-
-.q-icon-box {
-  width: 60px;
-  height: 60px;
-  background: rgba(2, 132, 199, 0.1);
-  color: #0284c7;
-  font-size: 1.4rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px auto;
-}
-
-.q-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  color: #0f172a;
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.q-card p {
-  color: #64748b;
-  font-size: 0.98rem;
   margin: 0;
 }
 
-/* ==========================================================
-   FAQ SECTION
-   ========================================== */
-.support-faq-section {
-  background-color: #ffffff;
-  padding: 80px 40px;
-  border-top: 1px solid #E2E8F0;
+/* Right Side Image & Floating Elements Styling */
+.sup-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-.faq-wrapper-max {
-  max-width: 900px;
+.sup-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 20px 30px rgba(59, 130, 246, 0.25));
+  border-radius: 20px;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.floating-chat-bubble, .floating-mail-bubble {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 10px 14px;
+  border-radius: 14px;
+  color: #38bdf8;
+  font-size: 1.3rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  z-index: 5;
+}
+
+.floating-chat-bubble { top: 20px; right: 10px; color: #8b5cf6; }
+.floating-mail-bubble { bottom: 20px; left: 10px; color: #3b82f6; }
+
+/* Responsive for mobile */
+@media (max-width: 992px) {
+  .sup-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .sup-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .sup-features-row {
+    justify-content: center;
+  }
+}
+
+/* --- Connect Section (Single Clean Horizontal Row, No Boxes) --- */
+.sup-connect-section {
+  padding: 30px 4% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.connect-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: nowrap; /* Ek hi line mein rakhne ke liye */
+  width: 100%;
+}
+
+.connect-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+  box-shadow: none;
+}
+
+.connect-card:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.whatsapp-bg { background: rgba(37, 211, 102, 0.12); color: #25D366; }
+.email-bg { background: rgba(59, 130, 246, 0.12); color: #3b82f6; }
+.call-bg { background: rgba(16, 185, 129, 0.12); color: #10b981; }
+
+
+.connect-card h4 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.connect-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+.phone-num {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 220px;
+}
+
+
+
+.card-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Mobile responsive ke liye stacking */
+@media (max-width: 992px) {
+  .connect-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .connect-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* --- Split Section (Form & FAQs) --- */
+.sup-split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px 2% 80px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.faq-section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  text-align: center;
-  color: #0f172a;
-  margin-bottom: 10px;
+/* Form Box */
+.sup-form-box {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.box-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0 8px 0;
   font-weight: 700;
 }
 
-.faq-section-subtitle {
-  text-align: center;
+.box-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin: 0 0 30px 0;
+}
+
+.sup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
   color: #64748b;
-  font-size: 1.05rem;
-  margin-bottom: 45px;
+  font-size: 1.1rem;
+}
+
+.sup-form input, .form-select, .sup-form textarea {
+  width: 100%;
+  background: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 14px 12px 42px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sup-form input:focus, .form-select:focus, .sup-form textarea:focus {
+  border-color: #38bdf8;
+}
+
+.form-select {
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+.sup-form textarea {
+  padding-left: 14px;
+  resize: vertical;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: right;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.form-secure-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+
+/* FAQ Right Box */
+.faq-box-wrap {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.faq-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.faq-header-row h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.view-all-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .faq-accordion-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex: 1;
 }
 
-.faq-card-item {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+.faq-row-item {
+  background: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 22px 28px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.faq-card-item:hover, .faq-card-item.active {
-  background: #ffffff;
-  border-color: #0284c7;
-  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
-}
-
-.faq-question-row {
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.faq-question-row h3 {
-  font-size: 1.05rem;
-  color: #0f172a;
-  font-weight: 600;
-  margin: 0;
+.faq-row-item:hover {
+  background: #111827;
 }
 
-.faq-toggle-icon {
-  color: #0284c7;
-  font-size: 0.9rem;
+.faq-q-text {
+  font-size: 0.95rem;
+  color: #e2e8f0;
 }
 
-.faq-answer-row {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #e2e8f0;
-}
-
-.faq-answer-row p {
+.faq-arrow {
   color: #64748b;
-  font-size: 0.96rem;
-  line-height: 1.7;
-  margin: 0;
+  font-size: 1.2rem;
 }
 
-/* ==========================================================
-   DYNAMIC CONTACT LINKS STYLING (No Blue Underlines)
-   ========================================== */
-.dynamic-contact-link {
-  text-decoration: none !important;
-  color: inherit !important;
+/* Still Need Help Card inside FAQ Column */
+.still-need-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.5) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.snc-left {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  cursor: pointer;
-  width: 100%;
+  gap: 16px;
 }
 
-.dynamic-contact-link:hover .info-value-text {
-  color: #38bdf8 !important; 
-  text-decoration: underline;
+.snc-icon {
+  font-size: 1.8rem;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 10px;
+  border-radius: 12px;
 }
 
-.dynamic-q-card {
-  text-decoration: none !important;
-  color: inherit !important;
+.still-need-card h4 {
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+}
+
+.still-need-card p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.snc-btn {
+  background: #38bdf8;
+  color: #030712;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.snc-btn:hover {
+  background: #7dd3fc;
+}
+
+
+/* --- Bottom Trust Metrics Bar --- */
+.sup-trust-bar {
+  background: #0f172a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.trust-main-heading {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.trust-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.m-icon {
+  font-size: 2rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-item strong {
   display: block;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  font-weight: 600;
 }
 
-/* ==========================================================
-   🔥 FULLY RESPONSIVE MEDIA QUERIES (TABLET & MOBILE)
-   ========================================== */
-
-/* TABLET VIEW (< 900px) */
-@media (max-width: 900px) {
-  .contact-grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-left-card {
-    margin-left: 0;
-    clip-path: none;
-    /* Properly stacks and rounds top corners on tablet */
-    border-radius: 16px 16px 0 0; 
-  }
-
-  .quick-cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .form-row-dual {
-    grid-template-columns: 1fr;
-  }
+.metric-item p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
 }
 
-/* MOBILE VIEW (< 768px) */
-@media (max-width: 768px) {
-  .support-hero-banner {
-    padding: 20px 20px 60px 20px;
-  }
 
-  .support-hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .contact-main-card-section {
-    padding: 0 15px 50px 15px; /* Tighter padding for mobile */
-    margin-top: 20px;
-  }
-
-  .contact-left-card, 
-  .contact-right-form-box {
-    padding: 35px 20px; /* Reduced internal padding so content fits beautifully */
-  }
-
-  .contact-right-form-box h2 {
-    font-size: 1.6rem;
-  }
-
-  .submit-btn-pro {
-    width: 100%; /* Full width button on mobile */
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  .sup-hero {
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .quick-features-bar {
-    padding: 0 20px 50px 20px;
+  .sup-features-row {
+    justify-content: center;
   }
 
-  .quick-cards-grid {
+  .sup-split-section {
     grid-template-columns: 1fr;
   }
 
-  .support-faq-section {
-    padding: 50px 20px;
+  .still-need-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .faq-section-title {
-    font-size: 1.8rem;
+  .snc-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* --- Map Box Styling (Left Side) --- */
+.sup-map-box {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.map-embed-wrapper {
+  flex: 1;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.map-embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  filter: contrast(110%) brightness(85%); /* Dark theme ke sath map ko match karne ke liye */
+}
+
+/* --- Mobile Responsiveness (Small Screens) --- */
+@media (max-width: 992px) {
+  /* Hero Section Stacking */
+  .sup-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 4% 40px;
+    gap: 30px;
   }
 
-  .faq-card-item {
-    padding: 18px 20px;
+  .sup-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .sup-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .sup-features-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .sup-feat {
+    width: 100%;
+    max-width: 280px;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .sup-image-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Connect Section Grid for Mobile */
+  .connect-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .connect-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+  }
+
+  .card-btn {
+    max-width: 100%;
+  }
+
+  /* Split Section (Map & FAQs) */
+  .sup-split-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px 4% 40px;
+  }
+
+  .sup-map-box, .faq-box-wrap {
+    padding: 20px;
+  }
+
+  .map-embed-wrapper {
+    min-height: 250px;
+  }
+
+  /* Still Need Help Banner Stack */
+  .still-need-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .snc-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .snc-btn {
+    width: 100%;
+    text-align: center;
   }
 }

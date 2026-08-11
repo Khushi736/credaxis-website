@@ -67,7 +67,7 @@ export default function AboutUs() {
       {/* Logo & Brand Section */}
       <div className="logo-container">
         <img src="/images/logos.png" alt="MyCredAxis Logo" className="brand-logo" />
-        <span className="logo-subtext">A product of BisaniBrothers Private Limited</span>
+        <span className="logo-subtext">A product of Bisani Brothers Private Limited</span>
       </div>
 
       {/* 1. Hero Section */}

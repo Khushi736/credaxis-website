@@ -1,0 +1,773 @@
+/* ==========================================================
+   CREDIT SCORE LANDING PAGE STYLING (Matching Exact Layout)
+   ========================================================== */
+
+.cs-landing-wrapper {
+  background-color: #030712;
+  color: #F8FAFC;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.cs-landing-wrapper *, .cs-landing-wrapper *:before, .cs-landing-wrapper *:after {
+  box-sizing: inherit;
+}
+
+/* --- 1. Hero Section --- */
+
+.cs-hero-section {
+  background-color: #030712;
+  padding: 40px 20px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.cs-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cs-hero-content {
+  flex: 1;
+  max-width: 650px;
+  text-align: left;
+}
+
+.cs-hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.cs-hero-subtitle {
+  font-size: 1rem;
+  color: #e0e6ee;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cs-read-more {
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cs-section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e3e4e8;
+  margin-bottom: 16px;
+}
+
+/* Vertical Badges/Pills Layout */
+.cs-hero-badges-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 40px; /* Fully rounded pill shape */
+  font-size: 0.95rem;
+  color: #dde2e9;
+  transition: all 0.2s ease;
+}
+
+
+.cs-badge-icon {
+  font-size: 1.2rem;
+  color: #16a34a; /* Green check color */
+  display: flex;
+  align-items: center;
+}
+
+/* Right Side Image/Illustration */
+.cs-hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-hero-image-wrapper img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 900px) {
+  .cs-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cs-hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .cs-hero-badges-vertical {
+    align-items: stretch;
+  }
+}
+
+/* --- 2. Three Simple Steps Section --- */
+.cs-steps-section {
+  padding: 50px 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cs-section-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.cs-section-header p {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  margin-bottom: 40px;
+}
+
+.cs-steps-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cs-step-card {
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 330px;
+  position: relative;
+  text-align: center;
+
+  transition: transform 0.3s ease;
+}
+
+.cs-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.cs-step-num-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #2563EB;
+  color: #FFFFFF;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cs-step-img {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-step-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cs-step-card h3 {
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.cs-step-card p {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cs-step-arrow {
+  font-size: 1.6rem;
+  color: #38BDF8;
+  font-weight: bold;
+}
+
+/* --- 3. Why It Matters Section --- */
+.cs-why-section {
+  padding: 50px 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: inherit;
+}
+
+.cs-section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.cs-header-line {
+  width: 45px;
+  height: 3px;
+  background: #38BDF8;
+  margin: 10px 0 20px 0;
+  border-radius: 2px;
+}
+
+.cs-why-top-desc {
+  font-size: 1rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Main Split Wrapper for Left Content & Right Reasons Column */
+.cs-why-main-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.cs-why-left-content {
+  width: 100%;
+}
+
+/* Dark Outer Wrapper Box */
+.cs-why-container-box {
+  background-color: #0F172A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 0; /* Removed bottom margin since left side ends here */
+}
+
+.cs-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual Dark Card */
+.cs-why-card {
+  background: #0B0F19;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.cs-why-card:hover {
+  transform: translateY(-3px);
+  background: #111827;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Image Icon Container */
+.cs-why-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-why-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cs-why-card p {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right Side Reasons Column & Box Styles */
+.cs-reasons-right-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-reasons-box {
+  background-color: #0F172A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 30px 24px;
+  margin-top: 20px;
+  margin-bottom: 15px; /* Space between box and note */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cs-reasons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.cs-reasons-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cs-arrow-icon {
+  color: #38BDF8;
+  font-size: 0.95rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.cs-reasons-list p {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bottom Note Styling for Right Column */
+.cs-why-note {
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.5;
+  padding-left: 4px;
+}
+
+.cs-why-note strong {
+  color: #94A3B8;
+}
+
+/* Responsive Grid for Tablets and Mobiles */
+@media (max-width: 1024px) {
+  .cs-why-main-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cs-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-why-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cs-why-container-box,
+  .cs-reasons-box {
+    padding: 15px;
+  }
+}
+
+/* --- 4. Secure & Compliant Section --- */
+.cs-secure-section {
+  padding: 50px 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cs-secure-container {
+  background: #0B0F19;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.cs-secure-img-box img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cs-sub-badge {
+  font-size: 0.72rem;
+  color: #38BDF8;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cs-secure-text-box h2 {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+  font-weight: 800;
+}
+
+.cs-secure-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.cs-s-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+.cs-s-feat svg {
+  font-size: 1.2rem;
+  color: #38BDF8;
+  flex-shrink: 0;
+}
+
+/* --- 5. Bottom CTA Banner --- */
+/* 1. Full-width Section */
+.cs-cta-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #030712;
+}
+
+/* 2. Full Width Container */
+.cs-cta-box {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 8% 0 8%;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Image ke hisaab se auto width aur text ke liye bacha hua space */
+  align-items: stretch;
+  
+  /* Gap ko bilkul kam (10px) kar diya hai taaki paas aa jayein */
+  gap: 10px; 
+  
+  background: linear-gradient(135deg, #0B0F19 0%, #111827 100%);
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 0;
+}
+
+/* 3. Left Container */
+.cs-cta-left-part {
+  width: 420px; /* Container ki width fix kar di hai taaki extra space na aaye */
+  position: relative;
+  min-height: 280px;
+}
+
+.cs-cta-raw-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 4. Right Part */
+.cs-cta-right-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  padding-left: 0;
+}
+
+.cs-cta-right-part h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin: 0 0 15px 0;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.cs-cta-right-part p {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  margin: 0 0 25px 0;
+  line-height: 1.5;
+  max-width: 550px;
+}
+
+.cs-cta-action-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cs-main-btn {
+  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 15px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cs-main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6);
+}
+
+.cs-token-note {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs-coin-icon {
+  color: #F59E0B; /* Golden coin color */
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .cs-cta-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 5% 0 5%;
+  }
+  
+  .cs-cta-right-part,
+  .cs-cta-action-group {
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .cs-cta-right-part h2 {
+    font-size: 1.8rem;
+  }
+
+  .cs-cta-left-part {
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cs-cta-raw-image {
+    position: relative;
+    max-width: 260px;
+  }
+}
+/* --- Responsive Media Queries --- */
+@media (max-width: 992px) {
+  .cs-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .cs-hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cs-hero-badges {
+    justify-content: center;
+  }
+  .cs-secure-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .cs-cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 20px;
+  }
+  .cs-cta-left {
+    flex-direction: column;
+  }
+  .cs-cta-right {
+    align-items: center;
+    width: 100%;
+  }
+  .cs-main-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cs-step-arrow {
+    display: none; 
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-hero-title {
+    font-size: 2rem;
+  }
+  .cs-secure-features {
+    grid-template-columns: 1fr;
+  }
+  .cs-cta-left h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+.cs-info-card-section {
+  padding: 40px 20px;
+  background-color: #030712;
+  font-family: inherit;
+}
+
+/* Light blue/white card box */
+.cs-info-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #0B0F19;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+  
+
+.cs-info-desc {
+  font-size: 1rem;
+  color: #e5eefa;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Split layout inside card */
+.cs-info-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cs-info-bullets {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-info-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cs-info-bullet-item p {
+  margin: 0;
+  font-size: 0.95krem;
+  color: #d2dbe8;
+  line-height: 1.5;
+}
+
+.cs-info-icon {
+  font-size: 1.2rem;
+  color: #0284c7; /* Blue check icon matching image */
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.cs-info-link {
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Right Image Container */
+.cs-info-image-wrapper {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-info-image-wrapper img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive adjustment for mobiles */
+@media (max-width: 900px) {
+  .cs-info-body {
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+  
+  .cs-info-card {
+    padding: 20px;
+  }
+}
+.cs-info-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cs-section-main-heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: left;
+}

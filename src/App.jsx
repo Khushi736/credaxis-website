@@ -18,6 +18,7 @@ import Faq from './pages/Faq';
 import Footer from './pages/Footer';
 import BillPayments from "./pages/BillPayments";
 import FeatureComingSoon from "./pages/FeatureComingSoon";
+import CreditScore from "./pages/CreditScore";
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -69,6 +70,7 @@ function AppContent() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/bill-payments" element={<BillPayments />} />
         <Route path="/upcoming" element={<FeatureComingSoon />} />
+        <Route path="/credit-score" element={<CreditScore />} />
       </Routes>
 
       {/* Conditionally Rendering the Footer */}

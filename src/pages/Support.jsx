@@ -8,11 +8,40 @@ import {
 } from "react-icons/bi";
 import { FaWhatsapp, FaBolt, FaShieldAlt, FaSmile} from "react-icons/fa";
 import "./Support.css";
+import apiClient from "../services/apiClient";
+import { useSEO } from "../hooks/useSEO";
 
 export default function Support() {
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useSEO(pageData?.seo);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    const fetchSupportData = async () => {
+      try {
+        const response = await apiClient.get('/website/pages/support');
+        if (response?.success && response?.data) {
+          setPageData(response.data);
+        }
+      } catch (error) {
+        console.error("API Error: using fallback data for Support", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSupportData();
   }, []);
+
+  const getSection = (sectionKey) => {
+    return pageData?.sections?.find((sec) => sec.key === sectionKey);
+  };
+
+  const heroSection = getSection("support_hero");
+  const connectSection = getSection("connect");
+  const mapSection = getSection("supportleft");
+  const faqSection = getSection("supportright");
+  const helpSection = getSection("helpbanner");
 
   const [activeFaq, setActiveFaq] = useState(null);
   const [formData, setFormData] = useState({
@@ -36,33 +65,6 @@ export default function Support() {
     alert("Message sent successfully!");
   };
 
-  const faqs = [
-    {
-      q: "How do I check my credit score?",
-      a: "You can check your credit score instantly by logging into your dashboard and navigating to the Credit Score tab."
-    },
-    {
-      q: "How long does it take to update my credit report?",
-      a: "Credit bureau data typically updates every 30 to 45 days automatically."
-    },
-    {
-      q: "Are my personal and financial data secure?",
-      a: "Yes, we use bank-grade 256-bit SSL encryption to ensure your data is completely secure."
-    },
-    {
-      q: "Is there any fee for using MyCredAxis?",
-      a: "Checking your basic credit score and exploring core features is 100% free."
-    },
-    {
-      q: "How can I correct an error in my credit report?",
-      a: "You can raise a dispute directly from your credit report section to notify the bureau."
-    },
-    {
-      q: "How do I contact support for my loan application?",
-      a: "You can reach out to us instantly via WhatsApp or call our support helpline."
-    }
-  ];
-
   return (
     <div className="sup-wrapper">
       
@@ -79,34 +81,33 @@ export default function Support() {
       {/* Hero Header with Right Side Image */}
       <header className="sup-hero">
         <div className="sup-hero-left">
-          
-          <h1 className="sup-title">We’re here to help<br /><span>you, always.</span></h1>
+          <h1 className="sup-title">
+            {heroSection?.title ? heroSection.title.split('\\n').map((line, i) => (
+              <React.Fragment key={i}>
+                {i === 1 ? <span>{line}</span> : line}
+                {i === 0 && <br />}
+              </React.Fragment>
+            )) : (
+              <>We’re here to help<br /><span>you, always.</span></>
+            )}
+          </h1>
           <p className="sup-subtitle">
-            Have a question, need assistance, or facing an issue? Our expert support team is ready to help you out instantly.
+            {heroSection?.subtitle || "Have a question, need assistance, or facing an issue? Our expert support team is ready to help you out instantly."}
           </p>
 
           <div className="sup-features-row">
-            <div className="sup-feat">
-              <span className="feat-dot"><FaBolt /></span>
-              <div>
-                <strong>Fast Response</strong>
-                <p>We respond quickly</p>
-              </div>
-            </div>
-            <div className="sup-feat">
-              <span className="feat-dot"><FaShieldAlt /></span>
-              <div>
-                <strong>Secure & Trusted</strong>
-                <p>Your data is safe</p>
-              </div>
-            </div>
-            <div className="sup-feat">
-              <span className="feat-dot"><FaSmile /></span>
-              <div>
-                <strong>Friendly Support</strong>
-                <p>We're here for you</p>
-              </div>
-            </div>
+            {heroSection?.items?.map((feat, idx) => {
+              const icons = [<FaBolt />, <FaShieldAlt />, <FaSmile />];
+              return (
+                <div className="sup-feat" key={idx}>
+                  <span className="feat-dot">{icons[idx] || <FaBolt />}</span>
+                  <div>
+                    <strong>{feat.title}</strong>
+                    <p>{feat.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -114,53 +115,41 @@ export default function Support() {
         <div className="sup-hero-right">
           <div className="sup-image-container">
             <div className="hero-glow"></div>
-            <img src="/images/cs.webp" alt="Support Assistance" className="hero-main-img" />
+            <img src={heroSection?.image || "/images/cs.webp"} alt="Support Assistance" className="hero-main-img" />
           </div>
         </div>
       </header>
 
       {/* Choose How You Want To Connect Section */}
       <section className="sup-connect-section">
-        <h3 className="section-heading">Choose how you want to connect</h3>
+        <h3 className="section-heading">{connectSection?.title || "Choose how you want to connect"}</h3>
 
         <div className="connect-grid">
-          
-          {/* WhatsApp Support Card */}
-          <div className="connect-card">
-            <div className="card-top-row">
-              <div className="card-icon whatsapp-bg"><FaWhatsapp /></div>
-            </div>
-            <h4>WhatsApp Support</h4>
-            <p>Chat with our support team in real-time.</p>
-            <a href="https://wa.me/918000000000" target="_blank" rel="noopener noreferrer" className="card-btn whatsapp-btn">
-              Chat on WhatsApp <BiRightArrowAlt />
-            </a>
-          </div>
+          {connectSection?.items?.map((card, idx) => {
+            const cardIcons = [<FaWhatsapp />, <BiEnvelope />, <BiPhoneCall />];
+            const bgClasses = ["whatsapp-bg", "email-bg", "call-bg"];
+            const btnClasses = ["card-btn whatsapp-btn", "card-btn", "card-btn"];
+            
+            let hrefLink = card.link;
+            if (idx === 1) hrefLink = `mailto:${card.link}`;
+            if (idx === 2) hrefLink = `tel:${card.link}`;
 
-          {/* Email Support Card */}
-          <div className="connect-card">
-            <div className="card-top-row">
-              <div className="card-icon email-bg"><BiEnvelope /></div>
-            </div>
-            <h4>Email Support</h4>
-            <p>We usually reply within 24 hours.</p>
-            <a href="mailto:support@mycredaxis.com" className="card-btn">
-              Send Email <BiRightArrowAlt />
-            </a>
-          </div>
-
-          {/* Call Support Card */}
-          <div className="connect-card">
-            <div className="card-top-row">
-              <div className="card-icon call-bg"><BiPhoneCall /></div>
-            </div>
-            <h4>Call Support</h4>
-            <p>Mon to Sat, 9AM - 7PM (IST)<br /><strong className="phone-num">+91 80-xxxx-xxxx</strong></p>
-            <a href="tel:+918000000000" className="card-btn">
-              Call Now <BiRightArrowAlt />
-            </a>
-          </div>
-
+            return (
+              <div className="connect-card" key={idx}>
+                <div className="card-top-row">
+                  <div className={`card-icon ${bgClasses[idx]}`}>{cardIcons[idx]}</div>
+                </div>
+                <h4>{card.title}</h4>
+                <p>
+                  {card.description}
+                  {idx === 2 && <><br /><strong className="phone-num">{card.link}</strong></>}
+                </p>
+                <a href={hrefLink} target={idx === 0 ? "_blank" : "_self"} rel="noopener noreferrer" className={btnClasses[idx]}>
+                  {idx === 0 ? "Chat on WhatsApp" : idx === 1 ? "Send Email" : "Call Now"} <BiRightArrowAlt />
+                </a>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -170,14 +159,14 @@ export default function Support() {
         {/* Left: Map / Location Card */}
         <div className="sup-map-box">
           <div className="box-header">
-            <h3>Our Location</h3>
-            <p>Visit our office or reach out to us directly.</p>
+            <h3>{mapSection?.title || "Our Location"}</h3>
+            <p>{mapSection?.description || "Visit our office or reach out to us directly."}</p>
           </div>
           
           <div className="map-embed-wrapper">
             <iframe 
               title="Bisani Brothers Pvt. Ltd. Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.261273397945!2d80.9920823!3d26.8874644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd53b91d35bb%3A0x637480bd96711616!2sBisani+Brothers+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src={mapSection?.image || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.261273397945!2d80.9920823!3d26.8874644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd53b91d35bb%3A0x637480bd96711616!2sBisani+Brothers+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"} 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -191,23 +180,25 @@ export default function Support() {
         <div className="sup-right-col">
           <div className="faq-box-wrap">
             <div className="faq-header-row">
-              <h3>Frequently Asked Questions</h3>
-              <Link to="/faq" className="view-all-link">View all FAQs <BiRightArrowAlt /></Link>
+              <h3>{faqSection?.title || "Frequently Asked Questions"}</h3>
+              <Link to={faqSection?.buttons?.[0]?.link || "/faq"} className="view-all-link">
+                {faqSection?.buttons?.[0]?.text || "View all FAQs"} <BiRightArrowAlt />
+              </Link>
             </div>
 
             <div className="faq-accordion-list">
-              {faqs.map((item, idx) => {
+              {faqSection?.items?.map((item, idx) => {
                 const isOpen = activeFaq === idx;
                 return (
                   <div key={idx} className={`faq-row-item ${isOpen ? 'active' : ''}`} onClick={() => toggleFaq(idx)}>
-                    <div className="faq-content-wrap" style={{ width: '100%' }}>
-                      <div className="faq-q-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <div className="faq-q-text">{item.q}</div>
+                    <div className="faq-content-wrap">
+                      <div className="faq-q-row">
+                        <div className="faq-q-text">{item.title}</div>
                         <div className="faq-arrow">{isOpen ? <BiChevronUp /> : <BiChevronDown />}</div>
                       </div>
                       {isOpen && (
-                        <div className="faq-answer-text" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid rgba(255, 255, 255, 0.06)', color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.5' }}>
-                          {item.a}
+                        <div className="faq-answer-text">
+                          {item.description}
                         </div>
                       )}
                     </div>
@@ -221,13 +212,14 @@ export default function Support() {
               <div className="snc-left">
                 <div className="snc-icon">❓</div>
                 <div>
-                  <h4>Still need help?</h4>
-                  <p>Our support team is here to assist you with any questions or concerns.</p>
+                  <h4>{helpSection?.title ||"Still need help?"}</h4>
+                  <p>{helpSection?.subtitle || "Our support team is here to assist you with any questions or concerns."}</p>
                 </div>
               </div>
-              <a href="https://wa.me/918000000000" target="_blank" rel="noopener noreferrer" className="snc-btn">
-                Chat on WhatsApp <BiRightArrowAlt />
+              <a href={helpSection?.buttons?.[0]?.link || "https://wa.me/918000000000"} target={helpSection?.buttons?.[0]?.target ||"_blank"} rel="noopener noreferrer" className="snc-btn">
+                {helpSection?.buttons?.[0]?.text || "Chat on WhatsApp"} <BiRightArrowAlt />
               </a>
+      
             </div>
 
           </div>

@@ -8,69 +8,68 @@ import {
 } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 import "./Faq.css";
+import apiClient from "../services/apiClient";
+import { useSEO } from "../hooks/useSEO";
 
 export default function Faq() {
   const [activeCategory, setActiveCategory] = useState("General");
   const [expandedFaq, setExpandedFaq] = useState(null);
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useSEO(pageData?.seo);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const fetchFaqData = async () => {
+      try {
+        const response = await apiClient.get('website/pages/faq');
+        if (response?.success && response.data) {
+          setPageData(response.data);
+        }
+      } catch (error) {
+        console.error("API Error: using fallback data for FAQ", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchFaqData();
   }, []);
+
+  const getSection = (sectionKey) => {
+    return pageData?.sections?.find((sec) => sec.key === sectionKey);
+  };
+
+  const heroSection = getSection("faq_list");
+  const helpBanner = getSection("helpbanner");
 
   const toggleFaq = (index) => {
     setExpandedFaq(expandedFaq === index ? null : index);
   };
 
-  // 🔥 Updated: Completely removed all counts and numbers
+  // Categories list with matching API keys
   const categories = [
-    { name: "General", icon: <BiGridAlt /> },
-    { name: "Payments & Billing", icon: <BiCreditCard /> },
-    { name: "Credit Score", icon: <BiTachometer /> },
-    { name: "Rewards & Offers", icon: <BiGift /> },
-    { name: "Security & Privacy", icon: <BiShieldAlt2 /> },
-    { name: "KYC & Verification", icon: <BiUserCheck /> },
-    { name: "Loans & EMI", icon: <BiBuildingHouse /> },
-    { name: "Account & Profile", icon: <BiUser /> },
+    { name: "General", key: "general", icon: <BiGridAlt /> },
+    { name: "Payments & Billing", key: "pay-&-bill", icon: <BiCreditCard /> },
+    { name: "Credit Score", key: "credit-score", icon: <BiTachometer /> },
+    { name: "Rewards & Offers", key: "reward&offer", icon: <BiGift /> },
+    { name: "Security & Privacy", key: "securityprivacy", icon: <BiShieldAlt2 /> },
+    { name: "KYC & Verification", key: "kyc", icon: <BiUserCheck /> },
+    { name: "Loans & EMI", key: "loan&emi", icon: <BiBuildingHouse /> },
+    { name: "Account & Profile", key: "profile", icon: <BiUser /> },
   ];
 
-  const faqs = [
-    {
-      q: "What is MyCredAxis and what services does it provide?",
-      a: "MyCredAxis is a secure digital finance platform that helps you manage bill payments, check credit score, and track your financial health.",
-      icon: <BiUser />,
-      colorClass: "icon-blue"
-    },
-    {
-      q: "How do I make a bill payment on MyCredAxis?",
-      a: "You can make payments for mobile recharge, electricity, gas, water, DTH, broadband and more in just a few simple steps.",
-      icon: <BiCreditCard />,
-      colorClass: "icon-cyan"
-    },
-    {
-      q: "How can I check my credit score?",
-      a: "You can check your credit score instantly from the app dashboard and get detailed insights and improvement tips.",
-      icon: <BiTachometer />,
-      colorClass: "icon-green"
-    },
-    {
-      q: "How do rewards and cashback work?",
-      a: "Earn CX Reward Points on transactions and redeem them for exciting rewards, scratch cards and exclusive offers.",
-      icon: <BiGift />,
-      colorClass: "icon-orange"
-    },
-    {
-      q: "Is my personal and financial data secure?",
-      a: "Yes, we use bank-grade encryption and follow strict security protocols to keep your data safe and private.",
-      icon: <BiShieldAlt2 />,
-      colorClass: "icon-purple"
-    },
-    {
-      q: "Why is KYC verification required?",
-      a: "KYC helps us verify your identity and ensures a safe and compliant platform experience for all users.",
-      icon: <BiUserCheck />,
-      colorClass: "icon-teal"
-    }
-  ];
+  // Find the active category object based on state name
+  const currentCategoryObj = categories.find(cat => cat.name === activeCategory);
+  
+  // Get section data for the active category
+  const activeSectionData = getSection(currentCategoryObj?.key);
+  
+  // Extract items (questions & answers) from the active section, fallback to empty array
+  const currentFaqs = activeSectionData?.items || [];
+
+  // Icon mapping for FAQ items
+  const iconList = [<BiUser />, <BiCreditCard />, <BiTachometer />, <BiGift />, <BiShieldAlt2 />, <BiUserCheck />];
+  const colorClasses = ["icon-blue", "icon-cyan", "icon-green", "icon-orange", "icon-purple", "icon-teal"];
 
   return (
     <div className="hc-wrapper">
@@ -83,40 +82,34 @@ export default function Faq() {
             <span className="logo-my">My</span>CredAxis
           </span>
         </div>
-        
       </nav>
 
       {/* Hero Section */}
       <header className="hc-hero">
         <div className="hc-hero-left">
-          
-          <h1 className="hc-hero-title">How can we<br/>help you today?</h1>
+          <h1 className="hc-hero-title">
+            {heroSection?.title ? (
+              heroSection.title.split('\\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {i === 1 ? <span>{line}</span> : line}
+                  {i === 0 && <br />}
+                </React.Fragment>
+              ))
+            ) : (
+              <>How can we<br /><span>help you today?</span></>
+            )}
+          </h1>
           <p className="hc-hero-subtitle">
-            Find answers to your questions about our platform, payments, security and more.
+            {heroSection?.description || "Find answers to your questions about our platform, payments, security and more."}
           </p>
-          
-          
-
-          
         </div>
 
         <div className="hc-hero-right">
           <div className="hc-hero-image-container">
-            <img src="/images/faqbanner.png" alt="Support Executive" />
+            <img src={heroSection?.image || "/images/faqbanner.png"} alt="Support Executive" />
           </div>
         </div>
       </header>
-
-      {/* Horizontal Categories */}
-      {/* <section className="hc-categories-row">
-        {categories.map((cat, idx) => (
-          <div key={idx} className={`hc-cat-box ${activeCategory === cat.name ? 'active' : ''}`} onClick={() => setActiveCategory(cat.name)}>
-            <div className="cat-icon">{cat.icon}</div>
-            <h4>{cat.name}</h4>
-           
-          </div>
-        ))}
-      </section> */}
 
       {/* Main Content Layout */}
       <section className="hc-main-layout">
@@ -129,7 +122,10 @@ export default function Faq() {
               <li 
                 key={idx} 
                 className={activeCategory === cat.name ? 'active' : ''}
-                onClick={() => setActiveCategory(cat.name)}
+                onClick={() => {
+                  setActiveCategory(cat.name);
+                  setExpandedFaq(null); // Reset accordion on category switch
+                }}
               >
                 {cat.icon} {cat.name}
               </li>
@@ -138,7 +134,7 @@ export default function Faq() {
 
           <div className="hc-support-card">
             <h4>Can't find your answer?</h4>
-            <p>Our support team is here to help you.</p>
+            <p>Our support team is help you.</p>
             <Link to="/support" className="hc-btn-support">
               Contact Support <BiRightArrowAlt />
             </Link>
@@ -148,36 +144,39 @@ export default function Faq() {
         {/* Right Content */}
         <div className="hc-content-area">
           <div className="content-header">
-            <h2>Frequently Asked Questions</h2>
-            {/* 🔥 Updated: Removed the article-count span entirely */}
+            <h2>{activeCategory}</h2>
           </div>
 
           <div className="hc-faq-list">
-            {faqs.map((faq, idx) => {
-              const isOpen = expandedFaq === idx;
-              return (
-                <div 
-                  key={idx} 
-                  className={`hc-faq-item ${isOpen ? 'open' : ''}`}
-                  onClick={() => toggleFaq(idx)}
-                >
-                  <div className="faq-item-icon">
-                    <div className={`icon-circle ${faq.colorClass}`}>
-                      {faq.icon}
+            {currentFaqs.length > 0 ? (
+              currentFaqs.map((faq, idx) => {
+                const isOpen = expandedFaq === idx;
+                return (
+                  <div 
+                    key={idx} 
+                    className={`hc-faq-item ${isOpen ? 'open' : ''}`}
+                    onClick={() => toggleFaq(idx)}
+                  >
+                    <div className="faq-item-icon">
+                      <div className={`icon-circle ${colorClasses[idx % colorClasses.length]}`}>
+                        {iconList[idx % iconList.length]}
+                      </div>
+                    </div>
+                    <div className="faq-item-content">
+                      <h3>{faq.title}</h3>
+                      <div className="faq-answer">
+                        <p>{faq.description}</p>
+                      </div>
+                    </div>
+                    <div className="faq-item-toggle">
+                      {isOpen ? <BiMinus /> : <BiPlus />}
                     </div>
                   </div>
-                  <div className="faq-item-content">
-                    <h3>{faq.q}</h3>
-                    <div className="faq-answer">
-                      <p>{faq.a}</p>
-                    </div>
-                  </div>
-                  <div className="faq-item-toggle">
-                    {isOpen ? <BiMinus /> : <BiPlus />}
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <p style={{ color: "#94a3b8", padding: "20px 0" }}>No FAQs available in this category yet.</p>
+            )}
           </div>
         </div>
       </section>
@@ -185,17 +184,17 @@ export default function Faq() {
       {/* Bottom Support Grid */}
       <section className="hc-bottom-support">
         <div className="support-header">
-          <h2>Still need help?</h2>
-          <p>Our support team is available to assist you.</p>
+          <h2>{helpBanner?.title || "Still need help?"}</h2>
+          <p>{helpBanner?.subtitle || "Our support team is available to assist you."}</p>
         </div>
 
         <div className="support-cards-grid">
           <div className="support-card chat-card">
             <div className="s-icon"><FaWhatsapp /></div>
             <div className="s-info">
-              <h4>WhatsApp Support</h4>
-              <p>Chat with our team instantly on WhatsApp</p>
-              <a href="https://wa.me/918000000000" target="_blank" rel="noopener noreferrer" className="s-link">
+              <h4>{helpBanner?.items?.[0]?.title || "WhatsApp Support"}</h4>
+              <p>{helpBanner?.items?.[0]?.description || "Chat with our team instantly on WhatsApp"}</p>
+              <a href={helpBanner?.items?.[0]?.link || "https://wa.me/918000000000"} target="_blank" rel="noopener noreferrer" className="s-link">
                 Chat on WhatsApp <BiRightArrowAlt />
               </a>
             </div>
@@ -204,18 +203,18 @@ export default function Faq() {
           <div className="support-card email-card">
             <div className="s-icon"><BiEnvelope /></div>
             <div className="s-info">
-              <h4>Email Support</h4>
-              <p>We usually reply within 24 hours</p>
-              <a href="mailto:support@mycredaxis.com" className="s-link">Send Email <BiRightArrowAlt /></a>
+              <h4>{helpBanner?.items?.[1]?.title || "Email Support"}</h4>
+              <p>{helpBanner?.items?.[1]?.description || "We usually reply within 24 hours"}</p>
+              <a href={`mailto:${helpBanner?.items?.[1]?.link || "support@mycredaxis.com"}`} className="s-link">Send Email <BiRightArrowAlt /></a>
             </div>
           </div>
 
           <div className="support-card call-card">
             <div className="s-icon"><BiPhoneCall /></div>
             <div className="s-info">
-              <h4>Call Support</h4>
-              <p>Mon to Sat, 9AM - 7PM (IST)</p>
-              <a href="tel:+918000000000" className="s-link">+91 80-xxxx-xxxx <BiRightArrowAlt /></a>
+              <h4>{helpBanner?.items?.[2]?.title || "Call Support"}</h4>
+              <p>{helpBanner?.items?.[2]?.description || "Mon to Sat, 9AM - 7PM (IST)"}</p>
+              <a href={`tel:+${helpBanner?.items?.[2]?.link || "918000000000"}`} className="s-link">+91 80-xxxx-xxxx <BiRightArrowAlt /></a>
             </div>
           </div>
         </div>

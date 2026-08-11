@@ -114,7 +114,7 @@ export default function Footer() {
           <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
             <FaWhatsapp />
           </a>
-          <a href="mailto:support@bisanibrothers.com" className="sub-btn email">
+          <a href="mailto:contact@bisanibrother.com" className="sub-btn email">
             <FaEnvelope />
           </a>
           <a href="tel:+911234567890" className="sub-btn phone">

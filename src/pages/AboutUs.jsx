@@ -110,7 +110,7 @@ export default function AboutUs() {
             <p>
               {billPayments?.description || "Users can make supported utility and financial payments, including Electricity, Mobile & DTH Recharge, Broadband, Water, Gas Cylinder, FASTag, Credit Card Bill, Loan EMI, and Insurance Premium payments."}
             </p>
-            <button className="btn-yellow">Explore Bills &rarr;</button>
+            <Link to="/" style={{ color: "inherit", textDecoration: "none" }} className="btn-yellow">Explore Bills &rarr;</Link>
           </div>
           <div className="feature-image-container">
             <img 
@@ -128,7 +128,7 @@ export default function AboutUs() {
             <p>
               {creditServices?.description || "Eligible users can access credit-related services including Credit Score Checks, Reports, Account Summaries (Active & Closed), Enquiry Information, and Insights through authorized partners."}
             </p>
-            <button className="btn-yellow">Check Credit &rarr;</button>
+            <Link to="/" style={{ color: "inherit", textDecoration: "none" }} className="btn-yellow">Check Credit &rarr;</Link>
           </div>
           <div className="feature-image-container">
             <img 
@@ -147,7 +147,7 @@ export default function AboutUs() {
             <p>
               {rewardsService?.description || "Receive rewards based on platform activities including CX Reward Points, Spin & Win, Scratch Cards, and Promotional Coupons. Certain services require successful KYC verification via authorized partners."}
             </p>
-            <button className="btn-yellow">View Rewards &rarr;</button>
+            <Link to="/" style={{ color: "inherit", textDecoration: "none" }} className="btn-yellow">View Rewards &rarr;</Link>
           </div>
           <div className="feature-image-container">
             <img 

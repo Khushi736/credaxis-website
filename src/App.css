@@ -133,7 +133,7 @@ body {
    LOGO STYLING (Mobile First - Sleek)
 ========================================= */
 .logo img {
-  width: 110px; /* Mobile par logo sleek aur chhota rahega */
+  width: 50px; /* Mobile par logo sleek aur chhota rahega */
   height: auto;
   display: block;
   transition: width 0.3s ease; /* Smooth scaling animation */
@@ -578,7 +578,7 @@ body {
   .top-nav { padding: 30px 50px; align-items: center; }
   .logo { font-size: 24px; margin-top: 25px; }
   .logo img {
-    width: 160px; 
+    width: 80px; 
   }
   .nav-right { width: 56px; height: 56px; }
 

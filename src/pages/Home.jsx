@@ -171,7 +171,10 @@ function Home() {
 
         <nav className="top-nav">
           <div className="logo">
-            <img src="/images/logo.png" alt="Logo" />
+            <img src="/images/logos.png" alt="Logo" />
+             <span className="logo-text">
+                <span className="logo-my">My</span>CredAxis
+             </span>
           </div>
 
           <div className="nav-right" style={{ paddingTop: "25px" }}>

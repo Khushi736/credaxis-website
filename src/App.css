@@ -1167,3 +1167,189 @@ body {
   }
   100% { opacity: 1; transform: scale(1); }
 }
+
+
+/* ==========================================================
+   APP DOWNLOAD SECTION STYLING (Fixed Spacing & QR Size)
+   ========================================================== */
+
+/* .app-download-section {
+  width: 100%;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.app-download-container {
+  width: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15) 0%, rgba(11, 15, 25, 0.95) 60%, rgba(3, 7, 18, 1) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 40px 70px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+} */
+ .app-download-section {
+  width: 100%;
+  padding: 60px 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.app-download-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.app-download-content {
+  flex: 1.2;
+}
+
+.app-sub-badge {
+  font-size: 0.75rem;
+  color: #eaeff1;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px; /* Badges aur heading ke beech ka gap balance kiya */
+}
+
+.app-download-content h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.app-download-content p {
+  font-size: 1rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Store Buttons Style */
+.app-store-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.store-btn:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.store-icon {
+  font-size: 1.8rem;
+}
+
+.app-download-content h2 .title-my {
+  font-size: 0.6em; /* "My" ka size heading ke comparison mein chota ho jayega */
+  font-weight: 500;
+  vertical-align: baseline; /* Text ko line ke sath perfectly align rakhne ke liye */
+  color: #94a3b8;
+}
+
+.store-btn span {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  display: block;
+  text-transform: uppercase;
+}
+
+.store-btn strong {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* QR Code Card Style (Aligned and proportioned) */
+.app-qr-card {
+  flex: 0.8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-code-box {
+  background: #fbf8f8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* QR Code image ka size bada kiya gaya hai */
+.qr-code-box img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+}
+
+.qr-text-info h4 {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.qr-text-info p {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+  .app-download-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 25px;
+  }
+  .app-store-buttons {
+    justify-content: center;
+  }
+  .app-download-content h2 {
+    font-size: 1.8rem;
+  }
+  .qr-code-box img {
+    width: 180px;
+    height: 180px;
+  }
+}

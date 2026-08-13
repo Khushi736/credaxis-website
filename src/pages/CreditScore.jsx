@@ -24,7 +24,7 @@ export default function CreditScore() {
                 Check Credit Score & CIBIL Report
             </h1>
             <p className="cs-hero-subtitle">
-                Check your credit score across all 4 credit bureaus, including CIBIL, only on MyCredAxis. Get your credit score online with monthly updates and take steps to become 
+                Check your credit score across all including CIBIL, only on MyCredAxis. Get your credit score online with monthly updates and take steps to become 
             </p>
 
             <div className="cs-section-heading">Why Check Credit Score ?</div>
@@ -281,12 +281,12 @@ export default function CreditScore() {
             <p>Use a token, check your score, and download your report in less than a minute.</p>
             
             <div className="cs-cta-action-group">
-                <a href="#check-credit" className="cs-main-btn">
+                <a href="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share" className="cs-main-btn">
                 Check Your Credit Report Now &rarr;
                 </a>
-                <span className="cs-token-note">
+                {/* <span className="cs-token-note">
                 <FaCoins className="cs-coin-icon" /> 1 Token = 1 Credit Report
-                </span>
+                </span> */}
             </div>
             </div>
 

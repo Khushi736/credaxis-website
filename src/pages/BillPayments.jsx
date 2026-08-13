@@ -93,7 +93,7 @@ export default function BillPayments() {
             <div className="bp-cta-container bp-hidden-text bp-fade-up">
               <button 
                 className="bp-btn bp-btn-primary" 
-                onClick={() => navigate('/')}
+                onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share'}
               >
                 Download the App
               </button>

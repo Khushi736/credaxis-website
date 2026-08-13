@@ -3,7 +3,12 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube, FaMapMarkerAlt, FaComments, FaTimes, FaWhatsapp, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { 
+  FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube, 
+  FaMapMarkerAlt, FaComments, FaTimes, FaWhatsapp, 
+  FaEnvelope, FaPhoneAlt, FaApple 
+} from "react-icons/fa";
+import { IoLogoGooglePlaystore } from "react-icons/io5"; // 🔥 Yahan import add kiya gaya hai
 
 // =========================================
 // FALLBACK DATA (API Fail hone par ye use hoga)
@@ -51,9 +56,6 @@ const fallbackData = {
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [activeCol, setActiveCol] = useState(null);
-  
-  // 🔥 NEW: API Data State
   const [pageData, setPageData] = useState(fallbackData);
 
   const handleWidgetClick = () => {
@@ -69,16 +71,14 @@ function Home() {
     setIsExpanded(false); 
   };
 
-  // 🔥 NEW: API Fetch Logic
   useEffect(() => {
     const fetchPageData = async () => {
       try {
-        // Apni real API ka endpoint yahan dalein
         const response = await fetch('https://www.mycredaxis.com/api/website/pages/home');
         const json = await response.json();
         
         if (json.success && json.data) {
-          setPageData(json.data); // API se data aane par update karein
+          setPageData(json.data);
         }
       } catch (error) {
         console.error("Failed to fetch API data, using fallback data:", error);
@@ -88,10 +88,8 @@ function Home() {
     fetchPageData();
   }, []);
 
-  // Helper Function: Key ke base par section nikalne ke liye
   const getSection = (key) => pageData.sections.find(sec => sec.key === key) || {};
 
-  // Helper Function: Text ko \n se <br/> me dynamically convert karne ke liye
   const renderTextWithBreaks = (text) => {
     if (!text) return null;
     return text.replace(/\\n/g, '\n').split('\n').map((line, i, arr) => (
@@ -102,7 +100,6 @@ function Home() {
     ));
   };
 
-  // Typing Animation Variants
   const textVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
@@ -161,12 +158,22 @@ function Home() {
     <>
       {/* ================================
             HERO SECTION
-      ================================= */}
+      ================================ */}
       <section className="hero-section">
         <div className="video-container">
-          <video autoPlay loop muted playsInline className="bg-video">
-            <source src="/video/banner.mp4" type="video/mp4" />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="bg-video"
+            poster="/images/hero-poster.png" // 👈 Yahan apni poster image ka path de dein
+          >
+            <source src={getSection('hero').image || "/video/banner.mp4"} type="video/mp4" />
           </video>
+          {/* <video autoPlay loop muted playsInline className="bg-video">
+            <source src="/video/banner.mp4" type="video/mp4" />
+          </video> */}
         </div>
 
         <nav className="top-nav">
@@ -233,7 +240,6 @@ function Home() {
           </div>
         </nav>
 
-        {/* 🔥 DYNAMIC HERO CONTENT */}
         <div className="hero-content reveal">
           <h1 className="hero-title serif-text ">
             {renderTextWithBreaks(getSection('hero').title)}
@@ -246,10 +252,9 @@ function Home() {
     
       {/* =========================================
             SPATIAL UI FLOATING SCREENS
-      ========================================== */}
+      ========================================= */}
       <section className="video-feature-section">
         <div className="vf-container">
-          
           <div className="vf-video-box">
             <div className="coming-soon-badge">
               <span className="pulse-dot"></span> Coming Soon
@@ -260,18 +265,16 @@ function Home() {
             </video>
           </div>
 
-          {/* 🔥 DYNAMIC BILL CONTENT */}
           <div className="vf-text-box reveal">
             <h2>{renderTextWithBreaks(getSection('bill').subtitle)}</h2>
             <p>{getSection('bill').description}</p>
           </div>
-
         </div>
       </section>
 
       {/* =========================================
             UPGRADE SECTION
-      ========================================== */}
+      ========================================= */}
       <section className="upgrade-section">
         <div className="upgrade-header reveal">
           <h2 className="upgrade-title serif-text ">
@@ -281,7 +284,6 @@ function Home() {
 
         <div className="cards-container reveal">
           {getSection('upgrade').items?.map((card, index) => {
-            // Mapping colors to indexes to keep the design exactly as it was
             const colorClasses = ["card-green", "card-purple", "card-pink", "card-pink", "card-pink"];
             const cardColor = colorClasses[index % colorClasses.length];
             const showComingSoonBadge = card.isComingSoon || card.title.toLowerCase().includes("pay bills") || card.title.toLowerCase().includes("emi") || card.title.toLowerCase().includes("refer");
@@ -315,11 +317,9 @@ function Home() {
 
       {/* =========================================
           CENTER IMAGE FEATURE SECTION (AUTOPAY/MANDATE)
-      ========================================== */}
+      ========================================= */}
       <section className="autopay-showcase-section">
         <div className="autopay-showcase-container">
-          
-          {/* ⬅️ Left Text Column (First 2 Items) */}
           <div className="autopay-text-col autopay-align-left">
             {getSection('mandate').items?.slice(0, 2).map((item, index) => (
               <div key={index} className="autopay-info-box">
@@ -329,7 +329,6 @@ function Home() {
             ))}
           </div>
 
-          {/* 📱 Center Image Column */}
           <div className="autopay-center-visual">
             <div className="autopay-mockup-wrapper">
               <img src="/images/mdt.png" alt="Autopay Features" />
@@ -337,7 +336,6 @@ function Home() {
             </div>
           </div>
 
-          {/* ➡️ Right Text Column (Next 2 Items) */}
           <div className="autopay-text-col autopay-align-right">
              {getSection('mandate').items?.slice(2, 4).map((item, index) => (
               <div key={index} className="autopay-info-box">
@@ -346,17 +344,87 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+      {/* =========================================
+            APP DOWNLOAD SECTION
+      ========================================= */}
+      <section 
+        className="app-download-section"
+        style={{ 
+          backgroundImage: `linear-gradient(135deg, rgba(3, 7, 18, 0.1) 0%, rgba(11, 15, 25, 0.1) 100%), url('/images/dl-bg.png')` 
+        }}
+      >
+        <div className="app-download-container">
+          <div className="app-download-content">
+            <span className="app-sub-badge">GO MOBILE</span>
+            <h2>
+              Download the <span className="title-my">My</span>CredAxis App
+            </h2>
+            <p>
+              Take control of your credit health, pay your bills instantly, and manage your financial profile on the go. Scan the QR code or download directly from your app store.
+            </p>
+            
+            <div className="app-store-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share" className="store-btn">
+                <svg
+                  className="store-icon-svg"
+                  viewBox="0 0 512 512"
+                  width="28"
+                  height="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Blue */}
+                  <path
+                    fill="#4285F4"
+                    d="M32.3 20.5c-6.1 6.5-9.8 16.5-9.8 29.5v412c0 13 3.7 23 9.8 29.5L264.7 256 32.3 20.5z"
+                  />
+
+                  {/* Green */}
+                  <path
+                    fill="#34A853"
+                    d="M342.5 333.8L264.7 256 32.3 491.5c9.8 10.4 25.8 11.7 43.8 1.5l266.4-159.2z"
+                  />
+
+                  {/* Yellow */}
+                  <path
+                    fill="#FBBC04"
+                    d="M420.3 211.8l-77.8-46.5L264.7 256l77.8 77.8 77.8-46.5c23-13.7 23-61.8 0-75.5z"
+                  />
+
+                  {/* Red */}
+                  <path
+                    fill="#EA4335"
+                    d="M342.5 165.3L76.1 6.1C58.1-4.1 42.1-2.6 32.3 7.8L264.7 256l77.8-90.7z"
+                  />
+                </svg>
+                <div>
+                  <span>GET IT ON</span>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div className="app-qr-card">
+            <div className="qr-code-box">
+              <img 
+                src="/images/app-qr-code.jpeg" 
+                alt="Scan to Download App" 
+                onError={(e)=>{e.target.src="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share"}} 
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* =========================================
             SECURITY SECTION
-      ========================================== */}
+      ========================================= */}
       <section className="security-section">
         {(() => {
           const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: false });
-          // 🔥 Dynamic typing text fetch
           const fullText = getSection('security').description || "";
 
           return (
@@ -410,7 +478,7 @@ function Home() {
 
       {/* =========================================
             MODAL
-      ========================================== */}
+      ========================================= */}
       <div className={`modal-overlay ${isModalOpen ? "active" : ""}`}>
         <button
           className="close-btn"

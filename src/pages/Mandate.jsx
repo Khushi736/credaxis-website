@@ -56,7 +56,7 @@ export default function Mandate() {
               </div>
             </button> */}
 
-            <button className="md-store-btn" onClick={() => window.location.href = '/'}>
+            <button className="md-store-btn" onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share'}>
               <FaGooglePlay className="md-store-icon md-playstore-icon" />
               <div className="md-store-text">
                 <span>Get it on</span>
@@ -145,7 +145,7 @@ export default function Mandate() {
             <div className="md-handled-store-row">
               
 
-              <button className="md-store-btn" onClick={() => window.location.href = '/'}>
+              <button className="md-store-btn" onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share'}>
                 <FaGooglePlay className="md-store-icon md-playstore-icon" />
                 <div className="md-store-text">
                   <span>Get it on</span>

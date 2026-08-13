@@ -20,9 +20,43 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar { width: 8px; }
+/* ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #333; }
+::-webkit-scrollbar-thumb { background: #333; } */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712; /* Track ko dark rakha hai taaki contrast achha aaye */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Scrollbar thumb ko white kar diya gaya hai */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e4e4e7; /* Hover karne par halka sa gray shade */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #030712;
+}
+
+/* Agar aapko horizontal scrollbar completely hide karni hai */
+.cards-container::-webkit-scrollbar,
+.upgrade-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera ke liye */
+}
+
+.cards-container,
+.upgrade-section {
+  -ms-overflow-style: none;  /* IE and Edge ke liye */
+  scrollbar-width: none;  /* Firefox ke liye */
+}
 
 .serif-text { font-family: "Playfair Display", serif; }
 .lowercase { text-transform: lowercase; }
@@ -564,9 +598,9 @@ body {
 .close-btn:hover { background: rgba(255,255,255,.1); border-color: #fff; }
 .modal-content { position: relative; display: flex; flex-direction: column-reverse; align-items: center; gap: 30px; max-width: 1100px; transform: scale(.95) translateY(20px); transition: transform .5s cubic-bezier(.25,1,.5,1); }
 .modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
-.card-image-container { width: 100%; max-width: 350px; z-index: 2; margin-bottom: 0; }
+.card-image-container { width: 100%; max-width: 150px; z-index: 2; margin-bottom: 0; }
 .card-image-container img { width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,.5)); }
-.modal-text-content { display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 150px; }
+.modal-text-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .modal-title { font-family: "Inter", sans-serif; font-size: 2rem; font-weight: 700; line-height: 1.2; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
 .learn-more-btn { background: transparent; border: 1px solid rgba(255,255,255,.3); color: #fff; padding: 12px 25px; font-family: "Inter", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all .3s ease; }
 
@@ -642,8 +676,8 @@ body {
   .modal-overlay { height: 90vh; }
   .close-btn { top: 40px; right: 60px; width: 50px; height: 50px; font-size: 24px; }
   .modal-content { flex-direction: row; gap: 50px; }
-  .card-image-container { width: 550px; max-width: none; align-self: flex-end; margin-bottom: 93px; }
-  .card-image-container img { height: 750px; width: 100%; }
+  .card-image-container { width: 550px; max-width: none; align-self: flex-end; }
+  .card-image-container img { height: 350px; width: 60%; }
   .modal-text-content { align-items: flex-start; text-align: left; }
   .modal-title { font-size: 3rem; margin-bottom: 40px; }
   .learn-more-btn { font-size: 14px; padding: 15px 30px; }

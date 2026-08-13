@@ -202,7 +202,7 @@ function Home() {
                     <div className="signature-box">
                       <span className="cvv-text">***</span>
                     </div>
-                    <p className="support-text">If found, please return to IndusInd Bank.</p>
+                    <p className="support-text">If found, please return to MyCredAxis.</p>
                   </div>
                 </div>
 
@@ -218,8 +218,8 @@ function Home() {
                     </div>
                   </div>
                   <div className="card-center">
-                    <h3>IndusInd Bank</h3>
-                    <p>RuPay Credit Card</p>
+                    <h3>Credit Card</h3>
+                    {/* <p>RuPay Credit Card</p> */}
                   </div>
                   <div className="card-footer">
                     <div className="footer-left">
@@ -493,7 +493,7 @@ function Home() {
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="card-image-container">
             <img
-              src="/images/card.png"
+              src="/images/app-qr-code.jpeg"
               alt="IndusInd Card"
               onError={(e) => {
                 e.target.src = "https://via.placeholder.com/350x550.png?text=Add+Card+Image+Here";
@@ -507,10 +507,10 @@ function Home() {
               <br />
               OF INTENT.
             </h2>
-            <button className="learn-more-btn">
-              LEARN MORE
+            <a href="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share" style={{textDecoration:"none", color:"inherit"}}className="learn-more-btn">
+              GET APP
               <i className="bi bi-arrow-right"></i>
-            </button>
+            </a>
           </div>
         </div>
       </div>

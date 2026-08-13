@@ -57,7 +57,34 @@ export default function Mandate() {
             </button> */}
 
             <button className="md-store-btn" onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share'}>
-              <FaGooglePlay className="md-store-icon md-playstore-icon" />
+              <svg
+                className="md-store-icon md-playstore-icon"
+                viewBox="0 0 512 512"
+                width="28"
+                height="28"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Blue */}
+                <path
+                  fill="#4285F4"
+                  d="M32.3 20.5c-6.1 6.5-9.8 16.5-9.8 29.5v412c0 13 3.7 23 9.8 29.5L264.7 256 32.3 20.5z"
+                />
+                {/* Green */}
+                <path
+                  fill="#34A853"
+                  d="M342.5 333.8L264.7 256 32.3 491.5c9.8 10.4 25.8 11.7 43.8 1.5l266.4-159.2z"
+                />
+                {/* Yellow */}
+                <path
+                  fill="#FBBC04"
+                  d="M420.3 211.8l-77.8-46.5L264.7 256l77.8 77.8 77.8-46.5c23-13.7 23-61.8 0-75.5z"
+                />
+                {/* Red */}
+                <path
+                  fill="#EA4335"
+                  d="M342.5 165.3L76.1 6.1C58.1-4.1 42.1-2.6 32.3 7.8L264.7 256l77.8-90.7z"
+                />
+              </svg>
               <div className="md-store-text">
                 <span>Get it on</span>
                 <strong>Google Play</strong>
@@ -146,7 +173,34 @@ export default function Mandate() {
               
 
               <button className="md-store-btn" onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share'}>
-                <FaGooglePlay className="md-store-icon md-playstore-icon" />
+                <svg
+                  className="md-store-icon md-playstore-icon"
+                  viewBox="0 0 512 512"
+                  width="28"
+                  height="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Blue */}
+                  <path
+                    fill="#4285F4"
+                    d="M32.3 20.5c-6.1 6.5-9.8 16.5-9.8 29.5v412c0 13 3.7 23 9.8 29.5L264.7 256 32.3 20.5z"
+                  />
+                  {/* Green */}
+                  <path
+                    fill="#34A853"
+                    d="M342.5 333.8L264.7 256 32.3 491.5c9.8 10.4 25.8 11.7 43.8 1.5l266.4-159.2z"
+                  />
+                  {/* Yellow */}
+                  <path
+                    fill="#FBBC04"
+                    d="M420.3 211.8l-77.8-46.5L264.7 256l77.8 77.8 77.8-46.5c23-13.7 23-61.8 0-75.5z"
+                  />
+                  {/* Red */}
+                  <path
+                    fill="#EA4335"
+                    d="M342.5 165.3L76.1 6.1C58.1-4.1 42.1-2.6 32.3 7.8L264.7 256l77.8-90.7z"
+                  />
+                </svg>
                 <div className="md-store-text">
                   <span>Get it on</span>
                   <strong>Google Play</strong>

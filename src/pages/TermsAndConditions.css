@@ -76,6 +76,36 @@
   color: #475569; /* 🔥 Standard readable grey */
 }
 
+.tc-section-desc p {
+  margin: 0 0 0.85em 0;
+}
+
+.tc-section-desc p:last-child {
+  margin-bottom: 0;
+}
+
+.tc-section-desc ul,
+.tc-section-desc ol {
+  margin: 0.5em 0 0.85em 1.25em;
+  padding: 0;
+}
+
+.tc-section-desc li {
+  margin: 0.35em 0;
+}
+
+.tc-section-desc a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.tc-section-desc h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.75em 0 0.4em;
+}
+
 /* Loading State Styling */
 .tc-loader-container {
   display: flex;

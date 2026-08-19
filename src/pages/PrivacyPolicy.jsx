@@ -79,8 +79,11 @@ function PrivacyPolicy() {
           {renderItems.map((item, index) => (
             <section key={index}>
               <h2>{item.title}</h2>
-              {/* dangerouslySetInnerHTML API se aane wale HTML tags (lists, links) ko render karta hai */}
-              <div dangerouslySetInnerHTML={{ __html: item.description }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: item.description || item.content || "",
+                }}
+              />
             </section>
           ))}
         </div>

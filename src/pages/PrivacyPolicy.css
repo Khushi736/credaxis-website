@@ -85,6 +85,24 @@
   font-weight: 400;
 }
 
+.privacy-content ul,
+.privacy-content ol {
+  margin: 15px 0 30px 1.25rem;
+  padding: 0;
+}
+
+.privacy-content li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.privacy-content a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
 
 .privacy-content strong {
   color: #111827;

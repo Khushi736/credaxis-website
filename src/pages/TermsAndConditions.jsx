@@ -89,7 +89,12 @@ export default function TermsAndConditions() {
           {renderItems.map((item, index) => (
             <div key={index} className="tc-section">
               <h2 className="tc-section-title">{item.title}</h2>
-              <p className="tc-section-desc">{item.description}</p>
+              <div
+                className="tc-section-desc"
+                dangerouslySetInnerHTML={{
+                  __html: item.description || item.content || "",
+                }}
+              />
             </div>
           ))}
         </div>

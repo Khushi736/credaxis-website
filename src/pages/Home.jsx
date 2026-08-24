@@ -9,6 +9,7 @@ import {
   FaEnvelope, FaPhoneAlt, FaApple 
 } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5"; // 🔥 Yahan import add kiya gaya hai
+import { title } from "framer-motion/client";
 
 // =========================================
 // FALLBACK DATA (API Fail hone par ye use hoga)
@@ -33,7 +34,8 @@ const fallbackData = {
         { title: "Mandate", description: "Set it once.\nForgot the rest.", image: "/images/autopay.png", link: "/mandate", isComingSoon: false },
         { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.png", link: "/upcoming", isComingSoon: false },
         { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.png", link: "/upcoming", isComingSoon: true },
-        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/upcoming", isComingSoon: true }
+        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/upcoming", isComingSoon: true },
+        { title: "DLC", description: "Missed EMI? We'll remind you.", image: "/images/dlc.png", link: "/device-lock", isComingSoon: false}
       ]
     },
     {
@@ -344,6 +346,27 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Device Lock & Control Overview Section */}
+      <section className="dlc-section dlc-about-section">
+        <div className="dlc-about-container">
+          
+          {/* Left Side: Phone / Feature Image */}
+          <div className="dlc-about-image-wrapper">
+            <img src="/images/dlc-banner.png" alt="Device Lock & Control" className="dlc-about-img" />
+          </div>
+
+          {/* Right Side: Paragraph Content */}
+          <div className="dlc-about-content">
+
+            <h2>Automated device control aligned with every EMI payment.</h2>
+            <p className="dlc-about-desc">
+              MyCredAxis Device Lock & Control enables lenders to manage financed devices through an automated, payment-driven workflow. When an EMI becomes due, the system monitors the payment status in real time. If the payment is not received, an automated reminder is triggered. Continued non-payment results in the device being securely locked, helping lenders strengthen payment compliance and reduce operational intervention. Once the outstanding EMI is paid, device access is automatically restored, creating a seamless and controlled payment-to-device lifecycle.
+            </p>
+          </div>
+
         </div>
       </section>
 

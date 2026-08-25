@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { 
   FaArrowRight, 
   FaArrowDown, 
@@ -18,6 +18,9 @@ import {
 import './DeviceLockPage.css';
 
 const DeviceLockPage = () => {
+  useEffect(() => {
+   window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="dlc-container">
       {/* Breadcrumb & Hero Section */}

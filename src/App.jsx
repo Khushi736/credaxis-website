@@ -20,6 +20,8 @@ import BillPayments from "./pages/BillPayments";
 import FeatureComingSoon from "./pages/FeatureComingSoon";
 import CreditScore from "./pages/CreditScore";
 import DeviceLockPage from "./pages/DeviceLockPage";
+import RewardsPage from "./pages/rewards";
+import FdCreditCardPage from "./pages/FdCreditCardPage";
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -73,6 +75,8 @@ function AppContent() {
         <Route path="/upcoming" element={<FeatureComingSoon />} />
         <Route path="/credit-score" element={<CreditScore />} />
         <Route path="/device-lock" element={<DeviceLockPage />} />
+        <Route path="/rewards" element={<RewardsPage />} />
+        <Route path="/fd-against-credit" element={<FdCreditCardPage />} />
       </Routes>
 
       {/* Conditionally Rendering the Footer */}

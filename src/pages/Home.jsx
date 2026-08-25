@@ -34,7 +34,7 @@ const fallbackData = {
         { title: "Mandate", description: "Set it once.\nForgot the rest.", image: "/images/autopay.png", link: "/mandate", isComingSoon: false },
         { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.png", link: "/upcoming", isComingSoon: false },
         { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.png", link: "/upcoming", isComingSoon: true },
-        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/upcoming", isComingSoon: true },
+        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/rewards", isComingSoon: false },
         { title: "DLC", description: "Missed EMI? We'll remind you.", image: "/images/dlc.png", link: "/device-lock", isComingSoon: false}
       ]
     },
@@ -288,7 +288,7 @@ function Home() {
           {getSection('upgrade').items?.map((card, index) => {
             const colorClasses = ["card-green", "card-purple", "card-pink", "card-pink", "card-pink"];
             const cardColor = colorClasses[index % colorClasses.length];
-            const showComingSoonBadge = card.isComingSoon || card.title.toLowerCase().includes("pay bills") || card.title.toLowerCase().includes("emi") || card.title.toLowerCase().includes("refer");
+            const showComingSoonBadge = card.isComingSoon || card.title.toLowerCase().includes("pay bills") || card.title.toLowerCase().includes("emi");
 
             return (
               <div key={index} className={`feature-card ${cardColor}`}>

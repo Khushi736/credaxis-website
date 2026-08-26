@@ -20,7 +20,7 @@ import BillPayments from "./pages/BillPayments";
 import FeatureComingSoon from "./pages/FeatureComingSoon";
 import CreditScore from "./pages/CreditScore";
 import DeviceLockPage from "./pages/DeviceLockPage";
-import RewardsPage from "./pages/rewards";
+import RewardsPage from "./pages/Rewards";
 import FdCreditCardPage from "./pages/FdCreditCardPage";
 
 // Website at / — admin is a separate Vite app (local) or served by backend/nginx at /admin/

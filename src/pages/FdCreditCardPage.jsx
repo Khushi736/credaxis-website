@@ -1,30 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { FaShieldAlt, FaLock, FaCheckCircle, FaArrowRight, FaPercent, FaWallet, FaShoppingBag } from 'react-icons/fa';
 import './FdCreditCard.css';
 
 const FdCreditCardPage = () => {
-  // Page load hone par top par scroll karne ke liye
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  const [fdAmount, setFdAmount] = useState(10000);
-
-  // Limit calculation (100% of FD amount)
-  const creditLimit = fdAmount;
-
   return (
     <div className="fd-page-wrapper">
       
-      {/* 1. Hero Section */}
-      <section className="fd-hero">
+      {/* 1. Hero Section - Updated text for "Credit Card Against FD" */}
+      <section className="fd-hero-banner-wrapper">
         <div className="fd-hero-content">
           <div className="badge-pill">
             <FaShieldAlt className="badge-icon" /> 100% Secure & Guaranteed Approval
           </div>
-          <h1>Get Credit Card Against FD <br /><span>Zero CIBIL Required</span></h1>
+          <h1>Credit Card Against FD <br /><span>Zero CIBIL Required</span></h1>
           <p>
-            Start your Fixed Deposit with as low as <strong>₹2,000</strong> to unlimited amount. 
+            Start your Fixed Deposit with as low as <strong>₹2,000</strong> to any amount. 
             Get an instant credit card with a limit equal to your FD amount and earn high interest on your savings!
           </p>
 
@@ -43,59 +37,18 @@ const FdCreditCardPage = () => {
             </div>
           </div>
 
-          <button className="primary-btn" onClick={() => alert('Redirecting to FD creation flow...')}>
-            Book FD & Get Card Now <FaArrowRight />
-          </button>
-        </div>
-
-        {/* Interactive FD Calculator / Visual Card */}
-        <div className="fd-calculator-card">
-          <h3>Calculate Your Credit Limit</h3>
-          <p className="calc-sub">Drag or enter your FD amount</p>
-          
-          <div className="amount-input-box">
-            <span className="currency-symbol">₹</span>
-            <input 
-              type="number" 
-              min="2000" 
-              step="1000"
-              value={fdAmount} 
-              onChange={(e) => setFdAmount(Math.max(0, Number(e.target.value)))}
-            />
+          <div className="hero-cta-group">
+            <button className="primary-btn" onClick={() => alert('Redirecting to FD creation flow...')}>
+              Book FD & Get Card Now <FaArrowRight />
+            </button>
           </div>
-
-          <div className="preset-buttons">
-            <button onClick={() => setFdAmount(5000)}>₹5,000</button>
-            <button onClick={() => setFdAmount(10000)}>₹10,000</button>
-            <button onClick={() => setFdAmount(50000)}>₹50,000</button>
-            <button onClick={() => setFdAmount(100000)}>₹1,00,000+</button>
-          </div>
-
-          <div className="calculation-result-box">
-            <div className="result-row">
-              <span>Your Fixed Deposit:</span>
-              <strong>₹{fdAmount.toLocaleString('en-IN')}</strong>
-            </div>
-            <div className="result-row highlight-row">
-              <span>Your Card Spending Limit:</span>
-              <strong className="text-green">₹{creditLimit.toLocaleString('en-IN')} (100%)</strong>
-            </div>
-            <div className="result-row">
-              <span>FD Interest Rate:</span>
-              <strong className="text-blue">Up to 7.5% p.a.</strong>
-            </div>
-          </div>
-
-          <button className="secondary-btn" onClick={() => alert('Starting application...')}>
-            Get ₹{creditLimit.toLocaleString('en-IN')} Limit Card
-          </button>
         </div>
       </section>
 
       {/* 2. Features / Benefits Section */}
       <section className="fd-section">
         <div className="section-title">
-          <h2>Why Choose FD-Backed Credit Card?</h2>
+          <h2>Why Choose Credit Card Against FD?</h2>
           <p>The smartest way to spend, save, and build your credit score.</p>
         </div>
 

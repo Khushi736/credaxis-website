@@ -1,33 +1,71 @@
-/* General Layout */
+/* General Layout - Page padding hata di gayi hai taaki elements edge-to-edge fit ho sakein */
 .fd-page-wrapper {
   background-color: #070b14;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
-  padding: 40px 60px;
+  padding: 0; 
   overflow-x: hidden;
 }
 
-/* Hero Section */
-.fd-hero {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
-  align-items: center;
-  margin-bottom: 80px;
+/* Right side graphic container */
+.fd-hero-graphic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.badge-pill {
-  display: inline-flex;
+/* Slide Images Transition & Animation */
+.hero-slide-img {
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  height: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateX(60px); /* Right side se thoda door se start hoga */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+/* Jab image active hogi toh wo apni jagah smooth slide hokar aa jayegi */
+.hero-slide-img.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hero Section Layout - CSS Gradient + Side Graphic Setup */
+.fd-hero-banner-wrapper {
+  position: relative;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  min-height: 520px;
+  /* CSS se smooth dark + purple gradient background jo kabhi crop nahi hoga */
+  background: radial-gradient(circle at 75% 50%, #f12774 0%, #070b14 70%);
+  background-color: #070b14;
+  margin-bottom: 80px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  overflow: hidden; 
+}
+
+.fd-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 25px 60px 60px 60px; /* Yahan top padding ko 60px se kam karke 25px kar diya hai */
+}
+.fd-hero-graphic img {
+  height: 100%;
+  max-height: 520px;
+  object-fit: contain;
 }
 
 .fd-hero-content h1 {
@@ -87,132 +125,10 @@
   opacity: 0.9;
 }
 
-.secondary-btn {
-  background: #ffffff;
-  color: #070b14;
-  border: none;
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background 0.2s;
-}
-
-.secondary-btn:hover {
-  background: #f1f5f9;
-}
-
-/* Calculator Card */
-.fd-calculator-card {
-  background: #0d1322;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-.fd-calculator-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.calc-sub {
-  color: #94a3b8;
-  font-size: 13px;
-  margin-bottom: 20px;
-}
-
-.amount-input-box {
-  display: flex;
-  align-items: center;
-  background: #131826;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 12px 18px;
-  margin-bottom: 16px;
-}
-
-.currency-symbol {
-  font-size: 20px;
-  font-weight: 700;
-  color: #3b82f6;
-  margin-right: 10px;
-}
-
-.amount-input-box input {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 700;
-  width: 100%;
-  outline: none;
-}
-
-.preset-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.preset-buttons button {
-  background: #131826;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #cbd5e1;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.preset-buttons button:hover {
-  border-color: #3b82f6;
-  color: #ffffff;
-}
-
-.calculation-result-box {
-  background: #131826;
-  border-radius: 14px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.result-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-.result-row strong {
-  color: #ffffff;
-}
-
-.highlight-row {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 10px;
-}
-
-.text-green {
-  color: #10b981 !important;
-  font-size: 16px;
-}
-
-.text-blue {
-  color: #3b82f6 !important;
-}
-
-/* Features Grid */
+/* Features Grid & Sections - Inko alag se padding de di hai taaki content screen se chipke nahi */
 .fd-section {
   margin-bottom: 70px;
+  padding: 0 60px;
 }
 
 .section-title {
@@ -230,49 +146,80 @@
   color: #94a3b8;
   font-size: 14px;
 }
-
-.fd-features-grid {
+/* --- Modern Fintech Feature Cards Design --- */
+.fd-modern-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
-.fd-feature-box {
-  background: #0d1322;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 28px 22px;
-  transition: transform 0.3s;
+.fd-feature-card {
+  background: linear-gradient(135deg, #091a3a 0%, #132a6a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.fd-feature-box:hover {
-  transform: translateY(-5px);
+/* Glowing border & lift effect on hover */
+.fd-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.1);
 }
 
-.feat-icon-wrap {
-  width: 45px;
-  height: 45px;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
-  color: #3b82f6;
+/* Real Image Container Styling */
+.feat-img-container {
+  width: 100%;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.fd-feature-box h3 {
-  font-size: 16px;
+.feat-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image properly fit hone ke liye */
+  transition: transform 0.4s ease;
+}
+
+.fd-feature-card:hover .feat-img-container img {
+  transform: scale(1.06); /* Hover par image halka sa zoom hogi */
+}
+
+.feat-text-content h3 {
+  font-size: 17px;
   font-weight: 600;
+  color: #ffffff;
   margin-bottom: 8px;
+  letter-spacing: -0.3px;
 }
 
-.fd-feature-box p {
-  font-size: 13px;
+.feat-text-content p {
+  font-size: 13.5px;
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .fd-modern-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .fd-modern-features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Bottom CTA Banner */
@@ -309,21 +256,288 @@
 
 /* Responsive */
 @media (max-width: 968px) {
-  .fd-hero, .fd-bottom-banner {
-    grid-template-columns: 1fr;
+  .fd-hero-banner-wrapper {
+    margin: 20px 20px 60px 20px;
+  }
+  .fd-section {
+    padding: 0 20px;
+  }
+  .fd-bottom-banner {
     flex-direction: column;
     gap: 30px;
   }
   .fd-features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .fd-page-wrapper {
-    padding: 20px;
+  .fd-hero-graphic {
+    opacity: 0.25;
   }
 }
 
 @media (max-width: 768px) {
   .fd-features-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* --- FIXED: Logo & Brand Name Styling Inside Hero Content --- */
+.fd-hero-content .fd-brand-logo-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 68px; /* Heading ke upar proper gap maintain karne ke liye */
+}
+
+.fd-brand-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.fd-brand-name {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.fd-brand-my {
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #acc1da;
+}
+
+
+/* --- Promotional Banner Section (For 3rd Position) --- */
+.fd-promo-banner-section {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 350px;
+  background: linear-gradient(135deg, #070a0f 0%, #0a246b 100%);
+  
+  /* Left edge se connect rakhne ke liye margin left 0 rakha hai */
+  margin: 60px 30px 60px 0px; 
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+  overflow: hidden; 
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: none; /* Left side bilkul clean aur edge-connected lagegi */
+}
+
+.fd-promo-banner-section .fd-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  padding: 50px 40px 50px 60px;
+}
+
+/* --- Exact Ribbon Shape with V-cut --- */
+/* --- Authentic Double-Ended Arrow Ribbon Shape --- */
+.fd-ribbon-strip {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8c00 0%, #ff5722 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  /* Left aur right dono taraf padding adjust ki hai taaki text center mein rahe */
+  padding: 8px 28px 8px 24px; 
+  margin-bottom: 22px; /* Left edge se thoda space taaki left V-cut proper dikhe */
+  
+  /* Yeh polygon left aur right dono taraf V-shape (arrow cut) banayega */
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    calc(100% - 12px) 50%, 
+    100% 100%, 
+    12px 100%, 
+    0% 100%
+  );
+  
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+  letter-spacing: 0.3px;
+}
+
+/* Typography styles */
+.fd-promo-banner-section h1 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.fd-promo-banner-section h1 .highlight-upi {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.fd-promo-banner-section h1 .italic-heading {
+  font-style: italic;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.fd-promo-banner-section p {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Top-Right Partner Logos */
+.fd-promo-banner-section .fd-powered-by {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.powered-text {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.partner-logos-group {
+  display: flex;
+  gap: 8px;
+}
+
+.bank-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+
+
+/* Right side graphic container */
+.fd-promo-banner-section .fd-hero-graphic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.fd-promo-banner-section .hero-slide-img {
+  position: absolute;
+  right: -0px;
+  bottom: 0;
+  height: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.fd-promo-banner-section .hero-slide-img.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .fd-promo-banner-section {
+    margin: 40px 0px;
+    border-radius: 0px;
+    flex-direction: column;
+  }
+  .fd-promo-banner-section .fd-powered-by {
+    position: relative;
+    top: auto;
+    right: auto;
+    padding: 20px 30px 0 30px;
+  }
+  .fd-promo-banner-section .fd-hero-content {
+    padding: 30px 20px;
+  }
+}
+
+
+
+
+
+/* --- Standalone Tagline & Badges Section (No Box/Container) --- */
+.fd-standalone-tagline-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: transparent; /* Kisi box ya card me nahi hai */
+  margin: 20px 0;
+}
+
+.fd-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.feature-inline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 18px;
+  font-weight: 500;
+  
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+
+
+.fd-standalone-tagline-section h2 {
+  font-size: 44px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  line-height: 1.35;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.fd-standalone-tagline-section h2 .highlight-brand {
+  color: #a855f7; /* Purple/Violet accent matching novio branding */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fd-standalone-tagline-section h2 {
+    font-size: 26px;
+  }
+  .fd-badges-row {
+    flex-direction: column;
+    gap: 12px;
   }
 }

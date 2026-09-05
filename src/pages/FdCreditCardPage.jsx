@@ -138,6 +138,14 @@ const FdCreditCardPage = () => {
         </div>
       </section>
 
+      <div className="fd-banner-image-section">
+        <img 
+          src="/images/fdbng.png" 
+          alt="Banner" 
+          className="fd-responsive-banner-img" 
+        />
+      </div>
+
       <div className="fd-standalone-tagline-section">
         <div className="fd-badges-row">
           <span className="feature-inline-badge">

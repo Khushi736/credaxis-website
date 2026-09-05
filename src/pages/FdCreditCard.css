@@ -541,3 +541,17 @@
     gap: 12px;
   }
 }
+
+.fd-banner-image-section {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.fd-responsive-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

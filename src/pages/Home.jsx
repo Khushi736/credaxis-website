@@ -349,6 +349,17 @@ function Home() {
         </div>
       </section>
 
+      {/* =========================================
+          STANDALONE BANNER IMAGE SECTION
+      ========================================= */}
+      <div className="banner-image-section">
+        <img 
+          src="/images/fd-banner.png" 
+          alt="Banner" 
+          className="responsive-banner-img" 
+        />
+      </div>
+
       {/* Device Lock & Control Overview Section */}
       <section className="dlc-section dlc-about-section">
         <div className="dlc-about-container">
@@ -369,6 +380,8 @@ function Home() {
 
         </div>
       </section>
+
+    
 
       {/* =========================================
             APP DOWNLOAD SECTION

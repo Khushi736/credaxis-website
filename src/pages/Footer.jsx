@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 import apiClient from "../services/apiClient";
-import { useSEO } from "../hooks/useSEO";
 import { 
   FaLinkedinIn, 
   FaFacebookF, 

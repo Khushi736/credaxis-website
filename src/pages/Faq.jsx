@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { 
   BiSearch, BiGridAlt, BiCreditCard, BiTachometer, 
@@ -16,7 +16,24 @@ export default function Faq() {
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [pageData, setPageData] = useState(null);
   const [loading, setLoading] = useState(true);
-  useSEO(pageData?.seo);
+
+  const seoPayload = useMemo(() => {
+    if (!pageData) return null;
+    const faqItems = [];
+    for (const sec of pageData.sections || []) {
+      for (const item of sec.items || []) {
+        const question = item.title || item.question || item.name;
+        const answer = item.description || item.answer || item.content;
+        if (question && answer) faqItems.push({ question, answer });
+      }
+    }
+    return {
+      ...(pageData.seo || {}),
+      faqItems: faqItems.length ? faqItems : null,
+    };
+  }, [pageData]);
+
+  useSEO(seoPayload);
 
   useEffect(() => {
     window.scrollTo(0, 0);

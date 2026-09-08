@@ -35,7 +35,7 @@ const fallbackData = {
         { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.png", link: "/upcoming", isComingSoon: false },
         { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.png", link: "/upcoming", isComingSoon: true },
         { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/rewards", isComingSoon: false },
-        { title: "DLC", description: "Missed EMI? We'll remind you.", image: "/images/dlc.png", link: "/device-lock", isComingSoon: false}
+        { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.png", link: "/device-lock", isComingSoon: false}
       ]
     },
     {
@@ -80,7 +80,19 @@ function Home() {
         const json = await response.json();
         
         if (json.success && json.data) {
-          setPageData(json.data);
+          const data = json.data;
+          const sections = (data.sections || []).map((sec) => {
+            if (sec.key !== "upgrade" || !sec.items?.length) return sec;
+            return {
+              ...sec,
+              items: sec.items.map((item) =>
+                String(item.title || "").toUpperCase() === "DLC"
+                  ? { ...item, title: "Master Key Pro" }
+                  : item
+              ),
+            };
+          });
+          setPageData({ ...data, sections });
         }
       } catch (error) {
         console.error("Failed to fetch API data, using fallback data:", error);
@@ -289,9 +301,15 @@ function Home() {
             const colorClasses = ["card-green", "card-purple", "card-pink", "card-pink", "card-pink"];
             const cardColor = colorClasses[index % colorClasses.length];
             const showComingSoonBadge = card.isComingSoon || card.title.toLowerCase().includes("pay bills") || card.title.toLowerCase().includes("emi");
+            const cardHref = card.link || "/upcoming";
 
             return (
-              <div key={index} className={`feature-card ${cardColor}`}>
+              <Link
+                key={index}
+                to={cardHref}
+                className={`feature-card ${cardColor}`}
+                aria-label={`${card.title} — know more`}
+              >
                 {showComingSoonBadge && (
                   <div className="coming-soon-badge card-badge-size">
                     <span className="pulse-dot"></span> Coming Soon
@@ -305,13 +323,13 @@ function Home() {
                 </h3>
 
                 <div className="card-visual">
-                  <img src={card.image} alt={card.title} className="card-image landscape" />
+                  <img src={card.image} alt="" className="card-image landscape" />
                 </div>
 
-                <Link to={card.link || "/upcoming"} className="know-more">
+                <span className="know-more">
                   know more <i className="bi bi-arrow-right"></i>
-                </Link>
-              </div>
+                </span>
+              </Link>
             );
           })}
         </div>
@@ -366,15 +384,15 @@ function Home() {
           
           {/* Left Side: Phone / Feature Image */}
           <div className="dlc-about-image-wrapper">
-            <img src="/images/dlc-banner.png" alt="Device Lock & Control" className="dlc-about-img" />
+            <img src="/images/dlc-banner.png" alt="Master Key Pro" className="dlc-about-img" />
           </div>
 
           {/* Right Side: Paragraph Content */}
           <div className="dlc-about-content">
 
-            <h2>Automated device control aligned with every EMI payment.</h2>
+            <h2>Master Key Pro — automated device control aligned with every EMI.</h2>
             <p className="dlc-about-desc">
-              MyCredAxis Device Lock & Control enables lenders to manage financed devices through an automated, payment-driven workflow. When an EMI becomes due, the system monitors the payment status in real time. If the payment is not received, an automated reminder is triggered. Continued non-payment results in the device being securely locked, helping lenders strengthen payment compliance and reduce operational intervention. Once the outstanding EMI is paid, device access is automatically restored, creating a seamless and controlled payment-to-device lifecycle.
+              MyCredAxis Master Key Pro helps lenders manage financed devices through a payment-driven workflow. When an EMI becomes due, the system monitors payment status in real time. Missed payments trigger reminders; continued non-payment can securely lock the device. Once the EMI is paid, access is restored automatically — a clear payment-to-device lifecycle with less manual follow-up.
             </p>
           </div>
 

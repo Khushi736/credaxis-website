@@ -152,6 +152,249 @@ export default function Mandate() {
         </div>
       </section>
 
+      {/* About Mandate — details */}
+      <section className="md-about-section">
+        <div className="md-about-inner">
+          <p className="md-about-eyebrow">UPI Autopay on CredAxis</p>
+          <h2 className="md-about-title">
+            Approve once.
+            <br />
+            <span className="md-handled-highlight">Stay on track every month.</span>
+          </h2>
+          <p className="md-about-lead">
+            A CredAxis Mandate is a UPI Autopay setup for your EMI, credit bill,
+            or instalment. You confirm it once in your UPI app. After that, the
+            due amount is collected on schedule — with a pre-debit alert before
+            each run — so you do not chase the same payment every cycle.
+          </p>
+          <p className="md-about-lead md-about-lead-secondary">
+            Mandates are ideal when the amount and date are known in advance:
+            device EMIs, credit repayments, and partner-linked dues inside
+            CredAxis. You keep full control — pause, change, or cancel from your
+            UPI app whenever you need — while CredAxis and your bank handle the
+            repeat collection on regulated rails.
+          </p>
+
+          <div className="md-about-grid">
+            <div className="md-about-card">
+              <p className="md-about-card-label">How it works</p>
+              <h3>From setup to autopay</h3>
+              <ol>
+                <li>
+                  Open CredAxis and choose the EMI, bill, or instalment you want
+                  on Autopay.
+                </li>
+                <li>
+                  Review amount, start date, frequency, and end date — then
+                  approve once in your UPI app.
+                </li>
+                <li>
+                  Before every collection you get a pre-debit notification so
+                  you can keep the balance ready.
+                </li>
+                <li>
+                  On the due date Autopay runs automatically. No OTP chase, no
+                  queue, and no monthly payment stress.
+                </li>
+                <li>
+                  After each run, status updates in CredAxis so you can see what
+                  succeeded and what is coming next.
+                </li>
+              </ol>
+            </div>
+            <div className="md-about-card">
+              <p className="md-about-card-label">Your control</p>
+              <h3>Safe by design</h3>
+              <ul>
+                <li>
+                  Pause, resume, modify, or revoke anytime from your UPI /
+                  banking app.
+                </li>
+                <li>
+                  Runs on regulated UPI Autopay rails with bank-grade security —
+                  never a silent surprise debit.
+                </li>
+                <li>
+                  Amount and frequency are locked at creation; changes need your
+                  fresh consent where required.
+                </li>
+                <li>
+                  Track upcoming and past executions clearly inside CredAxis.
+                </li>
+                <li>
+                  Works with supported banks and UPI apps linked to your account.
+                </li>
+              </ul>
+            </div>
+            <div className="md-about-card">
+              <p className="md-about-card-label">Where it helps</p>
+              <h3>Everyday use cases</h3>
+              <ul>
+                <li>Device / product EMIs linked through CredAxis partners.</li>
+                <li>Credit line or card-style repayments on a fixed schedule.</li>
+                <li>Recurring instalments where the due date rarely changes.</li>
+                <li>
+                  Customers who want Autopay without remembering every cycle.
+                </li>
+                <li>
+                  Partners who need predictable collections with fewer follow-ups.
+                </li>
+              </ul>
+            </div>
+            <div className="md-about-card">
+              <p className="md-about-card-label">Good to know</p>
+              <h3>Before you set it up</h3>
+              <ul>
+                <li>
+                  Keep enough balance before the debit date — failed runs can
+                  affect your repayment status.
+                </li>
+                <li>
+                  Pre-debit alerts are your reminder window; act early if you
+                  need to pause or top up.
+                </li>
+                <li>
+                  If you revoke a mandate, future Autopay stops — set up a new
+                  one when you want Autopay again.
+                </li>
+                <li>
+                  Bank / UPI app rules still apply for limits, authentication,
+                  and eligible categories.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages — Customers & Merchants */}
+      <section className="md-adv-section">
+        <div className="md-adv-shell">
+          <div className="md-adv-intro">
+            <p className="md-about-eyebrow">Why Autopay</p>
+            <h2 className="md-adv-title">
+              Built for customers.
+              <span className="md-handled-highlight"> Built for partners.</span>
+            </h2>
+            <p className="md-adv-lead">
+              Whether you are paying on CredAxis or collecting as a partner,
+              Mandates make recurring money movement clearer, safer, and easier
+              to manage.
+            </p>
+          </div>
+
+          <div className="md-adv-inner">
+            <div className="md-adv-col">
+              <h3 className="md-adv-heading">For customers</h3>
+              <ol className="md-adv-list">
+                {[
+                  {
+                    title: "Never miss a due date",
+                    text: "Autopay keeps EMIs and credit bills on schedule — lower chance of late fees and follow-up reminders.",
+                  },
+                  {
+                    title: "One approval, many months",
+                    text: "Confirm once on UPI. CredAxis and your bank handle the repeat cycle until the mandate ends or you stop it.",
+                  },
+                  {
+                    title: "Clear limits from day one",
+                    text: "Amount, frequency, and tenure are set when you create the mandate — you know what will be collected.",
+                  },
+                  {
+                    title: "Pause or cancel anytime",
+                    text: "Modify, revoke, pause, or unpause from your UPI app in a few taps whenever plans change.",
+                  },
+                  {
+                    title: "No monthly payment grind",
+                    text: "Skip queues, OTPs, and monthly payment stress every billing cycle.",
+                  },
+                  {
+                    title: "Fully digital setup",
+                    text: "No forms, no branch visit — mandate starts inside the CredAxis app and completes on UPI.",
+                  },
+                  {
+                    title: "Alert before every debit",
+                    text: "Pre-debit notification about a day ahead so you can keep the required balance ready.",
+                  },
+                  {
+                    title: "Visible payment history",
+                    text: "See upcoming and past mandate runs in CredAxis — transparency without digging through SMS.",
+                  },
+                  {
+                    title: "Works with your bank app",
+                    text: "Uses the UPI Autopay experience you already know, across supported banks and apps.",
+                  },
+                ].map((item, i) => (
+                  <li key={i} className="md-adv-item">
+                    <span className="md-adv-num" aria-hidden="true">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="md-adv-copy">
+                      <p className="md-adv-item-title">{item.title}</p>
+                      <p className="md-adv-text">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="md-adv-col">
+              <h3 className="md-adv-heading">For merchants & partners</h3>
+              <ol className="md-adv-list">
+                {[
+                  {
+                    title: "Faster customer onboarding",
+                    text: "Digital Autopay setup cuts turnaround time versus chasing each EMI with manual collection.",
+                  },
+                  {
+                    title: "More predictable collections",
+                    text: "Scheduled debits mean fewer missed dues and fewer last-minute recovery calls.",
+                  },
+                  {
+                    title: "Cleaner support load",
+                    text: "Less payment-failed or forgot-EMI noise around every due date for your team.",
+                  },
+                  {
+                    title: "Better retention",
+                    text: "A smooth repayment journey builds trust and longer relationships with customers.",
+                  },
+                  {
+                    title: "Transparent, bank-backed flow",
+                    text: "UPI Autopay with alerts — customers see what will be collected and when.",
+                  },
+                  {
+                    title: "Flexible product fit",
+                    text: "Register mandates that match the right product, amount, and tenure for each customer.",
+                  },
+                  {
+                    title: "Recurrence that matches reality",
+                    text: "Choose EMI / bill cycles that fit how your customers actually pay month to month.",
+                  },
+                  {
+                    title: "Fewer cash follow-ups",
+                    text: "Replace repeated collection visits with a reliable Autopay rail customers already understand.",
+                  },
+                  {
+                    title: "Scale without chaos",
+                    text: "As your book grows, standardised mandate flows keep collections organised across areas and modules.",
+                  },
+                ].map((item, i) => (
+                  <li key={i} className="md-adv-item">
+                    <span className="md-adv-num" aria-hidden="true">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="md-adv-copy">
+                      <p className="md-adv-item-title">{item.title}</p>
+                      <p className="md-adv-text">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 🔥 Payment Handled Section (Left Image, Right Content) */}
       <section className="md-handled-section">
         <div className="md-handled-container">

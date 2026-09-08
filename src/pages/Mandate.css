@@ -414,6 +414,222 @@
 /* =========================================
    6. EVERY PAYMENT HANDLED SECTION
 ========================================= */
+/* =========================================
+   ABOUT MANDATE + ADVANTAGES (dark theme)
+========================================= */
+.md-about-section {
+  width: 100%;
+  background: #050505;
+  padding: 56px 16px 32px;
+  box-sizing: border-box;
+}
+
+.md-about-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.md-about-eyebrow {
+  margin: 0 0 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #607491;
+}
+
+.md-about-title {
+  margin: 0 0 18px;
+  font-size: clamp(1.85rem, 4.2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: #ffffff;
+}
+
+.md-about-lead {
+  margin: 0 0 16px;
+  max-width: none;
+  width: 100%;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #94a3b8;
+}
+
+.md-about-lead-secondary {
+  margin-bottom: 36px;
+  color: #7b8fa6;
+}
+
+.md-about-grid {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.md-about-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: linear-gradient(
+    165deg,
+    rgba(59, 112, 137, 0.14),
+    rgba(15, 23, 42, 0.45) 45%,
+    rgba(5, 5, 5, 0.8)
+  );
+  padding: 26px 24px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  min-width: 0;
+}
+
+.md-about-card-label {
+  margin: 0 0 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2295dd;
+}
+
+.md-about-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.md-about-card ol,
+.md-about-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.md-about-card li::marker {
+  color: #2295dd;
+}
+
+.md-adv-section {
+  width: 100%;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(59, 112, 137, 0.18), transparent 55%),
+    #050505;
+  color: #ffffff;
+  padding: 40px 16px 72px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+.md-adv-shell {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.md-adv-intro {
+  width: 100%;
+  margin: 0 0 40px;
+}
+
+.md-adv-title {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.md-adv-lead {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+.md-adv-inner {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.md-adv-col {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 28px 22px 24px;
+  box-sizing: border-box;
+}
+
+.md-adv-heading {
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b1bfc5;
+}
+
+.md-adv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.md-adv-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.md-adv-num {
+  font-size: clamp(1.5rem, 3.5vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #2295dd;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  min-width: 2.2ch;
+  padding-top: 2px;
+}
+
+.md-adv-copy {
+  min-width: 0;
+}
+
+.md-adv-item-title {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+}
+
+.md-adv-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #94a3b8;
+}
+
 .md-handled-section {
   position: relative;
   background-color: #050505;
@@ -532,6 +748,33 @@
 
 /* Tablets (min-width: 768px) */
 @media (min-width: 768px) {
+  .md-about-section {
+    padding: 72px 24px 40px;
+  }
+
+  .md-about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .md-adv-section {
+    padding: 48px 24px 88px;
+  }
+
+  .md-adv-intro {
+    margin-bottom: 48px;
+  }
+
+  .md-adv-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .md-adv-col {
+    padding: 32px 28px 28px;
+  }
+
   .md-hero-section {
     height: 100vh;
   }
@@ -614,6 +857,25 @@
 
 /* Desktops & Large Screens (min-width: 1024px) */
 @media (min-width: 1024px) {
+  .md-about-section,
+  .md-adv-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .md-about-inner,
+  .md-adv-shell {
+    max-width: 1300px;
+  }
+
+  .md-adv-item {
+    gap: 16px;
+  }
+
+  .md-adv-text {
+    font-size: 0.95rem;
+  }
+
   .md-hero-title {
     letter-spacing: 6px;
   }

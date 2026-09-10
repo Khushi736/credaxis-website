@@ -40,7 +40,7 @@ const Insurance = () => {
           <a href="#insurance-options" className="studio-cta-button">Explore Policies</a>
         </div>
         <div className="hero-image-wrapper">
-          <img src="/images/insurance.png" alt="Insurance Protection" className="hero-side-image" />
+          <img src="/images/lifeins.jpg" alt="Insurance Protection" className="hero-side-image" />
         </div>
       </header>
 
@@ -56,7 +56,7 @@ const Insurance = () => {
           {/* 1. Health Insurance */}
           <div className="insurance-card">
             <div className="insurance-card-image-wrapper">
-              <img src="/images/health.jpeg" alt="Health Insurance" className="insurance-card-img" />
+              <img src="/images/education.jpg" alt="Health Insurance" className="insurance-card-img" />
             </div>
             <div className="insurance-info">
               <h3>Health Insurance</h3>

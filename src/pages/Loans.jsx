@@ -40,7 +40,7 @@ const Loans = () => {
         {/* Right Side: Image */}
         <div className="hero-image-wrapper fade-in-up">
           {/* Apni proper phone/loan image ka path yahan dein */}
-          <img src="/images/loan.png" alt="Loan App Features" className="hero-side-image" />
+          <img src="/images/loan-icon.png" alt="Loan App Features" className="hero-side-image" />
         </div>
 
       </header>
@@ -71,7 +71,7 @@ const Loans = () => {
           {/* 2. Home Loan */}
           <div className="loan-card">
             <div className="loan-card-image-wrapper">
-              <img src="/images/home.jpg" alt="Home Loan" className="loan-card-img" />
+              <img src="/images/personal.jpeg" alt="Home Loan" className="loan-card-img" />
             </div>
             <div className="loan-info">
               <h3>Home Loan</h3>
@@ -107,7 +107,7 @@ const Loans = () => {
           {/* 5. Business Loan */}
           <div className="loan-card">
             <div className="loan-card-image-wrapper">
-              <img src="/images/business.jpeg" alt="Business Loan" className="loan-card-img" />
+              <img src="/images/personal.jpeg" alt="Business Loan" className="loan-card-img" />
             </div>
             <div className="loan-info">
               <h3>Business Loan</h3>
@@ -119,7 +119,7 @@ const Loans = () => {
           {/* 6. Gold Loan */}
           <div className="loan-card">
             <div className="loan-card-image-wrapper">
-              <img src="/images/gold.jpg" alt="Gold Loan" className="loan-card-img" />
+              <img src="/images/card.png" alt="Gold Loan" className="loan-card-img" />
             </div>
             <div className="loan-info">
               <h3>Gold Loan</h3>

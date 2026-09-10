@@ -6,7 +6,7 @@ import { SITE } from "./site";
  */
 export const PAGE_SEO = {
   "/": {
-    title: "MyCredAxis — Credit, UPI Autopay, Master Key Pro & Rewards",
+    title: "MyCredAxis — Smart Credit, Master Key Pro, UPI Autopay & Rewards",
     description:
       "Upgrade your financial life with MyCredAxis. UPI Autopay mandates, Master Key Pro device protection, credit insights, rewards, and secure everyday payments — in one app.",
     keywords: [
@@ -26,7 +26,8 @@ export const PAGE_SEO = {
       "Set up UPI Autopay mandates on MyCredAxis. Approve once, get pre-debit alerts, pay EMIs and bills on time, and pause or cancel anytime from your UPI app.",
     keywords: [
       "UPI Autopay",
-      "mandate",
+      "mandate",  
+      "upi autopay mandate",
       "recurring payment",
       "EMI autopay",
       "MyCredAxis",

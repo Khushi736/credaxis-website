@@ -65,10 +65,10 @@ export default function Footer() {
             {footerSection?.description || "MyCredAxis, a product of Bisani Brothers Pvt. Ltd. is a secure digital finance platform that lets you pay bills, repay loans, and check your credit score — all in one place."}
           </p>
           <div className="social-icons">
-            <a href="https://www.linkedin.com/company/bisani-brothers" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="https://www.facebook.com/people/Bisani-Brothers/61582749106777/" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/bisanibrothers/" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://www.youtube.com/@bisanibrothers" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.linkedin.com/showcase/my-cred-axis/" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/MyCredAxis" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/mycredaxis" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@mycredaxis" aria-label="YouTube"><FaYoutube /></a>
           </div>
         </div>
 

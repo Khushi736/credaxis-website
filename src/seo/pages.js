@@ -12,10 +12,15 @@ export const PAGE_SEO = {
     keywords: [
       "MyCredAxis",
       "UPI Autopay",
+      "FASTag",
       "mandate",
-      "Master Key Pro",
+      "automated device control",
+      "broadband",
       "credit score",
+      "master key",
+      "master key pro",
       "rewards",
+      "master key lock",
       "EMI",
     ],
     breadcrumb: "Home",
@@ -25,12 +30,14 @@ export const PAGE_SEO = {
     description:
       "Set up UPI Autopay mandates on MyCredAxis. Approve once, get pre-debit alerts, pay EMIs and bills on time, and pause or cancel anytime from your UPI app.",
     keywords: [
-      "UPI Autopay",
+      "Upi autopay setup for your emi app",
       "mandate",  
       "upi autopay mandate",
       "recurring payment",
       "EMI autopay",
       "MyCredAxis",
+      "automated reminders",
+      "Mobile application for mandate",
       "pre-debit notification",
     ],
     breadcrumb: "UPI Autopay Mandate",
@@ -46,12 +53,21 @@ export const PAGE_SEO = {
     description:
       "Master Key Pro by MyCredAxis links financed devices to EMI status. Smart reminders, fair grace, payment-linked lock, and automatic unlock when you pay.",
     keywords: [
-      "Master Key Pro",
       "device lock",
+      "financed devices",
+      "automatic unlock",
+      "Master Key Pro",
+      "EMI Protection",
+      "master key",
       "DLC",
+      "master key for all locks",
       "EMI recovery",
       "financed device",
+      " master lock key",
       "MyCredAxis",
+      "Mobile application for device lock",
+      "mobile lock & key services",
+      "Mobile Locking Key"
     ],
     breadcrumb: "Master Key Pro",
     service: {
@@ -64,8 +80,8 @@ export const PAGE_SEO = {
   "/rewards": {
     title: "Refer & Earn Rewards | MyCredAxis",
     description:
-      "Share MyCredAxis with friends and earn rewards. Discover referral benefits, coins, and offers that make every invite count.",
-    keywords: ["MyCredAxis rewards", "refer and earn", "referral", "coins"],
+      "Share MyCredAxis with friends and earn rewards. Discover referral benefits, collect coins, and unlock exciting offers that make every invite count and rewarding.",
+    keywords: ["MyCredAxis rewards", "Refer & Earn Rewards", "refer and earn","Refer Friends Unlock Exclusive Rewards", "referral", "coins"],
     breadcrumb: "Rewards",
   },
   "/bill-payments": {
@@ -81,10 +97,10 @@ export const PAGE_SEO = {
     },
   },
   "/credit-score": {
-    title: "Credit Score & Credit Insights | MyCredAxis",
+    title: "Check Credit Score & CIBIL Report Online | MyCredAxis",
     description:
-      "Know where you stand. Check and understand your credit health with MyCredAxis credit insights and report tools.",
-    keywords: ["credit score", "credit report", "CIBIL", "MyCredAxis"],
+      "Know where you stand. Check Credit Score and understand your credit health with MyCredAxis credit insights and report tools for smarter financial decisions.",
+    keywords: ["credit score check online","CIBIL Report Online", "Check Credit Score", "Credit Score and Credit Insights", "Credit Score & Credit Insights", "Credit Insights", "Credit Score","Mobile application for credit report","check your cibil score", "Check Credit Score & CIBIL Report", "credit report", "CIBIL", "MyCredAxis"],
     breadcrumb: "Credit Score",
     service: {
       name: "Credit Score Insights",
@@ -123,15 +139,15 @@ export const PAGE_SEO = {
   "/fd-against-credit": {
     title: "FD Against Credit Card | MyCredAxis",
     description:
-      "Learn how FD-backed credit card options work and explore offerings via MyCredAxis.",
-    keywords: ["FD credit card", "secured credit card", "MyCredAxis"],
+      "Learn how an FD against credit card works and explore FD-backed credit card options, benefits, and offers with MyCredAxis for smarter credit choices.",
+    keywords: ["FD credit card","fixed deposit and credit card","fd against credit card","credit card against fd", "secured credit card", "MyCredAxis"],
     breadcrumb: "FD Against Credit",
   },
   "/about-us": {
     title: "About Us — BisaniBrothers & MyCredAxis",
     description:
       "Learn about MyCredAxis and BisaniBrothers Private Limited — building secure, simple digital financial services for India.",
-    keywords: ["About MyCredAxis", "BisaniBrothers"],
+    keywords: ["About MyCredAxis","MyCredAxis", "BisaniBrothers"],
     breadcrumb: "About Us",
   },
   "/faq": {
@@ -145,7 +161,7 @@ export const PAGE_SEO = {
     title: "Support & Help | MyCredAxis",
     description:
       "Get help with MyCredAxis — contact support for app, payments, mandates, and account questions.",
-    keywords: ["MyCredAxis support", "help", "contact"],
+    keywords: ["MyCredAxis support","services support"," contect us", "help", "contact"],
     breadcrumb: "Support",
   },
   "/privacy-policy": {

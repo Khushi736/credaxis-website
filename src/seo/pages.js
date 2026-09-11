@@ -26,7 +26,7 @@ export const PAGE_SEO = {
     breadcrumb: "Home",
   },
   "/mandate": {
-    title: "UPI Autopay Mandate — Approve Once, Paid On Time | MyCredAxis",
+    title: "Upi Autopay Mandate: A Simple Guide to Automatic Payments",
     description:
       "Set up UPI Autopay mandates on MyCredAxis. Approve once, get pre-debit alerts, pay EMIs and bills on time, and pause or cancel anytime from your UPI app.",
     keywords: [
@@ -49,7 +49,7 @@ export const PAGE_SEO = {
     },
   },
   "/device-lock": {
-    title: "Master Key Pro — Device Lock & EMI Protection | MyCredAxis",
+    title: "Master Key Pro | Device Lock & EMI Protection",
     description:
       "Master Key Pro by MyCredAxis links financed devices to EMI status. Smart reminders, fair grace, payment-linked lock, and automatic unlock when you pay.",
     keywords: [
@@ -85,9 +85,9 @@ export const PAGE_SEO = {
     breadcrumb: "Rewards",
   },
   "/bill-payments": {
-    title: "Bill Payments — Electricity, Recharge & More | MyCredAxis",
+    title: "Simple Online Bill Payments in One Place for everyone",
     description:
-      "Pay electricity, mobile, broadband, FASTag, and more bills from one secure MyCredAxis platform with fast confirmations.",
+      "Make simple online bill payments in one place for everyone. Pay electricity, FASTag, mobile, broadband, and other bills quickly, securely, and conveniently.",
     keywords: ["bill payments", "utility bills", "MyCredAxis", "recharge"],
     breadcrumb: "Bill Payments",
     service: {
@@ -97,7 +97,7 @@ export const PAGE_SEO = {
     },
   },
   "/credit-score": {
-    title: "Check Credit Score & CIBIL Report Online | MyCredAxis",
+    title: "Check Credit Score & CIBIL Report Online Easily",
     description:
       "Know where you stand. Check Credit Score and understand your credit health with MyCredAxis credit insights and report tools for smarter financial decisions.",
     keywords: ["credit score check online","CIBIL Report Online", "Check Credit Score", "Credit Score and Credit Insights", "Credit Score & Credit Insights", "Credit Insights", "Credit Score","Mobile application for credit report","check your cibil score", "Check Credit Score & CIBIL Report", "credit report", "CIBIL", "MyCredAxis"],
@@ -109,7 +109,7 @@ export const PAGE_SEO = {
     },
   },
   "/credit-cards": {
-    title: "Credit Cards — Compare & Apply | MyCredAxis",
+    title: "Apply for Credit Card Online | Get Instant Approval",
     description:
       "Explore credit card options tailored to your lifestyle with MyCredAxis — rewards, benefits, and application guidance.",
     keywords: ["credit cards", "apply credit card", "MyCredAxis"],
@@ -137,14 +137,14 @@ export const PAGE_SEO = {
     breadcrumb: "Scan & Pay",
   },
   "/fd-against-credit": {
-    title: "FD Against Credit Card | MyCredAxis",
+    title: "Apply for Credit Cards Against FD online Easy Approval",
     description:
       "Learn how an FD against credit card works and explore FD-backed credit card options, benefits, and offers with MyCredAxis for smarter credit choices.",
     keywords: ["FD credit card","fixed deposit and credit card","fd against credit card","credit card against fd", "secured credit card", "MyCredAxis"],
     breadcrumb: "FD Against Credit",
   },
   "/about-us": {
-    title: "About Us — BisaniBrothers & MyCredAxis",
+    title: "About Us — digital financial services",
     description:
       "Learn about MyCredAxis and BisaniBrothers Private Limited — building secure, simple digital financial services for India.",
     keywords: ["About MyCredAxis","MyCredAxis", "BisaniBrothers"],
@@ -158,9 +158,9 @@ export const PAGE_SEO = {
     breadcrumb: "FAQ",
   },
   "/support": {
-    title: "Support & Help | MyCredAxis",
+    title: "Support & Help | Get quick answers, expert guidance",
     description:
-      "Get help with MyCredAxis — contact support for app, payments, mandates, and account questions.",
+      "Support & Help – Get quick answers and expert guidance. Contact support for app, credit card, payments, mandates, and other assistance whenever you need help.",
     keywords: ["MyCredAxis support","services support"," contect us", "help", "contact"],
     breadcrumb: "Support",
   },

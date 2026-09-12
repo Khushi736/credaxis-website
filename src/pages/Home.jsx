@@ -185,9 +185,6 @@ function Home() {
           >
             <source src={getSection('hero').image || "/video/banner.mp4"} type="video/mp4" />
           </video>
-          {/* <video autoPlay loop muted playsInline className="bg-video">
-            <source src="/video/banner.mp4" type="video/mp4" />
-          </video> */}
         </div>
 
         <nav className="top-nav">

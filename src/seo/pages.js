@@ -38,7 +38,7 @@ export const PAGE_SEO = {
       "MyCredAxis",
       "automated reminders",
       "Mobile application for mandate",
-      "pre-debit notification",
+      "pre debit notification",
     ],
     breadcrumb: "UPI Autopay Mandate",
     service: {
@@ -109,7 +109,7 @@ export const PAGE_SEO = {
     },
   },
   "/credit-cards": {
-    title: "Apply for Credit Card Online | Get Instant Approval",
+    title: "Apply for Credit Card Online & Get Instant Approval",
     description:
       "Explore credit card options tailored to your lifestyle with MyCredAxis — rewards, benefits, and application guidance.",
     keywords: ["credit cards", "apply credit card", "MyCredAxis"],
@@ -125,35 +125,35 @@ export const PAGE_SEO = {
   "/insurance": {
     title: "Insurance Solutions | MyCredAxis",
     description:
-      "Explore insurance options and protect what matters with MyCredAxis partner offerings.",
+      "Explore insurance options and protect what matters most with MyCredAxis partner offerings, designed to help you find suitable coverage and peace of mind.",
     keywords: ["insurance", "MyCredAxis"],
     breadcrumb: "Insurance",
   },
   "/scan-and-pay": {
-    title: "Scan & Pay with CredAxis | MyCredAxis",
+    title: "Scan and Pay with UPI | secure payments by scanning QR codes",
     description:
-      "Scan QR codes and pay seamlessly with MyCredAxis — fast, secure everyday payments.",
+      "Scan and pay with QR codes using UPI for fast, secure, and seamless everyday payments. Enjoy a simple, convenient way to make digital payments anytime, anywhere.",
     keywords: ["scan and pay", "UPI", "QR pay", "MyCredAxis"],
     breadcrumb: "Scan & Pay",
   },
   "/fd-against-credit": {
-    title: "Apply for Credit Cards Against FD online Easy Approval",
+    title: "Apply for Credit Cards Against FD Online Easy Approval",
     description:
       "Learn how an FD against credit card works and explore FD-backed credit card options, benefits, and offers with MyCredAxis for smarter credit choices.",
     keywords: ["FD credit card","fixed deposit and credit card","fd against credit card","credit card against fd", "secured credit card", "MyCredAxis"],
     breadcrumb: "FD Against Credit",
   },
   "/about-us": {
-    title: "About Us — digital financial services",
+    title: "About Us — Digital Financial Services",
     description:
-      "Learn about MyCredAxis and BisaniBrothers Private Limited — building secure, simple digital financial services for India.",
+      "Learn about MyCredAxis and its mission to build secure, simple, and trusted digital financial services that make managing finances easy for people across India..",
     keywords: ["About MyCredAxis","MyCredAxis", "BisaniBrothers"],
     breadcrumb: "About Us",
   },
   "/faq": {
     title: "FAQs — Mandates, Credit & App Help | MyCredAxis",
     description:
-      "Answers about MyCredAxis credit lines, UPI mandates, coins, security, and how to use the app.",
+      "Find answers about MyCredAxis credit lines, UPI mandates, coins, security, and app usage. Get clear guidance to manage your credit and use features with ease.",
     keywords: ["MyCredAxis FAQ", "mandate help", "credit help"],
     breadcrumb: "FAQ",
   },
@@ -167,21 +167,21 @@ export const PAGE_SEO = {
   "/privacy-policy": {
     title: "Privacy Policy | MyCredAxis",
     description:
-      "How MyCredAxis collects, uses, and protects your personal data. Read our privacy policy.",
+      "Learn how MyCredAxis collects, uses, and protects your personal data. Read our privacy policy to understand data protection, privacy practices, and your rights.",
     keywords: ["privacy policy", "MyCredAxis", "data protection"],
     breadcrumb: "Privacy Policy",
   },
   "/terms": {
     title: "Terms & Conditions | MyCredAxis",
     description:
-      "Terms and conditions for using the MyCredAxis platform operated by BisaniBrothers Private Limited.",
+      "Terms and conditions for using the MyCredAxis platform, including user responsibilities, account guidelines, services, privacy, payments, and other applicable terms.",
     keywords: ["terms and conditions", "MyCredAxis"],
     breadcrumb: "Terms & Conditions",
   },
   "/delete-account": {
     title: "Delete Account | MyCredAxis",
     description:
-      "Request deletion of your MyCredAxis account and understand what data we stop processing.",
+      "Request deletion of your MyCredAxis account and learn what happens to your personal data, including what information we stop processing after deletion..",
     keywords: ["delete account", "MyCredAxis"],
     robots: "noindex, follow",
     breadcrumb: "Delete Account",
@@ -189,14 +189,14 @@ export const PAGE_SEO = {
   "/upcoming": {
     title: "Coming Soon | MyCredAxis",
     description:
-      "This MyCredAxis feature is coming soon. Download the app to stay updated.",
+      "This MyCredAxis feature is coming soon. Download the app to stay updated with the latest features, updates, benefits, and exciting offers, all in one place.",
     keywords: ["coming soon", "MyCredAxis"],
     robots: "noindex, follow",
     breadcrumb: "Coming Soon",
   },
   "/not-found": {
     title: "Page Not Found | MyCredAxis",
-    description: "The page you are looking for does not exist on MyCredAxis.",
+    description: "The page you are looking for does not exist on MyCredAxis. Please check the URL or return to the homepage to find the information and services you need.",
     robots: "noindex, follow",
     breadcrumb: "Not Found",
   },

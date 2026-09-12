@@ -18,7 +18,7 @@ const fallbackData = {
   sections: [
     {
       key: "hero",
-      title: "Engineered for \nthe Elite",
+      title: "Engineered for \n the Elite",
       description: "Step into a curated financial ecosystem built for high achievers.\nWe reward your financial discipline with unmatched privileges, \nseamless everyday payments, and bespoke credit tools—all \nwithin a single, highly secure platform."
     },
     {

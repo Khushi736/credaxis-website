@@ -17,7 +17,6 @@ import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import CreditCards from "./pages/CreditCards";
 import Loans from "./pages/Loans";
-import Insurance from "./pages/Insurance";
 import AboutUs from "./pages/AboutUs";
 import Faq from "./pages/Faq";
 import Footer from "./pages/Footer";
@@ -66,7 +65,6 @@ function AppContent() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/scan-and-pay" element={<ScanAndPay />} />
         <Route path="/mandate" element={<Mandate />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
@@ -76,8 +74,6 @@ function AppContent() {
         <Route path="/support" element={<Support />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/credit-cards" element={<CreditCards />} />
-        <Route path="/loans" element={<Loans />} />
-        <Route path="/insurance" element={<Insurance />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/bill-payments" element={<BillPayments />} />

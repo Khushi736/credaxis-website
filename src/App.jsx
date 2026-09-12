@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -8,7 +9,6 @@ import {
 import "./App.css";
 
 import Home from "./pages/Home";
-import ScanAndPay from "./pages/ScanAndPay";
 import Mandate from "./pages/Mandate";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DeleteAccount from "./pages/DeleteAccount";
@@ -16,7 +16,6 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import CreditCards from "./pages/CreditCards";
-import Loans from "./pages/Loans";
 import AboutUs from "./pages/AboutUs";
 import Faq from "./pages/Faq";
 import Footer from "./pages/Footer";
@@ -57,7 +56,7 @@ function AppContent() {
   const location = useLocation();
   useRouteSEO();
 
-  const hideFooterRoutes = ["/privacy-policy", "/delete-account", "/upcoming"];
+  const hideFooterRoutes = ["/privacy-policy", "/delete-account", "/upcoming", "/not-found"];
   const showFooter = !hideFooterRoutes.includes(location.pathname);
 
   return (

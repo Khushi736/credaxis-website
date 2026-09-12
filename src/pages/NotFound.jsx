@@ -1,37 +1,25 @@
 // src/pages/NotFound.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './NotFound.css';
 
 const NotFound = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Agar current URL "/not-found" nahi hai, toh URL ko replace karke "/not-found" kar do
+    if (location.pathname !== '/not-found') {
+      navigate('/not-found', { replace: true });
+    }
+  }, [location, navigate]);
+
   return (
-    <div className="notfound-wrapper">
-      {/* Brand Logo Header */}
-      
-
-      {/* Main Content Area */}
+    <div className="notfound-container">
       <div className="notfound-content">
-        <div className="notfound-text-section">
-          <h1 className="notfound-title">
-            seem like<br />
-            <span className="notfound-highlight">you've hit the wall</span>
-          </h1>
-          <p className="notfound-subtitle">
-            we could not find the page<br />
-            you were looking for
-          </p>
-          <Link to="/" className="notfound-btn">
-            Go to homepage
-          </Link>
-        </div>
-
-        {/* Visual / Character Section */}
-        <div className="notfound-visual-section">
-          <div className="notfound-silhouette">
-            {/* High-end minimalist dark silhouette placeholder or asset wrapper */}
-            <div className="notfound-prop-glow"></div>
-          </div>
-        </div>
+        <h1 className="notfound-code">404</h1>
+        <h2 className="notfound-heading">Not Found</h2>
+        <p className="notfound-text">The resource requested could not be found on this server!</p>
       </div>
     </div>
   );

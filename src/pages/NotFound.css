@@ -1,124 +1,51 @@
 /* src/pages/NotFound.css */
-.notfound-wrapper {
-  background-color: #0b0f19;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 60px;
+
+* {
   box-sizing: border-box;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.notfound-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.notfound-logo-box {
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.notfound-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 4px;
-}
-
-.notfound-logo-icon {
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.notfound-brand-text {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #94a3b8;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1rem;
 }
 
 .notfound-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  flex: 1;
 }
 
-.notfound-text-section {
-  max-width: 600px;
-}
-
-.notfound-title {
-  font-size: 3.8rem;
+.notfound-code {
+  font-size: 6rem;
   font-weight: 700;
-  line-height: 1.15;
-  color: #71717a;
-  margin-bottom: 24px;
+  color: #333333;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
-.notfound-highlight {
-  color: #ffffff;
-}
-
-.notfound-subtitle {
-  font-size: 1.25rem;
-  color: #71717a;
-  line-height: 1.5;
-  margin-bottom: 40px;
-}
-
-.notfound-btn {
-  display: inline-block;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-size: 0.95rem;
+.notfound-heading {
+  font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  color: #333333;
+  margin-bottom: 0.75rem;
 }
 
-.notfound-btn:hover {
-  background-color: #ffffff;
-  color: #0b0f19;
-  border-color: #ffffff;
-}
-
-.notfound-visual-section {
-  position: relative;
-  height: 500px;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.notfound-silhouette {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(30, 41, 59, 0.4) 0%, rgba(11, 15, 25, 1) 70%);
-  border-radius: 50%;
-  position: relative;
-}
-
-@media (max-width: 900px) {
-  .notfound-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .notfound-visual-section {
-    display: none;
-  }
-  .notfound-header {
-    justify-content: center;
-  }
+.notfound-text {
+  font-size: 0.85rem;
+  color: #555555;
+  font-weight: 400;
 }

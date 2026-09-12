@@ -35,7 +35,7 @@ function ScanAndPay() {
         <div className="feature-detail-visual">
           {/* Yahan aap apne upgrade section wali same image use kar sakte hain */}
           <img 
-            src="/images/upgrade1.png" 
+            src="/images/app-phone.png" 
             alt="Scan and Pay anywhere" 
             className="floating-feature-img" 
           />

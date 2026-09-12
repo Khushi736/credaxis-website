@@ -6,9 +6,9 @@ import { SITE } from "./site";
  */
 export const PAGE_SEO = {
   "/": {
-    title: "MyCredAxis — Smart Credit, Master Key Pro, UPI Autopay & Rewards",
+    title: "MyCredAxis — Smart Credit, Master Key Pro, UPI Autopay",
     description:
-      "Upgrade your financial life with MyCredAxis. UPI Autopay mandates, Master Key Pro device protection, credit insights, rewards, and secure everyday payments — in one app.",
+      "Upgrade your financial life with MyCredAxis—UPI Autopay, Master Key Pro device protection, credit insights, rewards, and secure everyday payments in one app.",
     keywords: [
       "MyCredAxis",
       "UPI Autopay",
@@ -49,7 +49,7 @@ export const PAGE_SEO = {
     },
   },
   "/device-lock": {
-    title: "Master Key Pro | Device Lock & EMI Protection",
+    title: "Master Key Pro | Device Lock & EMI Protection Services",
     description:
       "Master Key Pro by MyCredAxis links financed devices to EMI status. Smart reminders, fair grace, payment-linked lock, and automatic unlock when you pay.",
     keywords: [
@@ -78,9 +78,9 @@ export const PAGE_SEO = {
     },
   },
   "/rewards": {
-    title: "Refer & Earn Rewards | MyCredAxis",
+    title: "Refer & Earn Rewards with Every Successful Referral",
     description:
-      "Share MyCredAxis with friends and earn rewards. Discover referral benefits, collect coins, and unlock exciting offers that make every invite count and rewarding.",
+      "Share MyCredAxis with friends and earn reward. Discover referral benefits, collect coins, and unlock exciting offers that make every invite count and rewarding.",
     keywords: ["MyCredAxis rewards", "Refer & Earn Rewards", "refer and earn","Refer Friends Unlock Exclusive Rewards", "referral", "coins"],
     breadcrumb: "Rewards",
   },
@@ -97,7 +97,7 @@ export const PAGE_SEO = {
     },
   },
   "/credit-score": {
-    title: "Check Credit Score & CIBIL Report Online Easily",
+    title: "Check Your Credit Score & CIBIL Report Online Instantly",
     description:
       "Know where you stand. Check Credit Score and understand your credit health with MyCredAxis credit insights and report tools for smarter financial decisions.",
     keywords: ["credit score check online","CIBIL Report Online", "Check Credit Score", "Credit Score and Credit Insights", "Credit Score & Credit Insights", "Credit Insights", "Credit Score","Mobile application for credit report","check your cibil score", "Check Credit Score & CIBIL Report", "credit report", "CIBIL", "MyCredAxis"],
@@ -111,49 +111,49 @@ export const PAGE_SEO = {
   "/credit-cards": {
     title: "Apply for Credit Card Online | Get Instant Approval",
     description:
-      "Explore credit card options tailored to your lifestyle with MyCredAxis — rewards, benefits, and application guidance.",
+      "Explore credit card options tailored to your lifestyle with MyCredAxis—compare rewards, benefits, fees, and application guidance to choose the right card.",
     keywords: ["credit cards", "apply credit card", "MyCredAxis"],
     breadcrumb: "Credit Cards",
   },
   "/loans": {
-    title: "Personal & Flexible Loans | MyCredAxis",
+    title: "MyCredAxis | Personal & Flexible Loans | Easy Borrowing",
     description:
-      "Discover flexible loan solutions with competitive rates and quick digital journeys on MyCredAxis.",
+      "Discover flexible loan solutions with competitive rates and quick digital journeys on MyCredAxis. Compare options and choose a loan that fits your needs.",
     keywords: ["loans", "personal loan", "MyCredAxis"],
     breadcrumb: "Loans",
   },
   "/insurance": {
-    title: "Insurance Solutions | MyCredAxis",
+    title: "Insurance Solutions for Secure Financial Protection",
     description:
-      "Explore insurance options and protect what matters with MyCredAxis partner offerings.",
+      "Explore insurance options and protect what matters with MyCredAxis partner offerings. Compare plans, find the right coverage, and make informed decisions.",
     keywords: ["insurance", "MyCredAxis"],
     breadcrumb: "Insurance",
   },
   "/scan-and-pay": {
-    title: "Scan & Pay with CredAxis | MyCredAxis",
+    title: "Scan & Pay with MyCredAxis | Fast & Secure Payments",
     description:
-      "Scan QR codes and pay seamlessly with MyCredAxis — fast, secure everyday payments.",
+      "Scan QR codes and pay seamlessly with MyCredAxis — enjoy fast, secure, and convenient everyday payments designed to make every transaction simple and smooth.",
     keywords: ["scan and pay", "UPI", "QR pay", "MyCredAxis"],
     breadcrumb: "Scan & Pay",
   },
   "/fd-against-credit": {
     title: "Apply for Credit Cards Against FD online Easy Approval",
     description:
-      "Learn how an FD against credit card works and explore FD-backed credit card options, benefits, and offers with MyCredAxis for smarter credit choices.",
+      "Learn how an FD against credit card works and explore FD-backed credit card options, benefits, offers and rewards with MyCredAxis for smarter credit choices.",
     keywords: ["FD credit card","fixed deposit and credit card","fd against credit card","credit card against fd", "secured credit card", "MyCredAxis"],
     breadcrumb: "FD Against Credit",
   },
   "/about-us": {
-    title: "About Us — digital financial services",
+    title: "Digital Financial Services for Smarter Money Management",
     description:
-      "Learn about MyCredAxis and BisaniBrothers Private Limited — building secure, simple digital financial services for India.",
+      "Learn how to build secure, simple, and reliable digital financial services for India, empowering users with seamless payments, smart tools, and trusted experiences.",
     keywords: ["About MyCredAxis","MyCredAxis", "BisaniBrothers"],
     breadcrumb: "About Us",
   },
   "/faq": {
-    title: "FAQs — Mandates, Credit & App Help | MyCredAxis",
+    title: "What Are Mandates, Credit & App Help Services for Users?",
     description:
-      "Answers about MyCredAxis credit lines, UPI mandates, coins, security, and how to use the app.",
+      "Find answers about MyCredAxis credit lines, UPI mandates, account security, rewards, payments, and everything you need to use the app with ease and confidence.",
     keywords: ["MyCredAxis FAQ", "mandate help", "credit help"],
     breadcrumb: "FAQ",
   },
@@ -165,38 +165,38 @@ export const PAGE_SEO = {
     breadcrumb: "Support",
   },
   "/privacy-policy": {
-    title: "Privacy Policy | MyCredAxis",
+    title: "Privacy Policy & Data Protection for Secure User Information",
     description:
-      "How MyCredAxis collects, uses, and protects your personal data. Read our privacy policy.",
+      "Privacy Policy & Data Protection: Learn how we collect, use, store, and protect your information with secure practices, transparency, and user control.",
     keywords: ["privacy policy", "MyCredAxis", "data protection"],
     breadcrumb: "Privacy Policy",
   },
   "/terms": {
-    title: "Terms & Conditions | MyCredAxis",
+    title: "Terms and Conditions – Rules for Using Our Services",
     description:
-      "Terms and conditions for using the MyCredAxis platform operated by BisaniBrothers Private Limited.",
+      "Terms and Conditions – Review the rules for using MyCredAxis services, including eligibility, payments, account responsibilities, user conduct, and service terms.",
     keywords: ["terms and conditions", "MyCredAxis"],
     breadcrumb: "Terms & Conditions",
   },
   "/delete-account": {
-    title: "Delete Account | MyCredAxis",
+    title: "Delete Account & Permanently Remove Your Personal Information",
     description:
-      "Request deletion of your MyCredAxis account and understand what data we stop processing.",
+      "Delete your MyCredAxis account and permanently remove your personal information. Follow the account deletion process to securely erase your data and details.",
     keywords: ["delete account", "MyCredAxis"],
     robots: "noindex, follow",
     breadcrumb: "Delete Account",
   },
   "/upcoming": {
-    title: "Coming Soon | MyCredAxis",
+    title: "Coming Soon: Exciting New Features and Services Ahead!",
     description:
-      "This MyCredAxis feature is coming soon. Download the app to stay updated.",
+      "Coming Soon: Exciting New Features and Services Ahead! Stay connected with MyCredAxis for smarter tools, services, exclusive benefits, and more. to explore.",
     keywords: ["coming soon", "MyCredAxis"],
     robots: "noindex, follow",
     breadcrumb: "Coming Soon",
   },
   "/not-found": {
-    title: "Page Not Found | MyCredAxis",
-    description: "The page you are looking for does not exist on MyCredAxis.",
+    title: "Page Not Found – The Page You are Looking For Is Missing",
+    description: "Page Not Found – The page you are looking for is missing or may have moved. Return to MyCredAxis to explore credit cards, UPI, rewards, and financial services.",
     robots: "noindex, follow",
     breadcrumb: "Not Found",
   },

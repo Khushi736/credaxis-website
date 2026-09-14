@@ -151,7 +151,7 @@ export default function AboutUs() {
           </div>
           <div className="feature-image-container">
             <img 
-              src={rewardsService?.image || "/images/rewards.png"} /* 🔥 Yahan apni image ka sahi path daalein */
+              src={rewardsService?.image || "/images/rewards.webp"} /* 🔥 Yahan apni image ka sahi path daalein */
               alt="Feature Display" 
               className="custom-feature-image"
             />

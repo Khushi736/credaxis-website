@@ -90,7 +90,7 @@ export default function CreditScore() {
           <div className="cs-step-card">
             <div className="cs-step-num-badge">3</div>
             <div className="cs-step-img">
-              <img src="/images/report_download.png" alt="Download Report" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80"}} />
+              <img src="/images/report_download.webp" alt="Download Report" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80"}} />
             </div>
             <h3>Download Report</h3>
             <p>Download your complete credit report in one click.</p>
@@ -173,7 +173,7 @@ export default function CreditScore() {
                         {/* Card 1 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/meter-icon.png" alt="Meter Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/meter-icon.webp" alt="Meter Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>A good CIBIL score helps you access credit without much difficulty</p>
                         </div>
@@ -197,7 +197,7 @@ export default function CreditScore() {
                         {/* Card 4 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/report-icon.png" alt="Preferred Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/report-icon.webp" alt="Preferred Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>Usually, a CIBIL Score of 760 and above is preferred by lenders for loan or credit card approval</p>
                         </div>
@@ -213,7 +213,7 @@ export default function CreditScore() {
                         {/* Card 6 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/reject-icon.png" alt="Low Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/reject-icon.webp" alt="Low Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>If your credit score is low (below 700), most lenders are likely to reject your loan application.</p>
                         </div>

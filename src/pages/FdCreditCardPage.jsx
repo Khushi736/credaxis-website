@@ -8,9 +8,9 @@ const FdCreditCardPage = () => {
   }, []);
 
   const heroImages = [
-    '/images/hero-fd.png',
-    '/images/hero-fd-2.png',
-    '/images/hero-fd-3.png'
+    '/images/hero-fd.webp',
+    '/images/hero-fd-2.webp',
+    '/images/hero-fd-3.webp'
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -116,7 +116,7 @@ const FdCreditCardPage = () => {
           {/* Feature 3 */}
           <div className="fd-feature-card">
             <div className="feat-img-container">
-              <img src="/images/feat-3.png" alt="Safe & Secure" />
+              <img src="/images/feat-3.webp" alt="Safe & Secure" />
             </div>
             <div className="feat-text-content">
               <h3>100% Safe & Secure Money</h3>

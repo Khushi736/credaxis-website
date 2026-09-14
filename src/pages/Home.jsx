@@ -32,7 +32,7 @@ const fallbackData = {
       items: [
         { title: "Pay bills", description: "Every bill. \nOne place.", image: "/images/bp1.webp", link: "/bill-payments", isComingSoon: true },
         { title: "Mandate", description: "Set it once.\nForgot the rest.", image: "/images/autopay.webp", link: "/mandate", isComingSoon: false },
-        { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.png", link: "/upcoming", isComingSoon: false },
+        { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.webp", link: "/upcoming", isComingSoon: false },
         { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.webp", link: "/upcoming", isComingSoon: true },
         { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.webp", link: "/rewards", isComingSoon: false },
         { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.webp", link: "/device-lock", isComingSoon: false}
@@ -181,7 +181,7 @@ function Home() {
             muted 
             playsInline 
             className="bg-video"
-            poster="/images/hero-poster.png" // 👈 Yahan apni poster image ka path de dein
+            poster="/images/hero-poster.webp" // 👈 Yahan apni poster image ka path de dein
           >
             <source src={getSection('hero').image || "/video/banner.mp4"} type="video/mp4" />
           </video>
@@ -348,7 +348,7 @@ function Home() {
 
           <div className="autopay-center-visual">
             <div className="autopay-mockup-wrapper">
-              <img src="/images/mdt.png" alt="Autopay Features" />
+              <img src="/images/mdt.webp" alt="Autopay Features" />
               <div className="autopay-ambient-glow"></div>
             </div>
           </div>
@@ -404,7 +404,7 @@ function Home() {
       <section 
         className="app-download-section"
         style={{ 
-          backgroundImage: `linear-gradient(135deg, rgba(3, 7, 18, 0.1) 0%, rgba(11, 15, 25, 0.1) 100%), url('/images/dl-bg.png')` 
+          backgroundImage: `linear-gradient(135deg, rgba(3, 7, 18, 0.1) 0%, rgba(11, 15, 25, 0.1) 100%), url('/images/dl-bg.webp')` 
         }}
       >
         <div className="app-download-container">

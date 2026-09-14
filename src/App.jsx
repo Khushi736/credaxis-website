@@ -15,7 +15,6 @@ import DeleteAccount from "./pages/DeleteAccount";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
-import CreditCards from "./pages/CreditCards";
 import AboutUs from "./pages/AboutUs";
 import Faq from "./pages/Faq";
 import Footer from "./pages/Footer";
@@ -72,7 +71,6 @@ function AppContent() {
         <Route path="/admin" element={<AdminRedirect />} />
         <Route path="/support" element={<Support />} />
         <Route path="/not-found" element={<NotFound />} />
-        <Route path="/credit-cards" element={<CreditCards />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/bill-payments" element={<BillPayments />} />

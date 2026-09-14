@@ -123,7 +123,7 @@ export default function Faq() {
 
         <div className="hc-hero-right">
           <div className="hc-hero-image-container">
-            <img src={heroSection?.image || "/images/faqbanner.png"} alt="Support Executive" />
+            <img src={heroSection?.image || "/images/faqbanner.webp"} alt="Support Executive" />
           </div>
         </div>
       </header>

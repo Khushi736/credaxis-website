@@ -94,7 +94,7 @@ const FdCreditCardPage = () => {
           {/* Feature 1 */}
           <div className="fd-feature-card">
             <div className="feat-img-container">
-              <img src="/images/hero-fd-3.png" alt="Starts at Just ₹2,000" />
+              <img src="/images/hero-fd-3.webp" alt="Starts at Just ₹2,000" />
             </div>
             <div className="feat-text-content">
               <h3>Starts at Just ₹2,000</h3>
@@ -105,7 +105,7 @@ const FdCreditCardPage = () => {
           {/* Feature 2 */}
           <div className="fd-feature-card">
             <div className="feat-img-container">
-              <img src="/images/feat-2.png" alt="Use Anywhere" />
+              <img src="/images/feat-2.webp" alt="Use Anywhere" />
             </div>
             <div className="feat-text-content">
               <h3>Use Anywhere, For Anything</h3>
@@ -127,7 +127,7 @@ const FdCreditCardPage = () => {
           {/* Feature 4 */}
           <div className="fd-feature-card">
             <div className="feat-img-container">
-              <img src="/images/feat-4.png" alt="Instant Approval" />
+              <img src="/images/feat-4.webp" alt="Instant Approval" />
             </div>
             <div className="feat-text-content">
               <h3>Instant Approval & Zero CIBIL</h3>
@@ -140,7 +140,7 @@ const FdCreditCardPage = () => {
 
       <div className="fd-banner-image-section">
         <img 
-          src="/images/fdbng.png" 
+          src="/images/fdbng.webp" 
           alt="Banner" 
           className="fd-responsive-banner-img" 
         />
@@ -199,7 +199,7 @@ const FdCreditCardPage = () => {
 
         {/* Right Side: Graphic / Image */}
         <div className="fd-hero-graphic">
-          <img src="/images/fd-hero-bg.png" alt="FD Credit Card" className="hero-slide-img active" />
+          <img src="/images/fd-hero-bg.webp" alt="FD Credit Card" className="hero-slide-img active" />
         </div>
 
       </section>

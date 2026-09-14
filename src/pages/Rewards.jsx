@@ -47,7 +47,7 @@ const RewardsPage = () => {
           </button>
         </div>
         <div className="rewards-hero-visual">
-          <img src="/images/rewards-banner.png" alt="Spin Wheel Phone Mockup" className="hero-phone-img" />
+          <img src="/images/rewards-banner.webp" alt="Spin Wheel Phone Mockup" className="hero-phone-img" />
         </div>
       </section>
 
@@ -144,7 +144,7 @@ const RewardsPage = () => {
             {/* Card 2: Card Shuffle */}
             <div className="mw-card mw-blue">
             <div className="mw-card-img-wrap">
-                <img src="/images/csuffle.png" alt="Card Shuffle" className="mw-card-img" />
+                <img src="/images/csuffle.webp" alt="Card Shuffle" className="mw-card-img" />
             </div>
             <h3>Card Shuffle</h3>
             <p>Shuffle the cards and win exciting coins.</p>
@@ -153,7 +153,7 @@ const RewardsPage = () => {
             {/* Card 3: Bubble Pop */}
             <div className="mw-card mw-green">
             <div className="mw-card-img-wrap">
-                <img src="/images/bubblepop.png" alt="Bubble Pop" className="mw-card-img" />
+                <img src="/images/bubblepop.webp" alt="Bubble Pop" className="mw-card-img" />
             </div>
             <h3>Bubble Pop</h3>
             <p>Pop bubbles and earn rewards.</p>
@@ -162,7 +162,7 @@ const RewardsPage = () => {
             {/* Card 4: User Rewards */}
             <div className="mw-card mw-yellow">
             <div className="mw-card-img-wrap">
-                <img src="/images/gift.png" alt="User Rewards" className="mw-card-img" />
+                <img src="/images/gift.webp" alt="User Rewards" className="mw-card-img" />
             </div>
             <h3>User Rewards</h3>
             <p>Complete tasks and earn more rewards.</p>
@@ -171,7 +171,7 @@ const RewardsPage = () => {
             {/* Card 5: Boost Your Income */}
             <div className="mw-card mw-pink">
             <div className="mw-card-img-wrap">
-                <img src="/images/win.png" alt="Boost Your Income" className="mw-card-img" />
+                <img src="/images/win.webp" alt="Boost Your Income" className="mw-card-img" />
             </div>
             <h3>Boost Your Income</h3>
             <p>The more you play, the more you earn!</p>
@@ -193,7 +193,7 @@ const RewardsPage = () => {
             <h3>Spin Wheel</h3>
             <p className="card-sub">Spin & Win</p>
             <div className="card-mockup-box">
-              <img src="/images/spin.png" alt="Spin Wheel" />
+              <img src="/images/spin.webp" alt="Spin Wheel" />
             </div>
           </div>
 
@@ -209,7 +209,7 @@ const RewardsPage = () => {
             <h3>Card Shuffle</h3>
             <p className="card-sub">Pick a Card</p>
             <div className="card-mockup-box">
-              <img src="/images/csuffle.png" alt="Card Shuffle" />
+              <img src="/images/csuffle.webp" alt="Card Shuffle" />
             </div>
           </div>
 
@@ -217,7 +217,7 @@ const RewardsPage = () => {
             <h3>Bubble Pop</h3>
             <p className="card-sub">Pop & Win</p>
             <div className="card-mockup-box">
-              <img src="/images/bubblepop.png" alt="Bubble Pop" />
+              <img src="/images/bubblepop.webp" alt="Bubble Pop" />
             </div>
           </div>
 
@@ -264,7 +264,7 @@ const RewardsPage = () => {
             </button>
           </div>
           <div className="cta-visual-side">
-            <img src="/images/gift-box.png" alt="3D Gift Box" className="gift-box-img" />
+            <img src="/images/gift-box.webp" alt="3D Gift Box" className="gift-box-img" />
           </div>
         </div>
       </section>

@@ -114,7 +114,7 @@ export default function AboutUs() {
           </div>
           <div className="feature-image-container">
             <img 
-              src={billPayments?.image || "/images/payments.png"} /* 🔥 Yahan apni image ka sahi path daalein */
+              src={billPayments?.image || "/images/payments.webp"} /* 🔥 Yahan apni image ka sahi path daalein */
               alt="Feature Display" 
               className="custom-feature-image"
             />
@@ -132,7 +132,7 @@ export default function AboutUs() {
           </div>
           <div className="feature-image-container">
             <img 
-              src={creditServices?.image || "/images/score.png"} /* 🔥 Yahan apni image ka sahi path daalein */
+              src={creditServices?.image || "/images/score.webp"} /* 🔥 Yahan apni image ka sahi path daalein */
               alt="Feature Display" 
               className="custom-feature-image"
             />

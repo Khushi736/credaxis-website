@@ -165,7 +165,7 @@ const DeviceLockPage = () => {
 
           <div className="dlc-hero-image-wrapper">
             <img
-              src="/images/dlc_hero.png"
+              src="/images/dlc_hero.webp"
               alt="Master Key Pro"
               className="dlc-hero-right-img"
             />
@@ -399,7 +399,7 @@ const DeviceLockPage = () => {
         <div className="dlc-overview-container">
           <div className="dlc-overview-image-wrapper">
             <img
-              src="/images/dlc-feature.png"
+              src="/images/dlc-feature.webp"
               alt="Master Key Pro overview"
               className="dlc-overview-img"
             />

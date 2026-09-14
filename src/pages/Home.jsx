@@ -30,12 +30,12 @@ const fallbackData = {
       key: "upgrade",
       title: "Upgrade your life.\nbit by bit.",
       items: [
-        { title: "Pay bills", description: "Every bill. \nOne place.", image: "/images/bp1.png", link: "/bill-payments", isComingSoon: true },
-        { title: "Mandate", description: "Set it once.\nForgot the rest.", image: "/images/autopay.png", link: "/mandate", isComingSoon: false },
+        { title: "Pay bills", description: "Every bill. \nOne place.", image: "/images/bp1.webp", link: "/bill-payments", isComingSoon: true },
+        { title: "Mandate", description: "Set it once.\nForgot the rest.", image: "/images/autopay.webp", link: "/mandate", isComingSoon: false },
         { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.png", link: "/upcoming", isComingSoon: false },
-        { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.png", link: "/upcoming", isComingSoon: true },
-        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.png", link: "/rewards", isComingSoon: false },
-        { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.png", link: "/device-lock", isComingSoon: false}
+        { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.webp", link: "/upcoming", isComingSoon: true },
+        { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.webp", link: "/rewards", isComingSoon: false },
+        { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.webp", link: "/device-lock", isComingSoon: false}
       ]
     },
     {
@@ -369,7 +369,7 @@ function Home() {
       ========================================= */}
       <div className="banner-image-section">
         <img 
-          src="/images/fd-banner.png" 
+          src="/images/fd-banner.webp" 
           alt="Banner" 
           className="responsive-banner-img" 
         />
@@ -381,7 +381,7 @@ function Home() {
           
           {/* Left Side: Phone / Feature Image */}
           <div className="dlc-about-image-wrapper">
-            <img src="/images/dlc-banner.png" alt="Master Key Pro" className="dlc-about-img" />
+            <img src="/images/dlc-banner.webp" alt="Master Key Pro" className="dlc-about-img" />
           </div>
 
           {/* Right Side: Paragraph Content */}
@@ -461,7 +461,7 @@ function Home() {
           <div className="app-qr-card">
             <div className="qr-code-box">
               <img 
-                src="/images/app-qr-code.jpeg" 
+                src="/images/app-qr-code.webp" 
                 alt="Scan to Download App" 
                 onError={(e)=>{e.target.src="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share"}} 
               />
@@ -544,7 +544,7 @@ function Home() {
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="card-image-container">
             <img
-              src="/images/app-qr-code.jpeg"
+              src="/images/app-qr-code.webp"
               alt="IndusInd Card"
               onError={(e) => {
                 e.target.src = "https://via.placeholder.com/350x550.png?text=Add+Card+Image+Here";

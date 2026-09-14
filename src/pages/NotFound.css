@@ -7,8 +7,6 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #333333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -17,35 +15,76 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #ffffff;
+  /* Public folder ke images folder se background image load ho rahi hai */
+  background-image: url('/images/not-found.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
   text-align: center;
-  padding: 1rem;
 }
 
 .notfound-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
+  width: 100%;
+  /* Image ke 404 text aur design ke niche content ko properly align karne ke liye */
+  margin-top: 500px; 
 }
 
-.notfound-code {
-  font-size: 6rem;
+.notfound-title {
+  font-size: 3.95rem;
   font-weight: 700;
-  color: #333333;
-  line-height: 1;
-  margin-bottom: 0.5rem;
+  color: #111111;
+  margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
 
-.notfound-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 0.75rem;
+.notfound-subtitle {
+  font-size: 0.95rem;
+  color: #666666;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
 }
 
-.notfound-text {
-  font-size: 0.85rem;
-  color: #555555;
-  font-weight: 400;
+.notfound-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.notfound-home-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 1.1rem;
+}
+
+/* Responsive design ke liye */
+@media (max-width: 768px) {
+  .notfound-container {
+    background-position: center;
+  }
+  
+  .notfound-title {
+    font-size: 2rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
 }

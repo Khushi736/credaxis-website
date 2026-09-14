@@ -15,7 +15,7 @@ const CreditCards = () => {
         <div className="about-studio-logo">
           <Link to="/">
             <img 
-              src="/images/logo.png" 
+              src="/images/logo.webp" 
               alt="MyCredAxis Logo" 
               className="nav-logo-img" 
             />

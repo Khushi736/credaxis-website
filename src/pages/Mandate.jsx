@@ -115,7 +115,7 @@ export default function Mandate() {
       <section className="md-cards-section">
         <div className="md-features-grid">
           {/* Card 1: Approve Once */}
-          <div className="md-feature-card" style={{ backgroundImage: `url('/images/Ao.png')` }}>
+          <div className="md-feature-card" style={{ backgroundImage: `url('/images/Ao.webp')` }}>
             <div className="md-card-overlay"></div>
             <div className="md-card-content-top"></div>
             <div className="md-card-footer">
@@ -127,7 +127,7 @@ export default function Mandate() {
           </div>
 
           {/* Card 2: Pays on Time */}
-          <div className="md-feature-card" style={{ backgroundImage: `url('/images/pay.png')` }}>
+          <div className="md-feature-card" style={{ backgroundImage: `url('/images/pay.webp')` }}>
             <div className="md-card-overlay"></div>
             <div className="md-card-content-top"></div>
             <div className="md-card-footer">
@@ -139,7 +139,7 @@ export default function Mandate() {
           </div>
 
           {/* Card 3: Bank-grade safe */}
-          <div className="md-feature-card" style={{ backgroundImage: `url('/images/security.png')` }}>
+          <div className="md-feature-card" style={{ backgroundImage: `url('/images/security.webp')` }}>
             <div className="md-card-overlay"></div>
             <div className="md-card-content-top"></div>
             <div className="md-card-footer">
@@ -401,7 +401,7 @@ export default function Mandate() {
           
           {/* Left Side: Phones Mockup Image */}
           <div className="md-handled-image-wrapper">
-            <img src="/images/app-phone.png" alt="Phones Mockup" className="md-handled-img" />
+            <img src="/images/app-phone.webp" alt="Phones Mockup" className="md-handled-img" />
           </div>
 
           {/* Right Side: Content & Actions */}

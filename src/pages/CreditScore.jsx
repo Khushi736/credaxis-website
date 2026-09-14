@@ -48,7 +48,7 @@ export default function CreditScore() {
             {/* Right Illustration/Image */}
             <div className="cs-hero-image-wrapper">
             <img 
-                src="/images/creditbanner.png" 
+                src="/images/creditbanner.webp" 
                 alt="Credit Score Dashboard" 
                 onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"}} 
             />
@@ -68,7 +68,7 @@ export default function CreditScore() {
           <div className="cs-step-card">
             <div className="cs-step-num-badge">1</div>
             <div className="cs-step-img">
-              <img src="/images/tokens.png" alt="Use Token" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=400&q=80"}} />
+              <img src="/images/tokens.webp" alt="Use Token" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=400&q=80"}} />
             </div>
             <h3>Choose Your Option</h3>
             <p>Select Coins, Wallet, or Token to check your credit score.</p>
@@ -79,7 +79,7 @@ export default function CreditScore() {
           <div className="cs-step-card">
             <div className="cs-step-num-badge">2</div>
             <div className="cs-step-img">
-              <img src="/images/check_report.png" alt="Check Score" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80"}} />
+              <img src="/images/check_report.webp" alt="Check Score" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80"}} />
             </div>
             <h3>Check Score</h3>
             <p>Get your credit score and key factors instantly.</p>
@@ -138,7 +138,7 @@ export default function CreditScore() {
                     {/* Right Side Illustration */}
                     <div className="cs-info-image-wrapper">
                         <img 
-                        src="/images/cs_info.png" 
+                        src="/images/cs_info.webp" 
                         alt="Credit Report Illustration" 
                         onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"}} 
                         />
@@ -181,7 +181,7 @@ export default function CreditScore() {
                         {/* Card 2 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/loan-icon.png" alt="Interest Rate Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/loan-icon.webp" alt="Interest Rate Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>Many lenders offer lower rate of interest on loans to applicants with a strong credit score</p>
                         </div>
@@ -189,7 +189,7 @@ export default function CreditScore() {
                         {/* Card 3 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/check_report.png" alt="Credit Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/check_report.webp" alt="Credit Score Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>The higher your credit score, the more likely lenders are to approve you for new credit</p>
                         </div>
@@ -205,7 +205,7 @@ export default function CreditScore() {
                         {/* Card 5 */}
                         <div className="cs-why-card">
                             <div className="cs-why-icon">
-                            <img src="/images/approve-icon.png" alt="Approval Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
+                            <img src="/images/approve-icon.webp" alt="Approval Icon" onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80"}} />
                             </div>
                             <p>Many Banks and NBFCs also approve applications if the CIBIL score is between 700 and 760</p>
                         </div>
@@ -268,7 +268,7 @@ export default function CreditScore() {
             {/* Part 1 (Left Side): Image Container */}
             <div className="cs-cta-left-part">
             <img 
-                src="/images/phone-preview.png" 
+                src="/images/phone-preview.webp" 
                 alt="Credit Report App Preview" 
                 className="cs-cta-raw-image"
                 onError={(e)=>{e.target.src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=80"}} 

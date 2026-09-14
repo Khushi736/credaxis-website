@@ -211,7 +211,7 @@ export default function Faq() {
             <div className="s-info">
               <h4>{helpBanner?.items?.[0]?.title || "WhatsApp Support"}</h4>
               <p>{helpBanner?.items?.[0]?.description || "Chat with our team instantly on WhatsApp"}</p>
-              <a href={helpBanner?.items?.[0]?.link || "https://wa.me/918000000000"} target="_blank" rel="noopener noreferrer" className="s-link">
+              <a href={helpBanner?.items?.[0]?.link || "https://wa.me/9793649177"} target="_blank" rel="noopener noreferrer" className="s-link">
                 Chat on WhatsApp <BiRightArrowAlt />
               </a>
             </div>
@@ -231,7 +231,7 @@ export default function Faq() {
             <div className="s-info">
               <h4>{helpBanner?.items?.[2]?.title || "Call Support"}</h4>
               <p>{helpBanner?.items?.[2]?.description || "Mon to Sat, 9AM - 7PM (IST)"}</p>
-              <a href={`tel:+${helpBanner?.items?.[2]?.link || "918000000000"}`} className="s-link">+91 80-xxxx-xxxx <BiRightArrowAlt /></a>
+              <a href={`tel:+${helpBanner?.items?.[2]?.link || "+91 9793649177"}`} className="s-link">+91 9793649177 <BiRightArrowAlt /></a>
             </div>
           </div>
         </div>

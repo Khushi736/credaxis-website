@@ -110,13 +110,13 @@ export default function Footer() {
       <div className="chat-widget-wrapper">
         {/* Sub-menus (WhatsApp, Email, Phone) */}
         <div className={`chat-sub-menus ${isChatOpen ? 'active' : ''}`}>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
+          <a href="https://wa.me/9793649177" target="_blank" rel="noreferrer" className="sub-btn whatsapp">
             <FaWhatsapp />
           </a>
           <a href="mailto:contact@bisanibrother.com" className="sub-btn email">
             <FaEnvelope />
           </a>
-          <a href="tel:+911234567890" className="sub-btn phone">
+          <a href="tel:+91 9793649177" className="sub-btn phone">
             <FaPhoneAlt />
           </a>
         </div>

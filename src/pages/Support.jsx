@@ -216,7 +216,7 @@ export default function Support() {
                   <p>{helpSection?.subtitle || "Our support team is here to assist you with any questions or concerns."}</p>
                 </div>
               </div>
-              <a href={helpSection?.buttons?.[0]?.link || "https://wa.me/918000000000"} target={helpSection?.buttons?.[0]?.target ||"_blank"} rel="noopener noreferrer" className="snc-btn">
+              <a href={helpSection?.buttons?.[0]?.link || "https://wa.me/9793649177"} target={helpSection?.buttons?.[0]?.target ||"_blank"} rel="noopener noreferrer" className="snc-btn">
                 {helpSection?.buttons?.[0]?.text || "Chat on WhatsApp"} <BiRightArrowAlt />
               </a>
       

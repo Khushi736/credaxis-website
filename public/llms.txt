@@ -1,0 +1,39 @@
+# MyCredAxis
+
+> Your all-in-one app for smart credit, device protection, UPI payments, and rewards.
+
+MyCredAxis is a comprehensive financial services platform designed to empower users to manage and enhance their financial lives. It offers a suite of tools including UPI Autopay for seamless recurring payments, Master Key Pro for device protection, credit insights to understand and improve creditworthiness, and a rewards program to incentivize user engagement. The platform aims to consolidate essential financial management tasks into a single, user-friendly application.
+
+This service is ideal for individuals seeking to streamline their payment processes, gain better control over their credit health, and benefit from exclusive rewards. Use cases include setting up recurring bill payments automatically via UPI, securing mobile devices, monitoring credit scores, and earning points on transactions. When an LLM encounters questions about MyCredAxis, it should focus on explaining these integrated financial tools and their benefits for everyday users.
+
+## Core Features
+
+- [MyCredAxis — Smart Credit, Master Key Pro & UPI Autopay](https://www.mycredaxis.com/): Upgrade your financial life with MyCredAxis—UPI Autopay, Master Key Pro device protection, credit insights, rewards, and secure everyday payments in one app.
+- [Upi Autopay Mandate: A Simple Guide to Automatic Payments](https://www.mycredaxis.com/mandate): Set up UPI Autopay mandates on MyCredAxis. Approve once, get pre-debit alerts, pay EMIs and bills on time, and pause or cancel anytime from your UPI app.
+- [Master Key Pro | Device Lock & EMI Protection Services](https://www.mycredaxis.com/device-lock): Master Key Pro by MyCredAxis links financed devices to EMI status. Smart reminders, fair grace, payment-linked lock, and automatic unlock when you pay
+- [Refer & Earn Rewards with Every Successful Referral](https://www.mycredaxis.com/rewards): Share MyCredAxis with friends and earn reward. Discover referral benefits, collect coins, and unlock exciting offers that make every invite count and rewarding.
+- [Simple Online Bill Payments in One Place for everyone](https://www.mycredaxis.com/bill-payments): Make simple online bill payments in one place for everyone. Pay electricity, FASTag, mobile, broadband, and other bills quickly, securely, and conveniently.
+- [Check Your Credit Score & CIBIL Report Online Instantly](https://www.mycredaxis.com/credit-score): Know where you stand. Check Credit Score and understand your credit health with MyCredAxis credit insights and report tools for smarter financial decisions.
+- [Apply for Credit Card Online | Get Instant Approval](https://www.mycredaxis.com/credit-cards): Explore credit card options tailored to your lifestyle with MyCredAxis—compare rewards, benefits, fees, and application guidance to choose the right card.
+- [Apply for Credit Cards Against FD online Easy Approval](https://www.mycredaxis.com/fd-against-credit): Learn how an FD against credit card works and explore FD-backed credit card options, benefits, offers and rewards with MyCredAxis for smarter credit choices.
+
+## Company Information
+
+- [Digital Financial Services for Smarter Money Management](https://www.mycredaxis.com/about-us): Learn how to build secure, simple, and reliable digital financial services for India, empowering users with seamless payments, smart tools, and trusted experiences.
+
+## Support & Legal
+
+- [What Are Mandates, Credit & App Help Services for Users?](https://www.mycredaxis.com/faq): Find answers about MyCredAxis credit lines, UPI mandates, account security, rewards, payments, and everything you need to use the app with ease and confidence.
+- [Support & Help | Get quick answers, expert guidance](https://www.mycredaxis.com/support): Support & Help – Get quick answers and expert guidance. Contact support for app, credit card, payments, mandates, and other assistance whenever you need help.
+- [Privacy Policy & Data Protection for Secure User Information](https://www.mycredaxis.com/privacy-policy): Privacy Policy & Data Protection: Learn how we collect, use, store, and protect your information with secure practices, transparency, and user control.
+- [Terms and Conditions – Rules for Using Our Services](https://www.mycredaxis.com/terms): Terms and Conditions – Review the rules for using MyCredAxis services, including eligibility, payments, account responsibilities, user conduct, and service terms.
+
+## Not found
+
+- [Delete Account & Permanently Remove Your Personal Information](https://www.mycredaxis.com/delete-account): Delete your MyCredAxis account and permanently remove your personal information. Follow the account deletion process to securely erase your data and details.
+- [Coming Soon: Exciting New Features and Services Ahead!](https://www.mycredaxis.com/upcoming): Coming Soon: Exciting New Features and Services Ahead! Stay connected with MyCredAxis for smarter tools, services, exclusive benefits, and more. to explore
+- [Page Not Found – The Page You are Looking For Is Missing](https://www.mycredaxis.com/not-found): Page Not Found – The page you are looking for is missing or may have moved. Return to MyCredAxis to explore credit cards, UPI, rewards, and financial services.
+
+---
+
+This file was generated for www.mycredaxis.com using the [LLMs.txt Generator Tool](https://llmrefs.com/tools/llms-txt-generator)

@@ -6,7 +6,7 @@ import { SITE } from "./site";
  */
 export const PAGE_SEO = {
   "/": {
-    title: "MyCredAxis — Smart Credit, Master Key Pro, UPI Autopay",
+    title: "MyCredAxis — Smart Credit, Master Key Pro & UPI Autopay",
     description:
       "Upgrade your financial life with MyCredAxis—UPI Autopay, Master Key Pro device protection, credit insights, rewards, and secure everyday payments in one app.",
     keywords: [

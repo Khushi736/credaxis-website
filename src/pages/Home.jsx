@@ -183,7 +183,7 @@ function Home() {
             className="bg-video"
             poster="/images/hero-poster.webp" // 👈 Yahan apni poster image ka path de dein
           >
-            <source src={getSection('hero').image || "/video/banner.mp4"} type="video/mp4" />
+            <source src={getSection('hero').image || "/video/banner.webm"} type="video/webm" />
           </video>
         </div>
 
@@ -271,7 +271,7 @@ function Home() {
               <span className="pulse-dot"></span> Coming Soon
             </div>
             <video autoPlay loop muted playsInline className="vf-video">
-              <source src="/video/bill.mp4" type="video/mp4" />
+              <source src="/video/bill.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -320,7 +320,7 @@ function Home() {
                 </h3>
 
                 <div className="card-visual">
-                  <img src={card.image} alt="" className="card-image landscape" />
+                  <img src={card.image} alt={card.alt || card.title} className="card-image landscape" />
                 </div>
 
                 <span className="know-more">

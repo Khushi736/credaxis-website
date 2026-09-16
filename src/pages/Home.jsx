@@ -189,7 +189,7 @@ function Home() {
 
         <nav className="top-nav">
           <div className="logo">
-            <img src="/images/logos.png" alt="Logo" />
+            <img src="/images/logos.png" alt="Logo" width={260} height={248} />
              <span className="logo-text">
                 <span className="logo-my">My</span>CredAxis
              </span>
@@ -371,6 +371,8 @@ function Home() {
         <img 
           src="/images/fd-banner.webp" 
           alt="Banner" 
+          width={2043}
+          height={770}
           className="responsive-banner-img" 
         />
       </div>
@@ -381,7 +383,7 @@ function Home() {
           
           {/* Left Side: Phone / Feature Image */}
           <div className="dlc-about-image-wrapper">
-            <img src="/images/dlc-banner.webp" alt="Master Key Pro" className="dlc-about-img" />
+            <img src="/images/dlc-banner.webp" width={1118} height={836} alt="Master Key Pro" className="dlc-about-img" />
           </div>
 
           {/* Right Side: Paragraph Content */}
@@ -463,6 +465,8 @@ function Home() {
               <img 
                 src="/images/app-qr-code.webp" 
                 alt="Scan to Download App" 
+                width={732}
+                height={732}
                 onError={(e)=>{e.target.src="https://play.google.com/store/apps/details?id=com.bbpl.mycredaxis&pcampaignid=web_share"}} 
               />
             </div>

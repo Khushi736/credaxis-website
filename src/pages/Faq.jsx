@@ -133,7 +133,7 @@ export default function Faq() {
         
         {/* Left Sidebar */}
         <aside className="hc-sidebar">
-          <h3 className="sidebar-title">All Categories</h3>
+          <h2 className="sidebar-title">All Categories</h2>
           <ul className="sidebar-nav">
             {categories.map((cat, idx) => (
               <li 
@@ -209,7 +209,7 @@ export default function Faq() {
           <div className="support-card chat-card">
             <div className="s-icon"><FaWhatsapp /></div>
             <div className="s-info">
-              <h4>{helpBanner?.items?.[0]?.title || "WhatsApp Support"}</h4>
+              <h3>{helpBanner?.items?.[0]?.title || "WhatsApp Support"}</h3>
               <p>{helpBanner?.items?.[0]?.description || "Chat with our team instantly on WhatsApp"}</p>
               <a href={helpBanner?.items?.[0]?.link || "https://wa.me/9793649177"} target="_blank" rel="noopener noreferrer" className="s-link">
                 Chat on WhatsApp <BiRightArrowAlt />
@@ -220,7 +220,7 @@ export default function Faq() {
           <div className="support-card email-card">
             <div className="s-icon"><BiEnvelope /></div>
             <div className="s-info">
-              <h4>{helpBanner?.items?.[1]?.title || "Email Support"}</h4>
+              <h3>{helpBanner?.items?.[1]?.title || "Email Support"}</h3>
               <p>{helpBanner?.items?.[1]?.description || "We usually reply within 24 hours"}</p>
               <a href={`mailto:${helpBanner?.items?.[1]?.link || "support@mycredaxis.com"}`} className="s-link">Send Email <BiRightArrowAlt /></a>
             </div>
@@ -229,7 +229,7 @@ export default function Faq() {
           <div className="support-card call-card">
             <div className="s-icon"><BiPhoneCall /></div>
             <div className="s-info">
-              <h4>{helpBanner?.items?.[2]?.title || "Call Support"}</h4>
+              <h3>{helpBanner?.items?.[2]?.title || "Call Support"}</h3>
               <p>{helpBanner?.items?.[2]?.description || "Mon to Sat, 9AM - 7PM (IST)"}</p>
               <a href={`tel:+${helpBanner?.items?.[2]?.link || "+91 9793649177"}`} className="s-link">+91 9793649177 <BiRightArrowAlt /></a>
             </div>

@@ -778,3 +778,247 @@
     font-size: 11px;
   }
 }
+
+
+/* =========================================================
+   REACT ICON ALIGNMENT FIX
+========================================================= */
+
+/* Common icon alignment */
+.centric-ui svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+
+/* =========================
+   EYEBROW ICONS
+========================= */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eyebrow svg {
+  width: 11px;
+  height: 11px;
+}
+
+
+/* =========================
+   HERO ABOUT ICON
+========================= */
+
+.about b {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.about b svg {
+  width: 11px;
+  height: 11px;
+}
+
+
+/* =========================
+   PHONE TOP
+========================= */
+
+.phone-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.phone-top svg {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* =========================
+   PHONE CONSENT
+========================= */
+
+.phone-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.phone-note svg {
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   PHONE ROW
+========================= */
+
+.phone-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.phone-row > span {
+  min-width: 0;
+}
+
+.phone-row > svg {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   PHONE BUTTONS
+========================= */
+
+.phone-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+/* =========================
+   MODULE HEADER
+========================= */
+
+.module header small {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.module header small svg {
+  width: 9px;
+  height: 9px;
+}
+
+
+/* =========================
+   MODULE FOOTER
+========================= */
+
+.module footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.module footer b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.module footer svg {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* =========================
+   EXPORT BUTTON
+========================= */
+
+.export {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.export svg {
+  width: 11px;
+  height: 11px;
+}
+
+
+/* =========================
+   AUDIT FEATURE HEADINGS
+========================= */
+
+.audit-features b {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.audit-features b svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   TERMINAL HEADER
+========================= */
+
+.terminal header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.terminal header small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.terminal header small svg {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* =========================
+   TERMINAL BUTTONS
+========================= */
+
+.terminal button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.terminal button svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 620px) {
+
+  .terminal header {
+    align-items: flex-start;
+  }
+
+  .audit-features b {
+    gap: 6px;
+  }
+
+}

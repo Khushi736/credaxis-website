@@ -35,7 +35,8 @@ const fallbackData = {
         { title: "CREDIT INSIGHTS", description: "Know where \nYou stand", image: "/images/report.webp", link: "/upcoming", isComingSoon: false },
         { title: "EMI PAYMENTS", description: "Stay ahead \nof every EMi.", image: "/images/emi.webp", link: "/upcoming", isComingSoon: true },
         { title: "Refer & Earn", description: "Share more.\nEarn more.", image: "/images/referral.webp", link: "/rewards", isComingSoon: false },
-        { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.webp", link: "/device-lock", isComingSoon: false}
+        { title: "Master Key Pro", description: "Missed EMI? We'll remind you.", image: "/images/dlc.webp", link: "/device-lock", isComingSoon: false},
+        { title: "Centric", description: "Connect with verified customer information.", image: "/images/centric.webp", link: "/centric", isComingSoon: false }
       ]
     },
     {
@@ -298,7 +299,10 @@ function Home() {
             const colorClasses = ["card-green", "card-purple", "card-pink", "card-pink", "card-pink"];
             const cardColor = colorClasses[index % colorClasses.length];
             const showComingSoonBadge = card.isComingSoon || card.title.toLowerCase().includes("pay bills") || card.title.toLowerCase().includes("emi");
-            const cardHref = card.link || "/upcoming";
+            // Centric has a dedicated route. Keep it available even if a cached
+            // CMS response is missing its link or uses an outdated value.
+            const isCentricCard = String(card.title || "").trim().toLowerCase() === "centric";
+            const cardHref = isCentricCard ? "/centric" : card.link || "/upcoming";
 
             return (
               <Link

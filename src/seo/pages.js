@@ -178,6 +178,19 @@ export const PAGE_SEO = {
     keywords: ["terms and conditions", "MyCredAxis"],
     breadcrumb: "Terms & Conditions",
   },
+  "/centric": {
+    title: "Centric – Mobile Identity Verification & Risk Intelligence",
+    description:
+      "Centric helps verify mobile identity, KYC, employment, contact, address, and risk signals through consent-based identity checks.",
+    keywords: [
+      "Centric",
+      "mobile identity verification",
+      "identity verification",
+      "KYC verification",
+      "risk intelligence",
+    ],
+    breadcrumb: "Centric",
+  },
   "/delete-account": {
     title: "Delete Account & Permanently Remove Your Personal Information",
     description:
@@ -200,6 +213,7 @@ export const PAGE_SEO = {
     robots: "noindex, follow",
     breadcrumb: "Not Found",
   },
+
 };
 
 export function resolvePageSeo(pathname, override = null) {

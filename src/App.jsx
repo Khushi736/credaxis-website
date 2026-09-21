@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import Faq from "./pages/Faq";
 import Footer from "./pages/Footer";
+import Centric from "./pages/Centric";
 import BillPayments from "./pages/BillPayments";
 import FeatureComingSoon from "./pages/FeatureComingSoon";
 import CreditScore from "./pages/CreditScore";
@@ -78,6 +79,7 @@ function AppContent() {
         <Route path="/credit-score" element={<CreditScore />} />
         <Route path="/device-lock" element={<DeviceLockPage />} />
         <Route path="/rewards" element={<RewardsPage />} />
+        <Route path="/centric" element={<Centric />} />
         <Route path="/fd-against-credit" element={<FdCreditCardPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

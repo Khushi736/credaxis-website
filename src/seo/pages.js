@@ -143,6 +143,25 @@ export const PAGE_SEO = {
     keywords: ["FD credit card","fixed deposit and credit card","fd against credit card","credit card against fd", "secured credit card", "MyCredAxis"],
     breadcrumb: "FD Against Credit",
   },
+  "/masterkeypro-offers": {
+    title: "Buy Master Keys | Master Key Pro Plans – MyCredAxis",
+    description:
+      "Buy Master Key packs on MyCredAxis. Choose a plan, get bonus keys on larger packs, and create Master Keys for financed device protection.",
+    keywords: [
+      "Master Key Pro",
+      "Buy Master Keys",
+      "DLC tokens",
+      "Master Key plans",
+      "MyCredAxis",
+    ],
+    breadcrumb: "Master Key Pro Offers",
+    service: {
+      name: "Master Key Pro Offers",
+      serviceType: "Master Key token packs",
+      description:
+        "Purchase Master Key packs to create keys for financed device protection.",
+    },
+  },
   "/about-us": {
     title: "Digital Financial Services for Smarter Money Management",
     description:

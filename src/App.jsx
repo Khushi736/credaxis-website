@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useLocation,
 } from "react-router-dom";
 import "./App.css";
@@ -25,6 +26,7 @@ import CreditScore from "./pages/CreditScore";
 import DeviceLockPage from "./pages/DeviceLockPage";
 import RewardsPage from "./pages/Rewards";
 import FdCreditCardPage from "./pages/FdCreditCardPage";
+import MasterkeyProOffers from "./pages/MasterkeyProOffers";
 import { useRouteSEO } from "./hooks/useSEO";
 
 const basename = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
@@ -81,6 +83,11 @@ function AppContent() {
         <Route path="/rewards" element={<RewardsPage />} />
         <Route path="/centric" element={<Centric />} />
         <Route path="/fd-against-credit" element={<FdCreditCardPage />} />
+        <Route path="/masterkeypro-offers" element={<MasterkeyProOffers />} />
+        <Route
+          path="/masterkeypro-0ffers"
+          element={<Navigate to="/masterkeypro-offers" replace />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

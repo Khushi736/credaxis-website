@@ -3,13 +3,14 @@
 ========================================= */
 .footer-section {
   background: linear-gradient(145deg, #0a0f1a 0%, #000000 50%, #120e06 100%);
-  color: #ffffff !important; /* 🔥 Fix: Force text color */
+  color: #ffffff !important;
   padding: 40px 20px 30px; 
   border-top: 1px solid rgba(130, 128, 128, 0.46);
   font-family: "Inter", sans-serif;
   width: 100%;
-  opacity: 1 !important; /* 🔥 Fix: Force visibility */
-  visibility: visible !important; /* 🔥 Fix: Force visibility */
+  position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .footer-content-wrapper {
@@ -19,8 +20,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  opacity: 1 !important; /* 🔥 Fix: Force visibility */
-  visibility: visible !important; /* 🔥 Fix: Force visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* --- Brand Section --- */
@@ -34,12 +35,12 @@
 .brand-name {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff !important; /* 🔥 Fix: Prevents other pages from making it black */
+  color: #ffffff !important;
   letter-spacing: 0.5px;
 }
 
 .brand-desc {
-  color: #a1a1aa !important; /* 🔥 Fix */
+  color: #a1a1aa !important;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -60,7 +61,7 @@
   height: 42px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2); 
-  color: #ffffff !important; /* 🔥 Fix */
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -88,7 +89,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffffff !important; /* 🔥 Fix */
+  color: #ffffff !important;
   padding: 20px 0;
   margin: 0;
   display: flex;
@@ -117,7 +118,7 @@
   display: none; 
   flex-direction: column;
   gap: 12px;
-  opacity: 1 !important; /* 🔥 Fix */
+  opacity: 1 !important;
 }
 
 .footer-col.active ul {
@@ -135,14 +136,15 @@
 }
 
 .footer-col ul li a {
-  color: #a1a1aa !important; /* 🔥 Fix */
+  color: #a1a1aa !important;
   font-size: 0.9rem;
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
+  text-decoration: none;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff !important; /* 🔥 Fix */
+  color: #ffffff !important;
   transform: translateX(5px);
 }
 
@@ -191,12 +193,12 @@
   .footer-col ul {
     display: flex !important;
     padding: 0;
-    visibility: visible !important; /* 🔥 Fix for desktop visibility */
+    visibility: visible !important;
   }
 }
 
 /* =========================================
-   FOOTER BOTTOM BAR & CHAT BTN (Mobile First)
+   FOOTER BOTTOM BAR (Mobile First)
 ========================================= */
 .footer-bottom-bar {
   margin: 40px auto 0;
@@ -274,19 +276,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000;
+  z-index: 99999;
 }
 
 /* Sub Menus Container */
 .chat-sub-menus {
   position: absolute;
-  bottom: 65px; 
+  bottom: 100%; 
+  margin-bottom: 15px; 
   display: flex;
-  flex-direction: column-reverse; 
+  flex-direction: column; 
+  align-items: center;
   gap: 12px; 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px) scale(0.8);
+  transform: translateY(20px);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
   pointer-events: none;
 }
@@ -294,36 +298,45 @@
 .chat-sub-menus.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   pointer-events: auto;
 }
 
-/* Individual Sub Buttons */
-.sub-btn {
-  width: 45px; 
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Individual Sub Buttons - Heavily constrained to fix rectangle issue */
+.chat-sub-menus .sub-btn {
+  width: 45px !important; 
+  height: 45px !important;
+  min-width: 45px !important; 
+  min-height: 45px !important;
+  max-width: 45px !important;
+  max-height: 45px !important;
+  border-radius: 50% !important; /* Forces the circle shape */
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   text-decoration: none;
-  background-color: #1a365d; 
-  color: #b5dcec; 
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  font-size: 18px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  background-color: #1a365d !important; 
+  color: #ffffff !important; 
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  font-size: 18px !important; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
 }
 
-.sub-btn:hover {
-  background-color: #5e889a; 
-  color: #000000;
-  transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 6px 14px rgba(56, 189, 248, 0.4);
-  border-color: #38bdf8;
+/* Brand specific colors for hover */
+.chat-sub-menus .sub-btn.whatsapp:hover { background-color: #25D366 !important; border-color: #25D366 !important; }
+.chat-sub-menus .sub-btn.email:hover { background-color: #ea4335 !important; border-color: #ea4335 !important; }
+.chat-sub-menus .sub-btn.phone:hover { background-color: #0ea5e9 !important; border-color: #0ea5e9 !important; }
+
+.chat-sub-menus .sub-btn:hover {
+  transform: scale(1.1) translateY(-3px) !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* 🔥 NEW: Floating Keyframe Animation */
 @keyframes floatUpDown {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
@@ -332,49 +345,48 @@
 
 /* Main Chat Button */
 .chat-floating-btn {
-  width: 50px; 
-  height: 50px;
-  background-color: #5a7784;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  font-size: 22px; 
+  width: 50px !important; 
+  height: 50px !important;
+  background-color: #5a7784 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #000 !important;
+  font-size: 22px !important; 
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
   animation: floatUpDown 3s ease-in-out infinite; 
 }
 
-/* Jab chat menu khula ho */
 .chat-floating-btn.open {
-  background-color: #1a365d; 
-  color: #ffffff;
-  transform: rotate(90deg); 
-  animation: none; 
+  background-color: #1a365d !important; 
+  color: #ffffff !important;
+  transform: rotate(90deg) !important; 
+  animation: none !important; 
 }
 
 /* =========================================
-   DESKTOP VIEW (Original Bada Size)
+   DESKTOP VIEW (Chat Widget)
 ========================================= */
 @media (min-width: 768px) {
   .chat-widget-wrapper {
     bottom: 40px;
     right: 40px;
   }
-  .chat-sub-menus {
-    bottom: 80px;
-    gap: 15px; 
-  }
-  .sub-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+  .chat-sub-menus .sub-btn {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    font-size: 20px !important;
   }
   .chat-floating-btn {
-    width: 60px; 
-    height: 60px;
-    font-size: 28px;
+    width: 60px !important; 
+    height: 60px !important;
+    font-size: 28px !important;
   }
 }

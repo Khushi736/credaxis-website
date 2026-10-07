@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /admin
-Disallow: /delete-account
-
-Sitemap: https://www.mycredaxis.com/sitemap.xml

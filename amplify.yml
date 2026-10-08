@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - node scripts/audit-routes.mjs
+        - npm run build
+        - node scripts/verify-spa-build.mjs
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+# SPA path URLs (React Router). public/_redirects is copied into dist/ by Vite.
+# In Amplify console: connect this repo, branch main, build spec = amplify.yml,
+# custom domain mycredaxis.com → verify SSL, then redeploy after each push.

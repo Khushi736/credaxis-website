@@ -14,7 +14,7 @@ export const PAGE_SEO = {
   "/": {
     title: "Mycredaxis | Smart Credit, Emi & Upi Autopay Solutions",
     description:
-      "Upgrade your financial life with MyCredAxis: UPI Autopay, device protection, credit insights, rewards, secure payments, and secured device financing in one app.",
+      "MyCredAxis offers smart credit, credit score checks, EMI, UPI Autopay, and secured device financing to manage payments and enjoy secure services in one app.",
     keywords: [
       "MyCredAxis",
       "UPI Autopay",

@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
-import { resolvePageSeo } from './seo/pages.js';
+import { SeoMetadata } from './seo/SeoMetadata';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { TrustStrip } from './components/TrustStrip';
@@ -50,49 +50,6 @@ type SiteChromeContextValue = {
 };
 
 const SiteChromeContext = React.createContext<SiteChromeContextValue | null>(null);
-
-function setSeoMeta(attribute: 'name' | 'property', key: string, content: string) {
-  let meta = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
-  if (!meta) {
-    meta = document.createElement('meta');
-    meta.setAttribute(attribute, key);
-    document.head.append(meta);
-  }
-  meta.content = content;
-}
-
-function SeoMetadata() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    const seo = resolvePageSeo(pathname);
-    const canonicalUrl = new URL(seo.canonicalPath, window.location.origin).href;
-    const imageUrl = new URL(seo.image, window.location.origin).href;
-
-    document.title = seo.title;
-    setSeoMeta('name', 'description', seo.description);
-    setSeoMeta('name', 'keywords', seo.keywords.join(', '));
-    setSeoMeta('name', 'robots', seo.robots);
-    setSeoMeta('property', 'og:title', seo.title);
-    setSeoMeta('property', 'og:description', seo.description);
-    setSeoMeta('property', 'og:type', seo.type);
-    setSeoMeta('property', 'og:url', canonicalUrl);
-    setSeoMeta('property', 'og:image', imageUrl);
-    setSeoMeta('name', 'twitter:title', seo.title);
-    setSeoMeta('name', 'twitter:description', seo.description);
-    setSeoMeta('name', 'twitter:image', imageUrl);
-
-    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.append(canonical);
-    }
-    canonical.href = canonicalUrl;
-  }, [pathname]);
-
-  return null;
-}
 
 function useSiteChrome() {
   const ctx = React.useContext(SiteChromeContext);

@@ -6,6 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - node scripts/sync-favicon.mjs
         - node scripts/audit-routes.mjs
         - npm run build
         - node scripts/verify-spa-build.mjs

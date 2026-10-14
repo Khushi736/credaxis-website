@@ -1,38 +1,15 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import type {Plugin} from 'vite';
 import {defineConfig} from 'vite';
+import {injectDefaultSeo} from './vite.injectDefaultSeo';
 import {spaHashBootstrap} from './vite.spaHashBootstrap';
-
-/** Browsers still request /favicon.ico by default; serve our webp asset. */
-function faviconIcoFallback(): Plugin {
-  return {
-    name: 'favicon-ico-fallback',
-    configureServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        if (req.url === '/favicon.ico' || req.url?.startsWith('/favicon.ico?')) {
-          req.url = '/favicon.webp';
-        }
-        next();
-      });
-    },
-    configurePreviewServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        if (req.url === '/favicon.ico' || req.url?.startsWith('/favicon.ico?')) {
-          req.url = '/favicon.webp';
-        }
-        next();
-      });
-    },
-  };
-}
 
 export default defineConfig(() => {
   const disableHmr = process.env.DISABLE_HMR === 'true';
 
   return {
-    plugins: [spaHashBootstrap(), react(), tailwindcss(), faviconIcoFallback()],
+    plugins: [injectDefaultSeo(), spaHashBootstrap(), react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(import.meta.dirname, '.'),

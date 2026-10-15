@@ -219,20 +219,14 @@ export const PAGE_SEO = {
     keywords: ["privacy policy", "MyCredAxis", "data protection"],
     breadcrumb: "Privacy Policy",
   },
-  "/terms": {
+  "/terms-conditions": {
     title: "Terms and Conditions – Rules for Using Our Services",
     description:
       "Terms and Conditions – Review the rules for using MyCredAxis services, including eligibility, payments, account responsibilities, user conduct, and service terms.",
     keywords: ["terms and conditions", "MyCredAxis"],
     breadcrumb: "Terms & Conditions",
   },
-  "/terms-conditions": {
-    title: "Terms and Conditions | MyCredAxis",
-    description:
-      "Review the terms and conditions for using MyCredAxis services, including eligibility, account responsibilities, and service terms.",
-    keywords: ["MyCredAxis terms and conditions", "terms of service"],
-    breadcrumb: "Terms & Conditions",
-  },
+
   "/delete-account": {
     title: "Delete Account & Permanently Remove Your Personal Information",
     description:

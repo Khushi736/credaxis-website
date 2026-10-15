@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /login/
 
-Sitemap: https://mycredaxis.in/sitemap.xml
+Sitemap: https://mycredaxis.in/sitemap.xml  
